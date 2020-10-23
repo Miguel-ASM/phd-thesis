@@ -1,3 +1,7 @@
+## hidden mac osx system files
+.DS_Store
+Thumbs.db
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
