@@ -1,0 +1,214 @@
+%% ----------------------------------------------------------------
+%% Thesis.tex -- MAIN FILE (the one that you compile with LaTeX)
+%% ----------------------------------------------------------------
+
+% Set up the document
+%\documentclass[a4paper, 11pt, oneside]{Thesis}  % Use the "Thesis" style, based on the ECS Thesis style by Steve Gunn
+%\documentclass[a4paper, 11pt, twoside, openright]{Thesis} %en a4
+\documentclass[a4paper, 12pt, twoside, openright]{Thesis} %para reducir a b5
+\graphicspath{{Figures/}}  % Location of the graphics files (set up for graphics to be in PDF format)
+
+% Include any extra LaTeX packages required
+\usepackage[square, numbers, comma, sort&compress]{natbib}  % Use the "Natbib" style for the references in the Bibliography
+\usepackage{verbatim}  % Needed for the "comment" environment to make LaTeX comments
+\usepackage{vector}  % Allows "\bvec{}" and "\buvec{}" for "blackboard" style bold vectors in maths
+\usepackage{mathtools}
+
+\usepackage{parskip} %para que haga el indent al principio de cada parrafo
+\setlength{\parindent}{15pt}
+\usepackage{indentfirst} %para que ponga el indent en el primer parrafo tambien, sino no lo hace
+
+\hypersetup{urlcolor=blue, colorlinks=true}  % Colours hyperlinks in blue, but this can be distracting if there are many links.
+
+\DeclareMathOperator{\arccot}{arccot}
+
+%% ----------------------------------------------------------------
+\begin{document}
+
+%Abreviaciones de comandos y nuevos comandos.
+\def\la{\langle}
+\def\ra{\rangle}
+\def\beq{\begin{equation}}
+\def\eeq{\end{equation}}
+\def\beqa{\begin{eqnarray}}
+\def\eeqa{\end{eqnarray}}
+\def\blankpage{
+\newpage
+\begin{equation}
+\nonumber
+\end{equation}
+\newpage}
+\def\ssst{\scriptscriptstyle}   %%para hacer más pequeñas algunas ecuaciones
+
+\newcommand{\beqas}{\begin{eqnarray*}}
+\newcommand{\eeqas}{\end{eqnarray*}}
+\newcommand {\fexp} [1] {\exp \left( #1 \right)}
+\newcommand {\fabs}[1] {\left| #1 \right|}
+\newcommand{\cR}{{\cal{R}}}
+\newcommand{\new}[1]{{\it #1}}
+
+\frontmatter	  % Begin Roman style (i, ii, iii, iv...) page numbering
+
+% Set up the Title Page
+%----------------------------------------------------------------------------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------------------------------------------------------------------------
+\include{portada}%we use the title page document
+%\newpage
+%\mbox{}
+%\thispagestyle{plain} % para que no se numere esta p�gina
+
+%This is another way of generating a title page, (in fact below it is written how to use )
+%\title  {Shortcuts to adiabaticity in the double well}
+%\authors  {\texorpdfstring
+%           {\href{sofia.martinez@ehu.eus}{Sof\'ia Mart\'inez Garaot}}
+%            {}
+%            }
+
+%\addresses  {\groupname\\\deptname\\\univname}  % Do not change this here, instead these must be set in the "Thesis.cls" file, please look through it instead
+%\date       {\today}
+%\subject    {}
+%\keywords   {}
+
+%\maketitle
+%----------------------------------------------------------------------------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\setstretch{1.3}  % It is better to have smaller font and larger line spacing than the other way round
+
+% Define the page headers using the FancyHdr package and set up for one-sided printing
+\fancyhead{}  % Clears all page headers and footers
+\rhead{\thepage}  % Sets the right side header to show the page number
+\lhead{}  % Clears the left side page header
+
+\pagestyle{fancy}  % Finally, use the "fancy" page style to implement the FancyHdr headers
+
+\clearpage  % Declaration ended, now start a new page
+
+%Meto una pagina en blanco
+\pagestyle{empty}  % No headers or footers for the following pages
+\null\vfill
+
+\vfill\vfill\vfill\vfill\vfill\vfill\null
+\clearpage  % Empty page ended, start a new page
+
+
+%% ----------------------------------------------------------------
+% The "Funny Quote Page"
+\pagestyle{empty}  % No headers or footers for the following pages
+
+\null\vfill
+% Now comes the "Funny Quote", written in italics
+\textit{``Insert deep/meaningful/clever quote by someone who you admire or hate''}
+
+\begin{flushright}
+Someone who you admire or hate
+\end{flushright}
+
+\vfill\vfill\vfill\vfill\vfill\vfill\null
+\clearpage  % Funny Quote page ended, start a new page
+%% ----------------------------------------------------------------
+
+%% The Abstract Page
+%\addtotoc{Abstract}  % Add the "Abstract" page entry to the Contents
+%\abstract{
+%\addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
+%
+%The Thesis Abstract is written here (and usually kept to just this page). The page is kept centered vertically so can expand into the blank space above the title too\ldots
+%
+%}
+%
+%\clearpage  % Abstract ended, start a new page
+%%% ----------------------------------------------------------------
+
+%Meto una pagina en blanco
+\pagestyle{empty}  % No headers or footers for the following pages
+
+\null\vfill
+
+\vfill\vfill\vfill\vfill\vfill\vfill\null
+\clearpage  % Empty page ended, start a new page
+
+\setstretch{1.3}  % Reset the line-spacing to 1.3 for body text (if it has changed)
+
+% The Acknowledgements page, for thanking everyone
+\acknowledgements{
+\addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
+Do not forget about the people that has been by your side and supported you.
+\it{Esta Tesis ha sido financiada a trav\'es de una beca predoctoral concedida por el Gobierno Vasco/Eusko Jaurlaritza}
+
+}
+
+\clearpage  % End of the Acknowledgements
+%% ----------------------------------------------------------------
+
+\pagestyle{fancy}  %The page style headers have been "empty" all this time, now use the "fancy" headers as defined before to bring them back
+
+
+%% ----------------------------------------------------------------
+\lhead{\emph{Contents}}  % Set the left side page header to "Contents"
+\tableofcontents  % Write out the Table of Contents
+
+%% ----------------------------------------------------------------
+\lhead{\emph{List of Figures}}  % Set the left side page header to "List if Figures"
+\listoffigures  % Write out the List of Figures
+
+%%% ----------------------------------------------------------------
+%\lhead{\emph{List of Tables}}  % Set the left side page header to "List of Tables"
+%\listoftables  % Write out the List of Tables
+
+%% ----------------------------------------------------------------
+\setstretch{1.5}  % Set the line spacing to 1.5, this makes the following tables easier to read
+\clearpage  % Start a new page
+
+%% Begin the Dedication page
+\setstretch{1.3}  % Return the line spacing back to 1.3
+\pagestyle{empty}  % Page style needs to be empty for this page
+\dedicatory{dedicatory here}
+
+\addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
+\input{Publications}
+
+%% ----------------------------------------------------------------
+\mainmatter	  % Begin normal, numeric (1,2,3...) page numbering
+\pagestyle{fancy}  % Return the page headers back to the "fancy" style
+
+% Include the chapters of the thesis, as separate files
+
+\addtocontents{toc}{\vspace{0.6em}}
+
+\addcontentsline{toc}{chapter}{Introduction}
+\input{./Chapters/Introduction} %Introduction
+
+\input{./Chapters/Chapter1} % Splitting
+\input{./Chapters/Conclusions} %Conclusions
+\addcontentsline{toc}{chapter}{Conclusions}
+
+%% ----------------------------------------------------------------
+% Now begin the Appendices, including them as separate files
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aestheticsy
+
+\appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
+\part*{Appendix}
+%\addcontentsline{toc}{part}{Appendix}
+\addtocontents{toc}{\vspace{0.6em}}
+
+\input{./Appendices/AppendixA}	% Interaction versus asymmetry for adiabatic following
+
+\addtocontents{toc}{\vspace{0.6em}}  % Add a gap in the Contents, for aesthetics
+\backmatter
+\pagestyle{empty}  % Page style needs to be empty for this page
+
+%% ----------------------------------------------------------------
+\label{Bibliography}
+\lhead{\emph{Bibliography}}  % Change the left side page header to "Bibliography"
+%\bibliographystyle{apsrev}  % Use the "unsrtnat" BibTeX style for formatting the Bibliography
+%\bibliographystyle{h-physrev3} % formato PRA sin url ni issn ni hyperlinks
+\bibliographystyle{sofia} %modificado por mi a partir de utphys
+%\bibliographystyle{utphys} %formato arXiv con hyperlinks
+\bibliography{Bibliography}  % The references (bibliography) information are stored in the file named "Bibliography.bib"
+
+\end{document}  % The End
+%% ----------------------------------------------------------------
