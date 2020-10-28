@@ -76,7 +76,7 @@
 \thispagestyle{empty}
 \newpage
 \if@twocolumn\hbox{}\newpage\fi\fi\fi}
-\usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,xspace}
+\usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,xspace,bm,physics}
 \theoremstyle{plain}
 \newtheorem{example}{Example}[chapter]
 \newtheorem{theorem}{Theorem}[chapter]
@@ -107,7 +107,7 @@
 \setcounter{totalnumber}{20}
 \setcounter{dbltopnumber}{9}
 \usepackage{graphicx}
-\usepackage{epstopdf}
+% \usepackage{epstopdf}
 \usepackage[scriptsize]{subfigure}
 \usepackage{booktabs}
 \usepackage{rotating}
