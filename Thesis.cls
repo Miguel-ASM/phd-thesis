@@ -76,7 +76,7 @@
 \thispagestyle{empty}
 \newpage
 \if@twocolumn\hbox{}\newpage\fi\fi\fi}
-\usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,xspace,bm,physics}
+\usepackage{amsmath,amsfonts,mathtools,amssymb,amsbsy,amscd,amsthm,xspace,bm,physics}
 \theoremstyle{plain}
 \newtheorem{example}{Example}[chapter]
 \newtheorem{theorem}{Theorem}[chapter]

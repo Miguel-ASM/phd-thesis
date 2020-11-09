@@ -59,22 +59,22 @@ satisfies
 \begin{equation}
 A^\dagger HA=H,
 \label{symme}
-\eeq
+\end{equation}
 %
 so that
 %
-\beq
+\begin{equation}
 [H,A]=0,
 \label{conmu}
-\eeq
+\end{equation}
 %
 and thus $A$,  which we assume to be time-independent unless stated otherwise,
 represents also a conserved quantity when A is unitary (and therefore linear),
 %
-\beq
+\begin{equation}
 \la \psi(t),A\psi(t)\ra=\la \psi(0),A \psi(0)\ra,
 \label{conser}
-\eeq
+\end{equation}
 %
 (We use the ordinary quantum inner product notation.)
 where $|\psi(t)\ra=U(t)|\psi(0)\ra$ is the time-dependent wave function
@@ -133,24 +133,24 @@ important physical consequences discussed e.g. in \cite{Muga2004,Ruschhaupt2017}
 %
 Now consider the following two formal generalizations of the element $\la \psi(t),A\psi(t)\ra$ in Equation (\ref{conser}),
 %
-\beqa
+\begin{eqnarray}
 &&\la e^{-iH^\dagger t/\hbar} \psi(0), A e^{-iHt/\hbar} \psi(0)\ra=\la \widehat{\psi}(t),A\psi(t)\ra,
 \label{sec}
 \\
 %
 &&\la e^{-iH t/\hbar}  \psi(0), A e^{-iHt/\hbar} \psi(0)\ra=\la \psi(t), A \psi(t)\ra,
 \label{pri}
-\eeqa
+\end{eqnarray}
 %
 and the  generalizations of (\ref{conmu})
 %
-\beqa
+\begin{eqnarray}
 AH&=&HA,
 \label{usu}
 \\
 AH&=&H^\dagger A.
 \label{unu}
-\eeqa
+\end{eqnarray}
 %
 We name (\ref{unu}) $A$-pseudohermiticity of $H$ \cite{Mostafazadeh2010}.
 (This is here a formal definition that does not presupose any  further property
@@ -167,17 +167,17 @@ This is however premature for several reasons. One is the following (others will
 Unlike Hermitian Hamiltonians, non-Hermitian ones may have generally different
 right and left eigenvectors. We assume the existence of the resolution
 %
-\beq
+\begin{equation}
 H=\sum_j |\phi_j\ra E_j \la\widehat{\phi}_j|,
 \label{res}
-\eeq
+\end{equation}
 %
 where the $E_j$ may be complex and where
 %
-\beqa
+\begin{eqnarray}
 H|\phi_j\ra=E_j|\phi_j\ra, \;\;\;
 H^\dagger|\widehat{\phi}_j\ra=E_j^* |\widehat{\phi}_j\ra.
-\eeqa
+\end{eqnarray}
 %
 We have used a simplifying notation for  a discrete spectrum, but a continuum
 part could be treated similarly with integrals rather than sums and continuum-normalized states.
@@ -268,13 +268,13 @@ applied to Equation \eqref{eq:ExpectValueChange} gives
 If we use Equations \eqref{eq:NormChange} and \eqref{eq:ExpectValue} in Equation
 \eqref{eq:ExpectValueChangeSymmetry},
 %
-\beqa
+\begin{eqnarray}
 \frac{\ev{A}}{\braket{\psi(t)}} \partial_t\braket{\psi(t)} &=& -  \partial_t \ev{A} ,
 %  \\\braket{\psi(t)}\partial_t \ev{A} + \ev{A}\partial_t\braket{\psi(t)} &=0,
 %  \\\partial_t\left( \ev{A}\braket{\psi(t)} \right) &= 0,
 \\
 \ev{A}\braket{\psi(t)} &=& \text{Constant}.
-\eeqa
+\end{eqnarray}
 %
 Applying the initial condition $\braket{\psi(0)}=1$,
 %
@@ -323,7 +323,7 @@ A superoperator framework helps to understand why (\ref{unu}) also represents a 
 Let us define the superoperators ${\cal L}_A(\cdot) \equiv A^\dagger(\cdot) A$, ${\cal L}_\dagger (\cdot)\equiv (\cdot)^\dagger$ and ${\cal L}_{A,\dagger}(\cdot)\equiv {\cal L}_A\left({\cal L}_\dagger (\cdot)\right) = {\cal L}_\dagger\left({\cal L}_A (\cdot)\right) $. For  linear operators $B$ and a complex number $a$ they satisfy
 %
 %
-\beqa
+\begin{eqnarray}
 {\cal L}_A (a B)&=& a A^\dagger  B A,\;\;\,  A\, {\rm unitary},
 \\
 {\cal L}_A (a B)&=& a^* A^\dagger  B A,\;  A\, {\rm antiunitary},
@@ -335,7 +335,7 @@ A\, {\rm{unitary}},
 \\
 {\cal L}_{A,\dagger} (a B)&=& {\cal L}_{\dagger} {\cal L}_A  (aB)=    {\cal L}_A  {\cal L}_{\dagger} (aB) = a A^\dagger B^\dagger A,\;\;\,
 A\, {\rm{antiunitary}}.
-\eeqa
+\end{eqnarray}
 %
 As the product of two antilinear operators is a linear operator,
 the resulting operators (on the right hand sides) are linear in all cases,
@@ -346,20 +346,20 @@ superoperator) of the constant $a$.
 %The first superoperator is linear and the second and third are antilinear.
 Using the scalar product for linear operators $F$ and $G$,
 %
-\beq
+\begin{equation}
 \la\la F,G\ra\ra=Tr (F^\dagger G),
-\eeq
+\end{equation}
 %
 we find the adjoints,
 %
 %
-\beqa
+\begin{eqnarray}
 {\cal L}_A^\dagger(\cdot)&=& {\cal L}_{A^\dagger}(\cdot)\equiv A(\cdot)A^\dagger,
 \\
 {\cal L}_{\dagger}^\dagger(\cdot) &=&{\cal L}_{\dagger}(\cdot),
 \\
 {\cal L}_{A,\dagger}^\dagger (\cdot) &=& {\cal L}_{A^\dagger, \dagger}(\cdot)\,,
-\eeqa
+\end{eqnarray}
 %
 where $\la\la F,{\cal L}^\dagger G\ra\ra=\la\la G,{\cal L} F\ra\ra^*$ for ${\cal L}$ linear
 and $\la\la F,{\cal L}^\dagger G\ra\ra=\la\la G,{\cal L} F\ra\ra$ for ${\cal L}$ antilinear.
@@ -370,10 +370,10 @@ and they keep ``transition probabilities'' among
 two states, most generally represented by density operators
 $\rho_1$ and $\rho_2$, invariant, namely
 %
-\beq
+\begin{equation}
 \la\la \rho_1,\rho_2\ra\ra=\la\la {\cal L}\rho_1,  {\cal L} \rho_2\ra\ra.
 \label{Wigner}
-\eeq
+\end{equation}
 %
 Due to the Hermicity of the density operators, $\la\la \rho_1,\rho_2\ra\ra$ is a real number
 (both for unitary or antinuitary ${\cal{L}}$). This result is reminiscent of Wigner's theorem, originally formulated
@@ -512,10 +512,10 @@ some desired dynamics the necessary driving forces.
 Invariants for Hermitian, time-dependent Hamiltonians obey the
 invariance condition
 %
-\beq
+\begin{equation}
 \frac{\partial I(t)}{\partial t}-\frac{1}{i\hbar}[H(t),I(t)]=0,
 \label{gene}
-\eeq
+\end{equation}
 %
 so that $\frac{d}{dt}\la {\psi}(t)|I(t)|\psi(t)\ra=0$ for states $\psi(t)$ that evolve  with $H(t)$
 (we assume that the invariant is linear).
@@ -536,17 +536,17 @@ roles to provide a basis for useful state decompositions and inverse engineering
 applicable \cite{Ibanez2011}.
 Note however that in this context $I(t)$ is not invariant in an ordinary sense, but rather
 %
-\beq
+\begin{equation}
 \frac{d}{dt}\la \widehat{\psi}(t)|I(t)|\psi(t)\ra=0.
-\eeq
+\end{equation}
 %
 The alternative option, yet to be explored for inverse engineering the Hamiltonian,
 is to consider (linear) operators $I'(t)$ such that
 %
-\beq
+\begin{equation}
 \frac{\partial I'(t)}{\partial t}-\frac{1}{i\hbar}[H(t)^\dagger I'(t)-I'(t)H(t)]=0,
 \label{gene2}
-\eeq
+\end{equation}
 %
 and thus  $\frac{d}{dt}\la \psi(t)|I'(t)|\psi(t)\ra=0$.
 

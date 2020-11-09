@@ -12,7 +12,6 @@
 \usepackage[square, numbers, comma, sort&compress]{natbib}  % Use the "Natbib" style for the references in the Bibliography
 \usepackage{verbatim}  % Needed for the "comment" environment to make LaTeX comments
 \usepackage{vector}  % Allows "\bvec{}" and "\buvec{}" for "blackboard" style bold vectors in maths
-\usepackage{mathtools}
 \usepackage[table]{xcolor}
 
 \usepackage{parskip} %para que haga el indent al principio de cada parrafo
@@ -21,30 +20,29 @@
 
 \hypersetup{urlcolor=blue, colorlinks=true}  % Colours hyperlinks in blue, but this can be distracting if there are many links.
 
-%% ----------------------------------------------------------------
-\begin{document}
 
 %Abreviaciones de comandos y nuevos comandos.
+\newcommand {\absq}[1] {\left| #1 \right|^2}
+
 \def\la{\langle}
 \def\ra{\rangle}
-\def\beq{\begin{equation}}
-\def\eeq{\end{equation}}
-\def\beqa{\begin{eqnarray}}
-\def\eeqa{\end{eqnarray}}
+% \def\beq{\begin{equation}}
+% \def\eeq{\end{equation}}
+% \def\beqa{\begin{eqnarray}}
+% \def\eeqa{\end{eqnarray}}
 \def\blankpage{
 \newpage
 \begin{equation}
-\nonumber
+  \nonumber
 \end{equation}
 \newpage}
 \def\ssst{\scriptscriptstyle}   %%para hacer más pequeñas algunas ecuaciones
 
-\newcommand{\beqas}{\begin{eqnarray*}}
-\newcommand{\eeqas}{\end{eqnarray*}}
-\newcommand {\fexp} [1] {\exp \left( #1 \right)}
-\newcommand {\fabs}[1] {\left| #1 \right|}
-\newcommand{\cR}{{\cal{R}}}
-\newcommand{\new}[1]{{\it #1}}
+
+%% ----------------------------------------------------------------
+\begin{document}
+
+
 
 \frontmatter	  % Begin Roman style (i, ii, iii, iv...) page numbering
 
@@ -102,7 +100,7 @@
 \textit{``Insert deep/meaningful/clever quote by someone who you admire or hate''}
 
 \begin{flushright}
-Someone who you admire or hate
+  Someone who you admire or hate
 \end{flushright}
 
 \vfill\vfill\vfill\vfill\vfill\vfill\null
@@ -184,8 +182,9 @@ Do not forget about the people that has been by your side and supported you.
 \input{./Chapters/ChapterSymAndInvariants} %Invariants om non-h Hamiltonians
 \input{./Chapters/ChapterRealEigenValues} %complex plane symmetries of nh Hamiltonians
 \input{./Chapters/ChapterDiscreteNNSymmetries} %Discrete Hamiltonian symmetries
+\input{./Chapters/ChapterPhysicalImplementation} %Physical Implementation
 
-\input{./Chapters/ChapterLocalRectification} %Rectification chain of Ions
+\input{./Chapters/ChapterLocalRectification} %Rectification with local impurity
 \input{./Chapters/RectificationChainOfIons} %Rectification chain of Ions
 \input{./Chapters/ChapterToyModel} %Rectification Toy Model
 

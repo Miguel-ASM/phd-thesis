@@ -116,7 +116,7 @@ We choose a simple form of the Hamiltonian in
 %(\ref{IH})
 which each atom is subjected to a harmonic on-site potential and a Morse interaction potential between nearest neighbors (see fig. \ref{figure1}, dashed lines),
 %
-\beqa
+\begin{eqnarray}
 \label{HO}
 %HO=Harmonic oscillator
 U_i(x_i)&=&{1 \over 2} m \omega^2 x^2_i,
@@ -126,16 +126,16 @@ U_i(x_i)&=&{1 \over 2} m \omega^2 x^2_i,
 \label{IH}
 %IP=Interaction potential
 V_i(x_{i-1},x_i)&=&D\left \{e^{-\alpha [x_i-x_{i-1}]}-1\right \}^2,
-\eeqa
+\end{eqnarray}
 %
 where $\omega$ is the trapping angular frequency, and $D$ and $\alpha$ are time independent parameters of the Morse potential.
 A ``minimalist version'' of the model where $V$ becomes the harmonic limit of eq. (\ref{IH}), dotted line in fig. 1,
  will also be considered in the final discussion,
 %
-\beq
+\begin{equation}
 \label{Vhar}
 {V}_i(x_{i-1},x_i)=k(x_i-x_{i-1})^2/2,\;k=2D\alpha^2.
-\eeq
+\end{equation}
 %
 For convenience, dimensionless units are used and the mass of all particles is set to unity.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -203,13 +203,13 @@ we modify the potentials for site $j=N/2+1$ with $N$ even, as
 %\end{equation}
 %with $y_{d}=y_{d,0}-a/3$.  Written in terms of the displacements, $x_j$,
 %
-\beqa
+\begin{eqnarray}
 \label{IMP}
 %IMP=impurity
 U_j(x_j,t)&=&d e^{-b [x_j(t)+a/3]},
 \\
 V_j(x_{j-1},x_j,t)&=&ge^{-\gamma [x_j(t)-x_{j-1}(t)+a/2]}.
-\eeqa
+\end{eqnarray}
 %
 All the parameters involved, $d, b$, and $g,\gamma$ are time independent. In fig. \ref{figure1} the modifications introduced with respect to the ordinary sites are shown (solid lines).  The different on-site and interaction terms introduce soft-wall potentials
 (instead of hard-walls to aid integrating the dynamical equations) that make it difficult for the impurity to transmit its excitation to the left whereas left-to-right transmission is still possible.
