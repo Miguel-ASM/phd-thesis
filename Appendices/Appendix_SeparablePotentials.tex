@@ -1,0 +1,94 @@
+%%!TEX root = ../Thesis.tex
+
+\chapter{Properties of separable potentials}
+\label{Appendix:SeparablePotentials}
+\lhead{Appendix C. \emph{Properties of separable potentials}}
+
+\section{Transition operator}
+\label{Appendix:SeparablePotentials_TransitionOperator}
+%%%%%%%%%%%%%%%%%
+ For a separable potential $V=V_0 \ketbra{\phi}{\chi}$, the transition operator becomes
+\begin{eqnarray}
+T_{op}=\alpha \ketbra{\phi}{\chi}
+\end{eqnarray}
+where $\alpha=V_{0}+V_{0}^{2}\bra{\chi}G(E)\ket{\phi}$. Then using the Lippmann-Schwinger equation we get that
+%
+\begin{eqnarray}
+T_{op}(E)&=&V+VG_{0}(E)T_{op}(E)
+\nonumber \\
+&=& \left[V_{0}+\alpha V_{0} \bra{\chi}G_{0}(E)\ket{\phi}\right]\ketbra{\phi}{\chi}
+\end{eqnarray}
+%
+where $G_{0}(E)=(E-H_{0})^{-1}$ is the Green's operator for free motion. Solving for $\alpha$ now gives
+%
+\begin{eqnarray}
+\alpha =\frac{V_{0}}{1-V_{0} \bra{\chi}G_{0}(E)\ket{\phi}}
+		   =\frac{V_{0}}{1-V_{0} Q_{0}(E)}.
+\end{eqnarray}
+%
+%%%%%%%%%%%%%%%%%
+%
+%
+%
+%
+\section{$S$-matrix eigenvalues}
+%
+%
+%
+%
+The eigenvalues for the S-matrix are given by Eq. \eqref{Sform} in terms of the reflection and transmission amplitudes. For a separable potential, using Eq. \eqref{art}, we can simplify the transmission and reflection coefficients as
+\begin{eqnarray}
+T^{l}&=&1-\frac{2 \pi i m}{p} \alpha \phi(p) \chi^{*}(p),
+\nonumber \\
+T^{r}&=&1-\frac{2 \pi i m}{p} \alpha \phi(-p) \chi^{*}(-p),
+\nonumber \\
+R^{l}&=&-\frac{2 \pi i m}{p} \alpha \phi(-p) \chi^{*}(p),
+\nonumber \\
+R^{r}&=&-\frac{2 \pi i m}{p} \alpha \phi(p) \chi^{*}(-p).
+\nonumber \\
+\end{eqnarray}
+%
+If we now define
+%
+\begin{equation}
+\Gamma=\frac{2 \pi i m}{p} \alpha \left[\phi(p) \chi^{*}(p)+\phi(-p) \chi^{*}(-p)\right],
+\end{equation}
+%
+we can write the eigenvalues as simply
+%
+\begin{eqnarray}
+S_{j}&=&1-\frac{\Gamma-(-1)^{j}\Gamma}{2}.
+\end{eqnarray}
+%
+Note that $S_2=1$ for all $p$. Clearly the following relation must also always hold for the reflection and transmission amplitudes,
+%
+\begin{equation}
+T^l + T^r - T^l T^r + R^l R^r = 1.
+\end{equation}
+%
+%
+%
+%
+%
+%
+%
+%
+\section{Uniqueness of bound state}
+%
+A separable potential  can only have at most one bound state $\ket{\psi_{E}}$.
+In momentum representation,
+%
+\begin{eqnarray}
+\braket{p}{\psi_{E}}&=&\bra{p}\frac{V_{0}}{E-H_{0}}\ket{\phi}\braket{\chi}{\psi_{E}}
+\nonumber \\
+&=&\frac{M}{p^{2}-q_{B}^{2}}\braket{p}{\phi},
+\end{eqnarray}
+%
+where $M=-2 m V_{0} \braket{\chi}{\psi_{E}}$ and $q_{B}^2=2 m E<0$. Suppose there is a second bound state $\ket{\psi_{E'}}$,
+with corresponding quantities $M'$ and $q_{B'}^2$. Then,
+%
+\begin{eqnarray}
+\braket{\psi_{E'}}{\psi_{E}}&=&M M' \int_{-\infty}^\infty dp \left|\braket{p}{\phi}\right| \frac{1}{p^{2}-q_{B}^{2}}\frac{1}{p^{2}-q_{B'}^{2}}. \nonumber \\		\end{eqnarray}
+%
+Since $MM'\ne 0$ and the integral is positive the overlap cannot be zero
+so there cannot be two bound states.

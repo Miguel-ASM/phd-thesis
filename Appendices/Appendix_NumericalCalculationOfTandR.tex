@@ -1,0 +1,362 @@
+%%!TEX root = ../Thesis.tex
+
+\chapter{Numerical calculation of transmission and reflection coefficients}
+\label{Appendix:NumericalCalculationOfTandR}
+\lhead{Appendix D. \emph{Numerical calculation of transmission and reflection coefficients}}
+
+%
+
+Here we will discuss how to numerically solve  the
+stationary Schr\"odinger equation for the two-level system
+by the invariant imbedding method \cite{Singer1982,Band1994}.
+%
+
+%
+Let the potential ${\cal V}(x)$ be non-zero in the region $-d < x < d$.
+We  introduce the following dimensionless variables: $\bar k = (2mE)^{1/2}2d/\hbar$, $\bar x = x/(2d) + 1/2$,
+$\bar\Omega (\bar x)= (4md^2/\hbar) \Omega(x)$ and $\bar\Gamma = (4md^2/\hbar) (\gamma-2i\Delta)$.
+%
+%
+The non-Hermitian dimensionless Hamiltonian for the system takes the form
+%
+\begin{eqnarray}
+	\bar {\cal H}&=& \bar {\cal H}_{0}+\bar {\cal V}(\bar x), \\
+	\bar {\cal H}_{0}&=&- \frac{\partial^2 }{\partial {\bar x}^2}+\left(\begin{array}{cc}
+	0 & 0 \\
+	0 & -i\bar\Gamma
+	\end{array}\right), \\
+	\bar {\cal V}(\bar x)&=& \left(\begin{array}{cc}
+	0 & \bar\Omega (\bar x)\\
+	\bar\Omega (\bar x)^{*} & 0
+	\end{array}\right).
+\end{eqnarray}
+%
+To set the matrices we use as in the main text the convention for internal states $\ket{1} = \left(\begin{smallmatrix}1\\0\end{smallmatrix}\right)$ and $\ket{2} = \left(\begin{smallmatrix}0\\1\end{smallmatrix}\right)$.
+%
+To simplify the notation, we will from now on drop the bars above variables and operators for the remaining part of this section A.
+The corresponding stationary Schr\"odinger equation is now
+%
+\begin{eqnarray}
+	k^{2} \psi^{(1)}(x)&=&-\frac{\partial^2}{\partial x^2}\psi^{(1)}(x)+\Omega(x) \psi^{(2)}(x),
+	\nonumber \\
+	k^{2} \psi^{(2)}(x)&=&-\frac{\partial^2}{\partial x^2}\psi^{(2)}(x)+\Omega(x)^* \psi_{1}(x)-i \Gamma \psi^{(2)}(x).
+	\nonumber
+\end{eqnarray}
+%
+Let us denote as  $|{\Psi}_\alpha(x)\ra$  the wave vector for the atom impinging in internal level $\alpha$, $\alpha=1,2$.
+This vector has ground and excited state components, generically $\braket{\beta}{\psi_{\alpha}(x)}$, $\beta=1,2$, which are still functions of $x$.
+We can define the matrices $F(x)$ and $\widetilde{F}(x)$ as
+%
+\begin{eqnarray}
+	F_{\beta,\alpha} (x) = \braket{\beta}{\psi_{\alpha}(x)},
+	\quad
+	\widetilde{F}_{\beta,\alpha} (x) = \braket{\beta}{\widetilde{\psi}_{\alpha}(x)},
+\end{eqnarray}
+%
+so the stationary Schr\"odinger equation can be rewritten as
+%
+\begin{eqnarray}
+	\left[k^2-{\cal H}_{0}-{\cal V}(x)\right]F(x)&=&0,
+	\nonumber\\
+	\left[k^2-{\cal H}_{0}-{\cal V}(x)\right]\widetilde{F}(x)&=&0.
+\end{eqnarray}
+%
+
+\section{Free motion, ${\cal V}=0$}
+%
+%
+When ${\cal V}(x)=0$ we get
+%
+\begin{eqnarray}
+	\left[k^2-{\cal H}_{0}\right]\ket{\psi_{\alpha}(x)}&=&0,
+	\nonumber\\
+	\left[k^2-{\cal H}_{0}\right]\ket{\widetilde{\psi}_{\alpha}(x)}&=&0,
+\end{eqnarray}
+%
+for $\alpha=1,2$.
+We can write down the solutions for particles ``coming'' from the left $\ket{\psi_{\alpha}(x)}$ in  internal state $\ket{\alpha}$ as
+%
+\begin{eqnarray}
+	\ket{\psi_{1}(x)} = \left(\begin{array}{c}
+	\frac{1}{\sqrt{k}} e^{i k x}\\
+	0
+	\end{array}\right)\!,
+	\,
+	\ket{\psi_{2}(x)} = \left(\!\!\begin{array}{c}
+	0\\
+	\frac{1}{\sqrt[4]{k^2+i \Gamma}} e^{i \sqrt{k^2+i \Gamma}x}
+	\end{array}\!\!\right)\!,
+	\nonumber
+\end{eqnarray}
+%
+where we assume the branch $\operatorname{Im} \sqrt{k^2+i \Gamma}\ge 0$.
+$\ket{\psi_2(x)}$ is a regular traveling wave only for real $\sqrt{k^2+i\Gamma})$. If the square root has an imaginary part,  $\ket{\psi_2(x)}$  decays  from left to right.
+%
+The solutions for incidence from the right  $\ket{\widetilde{\psi}_{\alpha}(x)}$ in internal state $\ket{\alpha}$ are similarly
+%
+\begin{eqnarray}
+	\ket{\widetilde{\psi}_{1}(x)} = \left(\!\begin{array}{c}
+	\frac{1}{\sqrt{k}} e^{-i k x}\\
+	0
+	\end{array}\!\right)\!,
+	\ket{\widetilde{\psi}_{2}(x)} = \left(\!\!\begin{array}{c}
+	0\\
+	\frac{1}{\sqrt[4]{k^2+i \Gamma}} e^{-i \sqrt{k^2+i \Gamma}x}
+	\end{array}\!\!\right)\!.
+	\nonumber
+\end{eqnarray}
+%
+The normalization is chosen in such a way that the dimensionless probability current
+is constant (and equal) for all solutions with real $\sqrt{k^2+i\Gamma}$.
+
+
+The solutions are given by $F(x) = h_+ (x)$ and $\widetilde F (x) = h_- (x)$, where
+%
+\begin{equation}
+	h_{\pm}(x)=\left(\begin{array}{cc}
+	\frac{1}{\sqrt{k}}e^{\pm i k x} & 0\\
+	0 & \frac{1}{\sqrt[4]{k^2+i \Gamma}} e^{\pm i \sqrt{k^2+i \Gamma} x} \\
+	\end{array}\right).
+\end{equation}
+%
+The Wronskian is $W(h_{+},h_{-})(x)=2i$ so that these are linearly independent solutions.
+
+
+\section{General case}
+To solve the general case, we construct the Green's function defined by
+%
+\begin{equation}
+	(k^2-{\cal H}_{0})G_{0}(x,x')=\delta(x-x')\mathbf{1}.
+\end{equation}
+%
+It is given by
+%
+\begin{eqnarray}
+	G_{0}(x,x')&=&W^{-1} \begin{cases}
+	h_{+}(x)h_{-}(x')  & x>x' , \\ h_{+}(x')h_{-}(x) & x'>x ,
+	\end{cases} \\
+	&=& -\frac{i}{2} \left(\!\begin{array}{cc}
+	\frac{1}{k}e^{ i k \abs{x-x'}} & 0\\
+	0 & \frac{e^{ i \sqrt{k^2+i \Gamma} \abs{x-x'}}}{\sqrt{k^2+i \Gamma}} \\
+	\end{array}\!\right). \nonumber
+\end{eqnarray}
+%
+The Green's function allows us to solve for   $F(x)$ and $\widetilde{F}(x)$ in integral form,
+%
+\begin{eqnarray}
+	F(x)=h_{+}(x)+\int_{-\infty}^{\infty} dx' G_{0}(x,x') {\cal V}(x') F(x'),
+	\nonumber\\
+	\widetilde{F}(x)=h_{-}(x)+\int_{-\infty}^{\infty} dx' G_{0}(x,x') {\cal V}(x') \widetilde{F}(x').
+	\label{eqf}
+\end{eqnarray}
+
+
+\section{Asymptotic form of the solutions}
+%
+From Eq. \eqref{eqf} we find the following asymptotic forms of  $F(x)$ and $\widetilde{F}(x)$:
+%
+\begin{eqnarray}
+	F_{\eta}(x)&=& \begin{cases}
+	h_{+}(x)+h_{-}(x)R  & x<0  \\ h_{+}(x)T & x>1
+	\end{cases},
+	\nonumber\\
+	\widetilde{F}_{\eta}(x)&=&\begin{cases}
+	h_{-}(x)\widetilde{T}  &  x<0  \\ h_{-}(x)+h_{+}(x)\widetilde{R} & x>1
+	\end{cases},
+\end{eqnarray}
+%
+where the $R$ and $T$ matrices for incidence from the left are given by
+%
+\begin{eqnarray}
+	R &=& W^{-1}\int_{0}^{1} dx' h_{+}(x'){\cal V}(x')F (x'),
+	\nonumber\\
+	T &=& \mathbf{1}+W^{-1}\int_{0}^{1} dx' h_{-}(x'){\cal V}(x')F (x'),
+\end{eqnarray}
+%
+whereas, for right incidence,
+%
+\begin{eqnarray}
+	\widetilde{R} &=& W^{-1}\int_{0}^{\eta} dx' h_{-}(x'){\cal V}(x')\widetilde{F}_{\eta}(x'),
+	\nonumber\\
+	\widetilde{T} &=& \mathbf{1}+W^{-1}\int_{0}^{\eta} dx' h_{+}(x'){\cal V}(x')\widetilde{F}_{\eta}(x').
+\end{eqnarray}
+%
+In particular, for left incidence  in the ground-state, we get  if $x < 0$,
+%
+\begin{eqnarray}
+	\hspace*{-.5cm}|\psi_1 (x)\ra = \left(\!\!\begin{array}{c} \frac{1}{\sqrt{k}}e^{i k x} \\ 0\end{array}\!\!\right)
+	+ \left(\!\!\begin{array}{c}
+	R_{1,1} \frac{1}{\sqrt{k}}e^{-i k x} \\
+	R_{2,1} \frac{1}{\sqrt[4]{k^2+i \Gamma}} e^{- i \sqrt{k^2+i \Gamma} x}
+	\end{array}\!\!\right)\!,
+	\label{as-}
+\end{eqnarray}
+%
+and, if $x>1$,
+%
+\begin{eqnarray}
+	|\psi_1 (x)\ra = \left(\begin{array}{c}
+	T_{1,1} \frac{1}{\sqrt{k}}e^{i k x} \\
+	T_{2,1} \frac{1}{\sqrt[4]{k^2+i \Gamma}} e^{i \sqrt{k^2+i \Gamma} x}
+	\end{array}\right).
+	\label{as+}
+\end{eqnarray}
+%
+When $\sqrt{k^2+i \Gamma}$ is real, the elements of $T$ and $R$ in Eqs. \eqref{as-} and \eqref{as+}
+are transmission and reflection amplitudes for waves traveling away from the interaction region.
+However when  ${\rm Im}\sqrt{k^2+i \Gamma}>0$ the waves for the excited state $2$ are evanescent.
+In scattering theory parlance the channel is ``closed'', so  the $T_{2,1}$ and $R_{2,1}$ are just proportionality factors
+rather than proper transmission
+and reflection amplitudes for travelling waves. By continuity however, it is customary to keep the same notation
+and even terminology for closed or open channels.
+
+
+In a similar way, for right incidence in the ground state and
+$x > 1$,
+%
+\begin{eqnarray}
+	\hspace*{-.5cm}|\widetilde\psi_1 (x)\ra = \left(\!\!\begin{array}{c} \frac{1}{\sqrt{k}}e^{-i k x} \\ 0\end{array}\!\!\right)
+	\!+\! \left(\!\!\begin{array}{c}
+	\widetilde R_{1,1} \frac{1}{\sqrt{k}}e^{i k x}
+	\\
+	\widetilde R_{2,1} \frac{1}{\sqrt[4]{k^2+i \Gamma}} e^{i \sqrt{k^2+i \Gamma} x}
+	\end{array}\!\!\right)\!\!,
+\end{eqnarray}
+%
+whereas, for $x<0$,
+%
+\begin{eqnarray}
+	|\widetilde \psi_1 (x)\ra = \left(\begin{array}{c}
+	\widetilde T_{1,1} \frac{1}{\sqrt{k}}e^{-i k x} \\
+	\widetilde T_{2,1} \frac{1}{\sqrt[4]{k^2+i \Gamma}} e^{-i \sqrt{k^2+i \Gamma} x}
+	\end{array}\right).
+\end{eqnarray}
+%
+Note that alternative definitions of the amplitudes may be found in many works,
+without momentum prefactors.
+
+The amplitudes relevant for the main text are $T^l=T_{1,1}$,
+$T^r=\widetilde{T}_{1,1}$, $R^l=R_{1,1}$, and $R^r=\widetilde{R}_{1,1}$.  The following
+subsection explains how to compute them.
+
+
+\section{Differential equations for $R$ and $T$ matrices}
+To solve for $R$ and $T$ we will use cut-off versions of the  potential,
+%
+
+\begin{equation}
+	{\cal V}_{\eta} (x) =\begin{cases}
+	{\cal V}(x)  & 0\leq x \leq \eta , \\ 0& \text{Otherwise}
+	\end{cases},
+\end{equation}
+%
+where $0 \le \eta \le 1$, and corresponding matrices
+%
+%
+\begin{eqnarray}
+	R_{\eta}&=& W^{-1}\int_{0}^{\eta} dx' h_{+}(x'){\cal V}(x')F_{\eta}(x'),
+	\nonumber\\
+	T_{\eta}&=& \mathbf{1}+W^{-1}\int_{0}^{\eta} dx' h_{-}(x'){\cal V}(x')F_{\eta}(x'),
+	\nonumber\\
+	%
+	\widetilde{R}_{\eta} &=& W^{-1}\int_{0}^{\eta} dx' h_{-}(x'){\cal V}(x')\widetilde{F}_{\eta}(x'),
+	\nonumber\\
+	\widetilde{T}_{\eta} &=& \mathbf{1}+W^{-1}\int_{0}^{\eta} dx' h_{+}(x'){\cal V}(x')\widetilde{F}_{\eta}(x').
+\end{eqnarray}
+%
+Taking the derivative of these matrices with respect to $\eta$,
+we find a set
+of four coupled differential equations,
+%
+\begin{eqnarray}
+	\frac{d R_{\eta}}{d \eta}&=& W^{-1} \widetilde{T}_{\eta} h_{+}(\eta){\cal V}(\eta)h_{+}(\eta)T_{\eta}, \\
+	\frac{d T_{\eta}}{d \eta}&=& W^{-1} \left[h_{-}(\eta)+\widetilde{R}_{\eta}h_{+}(\eta)\right]{\cal V}(\eta)h_{+}(\eta)T_{\eta},\\
+	\frac{d \widetilde{R}_{\eta}}{d \eta}&=& W^{-1}\!\!\left[h_{-}(\eta)\!+\!\widetilde{R}_{\eta}h_{+}(\eta)\right]\!{\cal V}(\eta)\!\left[h_{-}(\eta)\!+\!h_{+}(\eta)\widetilde{R}_{\eta}\right]\!, \nonumber\\
+	\label{a20a}\\
+	\frac{d \widetilde{T}_{\eta}}{d \eta}&=& W^{-1} \widetilde{T}_{\eta} h_{+}(\eta){\cal V}(\eta)\left[h_{-}(\eta)+h_{+}(\eta)\widetilde{R}_{\eta}\right].
+	\label{a20b}
+\end{eqnarray}
+%
+The initial conditions are $R_{0} = \widetilde{R}_{0}=0$ and $T_{0} = \widetilde{T}_{0}=\mathbf{1}$.
+
+
+\section{Improving numerical efficiency}
+%
+{The equations \eqref{a20a} and \eqref{a20b}} involve only  matrices for incidence from the right, they  do not couple to any left-incidence matrix, whereas the equations for left incidence
+amplitudes involve couplings with amplitudes for right incidence. This asymmetry is due to the way we do the potential slicing. The asymmetry  is not ``fundamental''
+but we can use it for our advantage to simplify calculations. We can solve equations \eqref{a20a} and \eqref{a20b} to get amplitudes for right incidence.
+To get amplitudes for left incidence we use a mirror image of the potential and solve also these two equations.
+Thus it is enough to find an efficient numerical method to solve equations \eqref{a20a} and \eqref{a20b}.
+In principle, one can now solve these differential equations from $\eta=0$ to $1$ to get all reflection and transmission amplitudes using the boundary conditions $\widetilde{R}_{0}=0$ and $\widetilde{T}_{0}=\mathbf{1}$. However due to the exponential nature of the
+free-space solutions $h_{\pm}(x)$ especially if ${\rm Im}\sqrt{k^2+i \Gamma}>0$, this is not very efficient numerically.
+
+To avoid this problem we make new definitions,
+%
+\begin{eqnarray}
+	\hat{S}_{\eta}&=&\mathbf{1}+h_{+}(\eta)\widetilde{R}_{\eta}h_{-}^{-1}(\eta),
+	\nonumber\\
+	\hat{T}_{\eta}&=&h_{+}(0)\widetilde{T}_{\eta}h_{-}^{-1}(\eta),
+	\nonumber\\
+	\hat{\cal V}(\eta)&=&W^{-1}h_{+}^{2}(0){\cal V}(\eta),
+	\nonumber\\
+	\hat{Q}&=&i h_{+}^{-2}(0).
+\end{eqnarray}
+%
+Rewriting {the equations \eqref{a20a} and \eqref{a20b}} in terms of these new variables we get
+%
+\begin{eqnarray}
+	\frac{d \hat{S}_{\eta}}{d \eta}&=&-2 \hat{Q}+\hat{Q}\hat{S}_{\eta}+\hat{S}_{\eta}\left[\hat{Q}+\hat{\cal V}(\eta)\hat{S}_{\eta}\right],
+	\nonumber\\
+	\frac{d \hat{T}_{\eta}}{d \eta}&=& \hat{T}_{\eta}\left[\hat{Q}+\hat{\cal V}(\eta)\hat{S}_{\eta}\right],
+\end{eqnarray}
+%
+with initial conditions $\hat{T}_{0} =\hat{S}_{0}=\mathbf{1}$.
+
+Let us consider solely incidence in the ground state. For right incidence in the ground state,
+the reflection coefficients and transmission coefficient are
+%
+\begin{eqnarray}
+	\widetilde R_{1,1} &=& e^{-2ik} \left[(\hat S_{\eta=1})_{1,1} - 1 \right],
+	\nonumber\\
+	\widetilde R_{2,1} &=&
+	\frac{\sqrt[4]{k^2+i \Gamma}}{\sqrt{k}} e^{-ik-i\sqrt{k^2+i \Gamma}} (\hat S_{\eta=1})_{2,1},
+	\nonumber\\
+	\widetilde T_{1,1} &=& e^{-i k} (\hat T_{\eta=1})_{1,1},
+	\nonumber\\
+	\widetilde T_{2,1} &=& \frac{\sqrt[4]{k^2+i \Gamma}}{\sqrt{k}} e^{-i k} (\hat T_{\eta=1})_{2,1}.
+\end{eqnarray}
+\vspace*{1cm}
+
+
+\section{Bounds from unitarity}
+%
+The $S$-matrix
+%
+\begin{equation}
+	S=\left(\begin{array}{cccc}
+	T_{11}&T_{12}&\widetilde R_{11}&\widetilde R_{12}
+	\\
+	T_{21}&T_{22}&\widetilde R_{21}&\widetilde R_{22}
+	\\
+	R_{11}&R_{12}&\widetilde T_{11}&\widetilde T_{12}
+	\\
+	R_{21}&R_{22}&\widetilde T_{21}&\widetilde T_{22}
+	\end{array}\right)
+\end{equation}
+%
+is unitary for Hermitian Hamiltonians,  in particular when $\gamma=0$.
+Unitarity implies relations among the matrix elements and in particular
+%
+\begin{eqnarray}
+	1&\ge& |R_{11} |^2+|T_{11} |^2,\label{a28}
+	\\
+	1&\ge& |\widetilde R_{11}|^2+|\widetilde T_{11}|^2, \label{a29}
+	\\
+	1&\ge& |\widetilde R_{11} |^2+|T_{11} |^2,
+	\label{a30}\\
+	1&\ge& |R_{11} |^2+|\widetilde T_{11}|^2.\label{a31}
+\end{eqnarray}
+%
+While the first two equations \eqref{a28} and \eqref{a29} are rather obvious because of  probability conservation, the last two equations
+\eqref{a30} and \eqref{a31} are less so, and
+set physical  limits to the possible asymmetric devices that can be constructed in the ground state subspace.

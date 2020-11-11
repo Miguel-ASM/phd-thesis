@@ -1,0 +1,168 @@
+%%!TEX root = ../Thesis.tex
+
+\chapter{Review of scattering theory formalism}
+\label{Appendix:ScattFormalism}
+\lhead{Appendix A. \emph{Review of scattering theory formalism}}
+
+%
+A detailed overview of scattering theory can be found in \cite{Taylor1972} and its extension to NH systems in \cite{Muga2004}. Scattering theory describes the interaction of an incoming wave packet with a localized potential. In general, the spectrum of scattering Hamiltonians (as defined at the beginning of section \ref{sec:SymTheory}) has both a discrete part and a continuum with real, positive energies.
+%It is precisely this continuous part of the spectrum which is relevant for scattering since the incoming wave packets do not overlap with the eigenstates of the discrete spectrum.
+The eigenstates of the continuous spectrum are constructed by the action on plane waves of the M\"oller operators
+$\ket{p^\pm}=\Omega_\pm \ket{p}$ and $\ket{\widehat{p}^\pm}=\widehat{\Omega}_\pm \ket{p}$,
+where
+%onCentral The eigenstates of the continuum may be found by applying are connected to the M\"oller operators, which are defined as
+%
+\begin{eqnarray}
+    \Omega_+ &=& \lim_{t \to -\infty}e^{i H t / \hbar}e^{-i H_0 t/ \hbar},\nonumber\\
+    \Omega_- &=& \lim_{t \to \infty}e^{i H^\dagger t/ \hbar}e^{-i H_0 t/ \hbar},\nonumber\\
+    \widehat{\Omega}_+ &=& \lim_{t \to -\infty}e^{i H^\dagger t/ \hbar}e^{-i H_0 t/ \hbar},\nonumber\\
+    \widehat{\Omega}_- &=& \lim_{t \to \infty}e^{i H t/ \hbar}e^{-i H_0 t/ \hbar},
+\end{eqnarray}
+%
+and a regularization of the limit is implied, see e.g. \cite{Muga2004}.
+The M\"oller operators satisfy the isometry relation $\widehat{\Omega}_{\pm}^\dagger\Omega_{\pm} = 1$ and the interwining relations $H \Omega_+ = \Omega_+ H_0$ and $H^\dagger \Omega_- = \Omega_- H_0$.
+%The eigenstates of the continuous spectrum are constructed by the action of the M\"oller operators on the eigenstates of momentum operator, .
+By using the intertwining relations, it is easy to see that $\ket{p^+}$ and $\ket{\widehat{p}^-}$ are right eigenvectors of $H$ while $\ket{\widehat{p}^+}$ and $\ket{p^-}$ are left eigenvectors of $H$, all with positive energy $E_p = p^2/2m$. In the following we will assume that the Hamiltonian admits a basis of biorthonormal
+right/left eigenstates $\left\{ \ket{\psi_n} , \ket{\phi_a} \right\}$ with energies $E_n$ satisfying $\braket{\phi_n}{\psi_m} = \delta_{n,m}$ for the discrete part. The stationary scattering states are also biorthonormal, i.e. $\braket{\widehat{p}^+}{q^+} = \braket{\widehat{p}^-}{q^-} = \delta (p-q)$ and together with the eigenstates of the discrete spectrum they give the resolution of the identity
+%
+\begin{eqnarray}
+    1 &=& \sum_{n}\ketbra{\psi_n}{\phi_n} + \int_{-\infty}^{\infty} dp\, \ketbra{p^+}{\widehat{p}^+}
+    \nonumber\\
+    &=& \sum_{n}\ketbra{\psi_n}{\phi_n} + \int_{-\infty}^{\infty} dp\, \ketbra{\widehat{p}^-}{p^-}.
+    \label{eq:identity}
+\end{eqnarray}
+%
+There is no degeneracy in the discrete spectrum of one-dimensional systems, whereas the continuum is doubly degenerate,
+e.g. with continuum eigenfunctions incident from the right or the left.  We shall explicitly make use of this property in what follows. Using the resolution of the identity in terms of discrete eigenstates and the stationary scattering states, the Hamiltonian can be expanded as
+%
+\begin{equation}
+    H = \sum_{n}E_n\ketbra{\psi_n}{\phi_n} + \frac{1}{2m}\int_{-\infty}^{\infty} dp\,p^2 \ketbra{p^+}{\widehat{p}^+}.
+    \label{eq:H_Expansion_Continuous}
+\end{equation}
+%
+We call the first and the second terms of \eqref{eq:H_Expansion_Continuous} the discrete, $H_d$, and continuous, $H_c$, parts of the Hamiltonian respectively. A central object is the scattering operator (or matrix), $S \equiv \Omega_-^\dagger \Omega_+$ for scattering processes by $H$ and $\widehat{S} \equiv \widehat{\Omega}_-^\dagger \widehat{\Omega}_+$ for $H^\dagger$. Unhatted quantities refer to scattering by $H$, while hatted ( $\widehat{\;}$ ) quantities refer to scattering by its Hermitian conjugate $H^\dagger$. The scattering operator gives the probability of an incident state $\ket{\psi_{in}}$ to be scattered (by $H$ or $H ^\dagger$) into a state $\ket{\psi_{out}}$ as $\left|\bra{\psi_{out}} S \ket{\psi_{in}}\right|^2$ or $\left|\bra{\psi_{out}} \widehat{S} \ket{\psi_{in}}\right|^2$. Although the scattering operator is not unitary for NH Hamiltonians, $S$ and $\widehat{S}$ obey the generalized unitarity relations $\widehat{S}^\dagger S = S\widehat{S}^\dagger= 1$ which collapses to the usual unitarity condition ($S = \widehat{S}$) if $H = H^\dagger$. If the Hamiltonian is symmetric or pseudohermitian with respect to a linear/antilinear operator $A$, the M\"oller and scattering operators transform according to the intertwining relations in Table \ref{tab:MollerOperatorSyms}. The intertwining relations of the M\"oller operators give the transformation rules for scattering states under $A$ and provide interesting relations between the different transmission/reflection coefficients.
+
+\begin{table}
+  \centering
+  \begin{tabular}{|c|c|c|}
+  \hline
+   & \textbf{$A$ linear} & \textbf{$A$ antilinear}
+
+  \\
+  \hline
+
+  $A H = H A$
+  &
+  $
+  \begin{array}{ccc}
+    &&
+    \\
+    A \Omega_{\pm}&=&\Omega_{\pm} A
+    \\
+    A S&=&S A
+    \\
+    &&
+  \end{array}
+  $
+  &
+  $
+  \begin{array}{ccc}
+    &&
+    \\
+    A \Omega_{\pm}&=&\widehat{\Omega}_{\mp} A
+    \\
+    A S&=&\widehat{S}^\dagger A
+    \\
+    &&
+  \end{array}
+  $
+  \\
+  \hline
+
+  $A H = H^\dagger A$
+  &
+  $
+  \begin{array}{ccc}
+    &&
+    \\
+    A \Omega_{\pm}&=&\widehat{\Omega}_{\pm} A
+    \\
+    A S&=&\widehat{S} A
+    \\
+    &&
+  \end{array}
+  $
+  &
+  $
+  \begin{array}{ccc}
+    &&
+    \\
+    A \Omega_{\pm}&=&\Omega_{\mp} A
+    \\
+    A S&=&S^\dagger A
+    \\
+    &&
+  \end{array}
+  $
+  \\
+  \hline
+  \end{tabular}
+  \caption{Transformation rules of the M\"oller and scattering operators under
+%symmetries/pseudo-symmetries
+symmetries with linear or antilinear operators.}
+   \label{tab:MollerOperatorSyms}
+\end{table}
+
+Also relevant to scattering theory is the transition operator, which is defined as
+%
+\begin{eqnarray}
+T_{op}(E)=V+VG(E)V
+\end{eqnarray}
+%
+where $G(E)=(E-H)^{-1}$ is Green's operator. The transition operator satisfies $T^{\dagger}_{op}(z)=\widehat{T}_{op}(z^*)$ and its matrix elements in momentum representation are related to the  scattering operator by
+%
+\begin{equation}
+    \bra{p} S \ket{p'} = \delta (p-p') -2 i \pi \delta (E_p-E_{p'}) \bra{p}T_{op}(+)\ket{p'},
+    \label{eq:SmatrixElements}
+\end{equation}
+%
+where  $T_{op}(\pm)|p'\ra=\lim_{\epsilon\to0^+} T_{op}(E_p\pm i\epsilon)|p'\ra$. This operator can then be used to define the scattering amplitudes
+for real $p$ as
+%
+\begin{eqnarray}\label{art}
+R^l(p)&=&-\frac{2\pi im}{p} \la -p|T_{op}({\rm sign}(p))|p\ra\,, \nonumber\\
+T^l(p)&=&1-\frac{2\pi im}{p} \la p|T_{op}({\rm sign}(p))|p\ra\,, \nonumber\\
+R^r(p)&=&-\frac{2\pi im}{p} \la p|T_{op}({\rm sign}(p))|-p\ra\,, \nonumber\\
+T^r(p)&=&1-\frac{2\pi im}{p} \la -p|T_{op}({\rm sign}(p))|-p\ra,
+\end{eqnarray}
+%
+where $R^{l,r}$ is the left/right reflection amplitude and $T^{l,r}$ is the left/right transmission amplitude. We assume that the amplitudes admit analytic continuations. The generalized unitarity relation of the scattering operators give the following set of equations for the amplitudes
+%
+\begin{eqnarray}
+    \widehat T^l(p) T^{l*}(p) + \widehat R^l(p) R^{l*}(p) &=& 1,
+    \nonumber\\
+    \widehat T^r(p) T^{r*}(p) + \widehat R^r(p) R^{r*}(p) &=& 1,
+    \nonumber\\
+    \hat T^{l*}(p) R^r(p) + T^r(p) \widehat R^{l*}(p) &=& 0,
+    \nonumber\\
+    T^l(p) \widehat R^{r*}(p) + \widehat T^{r*}(p) R^l(p) &=& 0,
+    \label{gurAmplitudes}
+\end{eqnarray}
+%
+where $p$ is taken to be real and nonnegative. The Dirac deltas in Eq. \eqref{eq:SmatrixElements} make clear that the $S$ matrix only connects momentum eigenstates having the same kinetic energy. Factoring out the Dirac delta of energy using $\delta(p-p') = \frac{|p|}{m}\delta(E_p-E_{p'})\delta_{pp'}$ ($\delta_{pp'}$ is to be understood as a Kronecker delta of the signs of the momenta) we can write $\bra{p} S \ket{p'} = \frac{|p|}{m}\delta(E_p-E_{p'})\bra{\mathbf{p}} \mathsf{S} \ket{\mathbf{p'}}$ in terms of the two-dimensional vectors $\ket{\mathbf{p}}\equiv (1,0)^T$ and $\ket{-\mathbf{p}}\equiv (0,1)^T$ that correspond to the states $\ket{p}$ and $\ket{-p}$ for $p > 0$
+\cite{Muga2004}. The previous relation defines the on-the-energy-shell $\mathsf{S}$ matrix as
+%
+\begin{eqnarray}
+  \bra{\mathbf{p}} \mathsf{S} \ket{\mathbf{p'}} &=& \delta_{pp'} - \frac{2i\pi m}{|p|} \la p|T_{op}(+)|p'\ra \nonumber \\
+  & \Downarrow & \\
+  \mathsf{S} &=&
+  \left(
+  \begin{array}{cc}
+    T^l(p)&R^r(p)
+    \\
+    R^l(p)&T^r(p)
+  \end{array}
+  \right)\nonumber.
+\end{eqnarray}
+%
+$\mathsf{\widehat{S}}$ can be defined similarly. The on-the-energy-shell scattering matrix $\mathsf{S}$ inherits the generalized unitarity relation of the scattering operator $S$, i.e., $\mathsf{\widehat{S}}^\dagger\mathsf{S} = \mathsf{1}$. Equation \eqref{gurAmplitudes} is just this generalized unitarity relation written for all matrix elements.

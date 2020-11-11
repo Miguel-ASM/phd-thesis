@@ -1,0 +1,256 @@
+%%!TEX root = ../Thesis.tex
+
+\chapter{Alternative formulation of $A$-pseudohermitian symmetries as ordinary (commuting) symmetries}
+\label{Appendix:AlternativeFormulationOfPseudoHermiticity}
+\lhead{Appendix B. \emph{Alternative formulation of $A$-pseudohermitian symmetries as ordinary (commuting) symmetries}}
+
+%
+
+Symmetry relations like \eqref{gs2} (for $A$ either linear or antilinear) may also be expressed as ordinary (commuting) symmetries, generalizing for scattering Hamiltonians the work in \cite{Mostafazadeh2002,Mostafazadeh2002a,Mostafazadeh2002b}. In other words, for a Hamiltonian $H$ and a linear hermitian (antilinear hermitian) operator $A$ satisfying \eqref{gs2} we can find an antilinear (linear) operator $B$ that commutes with $H$. In this appendix we explicitly construct the operators $B$ from the Hamiltonian both for $A$ linear and antilinear in the first and second sections respectively.
+
+Let us assume for now that besides $A$ (linear or antilinear) there exists an invertible and hermitian antilinear operator $\tau$ that also satisfies \eqref{gs2}. With $A$ and $\tau$ let us define the operator $B = A^{-1} \tau$ that will be antilinear (linear) for $A$ linear (antilinear). As defined, $B$ commutes with the Hamiltonian, because
+%
+\begin{eqnarray}
+    B H &=& A^{-1}\tau H \nonumber \\
+           &=& A^{-1} H^\dagger \tau \nonumber \\
+           &=& H A^{-1} \tau\nonumber \\
+           &=& H B.
+    \label{eq:HiddenSymmetry}
+\end{eqnarray}
+%
+%so $B$ represents a symmetry of the Hamiltonian in the usual sense.
+$B$ is not generally Hermitian unless $\tau$ commutes with $A^{-1}$.
+%This connection between symmetry and pseudo hermiticity  justifies taking into account equations like \eqref{gs2} since they can be translated to the usual symmetry equations implemented by commutations.
+
+The main task  to define  $B$ is to find the antilinear operator $\tau$ that satisfies \eqref{gs2}.
+This can be achieved if the eigenvectors of the Hamiltonian and its adjoint form bases of the Hilbert space that are biorthonormal.
+In \cite{Mostafazadeh2002b} the expression of $\tau$ for a discrete spectrum (with no degeneracy) is found as
+%
+\begin{equation}
+    \tau_d \ket{\zeta} = \sum_n \braket{\zeta}{\phi_n} \ket{\phi_n},
+    \label{eq:GenericTau}
+\end{equation}
+%
+where the $d$ subscript indicates that the Hamiltonian has a discrete spectrum. The action of the operator in Eq. \eqref{eq:GenericTau} on a vector in an eigenspace amounts to complex conjugation of its coordinate
+representation. $\tau_d$ is clearly antilinear, Hermitian (for antilinear operators hermicity is defined as $\braket{\chi}{\tau_d \zeta} = \braket{\zeta}{\tau_d \chi}$), and invertible. It can be checked that the relation $\tau_d H = H^\dagger \tau_d$ is satisfied.
+
+To generalize this to Hamiltonians whose spectrum includes a continuous part, we have to build an antilinear operator $\tau$ that acts in both the subspaces, ${\cal H}_d$ and ${\cal H}_c$, that are respectively spanned by the eigenfunctions associated with the discrete (point) and continuous spectra of the Hamiltonian. We propose to take $\tau= \tau_d + \tau_c$. The operators $\tau_d$ and $\tau_c$ act on complementary subspaces of the Hilbert space: while $\tau_d$ maps ${\cal H}_d$ to ${\cal H}_d$ and annihilates states in ${\cal H}_c$,   $\tau_c$ maps ${\cal H}_c$ to ${\cal H}_c$ and annihilates states in ${\cal H}_d$.
+%endred
+Specifically, we take $\tau_d$ to be given by Eq. (\ref{eq:GenericTau}) with  $n$ denoting the eigenvectors of the Hamiltonian associated with the discrete part of the spectrum. To construct $\tau_c$, note that to satisfy $\tau H = H^\dagger \tau$ (Eq. \eqref{gs2}) it has to transform right scattering eigenvectors into some linear combination of left scattering eigenvectors in the same energy shell. This is so because
+%
+% \begin{eqnarray}
+%     H^\dagger \tau \ket{p^+} &=& \tau H \ket{p^+}\nonumber\\
+%     &=& \tau E_p\ket{p^+}\nonumber\\
+%     &=& E_p \tau \ket{p^+}.
+% \end{eqnarray}
+\begin{equation}
+    H^\dagger \tau \ket{p^+} = \tau H \ket{p^+}
+    = \tau E_p\ket{p^+}
+    = E_p \tau \ket{p^+}.
+\end{equation}
+%
+To fulfill the last requirement we set
+%
+\begin{equation}
+    \tau_c \ket{\zeta} = \int_{-\infty}^{\infty}\!\! dp  \left[ C_+(p) \braket{\zeta}{\widehat{p}^+}\ket{\widehat{p}^+} + C_-(p)\braket{\zeta}{\widehat{p}^+}\ket{-\widehat{p}^+} \right],
+    \label{eq:ContinuousTau}
+\end{equation}
+%
+where $C_+(p)$ and $C_-(p)$ are complex coefficients. It is straightforward to check that $\tau_c \ket{p^+} = C_+(p)\ket{\widehat{p}^+} + C_-(p)\ket{-\widehat{p}^+}$.
+%, which is a left scattering vector with energy $E_p$.
+The operator in \eqref{eq:ContinuousTau} is clearly antilinear because of the antilinearity of the inner product with respect to its first argument. Hermicity of $\tau$ requires $C_-(p) = C_-(-p)$. The condition that $\tau$ must be invertible restricts the coefficients in Eq. (\ref{eq:ContinuousTau}) further.
+Consider the \textit{on shell} representation of $\tau_c$, $\braket{p^+}{\tau q^+} = \frac{|p|}{m}\delta(E_p-E_q) \mathsf{C}_{p,q}$, with $\mathsf{C}_{p,q} \equiv \delta_{p,q} C_+(q) + \delta_{p,-q} C_-(q)$, or in matrix form
+%
+\begin{equation}
+\mathsf{C}(p)=
+    \begin{pmatrix}
+    C_+(p) & C_-(p) \\
+    C_-(p) & C_+(-p)
+    \end{pmatrix}.
+\end{equation}
+%
+Since $\tau$ has to be invertible, $\mathsf{C}(p)$ must be invertible as well. This implies  $C_+(p)C_+(-p) - C_-(p)C_-(p) \neq 0$.
+
+In the following sections we construct expressions for $B$, in section 1 for $A$ linear, and in section 2 for $A$ antilinear.
+% on the continuum.
+
+\section{Pseudohermicity with linear operators}
+%
+In \cite{Mostafazadeh2002,Mostafazadeh2002a,Mostafazadeh2002b} it is shown that pseudohermitian Hamiltonians, i.e. those satisfying \eqref{gs2} for $A=\eta$ with $\eta$ a hermitian and invertible linear operator, posses an energy spectrum whose complex eigenvalues come in complex-conjugate pairs. Moreover the eigenspaces associated with  the eigenvalues $E$ and $E^*$ have the same degeneracy and $\eta$ maps one to the other. Conversely, if the complex part of the spectrum of $H$ contains only complex-conjugate pairs, it can be shown that there exists an $\eta$ for which the Hamiltonian satisfies \eqref{gs2}.
+These results hold for a general class of diagonalizable Hamiltonians with a discrete spectrum. For these Hamiltonians we can identify $\eta$ with
+%For discrete Hamiltonians with complex-conjugated pairs the operator satisfying \eqref{gs2} is
+%
+\begin{equation}
+    \begin{split}
+    \eta_{d} &= \sum_{n_0} \ketbra{\phi_{n_0}}{\phi_{n_0}}\\ &+ \sum_n \Big[\ketbra{\phi_{n_-}}{\phi_{n_+}} +  \ketbra{\phi_{n_+}}{\phi_{n_-}}\Big],
+    \end{split}
+    \label{eq:DiscreteEta}
+\end{equation}
+%
+% Consider a discrete Hamiltonian having the complex part of the spectrum in conjugate pairs and no degeneracy, then it can be expanded as
+%
+% \begin{widetext}
+% \begin{equation}
+%     H_d = \sum_{n_0}E_{n_0} \ketbra{\psi_{n_0}}{\phi_{n_0}} + \sum_n\Big[E_{n_+} \ketbra{\psi_{n_+}}{\phi_{n_+}} + E_{n_+}^* \ketbra{\psi_{n_-}}{\phi_{n_-}}\Big],
+% \end{equation}
+% \end{widetext}
+%
+where the states $\ket{\psi_{n_0}}$ ($\ket{\phi_{n_0}}$) correspond to the right (left) eigenstates of $H$ with real energy $E_{n_0}$.
+$\ket{\psi_{n+/n-}}$  (respectively $\ket{\phi_{n+/n-}}$) correspond to the right (respectively left) eigenvectors whose eigenvalue $E_{n+/n-}$  has a positive/negative imaginary part.
+This gives $\eta_d \ket{\psi_{n_0}} = \ket{\phi_{n_0}}$, $\eta_d\ket{\psi_{n_+}} = \ket{\phi_{n_-}}$ and $\eta_d\ket{\psi_{n_-}} = \ket{\phi_{n_+}}$. Clearly $\eta_d$ is compatible with pseudohermicity since it maps right eigenvectors associated with the eigenvalue $E$ into left eigenvectors with eigenvalue $E^*$ and the pseudohermicity relation \eqref{gs2} is satisfied. To generalize \eqref{eq:DiscreteEta} for a scattering Hamiltonian we must add an additional term $\eta_c$ which acts on the subspace of scattering states and is compatible with the hermiticity and invertibility of $\eta = \eta_d + \eta_c$. Since $\eta$ should transform the right scattering states into left ones in the same energy shell, $\eta_c \ket{p^+}$ should be a linear combination of both $\ket{\widehat{p}^+}$ and $\ket{-\widehat{p}^+}$. Accordingly, we propose
+%
+\begin{equation}
+    \eta_c = \int_{-\infty}^\infty dp\; \left[\Lambda_+(p)\ketbra{\widehat{p}^+}{\widehat{p}^+} + \Lambda_-(p)\ketbra{-\widehat{p}^+}{\widehat{p}^+}\right],
+    \label{eq:EtaContinuousPart}
+\end{equation}
+%
+where $\Lambda_+(p), \Lambda_-(p)$ are complex coefficients depending on the momentum $p$. Hermicity of $\eta$ requires $\Lambda_+(p) \in \mathbb{R}$ and $\Lambda_-^*(p) =\Lambda_-(-p)$.
+
+Since $\eta_c$ connects scattering states with the same energy it admits the following \textit{on-shell} representation, $\bra{q^+}\eta_c\ket{p^+} = \frac{|p|}{m}\delta(E_q-E_p) \mathsf{\Lambda}_{q,p}(p)$, with $\mathsf{\Lambda}_{q,p}(p) \equiv \delta_{q,p} \Lambda_+(p) + \delta_{q,-p} \Lambda_-(p)$, or in matrix form
+%
+\begin{equation}
+    \mathsf{\Lambda}(p)
+    =
+    \left(
+    \begin{matrix}
+        \Lambda_+(p) & \Lambda_-^*(p) \\
+        \Lambda_-(p) & \Lambda_+(-p)
+    \end{matrix}
+    \right).
+    \label{eq:onShellEtaContinuous}
+\end{equation}
+%
+%where we have used the hermicity condition for the $\Lambda_-(p)$ coefficients.
+Since $\eta$ has to be invertible, this implies that the determinant of $\mathsf{A}(p)$ should not vanish i.e. $\Lambda_+(p) \Lambda_+(-p) - \Lambda_-(p) \Lambda_-^*(p) \neq 0$. The inverse of $\eta$ is then $\eta^{-1} = \eta_d^{-1} + \eta_c^{-1}$ with
+%
+\begin{equation}
+  \begin{split}
+  \eta_d^{-1} &= \sum_{n_0} \ketbra{\psi_{n_0}}{\psi_{n_0}}\\
+  &+\sum_{n} \left[\ketbra{\psi_{n_+}}{\psi_{n_-}} + \ketbra{\psi_{n_-}}{\psi_{n_+}}\right]
+\end{split}
+\end{equation}
+%
+\begin{equation}
+    \eta_c^{-1} = \int_{-\infty}^\infty dp\; \left[\Lambda_+^{(-1)}(p)\ketbra{p^+}{p^+} + \Lambda_-^{(-1)}(p)\ketbra{-p^+}{p^+}\right],
+\end{equation}
+%
+where the complex coefficients $\Lambda_\pm^{(-1)}(p)$ are taken from the inverse of $\mathsf{\Lambda}(p)$
+%
+\begin{equation}
+  \mathsf{\Lambda}^{-1}(p)
+  =
+  \left(
+  \begin{matrix}
+      \Lambda_+^{(-1)}(p) & \Lambda_-^{(-1)*}(p) \\
+      \Lambda_-^{(-1)}(p) & \Lambda_+^{(-1)}(-p)
+  \end{matrix}
+  \right).
+  \label{eq:onShellEtaContinuous2}
+\end{equation}
+%
+Using the orthogonality between the subspace of discrete (bound) and scattering states we find the final expression for $B$
+%
+\begin{eqnarray}
+%  \begin{split}
+  &&B\ket{\zeta} = \eta_d^{-1}\tau_d\ket{\zeta}+  \eta_c^{-1}\tau_c\ket{\zeta}\nonumber\\
+  &&=\sum_{n_0}\braket{\zeta}{\phi_{n_0}}\ket{\psi_{n_0}}
+  %\nonumber\\
+  +\sum_{n}\braket{\zeta}{\phi_{n_+}}\ket{\psi_{n_-}}
+  %\nonumber\\
+  +\sum_{n}\braket{\zeta}{\phi_{n_-}}\ket{\psi_{n_+}}\nonumber\\
+  &&+\int_{-\infty}^{\infty}dp\,\braket{\zeta}{\widehat{p}^+}
+  \left[ \tilde{C}_+(p)\ket{p^+} + \tilde{C}_-(p)\ket{-p^+} \right],\nonumber\\
+%  \end{split}
+\end{eqnarray}
+%
+with $\tilde{C}_\pm(p) = C_+(p)\Lambda_\pm^{(-1)}(p)+C_-(p)\Lambda_\mp^{(-1)}(-p)$. Note that the resulting operator $B$ is antilinear.
+
+\section{Pseudohermicity with antilinear operators}
+%repeated in main text
+%This symmetry relation implies that if $\ket{\psi}$ is a right eigenvector of $H$ with eigenvalue $E$, $A \ket{\psi}$ will be a left eigenvector with the same energy since $H \da A \ket{\psi} = A H \ket{\psi} = E^* A \ket{\psi}$.
+
+In this section we will consider the case where the operator $A$ appearing in Eq. (\ref{gs2}) is antilinear.  In ref. \cite{Mostafazadeh2002b} this is called antipseudohermicity, but we will not use this terminology in order to avoid confusion with antihermicity ($H = - H^\dagger$). The effect of $A$ on a right eigenvector of $H$ is to transform it  into its corresponding biorthonormal partner, i.e. the left eigenvector corresponding to the same energy
+%
+% \begin{eqnarray}
+%     H^\dagger A \ket{\psi_n} &=& A H \ket{\psi_n}\nonumber\\
+%     &=& A E_n\ket{\psi_n}\nonumber\\
+%     &=& E_n^* A \ket{\psi_n}\nonumber\\
+%     &\big\Downarrow&\nonumber\\
+%     A\ket{\psi_n}&\propto&\ket{\phi_n}.
+% \end{eqnarray}
+\begin{eqnarray}
+    H^\dagger A \ket{\psi_n} = A H \ket{\psi_n}
+    &=&A E_n\ket{\psi_n}
+    = E_n^* A \ket{\psi_n}\nonumber\\
+    &\big\Downarrow&\nonumber\\
+    A\ket{\psi_n}&\propto&\ket{\phi_n}.
+\end{eqnarray}
+%
+$A$ also admits a decomposition similar to Eq. \eqref{eq:GenericTau}.
+The Hamiltonian satisfies Eq. (\ref{gs2})
+with respect to $\tau$. One can check that $A^{-1}\tau$ is a linear symmetry of the Hamiltonian,
+$HA^{-1}\tau - A^{-1}\tau H=0$. The expansion of $A$ on the discrete and scattering basis is
+%
+\begin{equation}
+    A \ket{\xi} = \sum_n g_n \braket{\xi}{\phi_n} \ket{\phi_n} + \int dp \;  \braket{\xi}{\widehat{p}^+}   \left[ G_+(p) \ket{\widehat{p}^+} + G_-(p)\ket{-\widehat{p}^+} \right],
+\end{equation}
+%
+with $A\ket{p^+\!}\!=\!G_+(p)\ket{\widehat{p}^+\!}+G_-(p)\ket{\!-\!\widehat{p}^+\!}$ and  $g_n = \bra{\psi_n}A {\psi_n}\ra$.
+As examples we have found the expressions of $B = A^{-1}\tau$ for $A_T = \Theta$(time reversal) and $A_{PT} = \Pi\Theta$ (PT). In both cases we have $A_T^{-1}=A_T$ and $A_{PT}^{-1}=A_{PT}$.
+%
+\subsection{PT Symmetry}
+The action of $B_{PT} = A_{PT}\tau$ on an arbitrary state is
+%
+\begin{equation}
+    B_{PT}\ket{\zeta} = A_{PT}\tau\ket{\zeta}
+                                   = A_{PT} \left\{ \sum_n \braket{\zeta}{\phi_n} \ket{\phi_n} + \int dp\; \left[ C_+(p) \braket{\zeta}{\widehat{p}^+}\ket{\widehat{p}^+} + C_-(p)\braket{\zeta}{\widehat{p}^+}\ket{-\widehat{p}^+} \right] \right\}.
+\end{equation}
+%
+~\\
+~\\
+~\\
+~\\
+~\\
+~\\
+Using $A_{PT} H = H^\dagger A_{PT}$ and table \ref{tab:MollerOperatorSyms} we have $A_{PT} \ket{\widehat{p}^\pm} = \ket{\widehat{p}^\mp}$. Note that The ``-" right scattering states can be expressed in terms of the ``+" right scattering states as
+%
+\begin{eqnarray}
+    \ket{\widehat{p}^-} &=& \int dq\; \ket{q^+}\braket{\widehat{q}^+}{\widehat{p}^-}\nonumber\\
+    &=& \int dq\; \ket{q^+}\bra{q}\widehat{\Omega}_+^\dagger \widehat{\Omega}_- \ket{p}\nonumber\\
+    &=& \int dq\; \ket{q^+}\bra{q} \widehat{S}^\dagger \ket{p}\nonumber\\
+    &=& \ket{p^+}\bra{p} \widehat{\mathsf{S}}^\dagger \ket{p} + \ket{-p^+}\bra{-p} \widehat{\mathsf{S}}^\dagger \ket{p}.
+\end{eqnarray}
+% \begin{eqnarray}
+%   \ket{\widehat{p}^-} = \int dq\; \ket{q^+}\braket{\widehat{q}^+}{\widehat{p}^-}
+%   = \int dq\; \ket{q^+}\bra{q}\widehat{\Omega}_+^\dagger \widehat{\Omega}_- \ket{p}\nonumber\\
+%
+%   = \int dq\; \ket{q^+}\bra{q} \widehat{S}^\dagger \ket{p}
+%   = \ket{p^+}\bra{p} \widehat{\mathsf{S}}^\dagger \ket{p} + \ket{-p^+}\bra{-p} \widehat{\mathsf{S}}^\dagger \ket{p}.
+% \end{eqnarray}
+%
+~\\~\\
+With all this, the final form of $B_{PT}$ is
+%
+\begin{eqnarray}
+    B_{PT} &=&   \sum_n (g_n^*)^{-1} \ketbra{\psi_n}{\phi_n} \nonumber \\
+                &+& \int dp\; \left[ \tilde{C}_+^*(p)\ketbra{p^+}{\widehat{p}^+} + \tilde{C}_-^*(p)\ketbra{-p^+}{\widehat{p}^+} \right], \nonumber \\
+\label{C13}
+\end{eqnarray}
+
+%\begin{widetext}
+%\begin{equation}
+%    B_{PT}=   \sum_n (g_n^*)^{-1} \ketbra{\psi_n}{\phi_n} +\int dp\; \left[ \tilde{C}_+^*(p)\ketbra{p^+}{\widehat{p}^+} + \tilde{C}_-^*(p)\ketbra{-p^+}{\widehat{p}^+} \right],
+%\end{equation}
+%\end{widetext}
+%
+with $C_{\pm}^*(p) = C_{\pm}^*(p) \bra{\pm p} \widehat{\mathsf{S}}^\dagger \ket{\pm p} + C_{\mp}^*(p) \bra{\pm p} \widehat{\mathsf{S}}^\dagger \ket{\mp p}$.
+
+\subsection{Time-Reversal Symmetry}
+%
+For time-reversal symmetry,
+%
+\begin{equation}
+    B_{T}\ket{\zeta} = A_{T}\tau\ket{\zeta} = A_{T} \left\{ \sum_n  \braket{\zeta}{\phi_n} \ket{\phi_n} + \int dp\; \left[ C_+(p) \braket{\zeta}{\widehat{p}^+}\ket{\widehat{p}^+} + C_-(p)\braket{\zeta}{\widehat{p}^+}\ket{-\widehat{p}^+} \right] \right\}.
+\end{equation}
+%
+Since the time-reversal operator satisfies the relation \eqref{gs2} with the Hamiltonian, Table \ref{tab:MollerOperatorSyms} implies $A_T\ket{\widehat{p}^\pm} = \ket{-\widehat{p}^\mp}$. The linear symmetry operator can be expressed as in Eq. (\ref{C13}) but in this case $\tilde{C}_{\pm}^*(p) = C_{\pm}^*(p) \bra{\pm p} \widehat{\mathsf{S}}^\dagger \ket{\mp p} + C_{\mp}^*(p) \bra{\pm p} \widehat{\mathsf{S}}^\dagger \ket{\pm p}$.

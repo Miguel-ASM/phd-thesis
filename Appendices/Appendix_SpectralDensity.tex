@@ -1,0 +1,465 @@
+%%!TEX root = ../Thesis.tex
+
+\chapter{Complete expressions for the Spectral Density Matrix}
+\label{Appendix:SpectralDensity}
+\lhead{Appendix F. \emph{Complete expressions for the Spectral Density Matrix}}
+
+%
+In Section \ref{sec:lookingForR} we used the characteristic polynomial $P_{\mathbb{A}}(\lambda)$ of the dynamical matrix $\mathbb{A}$ for the calculation of the spectral density matrix. $P_{\mathbb{A}}(\lambda)$ is defined as
+\begin{equation}
+  \begin{split}
+    \det(\mathbb{A}-\lambda) &= \lambda ^4 \\&+ \lambda ^3 \left(\frac{\gamma_L}{m_1}+\frac{\gamma_R}{m_2}\right) \\ &+ \lambda^2\frac{ (\gamma_L \gamma_R+m_2 (k+k_L)+m_1 (k+k_R))}{m_1 m_2}\\ &+ \lambda \frac{  (\gamma_R (k+k_L)+\gamma_L (k+k_R))}{m_1 m_2}\\ &+\frac{k (k_L+k_R)+k_L k_R}{m_1 m_2}.
+  \end{split}
+\end{equation}
+%
+We also used the polynomials $\mathbb{S}_L(\lambda)$ and $\mathbb{S}_R(\lambda)$, which are defined as $\mathbb{S}_L(\lambda)=\sum\limits_{n=0}^6 \lambda^n \mathbb{s}_{L,n}$ and $\mathbb{S}_R(\lambda)=\sum\limits_{n=0}^6 \lambda^n \mathbb{s}_{R,n}$. There are 14 different polynomial coefficients, which are $4\times 4$ matrices, which makes very cumbersome to include them in the main text. This is the full list of coefficients \\
+%
+% \resizebox{\linewidth}{!}{
+% \begin{minipage}{\linewidth}
+%   \begin{align}
+%       \mathbb{s}_{L,0} &=
+%       \left(
+%       \begin{array}{cccc}
+%         (k+k_R)^2 & k (k+k_R) & 0 & 0 \\
+%         k (k+k_R) & k^2 & 0 & 0 \\
+%         0 & 0 & 0 & 0 \\
+%         0 & 0 & 0 & 0
+%       \end{array}
+%       \right),
+%       &
+%       \mathbb{s}_{R,0} & =
+%       \left(
+%       \begin{array}{cccc}
+%         k^2 & k (k+k_L) & 0 & 0 \\
+%         k (k+k_L) & (k+k_L)^2 & 0 & 0 \\
+%         0 & 0 & 0 & 0 \\
+%         0 & 0 & 0 & 0
+%       \end{array}
+%       \right),
+%       %
+%       \nonumber\\
+%       %
+%       \mathbb{s}_{L,1} &= \left(
+%       \begin{array}{cccc}
+%         0 & k \gamma_R & -(k+k_R)^2 & -k (k+k_R) \\
+%         -k \gamma_R & 0 & -k (k+k_R) & -k^2 \\
+%         (k+k_R)^2 & k (k+k_R) & 0 & 0 \\
+%         k (k+k_R) & k^2 & 0 & 0
+%       \end{array}
+%       \right),
+%       &
+%       \mathbb{s}_{R,1} & = \left(
+%       \begin{array}{cccc}
+%         0 & -k \gamma_L & -k^2 & -k (k+k_L) \\
+%         k \gamma_L & 0 & -k (k+k_L) & -(k+k_L)^2 \\
+%         k^2 & k (k+k_L) & 0 & 0 \\
+%         k (k+k_L) & (k+k_L)^2 & 0 & 0
+%       \end{array}
+%       \right),
+%       %
+%       \nonumber\\
+%       %
+%       \mathbb{s}_{L,2} &= \left(
+%       \begin{array}{cccc}
+%         2 (k+k_R) m_2-\gamma_R^2 & k m_2 & 0 & -k \gamma_R \\
+%         k m_2 & 0 & k \gamma_R & 0 \\
+%         0 & k \gamma_R & -(k+k_R)^2 & -k (k+k_R) \\
+%         -k \gamma_R & 0 & -k (k+k_R) & -k^2
+%       \end{array}
+%       \right),
+%       &
+%       \mathbb{s}_{R,2} & = \left(
+%       \begin{array}{cccc}
+%         0 & k m_1 & 0 & k \gamma_L \\
+%         k m_1 & 2 (k+k_L) m_1-\gamma_L^2 & -k \gamma_L & 0 \\
+%         0 & -k \gamma_L & -k^2 & -k (k+k_L) \\
+%         k \gamma_L & 0 & -k (k+k_L) & -(k+k_L)^2
+%       \end{array}
+%       \right),
+%       %
+%       \nonumber\\
+%       %
+%       \mathbb{s}_{L,3} &= \left(
+%       \begin{array}{cccc}
+%         0 & 0 & \gamma_R^2-2 (k+k_R) m_2 & -k m_2 \\
+%         0 & 0 & -k m_2 & 0 \\
+%         2 (k+k_R) m_2-\gamma_R^2 & k m_2 & 0 & -k \gamma_R \\
+%         k m_2 & 0 & k \gamma_R & 0
+%       \end{array}
+%       \right),
+%       &
+%       \mathbb{s}_{R,3} & =\left(
+%       \begin{array}{cccc}
+%         0 & 0 & 0 & -k m_1 \\
+%         0 & 0 & -k m_1 & \gamma_L^2-2 (k+k_L) m_1 \\
+%         0 & k m_1 & 0 & k \gamma_L \\
+%         k m_1 & 2 (k+k_L) m_1-\gamma_L^2 & -k \gamma_L & 0
+%       \end{array}
+%       \right),
+%       %
+%       \nonumber\\
+%       %
+%       \mathbb{s}_{L,4} &= \left(
+%       \begin{array}{cccc}
+%         m_2^2 & 0 & 0 & 0 \\
+%         0 & 0 & 0 & 0 \\
+%         0 & 0 & \gamma_R^2-2 (k+k_R) m_2 & -k m_2 \\
+%         0 & 0 & -k m_2 & 0
+%       \end{array}
+%       \right),
+%         &
+%         \mathbb{s}_{R,4} & = \left(
+%       \begin{array}{cccc}
+%         0 & 0 & 0 & 0 \\
+%         0 & m_1^2 & 0 & 0 \\
+%         0 & 0 & 0 & -k m_1 \\
+%         0 & 0 & -k m_1 & \gamma_L^2-2 (k+k_L) m_1
+%       \end{array}
+%       \right),
+%       %
+%       \nonumber\\
+%       %
+%       \mathbb{s}_{L,5} &= \left(
+%       \begin{array}{cccc}
+%         0 & 0 & -m_2^2 & 0 \\
+%         0 & 0 & 0 & 0 \\
+%         m_2^2 & 0 & 0 & 0 \\
+%         0 & 0 & 0 & 0
+%       \end{array}
+%       \right),
+%       &
+%       \mathbb{s}_{R,5} & = \left(
+%       \begin{array}{cccc}
+%         0 & 0 & 0 & 0 \\
+%         0 & 0 & 0 & -m_1^2 \\
+%         0 & 0 & 0 & 0 \\
+%         0 & m_1^2 & 0 & 0
+%       \end{array}
+%       \right),
+%       %
+%       \nonumber\\
+%       %
+%       \mathbb{s}_{L,6} &= \left(
+%       \begin{array}{cccc}
+%         0 & 0 & 0 & 0 \\
+%         0 & 0 & 0 & 0 \\
+%         0 & 0 & -m_2^2 & 0 \\
+%         0 & 0 & 0 & 0
+%       \end{array}
+%       \right),
+%       &
+%       \mathbb{s}_{R,6} & = \left(
+%       \begin{array}{cccc}
+%         0 & 0 & 0 & 0 \\
+%         0 & 0 & 0 & 0 \\
+%         0 & 0 & 0 & 0 \\
+%         0 & 0 & 0 & -m_1^2
+%       \end{array}
+%       \right)\,.\nonumber
+%   \end{align}
+% \end{minipage}
+% }
+%
+%
+% {\tiny
+% \begin{align}
+%     \mathbb{s}_{L,0} &=
+%     \left(
+%     \begin{array}{cccc}
+%       (k+k_R)^2 & k (k+k_R) & 0 & 0 \\
+%       k (k+k_R) & k^2 & 0 & 0 \\
+%       0 & 0 & 0 & 0 \\
+%       0 & 0 & 0 & 0
+%     \end{array}
+%     \right),
+%     &
+%     \mathbb{s}_{R,0} & =
+%     \left(
+%     \begin{array}{cccc}
+%       k^2 & k (k+k_L) & 0 & 0 \\
+%       k (k+k_L) & (k+k_L)^2 & 0 & 0 \\
+%       0 & 0 & 0 & 0 \\
+%       0 & 0 & 0 & 0
+%     \end{array}
+%     \right),
+%     %
+%     \nonumber\\
+%     %
+%     \mathbb{s}_{L,1} &= \left(
+%     \begin{array}{cccc}
+%       0 & k \gamma_R & -(k+k_R)^2 & -k (k+k_R) \\
+%       -k \gamma_R & 0 & -k (k+k_R) & -k^2 \\
+%       (k+k_R)^2 & k (k+k_R) & 0 & 0 \\
+%       k (k+k_R) & k^2 & 0 & 0
+%     \end{array}
+%     \right),
+%     &
+%     \mathbb{s}_{R,1} & = \left(
+%     \begin{array}{cccc}
+%       0 & -k \gamma_L & -k^2 & -k (k+k_L) \\
+%       k \gamma_L & 0 & -k (k+k_L) & -(k+k_L)^2 \\
+%       k^2 & k (k+k_L) & 0 & 0 \\
+%       k (k+k_L) & (k+k_L)^2 & 0 & 0
+%     \end{array}
+%     \right),
+%     %
+%     \nonumber\\
+%     %
+%     \mathbb{s}_{L,2} &= \left(
+%     \begin{array}{cccc}
+%       2 (k+k_R) m_2-\gamma_R^2 & k m_2 & 0 & -k \gamma_R \\
+%       k m_2 & 0 & k \gamma_R & 0 \\
+%       0 & k \gamma_R & -(k+k_R)^2 & -k (k+k_R) \\
+%       -k \gamma_R & 0 & -k (k+k_R) & -k^2
+%     \end{array}
+%     \right),
+%     &
+%     \mathbb{s}_{R,2} & = \left(
+%     \begin{array}{cccc}
+%       0 & k m_1 & 0 & k \gamma_L \\
+%       k m_1 & 2 (k+k_L) m_1-\gamma_L^2 & -k \gamma_L & 0 \\
+%       0 & -k \gamma_L & -k^2 & -k (k+k_L) \\
+%       k \gamma_L & 0 & -k (k+k_L) & -(k+k_L)^2
+%     \end{array}
+%     \right),
+%     %
+%     \nonumber\\
+%     %
+%     \mathbb{s}_{L,3} &= \left(
+%     \begin{array}{cccc}
+%       0 & 0 & \gamma_R^2-2 (k+k_R) m_2 & -k m_2 \\
+%       0 & 0 & -k m_2 & 0 \\
+%       2 (k+k_R) m_2-\gamma_R^2 & k m_2 & 0 & -k \gamma_R \\
+%       k m_2 & 0 & k \gamma_R & 0
+%     \end{array}
+%     \right),
+%     &
+%     \mathbb{s}_{R,3} & =\left(
+%     \begin{array}{cccc}
+%       0 & 0 & 0 & -k m_1 \\
+%       0 & 0 & -k m_1 & \gamma_L^2-2 (k+k_L) m_1 \\
+%       0 & k m_1 & 0 & k \gamma_L \\
+%       k m_1 & 2 (k+k_L) m_1-\gamma_L^2 & -k \gamma_L & 0
+%     \end{array}
+%     \right),
+%     %
+%     \nonumber\\
+%     %
+%     \mathbb{s}_{L,4} &= \left(
+%     \begin{array}{cccc}
+%       m_2^2 & 0 & 0 & 0 \\
+%       0 & 0 & 0 & 0 \\
+%       0 & 0 & \gamma_R^2-2 (k+k_R) m_2 & -k m_2 \\
+%       0 & 0 & -k m_2 & 0
+%     \end{array}
+%     \right),
+%       &
+%       \mathbb{s}_{R,4} & = \left(
+%     \begin{array}{cccc}
+%       0 & 0 & 0 & 0 \\
+%       0 & m_1^2 & 0 & 0 \\
+%       0 & 0 & 0 & -k m_1 \\
+%       0 & 0 & -k m_1 & \gamma_L^2-2 (k+k_L) m_1
+%     \end{array}
+%     \right),
+%     %
+%     \nonumber\\
+%     %
+%     \mathbb{s}_{L,5} &= \left(
+%     \begin{array}{cccc}
+%       0 & 0 & -m_2^2 & 0 \\
+%       0 & 0 & 0 & 0 \\
+%       m_2^2 & 0 & 0 & 0 \\
+%       0 & 0 & 0 & 0
+%     \end{array}
+%     \right),
+%     &
+%     \mathbb{s}_{R,5} & = \left(
+%     \begin{array}{cccc}
+%       0 & 0 & 0 & 0 \\
+%       0 & 0 & 0 & -m_1^2 \\
+%       0 & 0 & 0 & 0 \\
+%       0 & m_1^2 & 0 & 0
+%     \end{array}
+%     \right),
+%     %
+%     \nonumber\\
+%     %
+%     \mathbb{s}_{L,6} &= \left(
+%     \begin{array}{cccc}
+%       0 & 0 & 0 & 0 \\
+%       0 & 0 & 0 & 0 \\
+%       0 & 0 & -m_2^2 & 0 \\
+%       0 & 0 & 0 & 0
+%     \end{array}
+%     \right),
+%     &
+%     \mathbb{s}_{R,6} & = \left(
+%     \begin{array}{cccc}
+%       0 & 0 & 0 & 0 \\
+%       0 & 0 & 0 & 0 \\
+%       0 & 0 & 0 & 0 \\
+%       0 & 0 & 0 & -m_1^2
+%     \end{array}
+%     \right)\,.\nonumber
+% \end{align}}
+%
+%
+\begingroup
+\allowdisplaybreaks
+\begin{align}
+    \mathbb{s}_{L,0} &=
+    \left(
+    \begin{array}{cccc}
+      (k+k_R)^2 & k (k+k_R) & 0 & 0 \\
+      k (k+k_R) & k^2 & 0 & 0 \\
+      0 & 0 & 0 & 0 \\
+      0 & 0 & 0 & 0
+    \end{array}
+    \right),
+    %
+    \nonumber\\
+    %
+    \mathbb{s}_{R,0} & =
+    \left(
+    \begin{array}{cccc}
+      k^2 & k (k+k_L) & 0 & 0 \\
+      k (k+k_L) & (k+k_L)^2 & 0 & 0 \\
+      0 & 0 & 0 & 0 \\
+      0 & 0 & 0 & 0
+    \end{array}
+    \right),
+    %
+    \nonumber\\
+    %
+    \mathbb{s}_{L,1} &= \left(
+    \begin{array}{cccc}
+      0 & k \gamma_R & -(k+k_R)^2 & -k (k+k_R) \\
+      -k \gamma_R & 0 & -k (k+k_R) & -k^2 \\
+      (k+k_R)^2 & k (k+k_R) & 0 & 0 \\
+      k (k+k_R) & k^2 & 0 & 0
+    \end{array}
+    \right),
+    %
+    \nonumber\\
+    %
+    \mathbb{s}_{R,1} & = \left(
+    \begin{array}{cccc}
+      0 & -k \gamma_L & -k^2 & -k (k+k_L) \\
+      k \gamma_L & 0 & -k (k+k_L) & -(k+k_L)^2 \\
+      k^2 & k (k+k_L) & 0 & 0 \\
+      k (k+k_L) & (k+k_L)^2 & 0 & 0
+    \end{array}
+    \right),
+    %
+    \nonumber\\
+    %
+    \mathbb{s}_{L,2} &= \left(
+    \begin{array}{cccc}
+      2 (k+k_R) m_2-\gamma_R^2 & k m_2 & 0 & -k \gamma_R \\
+      k m_2 & 0 & k \gamma_R & 0 \\
+      0 & k \gamma_R & -(k+k_R)^2 & -k (k+k_R) \\
+      -k \gamma_R & 0 & -k (k+k_R) & -k^2
+    \end{array}
+    \right),
+    %
+    \nonumber\\
+    %
+    \mathbb{s}_{R,2} & = \left(
+    \begin{array}{cccc}
+      0 & k m_1 & 0 & k \gamma_L \\
+      k m_1 & 2 (k+k_L) m_1-\gamma_L^2 & -k \gamma_L & 0 \\
+      0 & -k \gamma_L & -k^2 & -k (k+k_L) \\
+      k \gamma_L & 0 & -k (k+k_L) & -(k+k_L)^2
+    \end{array}
+    \right),
+    %
+    \nonumber\\
+    %
+    \mathbb{s}_{L,3} &= \left(
+    \begin{array}{cccc}
+      0 & 0 & \gamma_R^2-2 (k+k_R) m_2 & -k m_2 \\
+      0 & 0 & -k m_2 & 0 \\
+      2 (k+k_R) m_2-\gamma_R^2 & k m_2 & 0 & -k \gamma_R \\
+      k m_2 & 0 & k \gamma_R & 0
+    \end{array}
+    \right),
+    %
+    \nonumber\\
+    %
+    \mathbb{s}_{R,3} & =\left(
+    \begin{array}{cccc}
+      0 & 0 & 0 & -k m_1 \\
+      0 & 0 & -k m_1 & \gamma_L^2-2 (k+k_L) m_1 \\
+      0 & k m_1 & 0 & k \gamma_L \\
+      k m_1 & 2 (k+k_L) m_1-\gamma_L^2 & -k \gamma_L & 0
+    \end{array}
+    \right),
+    %
+    \nonumber\\
+    %
+    \mathbb{s}_{L,4} &= \left(
+    \begin{array}{cccc}
+      m_2^2 & 0 & 0 & 0 \\
+      0 & 0 & 0 & 0 \\
+      0 & 0 & \gamma_R^2-2 (k+k_R) m_2 & -k m_2 \\
+      0 & 0 & -k m_2 & 0
+    \end{array}
+    \right),
+    %
+    \nonumber\\
+    %
+    \mathbb{s}_{R,4} & = \left(
+    \begin{array}{cccc}
+      0 & 0 & 0 & 0 \\
+      0 & m_1^2 & 0 & 0 \\
+      0 & 0 & 0 & -k m_1 \\
+      0 & 0 & -k m_1 & \gamma_L^2-2 (k+k_L) m_1
+    \end{array}
+    \right),
+    %
+    \nonumber\\
+    %
+    \mathbb{s}_{L,5} &= \left(
+    \begin{array}{cccc}
+      0 & 0 & -m_2^2 & 0 \\
+      0 & 0 & 0 & 0 \\
+      m_2^2 & 0 & 0 & 0 \\
+      0 & 0 & 0 & 0
+    \end{array}
+    \right),
+    %
+    \nonumber\\
+    %
+    \mathbb{s}_{R,5} & = \left(
+    \begin{array}{cccc}
+      0 & 0 & 0 & 0 \\
+      0 & 0 & 0 & -m_1^2 \\
+      0 & 0 & 0 & 0 \\
+      0 & m_1^2 & 0 & 0
+    \end{array}
+    \right),
+    %
+    \nonumber\\
+    %
+    \mathbb{s}_{L,6} &= \left(
+    \begin{array}{cccc}
+      0 & 0 & 0 & 0 \\
+      0 & 0 & 0 & 0 \\
+      0 & 0 & -m_2^2 & 0 \\
+      0 & 0 & 0 & 0
+    \end{array}
+    \right),
+    %
+    \nonumber\\
+    %
+    \mathbb{s}_{R,6} & = \left(
+    \begin{array}{cccc}
+      0 & 0 & 0 & 0 \\
+      0 & 0 & 0 & 0 \\
+      0 & 0 & 0 & 0 \\
+      0 & 0 & 0 & -m_1^2
+    \end{array}
+    \right)\,.
+\end{align}%
+\endgroup
