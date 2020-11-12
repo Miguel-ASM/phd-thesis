@@ -5,7 +5,7 @@
 \label{ChapterNNSymmetries}
 \lhead{Chapter NxN. \emph{Symmetries of ($N\times N$) non-Hermitian Hamiltonian matrices}} % Write in your own chapter title to set the page header
 %
-A non-Abelian group of sixteen symmetry operations on (generally) non-Hermitian
+A non-Abelian group of sixteen symmetry operations on (generally) \linebreak non-Hermitian
 discrete Hamiltonians represented by $N\times N$ matrices is studied. The symmetry operations are described by unitary/antiunitary superoperators that arise  when combining
 three basic generating operations with simple ``geometric'' interpretations. The corresponding Hamiltonian symmetries occur when
 the Hamiltonian remains invariant under the superoperator action. These symmetries  include PT-symmetry and hermiticity as particular cases.
@@ -79,7 +79,7 @@ AH=H^{\dagger}A, \label{pseudohermiticity}
 \end{equation}
 %
 %
-where $A$ is a unitary or antiunitary operator in the Klein four-group $K_{4}=\lbrace 1,\Pi,\theta,\Pi\theta \rbrace$ \cite{Ruschhaupt2017}.
+where $A$ is a unitary or antiunitary operator in the Klein four-group \linebreak $K_{4}=\lbrace 1,\Pi,\theta,\Pi\theta \rbrace$ \cite{Ruschhaupt2017}.
 If (\ref{pseudohermiticity})  is fulfilled we say that $H$ is $A$-pseudohermitian \cite{Mostafazadeh2010,Ruschhaupt2017}.
 The operators $\Pi$, $\theta$ and $\Pi\theta$ of the $K_{4}$ group are parity, time reversal (for a spinless particle) and the consecutive (commuting) application of both. Their properties are well known but we review them quickly for comparison with later,  different
 usage of the symbols:
@@ -158,8 +158,7 @@ When $H$ is invariant under the operation, the matrix elements of $H$ obey these
 %
 
 As pointed out first for Hamiltonians with discrete spectrum by A. Mostafazadeh \cite{Mostafazadeh2002,Mostafazadeh2002a,Mostafazadeh2002b} and later extended to scattering
-Hamiltonians in \cite{Simon2019a},
-$A$-pseudohermiticity with $A$ linear, or the commutation of $A$ and $H$ for $A$ antilinear
+Hamiltonians in \cite{Simon2019a}, \linebreak $A$-pseudohermiticity with $A$ linear, or the commutation of $A$ and $H$ for $A$ antilinear
 imply that the eigenvalues of $H$ come in conjugate pairs necessarily, in particular they
 may be real.
 These conditions occur for symmetries II, IV, V, and VII.
@@ -508,7 +507,7 @@ For all sixteen superoperators an explicit calculation gives  ${\cal{S}}^{\dagge
 and similarly ${\cal{L}}_{A^{\dagger}B^{\dagger}}{\cal{L}}_{A,B}F=F$.
 
 
-Parallel to the fact that a unitary or antiunitary operator $A$ keeps the scalar product of two states represented by kets invariant ($|\psi_{1}\rangle,|\psi_{2}\rangle \Rightarrow \langle\psi_{1}|\psi_{2}\rangle$ ; $A|\psi_{1}\rangle,A|\psi_{2}\rangle \Rightarrow \langle\psi_{1}|A^{\dagger}A|\psi_{2}\rangle=\langle\psi_{1}|\psi_{2}\rangle$), unitary and antiunitary superoperators keep  invariant the scalar product of two density operators,
+Parallel to the fact that a unitary or antiunitary operator $A$ keeps the scalar product of two states represented by kets invariant ($|\psi_{1}\rangle,|\psi_{2}\rangle \Rightarrow \langle\psi_{1}|\psi_{2}\rangle$ ;\linebreak $A|\psi_{1}\rangle,A|\psi_{2}\rangle \Rightarrow \langle\psi_{1}|A^{\dagger}A|\psi_{2}\rangle=\langle\psi_{1}|\psi_{2}\rangle$), unitary and antiunitary superoperators keep  invariant the scalar product of two density operators,
 %
 \begin{equation}
 \langle\langle \rho_{1},\rho_{2}\rangle\rangle=\langle\langle {\cal{S}}\rho_{1},{\cal{S}}\rho_{2} \rangle\rangle.
@@ -634,76 +633,67 @@ for finite matrices. However, a group-theory type of code (column 2 in  table \r
 %The multiplication table of the group using the properties stated in the ``presentation'',
 
 %\clearpage
+\begin{landscape}
+  \begin{table}[h]
+    \caption{Multiplication table of $G_{16}$.
+    The element of the  column is applied first, then  the one in the  row, ${\cal{S}}_{row}{\cal{S}}_{column}={\cal{S}}_{table}$. The shaded area represents the table of the E8 group
+    in \cite{Simon2018}.
+    \label{tablabe}}
+    \vspace*{.2cm}
+    \begin{tabular}{l|llllllllllllllll}
+      \multicolumn{1}{l}{}&$e$
+      & {$x$}
+      & {$a^{2}$}
+      & {$a^{2}x$}
+      & {$y$}
+      &{xy}
+      & {$a^{2}y$}
+      & {$a^{2}xy$}
+      & {$ax$}
+      &{$xa$}
+      & {$axy$}
+      &{$a^{3}xy$}
+      & {$a$}
+      & {$a^{3}$}
+      & {$ya$}
+      & {$a^{3}y$} \\
 
-%\begin{adjustwidth}{-2cm}{-1cm}
-\begin{table*}[h]
-\caption{Multiplication table of $G_{16}$.
-The element of the  column is applied first, then  the one in the  row, ${\cal{S}}_{row}{\cal{S}}_{column}={\cal{S}}_{table}$. The shaded area represents the table of the E8 group
-in \cite{Simon2018}.
- \label{tablabe}}
-\vspace*{.2cm}
-%
-%\resizebox{0.74\textwidth}{!}{
-\begin{minipage}{\textwidth}
-\begin{tabular}{l|llllllllllllllll}
-\multicolumn{1}{l}{}&$e$
-& {$x$}
-& {$a^{2}$}
-& {$a^{2}x$}
-& {$y$}
-&{xy}
-& {$a^{2}y$}
-& {$a^{2}xy$}
-& {$ax$}
-&{$xa$}
-& {$axy$}
-&{$a^{3}xy$}
-& {$a$}
-& {$a^{3}$}
-& {$ya$}
-& {$a^{3}y$} \\
-
-%\cline{2-17}
-$e$        &\cellcolor{blue!25} $e$        &\cellcolor{blue!25} $x$ &\cellcolor{blue!25} $a^{2}$ &\cellcolor{blue!25} $a^{2}x$ &\cellcolor{blue!25} $y$ &\cellcolor{blue!25} $xy$ &\cellcolor{blue!25} $a^{2}y$ &\cellcolor{blue!25} $a^{2}xy$ & $ax$ & $xa$ & $axy$ & $a^{3}xy$ & a & $a^{3}$ & $ya$ & $a^{3}y$ \\
-%\cline{2-17}
-$x$        &\cellcolor{blue!25} $x$        &\cellcolor{blue!25} $e$        &\cellcolor{blue!25} $a^{2}x$ &\cellcolor{blue!25} $a^{2}$ & \cellcolor{blue!25}$xy$ &\cellcolor{blue!25} $y$ &\cellcolor{blue!25} $a^{2}xy$ &\cellcolor{blue!25} $a^{2}y$ & $a^{3}$ & a & $a^{3}y$ & ya & xa & ax & $a^{3}xy$ & $axy$ \\
-%\cline{2-17}
-$a^{2}$  &\cellcolor{blue!25} $a^{2}$  &\cellcolor{blue!25} $a^{2}x$ &\cellcolor{blue!25} $e$ &\cellcolor{blue!25} $x$ &\cellcolor{blue!25} $a^{2}y$ &\cellcolor{blue!25} $a^{2}xy$ &\cellcolor{blue!25} $y$ &\cellcolor{blue!25} $xy$ & $xa$ & $ax$ & $a^{3}xy$ & $axy$ & $a^{3}$ & $a$ & $a^{3}y$ & $ya$ \\
-%\cline{2-17}
-$a^{2}x$ &\cellcolor{blue!25} $a^{2}x$ &\cellcolor{blue!25} $a^{2}$  &\cellcolor{blue!25} $x$ &\cellcolor{blue!25} $e$ &\cellcolor{blue!25} $a^{2}xy$ &\cellcolor{blue!25} $a^{2}y$ &\cellcolor{blue!25} $xy$ &\cellcolor{blue!25} $y$ & $a$ & $a^{3}$ & $ya$ & $a^{3}y$ & $ax$ & $xa$ & $axy$ & $a^{3}xy$ \\
-%\cline{2-17}
-$y$        &\cellcolor{blue!25} $y$        &\cellcolor{blue!25} $xy$        &\cellcolor{blue!25} $a^{2}y$ &\cellcolor{blue!25} $a^{2}xy$ & \cellcolor{blue!25}$e$ &\cellcolor{blue!25} $x$ &\cellcolor{blue!25} $a^{2}$ &\cellcolor{blue!25} $a^{2}x$ & $axy$ & $a^{3}xy$ & $ax$ & $xa$ & ya & $a^{3}y$ & $a$ & $a^{3}$ \\
-%\cline{2-17}
-$xy$       &\cellcolor{blue!25} $xy$       &\cellcolor{blue!25} $y$        &\cellcolor{blue!25} $a^{2}xy$ &\cellcolor{blue!25} $a^{2}y$ & \cellcolor{blue!25}$x$ &\cellcolor{blue!25} $e$ &\cellcolor{blue!25} $a^{2}x$ &\cellcolor{blue!25} $a^{2}$ & $a^{3}y$ & $ya$ & $a^{3}$ & $a$ & $a^{3}xy$ & $axy$ & $xa$ & $ax$ \\
-%\cline{2-17}
-$a^{2}y$ &\cellcolor{blue!25} $a^{2}y$ &\cellcolor{blue!25} $a^{2}xy$        &\cellcolor{blue!25} $y$ &\cellcolor{blue!25} $xy$ & \cellcolor{blue!25}$a^{2}$ &\cellcolor{blue!25} $a^{2}x$ &\cellcolor{blue!25} $e$ &\cellcolor{blue!25} $x$ & $a^{3}xy$ & axy & xa & ax & $a^{3}y$ & ya & $a^{3}$ & a \\
-%\cline{2-17}
-$a^{2}xy$&\cellcolor{blue!25} $a^{2}xy$&\cellcolor{blue!25} $a^{2}y$       &\cellcolor{blue!25} $xy$ &\cellcolor{blue!25} $y$ &\cellcolor{blue!25} $a^{2}x$ &\cellcolor{blue!25} $a^{2}$ &\cellcolor{blue!25} $x$ &\cellcolor{blue!25} $e$ & $ya$ & $a^{3}y$ & $a$ & $a^{3}$ & $axy$ & $a^{3}xy$ & $ax$ & xa \\
-%\cline{2-17}
-$ax$       & $ax$       & $a$        & $xa$ & $a^{3}$ & $axy$ & $ya$ & $a^{3}xy$ & $a^{3}y$ & $e$ & $a^{2}$ & y & $a^{2}y$ & $x$ & $a^{2}x$ & xy & $a^{2}xy$ \\
-%\cline{2-17}
-$xa$       & $xa$       & $a^{3}$        & $ax$ & $a$ & $a^{3}xy$ & $a^{3}y$ & $axy$ & $ya$ & $a^{2}$ & $e$ & $a^{2}y$ & $y$ & $a^{2}x$ & $x$ & $a^{2}xy$ & $xy$ \\
-%\cline{2-17}
-$axy$      & $axy$      & $ya$        & $a^{3}xy$ & $a^{3}y$ & $ax$ & $a$ & xa & $a^{3}$ & y & $a^{2}y$ & e & $a^{2}$ & xy & $a^{2}xy$ & $x$ & $a^{2}x$ \\
-%\cline{2-17}
-$a^{3}xy$& $a^{3}xy$& $a^{3}y$        & axy & ya & $xa$ & $a^{3}$ & $ax$ & $a$ & $a^{2}y$ & y & $a^{2}$ & $e$ & $a^{2}xy$ & $xy$ & $a^{2}x$ & $x$ \\
-%\cline{2-17}
-$a$        & $a$        & $ax$        & $a^{3}$ & $xa$ & $ya$ & $axy$ & $a^{3}y$ & $a^{3}xy$ & $a^{2}x$ & $x$ & $a^{2}xy$ & xy & $a^{2}$ & e & $a^{2}y$ & $y$ \\
-%\cline{2-17}
-$a^{3}$  & $a^{3}$  & $xa$        & $a$ & $ax$ & $a^{3}y$ & $a^{3}xy$ & $ya$ & $axy$ & $x$ & $a^{2}x$ & $xy$ & $a^{2}xy$ & e & $a^{2}$ & $y$ & $a^{2}y$ \\
-%\cline{2-17}
-$ya$       & $ya$       & $axy$ & $a^{3}y$ & $a^{3}xy$ & $a$ & $ax$ & $a^{3}$ & $xa$ & $a^{2}xy$ & $xy$ & $a^{2}x$ & $x$ & $a^{2}y$ & $y$ & $a^{2}$ & $e$ \\
-%\cline{2-17}
-$a^{3}y$ &$a^{3}y$  & $a^{3}xy$ & ya & axy & $a^{3}$ & xa & $a$ & $ax$ & $xy$ & $a^{2}xy$ & x & $a^{2}x$ & $y$ & $a^{2}y$ & $e$ & $a^{2}$\\
-%\cline{2-17}
-\end{tabular}
-%\caption[Table caption text]{Table taken from \cite[p.10]{refid} }
-%\label{tablabe}
-\end{minipage} %}
-%
-\end{table*}
-%\end{adjustwidth}
-
+      %\cline{2-17}
+      $e$        &\cellcolor{blue!25} $e$        &\cellcolor{blue!25} $x$ &\cellcolor{blue!25} $a^{2}$ &\cellcolor{blue!25} $a^{2}x$ &\cellcolor{blue!25} $y$ &\cellcolor{blue!25} $xy$ &\cellcolor{blue!25} $a^{2}y$ &\cellcolor{blue!25} $a^{2}xy$ & $ax$ & $xa$ & $axy$ & $a^{3}xy$ & a & $a^{3}$ & $ya$ & $a^{3}y$ \\
+      %\cline{2-17}
+      $x$        &\cellcolor{blue!25} $x$        &\cellcolor{blue!25} $e$        &\cellcolor{blue!25} $a^{2}x$ &\cellcolor{blue!25} $a^{2}$ & \cellcolor{blue!25}$xy$ &\cellcolor{blue!25} $y$ &\cellcolor{blue!25} $a^{2}xy$ &\cellcolor{blue!25} $a^{2}y$ & $a^{3}$ & a & $a^{3}y$ & ya & xa & ax & $a^{3}xy$ & $axy$ \\
+      %\cline{2-17}
+      $a^{2}$  &\cellcolor{blue!25} $a^{2}$  &\cellcolor{blue!25} $a^{2}x$ &\cellcolor{blue!25} $e$ &\cellcolor{blue!25} $x$ &\cellcolor{blue!25} $a^{2}y$ &\cellcolor{blue!25} $a^{2}xy$ &\cellcolor{blue!25} $y$ &\cellcolor{blue!25} $xy$ & $xa$ & $ax$ & $a^{3}xy$ & $axy$ & $a^{3}$ & $a$ & $a^{3}y$ & $ya$ \\
+      %\cline{2-17}
+      $a^{2}x$ &\cellcolor{blue!25} $a^{2}x$ &\cellcolor{blue!25} $a^{2}$  &\cellcolor{blue!25} $x$ &\cellcolor{blue!25} $e$ &\cellcolor{blue!25} $a^{2}xy$ &\cellcolor{blue!25} $a^{2}y$ &\cellcolor{blue!25} $xy$ &\cellcolor{blue!25} $y$ & $a$ & $a^{3}$ & $ya$ & $a^{3}y$ & $ax$ & $xa$ & $axy$ & $a^{3}xy$ \\
+      %\cline{2-17}
+      $y$        &\cellcolor{blue!25} $y$        &\cellcolor{blue!25} $xy$        &\cellcolor{blue!25} $a^{2}y$ &\cellcolor{blue!25} $a^{2}xy$ & \cellcolor{blue!25}$e$ &\cellcolor{blue!25} $x$ &\cellcolor{blue!25} $a^{2}$ &\cellcolor{blue!25} $a^{2}x$ & $axy$ & $a^{3}xy$ & $ax$ & $xa$ & ya & $a^{3}y$ & $a$ & $a^{3}$ \\
+      %\cline{2-17}
+      $xy$       &\cellcolor{blue!25} $xy$       &\cellcolor{blue!25} $y$        &\cellcolor{blue!25} $a^{2}xy$ &\cellcolor{blue!25} $a^{2}y$ & \cellcolor{blue!25}$x$ &\cellcolor{blue!25} $e$ &\cellcolor{blue!25} $a^{2}x$ &\cellcolor{blue!25} $a^{2}$ & $a^{3}y$ & $ya$ & $a^{3}$ & $a$ & $a^{3}xy$ & $axy$ & $xa$ & $ax$ \\
+      %\cline{2-17}
+      $a^{2}y$ &\cellcolor{blue!25} $a^{2}y$ &\cellcolor{blue!25} $a^{2}xy$        &\cellcolor{blue!25} $y$ &\cellcolor{blue!25} $xy$ & \cellcolor{blue!25}$a^{2}$ &\cellcolor{blue!25} $a^{2}x$ &\cellcolor{blue!25} $e$ &\cellcolor{blue!25} $x$ & $a^{3}xy$ & axy & xa & ax & $a^{3}y$ & ya & $a^{3}$ & a \\
+      %\cline{2-17}
+      $a^{2}xy$&\cellcolor{blue!25} $a^{2}xy$&\cellcolor{blue!25} $a^{2}y$       &\cellcolor{blue!25} $xy$ &\cellcolor{blue!25} $y$ &\cellcolor{blue!25} $a^{2}x$ &\cellcolor{blue!25} $a^{2}$ &\cellcolor{blue!25} $x$ &\cellcolor{blue!25} $e$ & $ya$ & $a^{3}y$ & $a$ & $a^{3}$ & $axy$ & $a^{3}xy$ & $ax$ & xa \\
+      %\cline{2-17}
+      $ax$       & $ax$       & $a$        & $xa$ & $a^{3}$ & $axy$ & $ya$ & $a^{3}xy$ & $a^{3}y$ & $e$ & $a^{2}$ & y & $a^{2}y$ & $x$ & $a^{2}x$ & xy & $a^{2}xy$ \\
+      %\cline{2-17}
+      $xa$       & $xa$       & $a^{3}$        & $ax$ & $a$ & $a^{3}xy$ & $a^{3}y$ & $axy$ & $ya$ & $a^{2}$ & $e$ & $a^{2}y$ & $y$ & $a^{2}x$ & $x$ & $a^{2}xy$ & $xy$ \\
+      %\cline{2-17}
+      $axy$      & $axy$      & $ya$        & $a^{3}xy$ & $a^{3}y$ & $ax$ & $a$ & xa & $a^{3}$ & y & $a^{2}y$ & e & $a^{2}$ & xy & $a^{2}xy$ & $x$ & $a^{2}x$ \\
+      %\cline{2-17}
+      $a^{3}xy$& $a^{3}xy$& $a^{3}y$        & axy & ya & $xa$ & $a^{3}$ & $ax$ & $a$ & $a^{2}y$ & y & $a^{2}$ & $e$ & $a^{2}xy$ & $xy$ & $a^{2}x$ & $x$ \\
+      %\cline{2-17}
+      $a$        & $a$        & $ax$        & $a^{3}$ & $xa$ & $ya$ & $axy$ & $a^{3}y$ & $a^{3}xy$ & $a^{2}x$ & $x$ & $a^{2}xy$ & xy & $a^{2}$ & e & $a^{2}y$ & $y$ \\
+      %\cline{2-17}
+      $a^{3}$  & $a^{3}$  & $xa$        & $a$ & $ax$ & $a^{3}y$ & $a^{3}xy$ & $ya$ & $axy$ & $x$ & $a^{2}x$ & $xy$ & $a^{2}xy$ & e & $a^{2}$ & $y$ & $a^{2}y$ \\
+      %\cline{2-17}
+      $ya$       & $ya$       & $axy$ & $a^{3}y$ & $a^{3}xy$ & $a$ & $ax$ & $a^{3}$ & $xa$ & $a^{2}xy$ & $xy$ & $a^{2}x$ & $x$ & $a^{2}y$ & $y$ & $a^{2}$ & $e$ \\
+      %\cline{2-17}
+      $a^{3}y$ &$a^{3}y$  & $a^{3}xy$ & ya & axy & $a^{3}$ & xa & $a$ & $ax$ & $xy$ & $a^{2}xy$ & x & $a^{2}x$ & $y$ & $a^{2}y$ & $e$ & $a^{2}$\\
+      %\cline{2-17}
+    \end{tabular}
+  \end{table}
+\end{landscape}
 
 
 \subsubsection{Subgroups.}

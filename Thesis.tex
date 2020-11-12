@@ -18,6 +18,7 @@
 \setlength{\parindent}{15pt}
 \usepackage{indentfirst} %para que ponga el indent en el primer parrafo tambien, sino no lo hace
 
+\usepackage{lscape} %Poner una página apaisada (util para tablas muy anchas)
 
 
 \hypersetup{urlcolor=blue, colorlinks=true}  % Colours hyperlinks in blue, but this can be distracting if there are many links.
@@ -177,24 +178,29 @@ Do not forget about the people that has been by your side and supported you.
 
 \addtocontents{toc}{\vspace{0.6em}}
 
+% ------------ INTRODUCTION ------------------------------------------------------------------------
 \addcontentsline{toc}{chapter}{Introduction}
 \input{./Chapters/Introduction} %Introduction
 
-\input{./Chapters/ChapterAsymmetricScattering} %Asymmetric Scattering nonhermitian
-\input{./Chapters/ChapterSymAndInvariants} %Invariants om non-h Hamiltonians
-\input{./Chapters/ChapterRealEigenValues} %complex plane symmetries of nh Hamiltonians
-\input{./Chapters/ChapterDiscreteNNSymmetries} %Discrete Hamiltonian symmetries
-\input{./Chapters/ChapterPhysicalImplementation} %Physical Implementation
+% ------------ PART I: NH-Devices ------------------------------------------------------------------
+\part{Non hermitian devices}
+  \input{./Chapters/ChapterAsymmetricScattering}    %Asymmetric Scattering nonhermitian
+  \input{./Chapters/ChapterSymAndInvariants}        %Invariants of non-h Hamiltonians
+  \input{./Chapters/ChapterRealEigenValues}         %complex plane symmetries of nh Hamiltonians
+  \input{./Chapters/ChapterDiscreteNNSymmetries}    %Discrete Hamiltonian symmetries
+  \input{./Chapters/ChapterPhysicalImplementation}  %Physical Implementation
 
-\input{./Chapters/ChapterLocalRectification} %Rectification with local impurity
-\input{./Chapters/RectificationChainOfIons} %Rectification chain of Ions
-\input{./Chapters/ChapterToyModel} %Rectification Toy Model
+% ------------ PART II: Heat Rectification ---------------------------------------------------------
+\part{Heat rectification in mesoscopic systems}
+  \input{./Chapters/ChapterLocalRectification}      %Rectification with local impurity
+  \input{./Chapters/RectificationChainOfIons}       %Rectification chain of Ions
+  \input{./Chapters/ChapterToyModel}                %Rectification Toy Model
 
+% ------------ CONCLUSIONS -------------------------------------------------------------------------
 \input{./Chapters/Conclusions} %Conclusions
 \addcontentsline{toc}{chapter}{Conclusions}
 
-%% ----------------------------------------------------------------
-% Now begin the Appendices, including them as separate files
+% ------------ APPENDICES --------------------------------------------------------------------------
 
 \addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aestheticsy
 
