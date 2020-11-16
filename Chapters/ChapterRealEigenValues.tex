@@ -20,18 +20,18 @@ Non-Hermitian (NH) Hamiltonians may represent effective interactions for compone
 Much work on  NH-physics  has focused on PT-symmetric Hamiltonians, as they may have a purely real spectrum \cite{Bender1998}. More recently, other NH and non-PT Hamiltonians, have been shown to hold real eigenvalues \cite{Nixon2016,Chen2017,Yang2017}. Work on scattering by PT-symmetric potentials was at first rather scarce \cite{Muga2004,Ruschhaupt2005,Cannata2007,Znojil2015}. However, scattering has been later investigated intensely in connection with spectral singularities and reflection asymmetries for left or right incidence (i.e. unidirectional invisibility) \cite{Mostafazadeh2009,Longhi2014,Mostafazadeh2013}, in most cases restricting the analysis to local potentials. Interestingly, it has been recently shown  that different devices with asymmetrical scattering responses (i.e., with different transmission and/or reflection for right and left incidence in a 1D setting) are possible if one makes use of non-local potentials \cite{Ruschhaupt2017}. Ref. \cite{Ruschhaupt2017} provides the selection rules for the transmission and reflection coefficient asymmetries based on eight basic Hamiltonian symmetries. Four of these symmetries are of the standard form,
 %
 \begin{equation}
-AH=HA,
-\label{gs1}
+	AH=HA,
+	\label{gs1}
 \end{equation}
 %
 and the other four are of the form
 %
 \begin{equation}
-AH=H^\dagger A,
-\label{gs2}
+	AH=H^\dagger A,
+	\label{gs2}
 \end{equation}
 %
-where $A$ is a unitary or anti-unitary operator in Klein's $4$-group $\mathbf{K}_4 = \left\{1,\Pi,\Theta,\Theta\Pi\right\}$ formed by the identity ($1$), parity ($\Pi$), time-reversal ($\Theta$), and their product ($\Theta\Pi$), also termed $PT$. A Hamiltonian which has symmetry (\ref{gs2}) is called \linebreak $A$-pseudohermitian.
+where $A$ is a unitary or anti-unitary operator in Klein's $4$-group \linebreak $\mathbf{K}_4 = \left\{1,\Pi,\Theta,\Theta\Pi\right\}$ formed by the identity ($1$), parity ($\Pi$), time-reversal ($\Theta$), and their product ($\Theta\Pi$), also termed $PT$. A Hamiltonian which has symmetry (\ref{gs2}) is called \linebreak $A$-pseudohermitian.
 
 
 Here we aim at extending further our understanding of scattering of a structureless particle by NH-potentials in 1D
@@ -50,7 +50,7 @@ four of these eight symmetries  imply the same
 type of pole structure of $S$-matrix eigenvalues in the complex momentum plane that was found for PT symmetry \cite{Muga2004},
 namely, zero-pole correspondence at complex-conjugate points, and poles on the imaginary axis or forming symmetrical pairs with respect to the imaginary
 axis.\footnote{%Hermitian Hamiltonians conserve the wavefunction norm and have real eigenvalues.
- $S$-matrix poles of Hermitian Hamiltonians   are symmetric in the complex momentum plane with respect to the imaginary axis (see Fig. \ref{fig:DiagramPoles}).
+$S$-matrix poles of Hermitian Hamiltonians   are symmetric in the complex momentum plane with respect to the imaginary axis (see Fig. \ref{fig:DiagramPoles}).
 In the upper half-plane  they are on the imaginary axis and represent bound states.   In the lower half-plane they come in symmetrical
 resonance and antiresonance pairs, and may also lie on the imaginary axis as ``virtual states''. A further symmetry is the occurrence of a zero
 at the complex-conjugate momentum of a given pole. These properties are well known for partial wave scattering by spherical potentials
@@ -75,10 +75,10 @@ This configuration with poles located on the imaginary  axis or as symmetrical p
 
 
 \begin{figure}[h]
-    \includegraphics[width=0.75\linewidth]{DiagramPoles.eps}
-    \caption{Example of configuration of  poles (filled circles) and zeros (empty circles) of the $S$-matrix eigenvalues in the complex momentum plane for hermitian Hamiltonians.  Poles in the upper half plane ($\operatorname{Im}(p) > 0$) correspond to bound eigenstates of the Hamiltonian, i.e. localized states with negative energy. Poles in the lower half plane correspond to  virtual states ($\operatorname{Re}(p) = 0$), resonances ($\operatorname{Re}(p) > 0$) and antiresonances ($\operatorname{Re}(p)<0$). The singularities with negative imaginary part correspond to states that do not belong to the Hilbert space since they are not normalizable. However, they can produce observable effects in the scattering amplitudes, in particular when they approach the real axis. The pole structure of symmetries IV, V, and VII, see Table I,
-is similar, but pole pairs are also possible in the upper half-plane.}
-    \label{fig:DiagramPoles}
+	\includegraphics[width=0.75\linewidth]{Figures/DiagramPoles.eps}
+	\caption{Example of configuration of  poles (filled circles) and zeros (empty circles) of the $S$-matrix eigenvalues in the complex momentum plane for hermitian Hamiltonians.  Poles in the upper half plane ($\operatorname{Im}(p) > 0$) correspond to bound eigenstates of the Hamiltonian, i.e. localized states with negative energy. Poles in the lower half plane correspond to  virtual states ($\operatorname{Re}(p) = 0$), resonances ($\operatorname{Re}(p) > 0$) and antiresonances ($\operatorname{Re}(p)<0$). The singularities with negative imaginary part correspond to states that do not belong to the Hilbert space since they are not normalizable. However, they can produce observable effects in the scattering amplitudes, in particular when they approach the real axis. The pole structure of symmetries IV, V, and VII, see Table I,
+	is similar, but pole pairs are also possible in the upper half-plane.}
+	\label{fig:DiagramPoles}
 \end{figure}
 
 %however generally do not conserve norm, and typically have complex eigenvalues and asymmetrical singularities of $S$.
@@ -106,45 +106,42 @@ is similar, but pole pairs are also possible in the upper half-plane.}
 
 The remainder of the article is organized as follows. In section \ref{sec:SymTheory} we review the scattering properties of eight different Hamiltonian symmetries. These symmetries may be characterized as commutativity or pseudohermiticity with respect to four unitary or antiunitary operators forming a Klein $4$-group, or as invariance with respect to the action of eight linear or antilinear superoperators. In section \ref{sec:SPoles} we discuss the physical consequences of the symmetries in the pole structure of the scattering matrix eigenvalues  and hence in the transmission/reflection amplitudes. Four symmetries are shown to lead to complex poles corresponding to real energies or conjugate (energy) pairs.  In section \ref{sep_pot_sec} we exemplify the general results with separable potentials exhibiting parity-pseudohermiticity and time-reversal symmetry. These are the two non-trivial symmetries of the four (in the sense that the other two, hermiticity and PT-symmetry, are already well discussed). In section \ref{sec:RealEigenConclusions} we discuss and summarize our results.
 
-% \red{In section \ref{sec:ConjugatePairs} we prove that Hamiltonians which are invariant under the action of the antilinear superoperators imply symmetrical $S$-matrix pole pairs.}
-
-\begin{table*}
-%\label{table2RealEigen}
-\centering
-\scalebox{1}{
-\begin{tabular}{ccccccccccc}
-%\hline
-1&2&3&4&5&6&7&8&9&10&11
-\\
-Code & Symmetry&  $\la x|V|y\ra$ & ${\cal{L}}$(coord)& $\la p|V|p'\ra$ & ${\cal L}$(momentum) &$\la p|S|p'\ra$ & $T^l$ & $T^r$ & $R^l$& $R^r$
-\\
-\hline
-I & $1H=H1$ &   $\la x|V|y\ra$ & ${ 1}$ &$\la p|V|p'\ra$ &${ 1}$& $\la p|S|p'\ra$ & $T^l$ & $T^r$ & $R^l$ & $R^r$
-\\
-II & $1H=H^\dagger 1$ &  $\la y|V|x\ra^*$ & ${\cal TC}$& $\la p'|V|p\ra^*$ &${\cal T'C'}$&$\la p|\widehat{S}|p'\ra$ & $\widehat{T}^l$& $\widehat{T}^r$ & $\widehat{R}^l$ & $\widehat{R}^r$
-\\
-III & $\Pi H=H\Pi$ &  $\la -x|V|-y\ra$ &${\cal I}$&  $\la -p|V|-p'\ra$ &${\cal I'}$&$\la -p|S|-p'\ra$ & $T^r$ & $T^l$ & $R^r$ & $R^l$
-\\
-IV & $\Pi H=H^\dagger \Pi$ &  $\la -y|V|-x\ra^*$ &${\cal CTI}$& $\la -p'|V|-p\ra^*$ &${\cal C'T'I'}$& $\la -p|\widehat{S}|-p'\ra$ & $\widehat{T}^r$ & $\widehat{T}^l$ & $\widehat{R}^r$ & $\widehat{R}^l$
-\\
-V & $\Theta H=H\Theta$ &  $\la x|V|y\ra^*$&${\cal C}$& $\la -p|V|-p'\ra^*$ &${\cal I'C'}$& $\la -p'|\widehat{S}|-p\ra$ & $\widehat{T}^r$ & $\widehat{T}^l$ & $\widehat{R}^l$& $\widehat{R}^r$
-\\
-VI & $\Theta H=H^\dagger\Theta$ &  $\la y|V|x\ra$&${\cal T}$& $\la -p'|V|-p\ra$ &${\cal I'T'}$& $\la -p'|S|-p\ra$ & $T^r$& $T^l$ & $R^l$& $R^r$
-\\
-VII & $\Theta\Pi H=H\Theta \Pi$ &  $\la -x|V|-y\ra^*$ &${\cal IC}$& $\la p|V|p'\ra^*$ &${\cal C'}$& $\la p'|\widehat{S}|p\ra$ &$\widehat{T}^l$& $\widehat{T}^r$ & $\widehat{R}^r$& $\widehat{R}^l$
-\\
-VIII& $\Theta\Pi H=H^\dagger \Theta \Pi$ &  $\la -y|V|-x\ra$ &${\cal IT}$& $\la p'|V|p\ra$ &${\cal T'}$& $\la p'|S|p\ra$ & $T^l$ & $T^r$ & $R^r$ & $R^l$
-%\\
-%\hline
-\end{tabular}
-}
-\caption{Symmetries of the potential based on the commutativity or pseudohermiticity of $H$ with the elements of $\mathbf{K}_4$ (column 2). Columns 3, 5, and 7 to 11 are to be read as follows: For each symmetry the object in the column is equal to the one in the top row of the column. The relations among potential matrix elements are given in coordinate and momentum representations in the third and fifth columns. In columns 4 and 6, each symmetry is regarded as the invariance of the potential with respect to the transformations represented by superoperators ${\cal L}$ (see Sec. \ref{super}) in coordinate  or momentum  representation.
-The fifth column gives the relations they imply in the matrix elements of $S$ and $\widehat{S}$ matrices. The final four columns set the relations for the scattering amplitudes.
-\vspace*{.2cm}
-\label{table2RealEigen}}
-%\end{tabular}
-%}
-\end{table*}
+\begin{landscape}
+	\begin{table}
+		\centering
+		\caption{Symmetries of the potential based on the commutativity or pseudohermiticity of $H$ with the elements of $\mathbf{K}_4$ (column 2). Columns 3, 5, and 7 to 11 are to be read as follows: For each symmetry the object in the column is equal to the one in the top row of the column. The relations among potential matrix elements are given in coordinate and momentum representations in the third and fifth columns. In columns 4 and 6, each symmetry is regarded as the invariance of the potential with respect to the transformations represented by superoperators ${\cal L}$ (see Sec. \ref{super}) in coordinate  or momentum  representation.
+		The fifth column gives the relations they imply in the matrix elements of $S$ and $\widehat{S}$ matrices. The final four columns set the relations for the scattering amplitudes.
+		\vspace*{.2cm}
+		\label{table2RealEigen}}
+		\scalebox{1}{
+		\begin{tabular}{ccccccccccc}
+			%\hline
+			1&2&3&4&5&6&7&8&9&10&11
+			\\
+			Code & Symmetry&  $\la x|V|y\ra$ & ${\cal{L}}$(coord)& $\la p|V|p'\ra$ & ${\cal L}$(momentum) &$\la p|S|p'\ra$ & $T^l$ & $T^r$ & $R^l$& $R^r$
+			\\
+			\hline
+			I & $1H=H1$ &   $\la x|V|y\ra$ & ${ 1}$ &$\la p|V|p'\ra$ &${ 1}$& $\la p|S|p'\ra$ & $T^l$ & $T^r$ & $R^l$ & $R^r$
+			\\
+			II & $1H=H^\dagger 1$ &  $\la y|V|x\ra^*$ & ${\cal TC}$& $\la p'|V|p\ra^*$ &${\cal T'C'}$&$\la p|\widehat{S}|p'\ra$ & $\widehat{T}^l$& $\widehat{T}^r$ & $\widehat{R}^l$ & $\widehat{R}^r$
+			\\
+			III & $\Pi H=H\Pi$ &  $\la -x|V|-y\ra$ &${\cal I}$&  $\la -p|V|-p'\ra$ &${\cal I'}$&$\la -p|S|-p'\ra$ & $T^r$ & $T^l$ & $R^r$ & $R^l$
+			\\
+			IV & $\Pi H=H^\dagger \Pi$ &  $\la -y|V|-x\ra^*$ &${\cal CTI}$& $\la -p'|V|-p\ra^*$ &${\cal C'T'I'}$& $\la -p|\widehat{S}|-p'\ra$ & $\widehat{T}^r$ & $\widehat{T}^l$ & $\widehat{R}^r$ & $\widehat{R}^l$
+			\\
+			V & $\Theta H=H\Theta$ &  $\la x|V|y\ra^*$&${\cal C}$& $\la -p|V|-p'\ra^*$ &${\cal I'C'}$& $\la -p'|\widehat{S}|-p\ra$ & $\widehat{T}^r$ & $\widehat{T}^l$ & $\widehat{R}^l$& $\widehat{R}^r$
+			\\
+			VI & $\Theta H=H^\dagger\Theta$ &  $\la y|V|x\ra$&${\cal T}$& $\la -p'|V|-p\ra$ &${\cal I'T'}$& $\la -p'|S|-p\ra$ & $T^r$& $T^l$ & $R^l$& $R^r$
+			\\
+			VII & $\Theta\Pi H=H\Theta \Pi$ &  $\la -x|V|-y\ra^*$ &${\cal IC}$& $\la p|V|p'\ra^*$ &${\cal C'}$& $\la p'|\widehat{S}|p\ra$ &$\widehat{T}^l$& $\widehat{T}^r$ & $\widehat{R}^r$& $\widehat{R}^l$
+			\\
+			VIII& $\Theta\Pi H=H^\dagger \Theta \Pi$ &  $\la -y|V|-x\ra$ &${\cal IT}$& $\la p'|V|p\ra$ &${\cal T'}$& $\la p'|S|p\ra$ & $T^l$ & $T^r$ & $R^r$ & $R^l$
+			%\\
+			%\hline
+		\end{tabular}
+		}
+	\end{table}
+\end{landscape}
 % -------------------------------------------------------------------------------------------------
 
 \section{Hamiltonian Symmetries}
@@ -155,8 +152,8 @@ The fifth column gives the relations they imply in the matrix elements of $S$ an
 Let us first clarify the terminology. Scattering Hamiltonians are the ones that can be written as the sum of kinetic energy $H_0 = {p^2}/({2m})$ operator and a potential energy operator $V$,
 %
 \begin{equation}
-    H = H_0 + V.
-    \label{eq:ScatteringHamiltonian}
+	H = H_0 + V.
+	\label{eq:ScatteringHamiltonian}
 \end{equation}
 %
 $V$ is in general non-local, i.e., it does not have the local form $\la x|V|x'\ra=\delta(x-x')V(x)$.
@@ -201,8 +198,8 @@ are II, IV,V and VII.
 The emergence of these complex-conjugate pairs has been previously discussed in \cite{Mostafazadeh2002,Bender2010} for a general class of diagonalizable Hamiltonians that posses a discrete spectrum. They can be heuristically understood for the symmetries we consider as follows: Symmetry V implies that the Hamiltonian must be real in coordinate space, which would lead to a real characteristic polynomial with real or complex-conjugate roots. Symmetry VII is PT symmetry which is well discussed in the literature as having real or complex-conjugate pairs of eigenvalues \cite{Bender1998}. Note also that the matrix elements of PT-symmetric Hamiltonians are real in the momentum representation. More generally, in \cite{Mostafazadeh2002b}, it was shown, for diagonalizable Hamiltonians having a discrete spectrum, that $A$-pseudohermiticity for a Hermitian invertible linear operator $A$ is equivalent to the presence of an ordinary symmetry of the form $BH = HB$ for some antilinear operator $B$ with $B^2 = 1$. Because $B$ is an antilinear operator, the eigenvectors $\ket{E_n}$  of $H$ with eigenvalues $E_n$ satisfy
 %
 \begin{eqnarray}
-H B \ket{E_n}&=&B H \ket{E_n} \nonumber \\
-				   &=&E_{n}^{*} B \ket{E_n}.
+	H B \ket{E_n}&=&B H \ket{E_n} \nonumber \\
+	&=&E_{n}^{*} B \ket{E_n}.
 \end{eqnarray}
 %
 Therefore complex eigenvalues $E_n$ come in complex-conjugate pairs. In particular, when $\ket{E_n}$  is an eigenvector of $B$, i.e., $B\ket{E_n} = e^{ib_n} \ket{E_n}$ for some real number $b_n$, we have $E_n \in \mathbb{R}$.
@@ -217,19 +214,16 @@ A novel aspect uncovered in this paper is that whenever one of  the above-mentio
 %
 %
 \subsection{Superoperator formalism \label{super}}
-%
-%
-%
 The eight symmetries listed in Table I may also be regarded as the invariance
 of the Hamiltonian matrix with respect to
 transformations represented by superoperators ${\cal L}$ \cite{Simon2018} defined by
 %
 \begin{eqnarray}
-\mathcal{L}(H)=
+	\mathcal{L}(H)=
 	\begin{cases}
-      A^\dagger H A &  \text{I, III,V,VII} \\
-      A^\dagger H^\dagger A &\text{II, IV, VI, VIII}
-   \end{cases}.
+		A^\dagger H A &  \text{I, III,V,VII} \\
+		A^\dagger H^\dagger A &\text{II, IV, VI, VIII}
+		\end{cases}.
 \end{eqnarray}
 %
 %\red{Write how the symmetries look like using the superoperator formalism in position and mommentum basis.}
@@ -242,46 +236,40 @@ in coordinates or momenta in terms of the operations of complex conjugation, tra
 For example, in coordinate representation, these superoperators take the following forms (see column 3 in Table I),
 %
 \begin{eqnarray}
-1 H&=&\int\!\!\int |x\ra \la x|H|y\ra\la y| dx dy,
-\nonumber\\
-{\cal T} (H) &=&\int\!\!\int |x\ra \la y|H|x\ra\la y| dx dy,
-\nonumber\\
-{\cal C} (H)&=&\int\!\!\int |x\ra \la x|H|y\ra^*\la y| dx dy,
-\nonumber\\
-{\cal I} (H)&=&\int\!\!\int |x\ra \la -x|H|-y\ra\la y| dx dy.
-%\nonumber\\
-%{\cal CT} H &=&\int\!\!\int |x\ra \la y|H|x\ra^*\la y| dx dy,
-%\nonumber\\
-%{\cal CI} H&=&\int\!\!\int |x\ra \la -x|H|-y\ra^*\la y| dx dy,
-%\nonumber\\
-%{\cal TI} H&=&\int\!\!\int |x\ra \la -y|H|-x\ra\la y| dx dy,
-%\nonumber\\
-%{\cal CTI} H&=&\int\!\!\int |x\ra \la -y|H|-x\ra^*\la y| dx dy,
-\label{defs}
+	1 H&=&\int\!\!\int |x\ra \la x|H|y\ra\la y| dx dy,
+	\nonumber\\
+	{\cal T} (H) &=&\int\!\!\int |x\ra \la y|H|x\ra\la y| dx dy,
+	\nonumber\\
+	{\cal C} (H)&=&\int\!\!\int |x\ra \la x|H|y\ra^*\la y| dx dy,
+	\nonumber\\
+	{\cal I} (H)&=&\int\!\!\int |x\ra \la -x|H|-y\ra\la y| dx dy.
+	%\nonumber\\
+	%{\cal CT} H &=&\int\!\!\int |x\ra \la y|H|x\ra^*\la y| dx dy,
+	%\nonumber\\
+	%{\cal CI} H&=&\int\!\!\int |x\ra \la -x|H|-y\ra^*\la y| dx dy,
+	%\nonumber\\
+	%{\cal TI} H&=&\int\!\!\int |x\ra \la -y|H|-x\ra\la y| dx dy,
+	%\nonumber\\
+	%{\cal CTI} H&=&\int\!\!\int |x\ra \la -y|H|-x\ra^*\la y| dx dy,
+	\label{defs}
 \end{eqnarray}
 %
 % inner product for linear operators F and G, hhF|Gii = trF�G, we can show that all the above superoperators L are either unitary (for L = 1, T , I, T T ) or antiunitary ( for {\cal L} = C, CT , CI, CT I). Recall the following definition of unitarity and antiunitarity.
-Adopting the following inner product for linear operators $F$ and $G$, $\langle\langle F|G\rangle\rangle={\rm{tr}} F^\dagger G$,
+Adopting the following inner product for linear operators $F$ and $G$,\linebreak $\langle\langle F|G\rangle\rangle={\rm{tr}} F^\dagger G$,
 we can show that all superoperators ${\cal L}$ are either unitary (for ${\cal L}=1,{\cal T},{\cal I},{\cal TI}$), or antiunitary (for ${\cal L}={\cal C}, {\cal CT},{\cal CI},{\cal CTI}$), as defined by
 %
 \begin{eqnarray}
-\langle\langle {\cal L}F| {\cal L}G\rangle\rangle&=& \langle\langle F| G\rangle\rangle\;\;\;  ({\cal L}\; {\rm unitary}),
-\\
-\langle\langle {\cal L}F| {\cal L} G\rangle\rangle&=& \langle\langle  F| G\rangle\rangle^*\;\;\;  ({\cal L}\; {\rm antiunitary}).
+	\langle\langle {\cal L}F| {\cal L}G\rangle\rangle&=& \langle\langle F| G\rangle\rangle\;\;\;  ({\cal L}\; {\rm unitary}),
+	\\
+	\langle\langle {\cal L}F| {\cal L} G\rangle\rangle&=& \langle\langle  F| G\rangle\rangle^*\;\;\;  ({\cal L}\; {\rm antiunitary}).
 \end{eqnarray}
-%
-%where antiunitary  superoperators satisfy
-%%
-%\beq
-%{\cal L} (aA_1+bA_2)=a^*{\cal L}A_1+ b^*{\cal L}A_2.
-%\eeq
 %
 They all satisfy ${\cal L}{\cal L}^\dagger={\cal L}^\dagger {\cal L}=1$
 where the adjoints are defined differently for linear or antilinear superoperators,
 \begin{eqnarray}
-\langle\langle F| {\cal L}^\dagger G\rangle\rangle&=& \langle\langle {\cal L} F| G\rangle\rangle\;\;\;  ({\cal L}\; {\rm unitary}),
-\\
-\langle\langle F| {\cal L}^\dagger G\rangle\rangle&=& \langle\langle {\cal L} F| G\rangle\rangle^*\;  ({\cal L}\; {\rm antiunitary}).
+	\langle\langle F| {\cal L}^\dagger G\rangle\rangle&=& \langle\langle {\cal L} F| G\rangle\rangle\;\;\;  ({\cal L}\; {\rm unitary}),
+	\\
+	\langle\langle F| {\cal L}^\dagger G\rangle\rangle&=& \langle\langle {\cal L} F| G\rangle\rangle^*\;  ({\cal L}\; {\rm antiunitary}).
 \end{eqnarray}
 %
 Moreover the eight superoperators  satisfy ${\cal L}^\dagger={\cal L}$.
@@ -289,8 +277,7 @@ Moreover the eight superoperators  satisfy ${\cal L}^\dagger={\cal L}$.
 The set $\{1, \cal{I,T,C,CT,TI,IC,CTI}\}$ forms the elementary abelian group $E8$ \cite{Rose2009}.
 %and cite. Ref: Rose, H. E. A course on finite groups. Springer-Verlag: London, UK, 2009, ISBN 978-1-84882-888-9.}.
 This is a homocyclic group, namely, the direct product of isomorphic
-cyclic groups of order 2 with generators $\cal{C,T,I}$. We may, similarly to Eq. (\ref{defs}), define primmed superoperators in momentum representation, e.g. ${\cal T'} H =\int\!\!\int |p\ra \la p'|H|p\ra\la p'| dp dp'$. They also form the E8 group
-$\{1, \cal{I',T',C',C'T',T'I',I'C',C'T'I'}\}$. Only for the subgroup $\{1, \cal{I,CT,CTI}\}$ the superoperators have the same representation-independent form in terms of complex conjugation, transposition and inversion.
+cyclic groups of order 2 with generators $\cal{C,T,I}$. We may, similarly to Eq. (\ref{defs}), define primmed superoperators in momentum representation, e.g. \linebreak ${\cal T'} H =\int\!\!\int |p\ra \la p'|H|p\ra\la p'| dp dp'$. They also form the E8 group \linebreak $\{1, \cal{I',T',C',C'T',T'I',I'C',C'T'I'}\}$. Only for the subgroup $\{1, \cal{I,CT,CTI}\}$ the superoperators have the same representation-independent form in terms of complex conjugation, transposition and inversion.
 
 A direct application of the superoperator framework is the generalization of Wigner's
 formulation of symmetries \cite{Wigner1959}. He associated symmetry transformations to unitary or antiunitary operators preserving the (Hilbert space) inner product, namely the ``transition probabilities'' $|\expval{A\psi,A\phi}|^2=|\expval{\psi,\phi}|^2$.
@@ -333,11 +320,11 @@ In 1D scattering, the on-the-energy-shell $\sf{S}(p)$ matrix for $H$ is defined 
 and left incidence \cite{Muga2004},
 %
 \begin{equation}
-\sf{S}=\left(\begin{array}{cc}
-T^l(p)&R^r(p)
-\\
-R^l(p)&T^r(p)
-\end{array}\right).
+	\sf{S}=\left(\begin{array}{cc}
+	T^l(p)&R^r(p)
+	\\
+	R^l(p)&T^r(p)
+	\end{array}\right).
 \end{equation}
 %
 There is a companion matrix $\widehat{\sf{S}}$ with hatted amplitudes corresponding to scattering by $H^{\dagger}$. See Appendix \ref{Appendix:ScattFormalism} and \cite{Muga2004} for details. The $\sf{S}$ matrix contains the scattering amplitudes for incoming wave packets with well defined momentum being scattered into states with the same kinetic energy and reflected and transmitted components.
@@ -354,27 +341,27 @@ The analytical continuation is indeed possible for the model potentials of the f
 The eigenvalues of $\sf{S}$ can be calculated from the transmission and reflection amplitudes as
 %
 \begin{equation}
-S_j=\frac{(T^l+T^r)+(-1)^j[(T^l-T^r)^2+4R^lR^r]^{1/2}}{2}
-\label{Sform}
+	S_j=\frac{(T^l+T^r)+(-1)^j[(T^l-T^r)^2+4R^lR^r]^{1/2}}{2}
+	\label{Sform}
 \end{equation}
 %
 for $j=1,2$, and of course there is a similar expression for $\widehat{S}_j$ with hatted amplitudes.
 In general they satisfy the relations \cite{Muga2004},
 %
 \begin{equation}\label{pam1}
-S_j(p)=\widehat{S}_j^*(-p^*)\,,
+	S_j(p)=\widehat{S}_j^*(-p^*)\,,
 \end{equation}
 %
 and
 %
 \begin{equation}\label{pam2}
-\widehat{S}_j^*(p^*)S_j(p)=1\,.
+	\widehat{S}_j^*(p^*)S_j(p)=1\,.
 \end{equation}
 %
 Combining Eqs. (\ref{pam1}) and (\ref{pam2}) gives
 %
 \begin{equation}\label{pam3}
-S_j(p)=S^{-1}_j(-p)\,.
+	S_j(p)=S^{-1}_j(-p)\,.
 \end{equation}
 %
 Equation \eqref{pam3} is remarkable since it reveals the presence of a pole (zero) at $-p$ if there is a zero (pole) at $p$.
@@ -389,24 +376,24 @@ Equation \eqref{pam3} is remarkable since it reveals the presence of a pole (zer
 If the following relations are fulfilled,
 %
 \begin{eqnarray}
-T^{r,l}(p)&=&\widehat{T}^{r,l}(p)\; {\rm or}\; T^{r,l}(p)=\widehat{T}^{l,r}(p),
-\label{ts}
-\\
-R^{r,l}(p)&=&\widehat{R}^{r,l}(p)\; {\rm or}\; R^{r,l}(p)=\widehat{R}^{l,r}(p),
-\label{rs}
+	T^{r,l}(p)&=&\widehat{T}^{r,l}(p)\; {\rm or}\; T^{r,l}(p)=\widehat{T}^{l,r}(p),
+	\label{ts}
+	\\
+	R^{r,l}(p)&=&\widehat{R}^{r,l}(p)\; {\rm or}\; R^{r,l}(p)=\widehat{R}^{l,r}(p),
+	\label{rs}
 \end{eqnarray}
 %
 then
 %
 \begin{equation}
-S_j(p)=\widehat{S}_j(p),
+	S_j(p)=\widehat{S}_j(p),
 \end{equation}
 %
 which together with Eq. \eqref{pam1} gives
 %
 \begin{equation}
-S_j(p)=S_j^*(-p^*).
-\label{eq:PoleSymmetry}
+	S_j(p)=S_j^*(-p^*).
+	\label{eq:PoleSymmetry}
 \end{equation}
 %}
 In plain language, Eq. \eqref{eq:PoleSymmetry} tells that if Eqs. (\ref{ts}) and (\ref{rs}) are satisfied,  the poles and zeros of $S_j$ must be symmetrically distributed with respect to the imaginary axis of momentum complex plane. Combined with Eq. (\ref{pam3})
@@ -423,38 +410,6 @@ cases \cite{Ruschhaupt2017}, namely,
 IV becomes equivalent to PT-symmetry, and V becomes equivalent to hermiticity. For non-local potentials, though, these symmetries
 correspond to genuinely distinct properties. In the following section we shall demonstrate this fact with potentials that are
 either purely parity-pseudohermitian (and not PT-symmetrical), or time-reversal invariant but not Hermitian.
-
-%
-%we get
-%%
-%\begin{eqnarray}\label{prt1}
-%(R^{l,r}(p))^* &=& \widehat{R}^{l,r}(-p^*)\,, \nonumber\\
-%(T^{l,r}(p))^* &=& \widehat{T}^{r,l}(-p^*)\,,
-%\end{equation}a
-%%
-%%
-%The generalization  of the unitarity relation (\ref{uni})
-%in the different representations of the scattering operator
-%(\ref{mco1},\ref{mco2}) provides another series of relations
-%between the amplitudes: for the plane wave
-%representation,\footnote{
-%If $f(z)$ is
-%analytic in a region ${\cal D}$, $f^*(z^*)$ will be
-%analytic in ${\cal D}^*$.}
-%%
-%\begin{eqnarray}\label{prt2}
-%\widehat{T}^{l*}(p^*)T^l(p)+\widehat{R}^{l*}(p^*)R^l(p) &=& 1\,, \nonumber\\
-%\widehat{T}^{l*}(p^*)R^r(p)+\widehat{R}^{l*}(p^*)T^r(p) &=& 0\,, \nonumber\\
-%\widehat{R}^{r*}(p^*)T^l(p)+\widehat{T}^{r*}(p^*)R^l(p) &=& 0\,, \nonumber\\
-%\widehat{R}^{r*}(p^*)R^r(p)+\widehat{T}^{r*}(p^*)T^r(p) &=& 1\,,
-%\end{equation}a
-%%
-%and for the diagonal representation
-%
-%
-%
-%
-%
 %
 \section{Separable Potentials}
 \label{sep_pot_sec}
@@ -481,14 +436,14 @@ the real axis, or diodic (Maxwell demon) behavior with asymmetrical transmission
 From the stationary Schr\"{o}dinger equation $H \ket{\psi} = E \ket{\psi}$, the eigenvalues of separable potentials may be found by solving
 %
 \begin{eqnarray}
-Q_{0}(E)V_{0} = 1,
-\label{roots}
+	Q_{0}(E)V_{0} = 1,
+	\label{roots}
 \end{eqnarray}
 %
 where $Q_{0}(E)=\bra{\chi}(E-H_0)^{-1}\ket{\phi}$ and $H_{0}=p^{2}/(2m)$. Moreover, for a separable potential, the transition operator $T_{op}$ can be written (see Appendix \ref{Appendix:SeparablePotentials_TransitionOperator}) as
 %
 \begin{equation}
-T_{op}=\frac{V_{0}}{1-V_{0} Q_{0}(E)} \ketbra{\phi}{\chi}.
+	T_{op}=\frac{V_{0}}{1-V_{0} Q_{0}(E)} \ketbra{\phi}{\chi}.
 \end{equation}
 %
 Since all scattering amplitudes in $S$ are simply related to matrix elements of $T_{op}$ in momentum representation, see
@@ -506,29 +461,29 @@ In the following subsections we will build a Hamiltonian with symmetry V (time r
 %
 %
 \begin{figure}[h]
-    \includegraphics[width=1.0\linewidth]{VSymEigenvalsVaryingV0_Momentum.eps}
-    \includegraphics[width=1.0\linewidth]{VSymEigenvalsVaryingA_Momentum_Log.eps}
-    \includegraphics[width=1.0\linewidth]{VSymEigenvalsVaryingB_Momentum_Log.eps}
-    \caption{(Color online) Poles and pole trajectories of time-reversal symmetric potential \eqref{TRpot} for (a) varying $V_0$ with $a=2 b$; (b) varying $a$ with $b=0.5\, p_0$, $V_0>0$; and (c) varying $b$ with $a=p_0$,
-    $V_0>0$. At pole collisions we connect each of the incoming trajectories with a different emerging trajectory but the choice of outgoing branch  is arbitrary since the two colliding poles lose their identity.}
-    \label{fig:VSymEigenvals}
+	\includegraphics[width=1.0\linewidth]{Figures/VSymEigenvalsVaryingV0_Momentum.eps}
+	\includegraphics[width=1.0\linewidth]{Figures/VSymEigenvalsVaryingA_Momentum_Log.eps}
+	\includegraphics[width=1.0\linewidth]{Figures/VSymEigenvalsVaryingB_Momentum_Log.eps}
+	\caption{(Color online) Poles and pole trajectories of time-reversal symmetric potential \eqref{TRpot} for (a) varying $V_0$ with $a=2 b$; (b) varying $a$ with $b=0.5\, p_0$, $V_0>0$; and (c) varying $b$ with $a=p_0$,
+	$V_0>0$. At pole collisions we connect each of the incoming trajectories with a different emerging trajectory but the choice of outgoing branch  is arbitrary since the two colliding poles lose their identity.}
+	\label{fig:VSymEigenvals}
 \end{figure}
 
 We start with an example of a separable potential which only satisfies symmetry V (apart from the trivial symmetry I). The normalised vector $\ket{\chi}$, is given in position and momentum representation as
 %
 \begin{eqnarray}
-\braket{x}{\chi}&=&\sqrt{\frac{a}{\hbar}} e^{-a \left| x \right|/\hbar},
-\nonumber \\
-\braket{p}{\chi}&=& \sqrt{\frac{2 a^3}{\pi}} \frac{1}{p^2+a^2}.
+	\braket{x}{\chi}&=&\sqrt{\frac{a}{\hbar}} e^{-a \left| x \right|/\hbar},
+	\nonumber \\
+	\braket{p}{\chi}&=& \sqrt{\frac{2 a^3}{\pi}} \frac{1}{p^2+a^2}.
 \end{eqnarray}
 %
 We choose $\ket{\phi}$ similarly as
 %
 \begin{eqnarray}
-\braket{x}{\phi}=&\sqrt{\frac{2ab}{\hbar (a+b)}} \begin{cases}
- e^{-b x/\hbar} &x>0,\\ e^{a x/\hbar}  &x<0,
-   \end{cases}\nonumber \\
-\braket{p}{\phi}=& \sqrt{\frac{ab}{\pi (a+b)}}\frac{a+b}{(p+i a)(p-i b)}.
+	\braket{x}{\phi}=&\sqrt{\frac{2ab}{\hbar (a+b)}} \begin{cases}
+	e^{-b x/\hbar} &x>0,\\ e^{a x/\hbar}  &x<0,
+	\end{cases}\nonumber \\
+	\braket{p}{\phi}=& \sqrt{\frac{ab}{\pi (a+b)}}\frac{a+b}{(p+i a)(p-i b)}.
 \end{eqnarray}
 %
 The real and positive parameters $\hbar/ a$ and $\hbar/ b$ determine the width of the potential functions in coordinate representation.
@@ -536,9 +491,9 @@ $b$ is chosen different from $a$ to introduce a right/left  asymmetry in $\brake
 In coordinate representation the potential is given as
 %
 \begin{eqnarray}
-\la x|V|y\ra = V_{0} \sqrt{\frac{2 b a^2}{\hbar^2 (a+b)}} \begin{cases}
- e^{-(a \left| y \right|+b x)/\hbar} \, &x>0,\\ e^{a (x-\left| y \right|)/\hbar} \,  &x<0.
-   \end{cases} \label{TRpot}
+	\la x|V|y\ra = V_{0} \sqrt{\frac{2 b a^2}{\hbar^2 (a+b)}} \begin{cases}
+	e^{-(a \left| y \right|+b x)/\hbar} \, &x>0,\\ e^{a (x-\left| y \right|)/\hbar} \,  &x<0.
+\end{cases} \label{TRpot}
 \end{eqnarray}
 %
 %which can be seen in Fig. \ref{fig:VSymPotentialPlot}.
@@ -576,11 +531,11 @@ The coefficients can be greater than one in contrast to the Hermitian case.
 %Figure
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
-    \begin{center}
-    \includegraphics[width=1\linewidth]{VSymScattAmplitudes.eps}
-    \end{center}
-    \caption{(Color online) Transmission and reflection coefficients of the time-reversal symmetric potential \eqref{TRpot} with $a=p_0$, $b= 0.5\, p_0$ and $V_0>0$.}
-    \label{fig:VSymScattAmplitudes}
+\begin{center}
+	\includegraphics[width=1\linewidth]{Figures/VSymScattAmplitudes.eps}
+\end{center}
+\caption{(Color online) Transmission and reflection coefficients of the time-reversal symmetric potential \eqref{TRpot} with $a=p_0$, $b= 0.5\, p_0$ and $V_0>0$.}
+\label{fig:VSymScattAmplitudes}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -593,7 +548,7 @@ As a second example we will consider  a separable potential which only fulfils s
 \begin{eqnarray}
 \braket{x}{\chi}=& \sqrt{\frac{a}{\hbar}} \begin{cases}
 e^{-(a+ib)x/\hbar}  &x>0,\\ e^{a x/\hbar} &x<0,
-   \end{cases} \nonumber \\
+\end{cases} \nonumber \\
 \braket{p}{\chi}=&  \sqrt{\frac{a}{2\pi}} \frac{2 a+ i b}{(p+ia)(p+b-i a)},
 \end{eqnarray}
 %
@@ -603,7 +558,7 @@ We choose $\ket{\phi}$ as
 \begin{eqnarray}
 \braket{x}{\phi}=& \sqrt{\frac{a}{\hbar}} \begin{cases}
 e^{-a x/\hbar} &x>0,\\ e^{(a+i b)x/\hbar} &x<0,
-   \end{cases} \nonumber \\
+\end{cases} \nonumber \\
 \braket{p}{\phi}=& \sqrt{\frac{a}{2\pi}} \frac{2 a+i b}{(p-ia)(p-b+i a)},
 \end{eqnarray}
 %
@@ -614,12 +569,12 @@ In coordinate representation the potential is
 %
 \begin{eqnarray}
 \hspace*{-0.6cm}\la x|V|y\ra=  \frac{aV_{0}}{\hbar} \begin{cases}
- e^{-\left[a (x+y) - i b y\right]/\hbar} \, ,&x>0,\,y>0\\
- e^{a(y-x)/\hbar} \,  ,&x>0, \,y<0\\
- e^{\left[a(x-y)+i b(x+y)\right]/\hbar} \,  ,&x<0,\,y>0\\
- e^{\left[a(x+y)+i b x\right]/\hbar} \,  ,&x<0,\,y<0
-   \end{cases}.
-   \label{Ppot}
+e^{-\left[a (x+y) - i b y\right]/\hbar} \, ,&x>0,\,y>0\\
+e^{a(y-x)/\hbar} \,  ,&x>0, \,y<0\\
+e^{\left[a(x-y)+i b(x+y)\right]/\hbar} \,  ,&x<0,\,y>0\\
+e^{\left[a(x+y)+i b x\right]/\hbar} \,  ,&x<0,\,y<0
+\end{cases}.
+\label{Ppot}
 \end{eqnarray}
 %
 %see Fig. \ref{fig:IVSymPotentialPlot}.
@@ -627,11 +582,11 @@ The case $b=0$ implies that the potential is real and hence satisfies time-rever
 
 
 \begin{figure}[h]
-    \includegraphics[width=1.0\linewidth]{IVSymEigenvalsVaryingV0new.eps}
-    \includegraphics[width=1.0\linewidth]{IVSymEigenvalsVaryinganew.eps}
-    \includegraphics[width=1.0\linewidth]{IVSymEigenvalsVaryingbnew.eps}
-    \caption{(Color online) Poles and pole trajectories for the parity pseudohermitian potential \eqref{Ppot} (a) varying $V_0$ with $a=b$; (b) varying $a$ with $b=p_0$, $V_0>0$; (c) varying $b$ with $a=0.5\, p_0$, $V_0>0$.}
-    \label{fig:IVSymEigenvals}
+\includegraphics[width=1.0\linewidth]{Figures/IVSymEigenvalsVaryingV0new.eps}
+\includegraphics[width=1.0\linewidth]{Figures/IVSymEigenvalsVaryinganew.eps}
+\includegraphics[width=1.0\linewidth]{Figures/IVSymEigenvalsVaryingbnew.eps}
+\caption{(Color online) Poles and pole trajectories for the parity pseudohermitian potential \eqref{Ppot} (a) varying $V_0$ with $a=b$; (b) varying $a$ with $b=p_0$, $V_0>0$; (c) varying $b$ with $a=0.5\, p_0$, $V_0>0$.}
+\label{fig:IVSymEigenvals}
 \end{figure}
 
 
@@ -659,7 +614,7 @@ Figure \ref{fig:T_R_fig2} depicts the associated transmission and reflection coe
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[t]
 \begin{center}
-\includegraphics[width=\linewidth]{IVSymTR.eps}
+	\includegraphics[width=\linewidth]{Figures/IVSymTR.eps}
 \end{center}
 \caption{(Color online) Transmission and reflection coefficients for $a=b=0.5\, p_0$ and $V_0>0$.}
 \label{fig:T_R_fig2}

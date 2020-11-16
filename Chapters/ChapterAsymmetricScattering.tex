@@ -50,29 +50,22 @@ which were used, e.g., to propose  the realization of PT-symmetric potentials in
 
 
 \begin{figure}
-\includegraphics[width = 0.9\columnwidth]{Figures/PotentialCasesPT.pdf}
-\caption{(Color online) Devices with asymmetric scattering (limited to scattering coefficients being 0 or 1).  The dashed and continuous lines represent respectively zero or one
-for the moduli of the scattering amplitudes; the bended lines are for reflection amplitudes, and the straight lines for transmission:
-(a) One-way mirror ($\cal{TR/A}$); (b) One-way barrier ($\cal{T/R}$); (c) One-Way T-filter ($\cal{T/A}$);
-(d) Mirror \& 1-way transmitter ($\cal{TR/R}$); (e) One-way R-filter ($\cal{R/A}$); (f) Transparent, one-way
-reflector ($\cal{TR/T}$).
-The letter codes summarize the effect of left and right incidence, separated by a  slash ``$/$''.
-${\cal T}$ or ${\cal R}$ on one side of the slash indicate a unit
-transmission or reflection coefficient
-for  incidence from that side, whereas the absence of one or the other letter corresponds to zero coefficients.
-An ${\cal A}$ denotes ``full absorption'', i.e., both moduli of reflection and transmission amplitudes are zero for incidence from one side.
-For example,  $\cal{TR/A}$ means unit modulus transmission
-and reflection from the left and total absorption from the right.
-\label{cases}}
+  \includegraphics[width = 0.9\columnwidth]{Figures/PotentialCasesPT.pdf}
+  \caption{(Color online) Devices with asymmetric scattering (limited to scattering coefficients being 0 or 1).  The dashed and continuous lines represent respectively zero or one
+  for the moduli of the scattering amplitudes; the bended lines are for reflection amplitudes, and the straight lines for transmission:
+  (a) One-way mirror ($\cal{TR/A}$); (b) One-way barrier ($\cal{T/R}$); (c) One-Way T-filter ($\cal{T/A}$);
+  (d) Mirror \& 1-way transmitter ($\cal{TR/R}$); (e) One-way R-filter ($\cal{R/A}$); (f) Transparent, one-way
+  reflector ($\cal{TR/T}$).
+  The letter codes summarize the effect of left and right incidence, separated by a  slash ``$/$''.
+  ${\cal T}$ or ${\cal R}$ on one side of the slash indicate a unit
+  transmission or reflection coefficient
+  for  incidence from that side, whereas the absence of one or the other letter corresponds to zero coefficients.
+  An ${\cal A}$ denotes ``full absorption'', i.e., both moduli of reflection and transmission amplitudes are zero for incidence from one side.
+  For example,  $\cal{TR/A}$ means unit modulus transmission
+  and reflection from the left and total absorption from the right.
+  \label{cases}}
 \end{figure}
 
-%The definition of generalized symmetries, and their physical implications when combined with generalized unitarity relations are analyzed in Section
-%\ref{gs}.
-%In Section \ref{examples}, we  design non-local potentials to implement the different asymmetric devices
-%for a specific incident momentum.
-%Sec. \ref{ext} provides an example of how to extend the domain of incident momenta
-%for which the device works ideally.
-%The final section summarizes the results and discusses open questions.
 
 % ----------------------------------------------------------------------------------------------
 \begin{landscape}
@@ -134,36 +127,25 @@ The notation is essentially as in \cite{Muga2004}, but it proves convenient to u
 for the potential matrix (or kernel function) in coordinate representation
 two different forms, namely $\langle x|V|y\rangle=V(x,y)$. ``Local'' potentials are those
 for which $V(x,y)=V(x)\delta(x-y)$.
-%We will use the expression
-%potential also for the potential matrix during this paper.
 
 
 
 %
 For hermitian  Hamiltonians, symmetries are represented by the commutation of
-a symmetry operator with the Hamiltonian.
-%For time-independent Hamiltonians
-%the symmetry operator represents a conserved quantity.
-% and, when
-%applied to an eigenstate of $H$, it produces a degenerate eigenstate.
-In scattering theory, symmetry plays an important role  as it implies relations among
+a symmetry operator with the Hamiltonian. In scattering theory, symmetry plays an important role  as it implies relations among
 the S-matrix elements beyond those implied by its unitarity, see e.g. \cite{Taylor1972} and, for scattering in one dimension,
 Sec. 2.6 in \cite{Muga2004}.
 
-
 Symmetries are also useful for  non-hermitian Hamiltonians, but the mathematical and conceptual
-framework must be generalized. We consider that a unitary or antiunitary
-%
-%unitary or antiunitary symmetry transformation
-operator $A$ represents a symmetry of $H$ if it satisfies
+framework must be generalized. We consider that a unitary or antiunitary operator $A$ represents a symmetry of $H$ if it satisfies
 at least one of these relations,
 %
 \begin{eqnarray}
-AH&=&HA,
-\label{symm}
-\\
-AH&=&H^\dagger A.
-\label{pseudo}
+  AH&=&HA,
+  \label{symm}
+  \\
+  AH&=&H^\dagger A.
+  \label{pseudo}
 \end{eqnarray}
 %
 For a right eigenstate of $H$, $|\psi\rangle$,
@@ -176,7 +158,7 @@ for $A$ antiunitary. For real-energy scattering
 eigenfunctions in the continuum, the ones we are interested in here, $E^*=E$.
 When eq. (\ref{pseudo}) holds we say that $H$ is $A$-pseudohermitian \cite{Mostafazadeh2010}.
 Parity-pseudohermiticity has played an important role as being equivalent to space-time reflection (PT) symmetry for {\it local} potentials
- \cite{Mostafazadeh2010,Znojil2015}. A large set of these equivalences
+\cite{Mostafazadeh2010,Znojil2015}. A large set of these equivalences
 will be discussed below.
 A relation of the form (\ref{pseudo}) has been also used with differential operators  to get real spectra beyond
 PT-symmetry for local potentials  \cite{Nixon2016,Nixon2016a}.
@@ -196,28 +178,28 @@ Interesting enough, in this classification hermiticity (symmetry II in  table \r
 may be regarded as $1$-pseudohermiticity.
 
 \begin{table}
-\caption{Equivalences among symmetries for the potential elements.
-Given the symmetry of the upper row, the table provides the equivalent symmetries.
-For example, if II is satisfied, then III=IV holds. In words, if the potential is hermitian,  parity symmetry amounts to
-parity pseudohermiticity. In terms of the matrix elements of the potential, if  $\langle x|V|y\rangle=\langle y|V|x\rangle^*$ {\it and also}
-$\langle x|V|y\rangle=\langle -x|V|-y\rangle$, $\forall (x,y)$, then $\langle x|V|y\rangle=\langle -y|V|-x\rangle^*$ holds as well. One may proceed similarly for all other relations.
-The commutation with the identity (I) is excluded as this symmetry is satisfied by all potentials.\vspace*{.2cm}
- \label{tablee}}
-\centering
-\scalebox{0.9}{
-\begin{tabular}{ccccccc}
-%\hline
-II & III& IV& V& VI & VII &VIII
-\\
-\hline
-III=IV & II=IV & II=III & II=VI &II=V&II=VIII&II=VII
-\\
-V=VI&V=VII&V=VIII&III=VII&III=VIII&III=V&III=VI
-\\
-VII=VIII&VI=VIII&VI=VII&IV=VIII&IV=VII&IV=VI&IV=V
-%\\
-%\hline
-\end{tabular}}
+  \caption{Equivalences among symmetries for the potential elements.
+  Given the symmetry of the upper row, the table provides the equivalent symmetries.
+  For example, if II is satisfied, then III=IV holds. In words, if the potential is hermitian,  parity symmetry amounts to
+  parity pseudohermiticity. In terms of the matrix elements of the potential, if  $\langle x|V|y\rangle=\langle y|V|x\rangle^*$ {\it and also}
+  $\langle x|V|y\rangle=\langle -x|V|-y\rangle$, $\forall (x,y)$, then $\langle x|V|y\rangle=\langle -y|V|-x\rangle^*$ holds as well. One may proceed similarly for all other relations.
+  The commutation with the identity (I) is excluded as this symmetry is satisfied by all potentials.\vspace*{.2cm}
+  \label{tablee}}
+  \centering
+  \scalebox{0.9}{
+  \begin{tabular}{ccccccc}
+    %\hline
+    II & III& IV& V& VI & VII &VIII
+    \\
+    \hline
+    III=IV & II=IV & II=III & II=VI &II=V&II=VIII&II=VII
+    \\
+    V=VI&V=VII&V=VIII&III=VII&III=VIII&III=V&III=VI
+    \\
+    VII=VIII&VI=VIII&VI=VII&IV=VIII&IV=VII&IV=VI&IV=V
+    %\\
+    %\hline
+  \end{tabular}}
 
 \end{table}
 
@@ -226,10 +208,6 @@ are provided in
 ref. \cite{Muga2004}, where the symmetry types III, VI, and VII where worked out. Similar manipulations, making use of the action of unitary or antiunitary operators
 of Klein's group on M\"oller operators, help to
 complete the  table.
-%$S$ or $\widehat{S}$ are not unitary in general for nonhermitian potentials
-%but may be combined to set generalized unitarity relations, $\widehat{S}^\dagger S=S\widehat{S}^\dagger=1$.
-%,
-%see eq. (S8) for the explicit relations implied among the scattering amplitudes.
 
 From the fifth column in table 1, equivalences among the amplitudes for left and right incidence
 for scattering by $H$, ($T^{l,r}, R^{l,r}$) or $H^\dagger$  ($\widehat{T}^{l,r}, \widehat{R}^{l,r}$),
@@ -240,57 +218,37 @@ which in terms of amplitudes take the form \cite{Muga2004}
 %(\ref{gur}),
 %
 \begin{eqnarray}
-\widehat T^l T^{l*} + \widehat R^l R^{l*} = 1,
-\nonumber\\
-\widehat T^r T^{r*} + \widehat R^r R^{r*} = 1,
-\nonumber\\
-\hat T^{l*} R^r + T^r \widehat R^{l*} = 0,
-\nonumber\\
-T^l \widehat R^{r*} + \widehat T^{r*} R^l = 0,
-\label{gur}
+  \widehat T^l T^{l*} + \widehat R^l R^{l*} = 1,
+  \nonumber\\
+  \widehat T^r T^{r*} + \widehat R^r R^{r*} = 1,
+  \nonumber\\
+  \hat T^{l*} R^r + T^r \widehat R^{l*} = 0,
+  \nonumber\\
+  T^l \widehat R^{r*} + \widehat T^{r*} R^l = 0,
+  \label{gur}
 \end{eqnarray}
 %
 these equivalences  between the amplitudes
- imply further consequences on the amplitudes' moduli (tenth column of table \ref{table2}) and phases (not shown).
- The final two columns use the previous results to determine if perfect asymmetry is possible for transmission or reflection.
- This makes evident that hermiticity (II) and parity (III) preclude, independently, any asymmetry in the scattering coefficients;
- PT-symmetry (VII) or  $\Theta$-pseudohermiticity
- (VI) forbid transmission asymmetry (all local potentials  satisfy automatically
- symmetry VI),  whereas time-reversal symmetry (i.e., a real potential in coordinate space)
- (V) or  PT-pseudohermiticity (VIII) forbid reflection asymmetry.
- A caveat is that asymmetric effects forbidden by a certain symmetry in the linear (Schr\"odinger)
- regime considered in this paper might not be forbidden in a non-linear regime \cite{Xu2014}, which goes beyond our present scope.
- %
- %
- %\subsection{Double symmetries and equivalences among symmetries}
- %
- %
+imply further consequences on the amplitudes' moduli (tenth column of table \ref{table2}) and phases (not shown).
+The final two columns use the previous results to determine if perfect asymmetry is possible for transmission or reflection.
+This makes evident that hermiticity (II) and parity (III) preclude, independently, any asymmetry in the scattering coefficients;
+PT-symmetry (VII) or  $\Theta$-pseudohermiticity
+(VI) forbid transmission asymmetry (all local potentials  satisfy automatically
+symmetry VI),  whereas time-reversal symmetry (i.e., a real potential in coordinate space)
+(V) or  PT-pseudohermiticity (VIII) forbid reflection asymmetry.
+A caveat is that asymmetric effects forbidden by a certain symmetry in the linear (Schr\"odinger)
+regime considered in this paper might not be forbidden in a non-linear regime \cite{Xu2014}, which goes beyond our present scope.
 
+The occurrence of one particular symmetry in the potential (conventionally  ``first symmetry'')
+does not exclude a second symmetry to be satisfied as well.
+When a double symmetry holds, excluding the identity,  the ``first'' symmetry  implies the equivalence of the second symmetry with a third symmetry.
+We have already mentioned that $\Pi$-pseudohermiticity (IV) is equivalent to $PT$-symmetry (VII) for local potentials.
+Being local is just one particular way to satisfy symmetry VI, namely $\Theta$-pseudohermiticity. The reader may verify with the aid of
+the third column for $\langle x|V|y\rangle$  in table \ref{table2}, that indeed, if symmetry VI is satisfied (first symmetry), symmetry IV has the same effect as symmetry VII.
+They become equivalent. Other well known example is  that for a local potential (symmetry VI is satisfied), a real potential in coordinate space  is necessarily hermitian,
+so symmetries V and II become equivalent.
+These examples are just particular cases of the full set of equivalences given in table \ref{tablee}.
 
-
- The occurrence of one particular symmetry in the potential (conventionally  ``first symmetry'')
- does not exclude a second symmetry to be satisfied as well.
- When a double symmetry holds, excluding the identity,  the ``first'' symmetry  implies the equivalence of the second symmetry with a third symmetry.
- We have already mentioned that $\Pi$-pseudohermiticity (IV) is equivalent to $PT$-symmetry (VII) for local potentials.
- Being local is just one particular way to satisfy symmetry VI, namely $\Theta$-pseudohermiticity. The reader may verify with the aid of
- the third column for $\langle x|V|y\rangle$  in table \ref{table2}, that indeed, if symmetry VI is satisfied (first symmetry), symmetry IV has the same effect as symmetry VII.
- They become equivalent. Other well known example is  that for a local potential (symmetry VI is satisfied), a real potential in coordinate space  is necessarily hermitian,
- so symmetries V and II become equivalent.
- These examples are just particular cases of the full set of equivalences given in table \ref{tablee}.
-%This Table can be written down using the coordinate representation of the potential for the different symmetries,
-%or also acting on any symmetry relation in Eqs. (\ref{symm}),(\ref{pseudo}) with the other members of $K_4$, assuming a second symmetry
-%to hold, and using the product table of
-% Klein's group.
-%
-%
-%
-%
-%\subsection{Asymmetric devices}
-%
-%
-%
-%
-%%%%%%%%%
 \begin{landscape}
   \begin{table}
     \caption{Device types for  transmission and/or reflection asymmetry, restricted to 1 or 0 moduli for the scattering amplitudes.
@@ -324,33 +282,33 @@ these equivalences  between the amplitudes
 
 
 \begin{table}
-\caption{Device types allowed for a given symmetry.
-\vspace*{.3cm}\label{tableComp}}
-\centering
-\scalebox{0.9}{
-\begin{tabular}{cc}
-%\hline
-Symmetry& Allowed devices
-\\
-\hline
-I&All types
-\\
-II&None
-\\
-III&None
-\\
-IV&$\cal{TR/R,TR/T}$
-\\
-V&$\cal{TR/R}$
-\\
-VI & $\cal{R/A, TR/T}$
-\\
-VII&$\cal{TR/T}$
-\\
-VIII&$\cal{T/A,TR/R}$
-%\\
-%\hline
-\end{tabular}}
+  \caption{Device types allowed for a given symmetry.
+  \vspace*{.3cm}\label{tableComp}}
+  \centering
+  \scalebox{0.9}{
+  \begin{tabular}{cc}
+    %\hline
+    Symmetry& Allowed devices
+    \\
+    \hline
+    I&All types
+    \\
+    II&None
+    \\
+    III&None
+    \\
+    IV&$\cal{TR/R,TR/T}$
+    \\
+    V&$\cal{TR/R}$
+    \\
+    VI & $\cal{R/A, TR/T}$
+    \\
+    VII&$\cal{TR/T}$
+    \\
+    VIII&$\cal{T/A,TR/R}$
+    %\\
+    %\hline
+  \end{tabular}}
 
 \end{table}
 
@@ -379,17 +337,17 @@ as the one proposed will be instrumental in avoiding misunderstandings.
 %%%%%%%%%
 
 \begin{figure}
-\begin{center}
-(a)\includegraphics[width = 0.6\columnwidth]{Figures/fig_T_A_pot_abs.pdf}\\
-(b)\includegraphics[width = 0.6\columnwidth]{Figures/fig_T_A_pot_arg.pdf}\\
-(c)\includegraphics[width = 0.6\columnwidth]{Figures/fig_T_A_prob.pdf}
-\end{center}
-\caption{(Color online) One-way T-filter ($\cal{T/A}$, $\left|T^l\right|=1,T^r=R^l=R^r=0$) with  potential $V(x,y)=|V(x,y)|e^{i\phi(x,y)}$ set
-for $k_0 = 1/d$.
-(a) Absolute value $\left| V(x,y) \right|$;    (b) Argument $\phi(x,y)$;
-(c) Transmission and reflection coefficients:
-$\left| R^l \right|^2$ (black, solid line), $\left| T^l \right|^2$ (green, solid line),
-$\left| R^r \right|^2$ (blue, tick, dashed line), $\left| T^r \right|^2$ (red, dotted line). $V_0 = \hbar^2/(2m d^3)$.\label{fig_device_T_A}}
+  \begin{center}
+    (a)\includegraphics[width = 0.6\columnwidth]{Figures/fig_T_A_pot_abs.pdf}\\
+    (b)\includegraphics[width = 0.6\columnwidth]{Figures/fig_T_A_pot_arg.pdf}\\
+    (c)\includegraphics[width = 0.6\columnwidth]{Figures/fig_T_A_prob.pdf}
+  \end{center}
+  \caption{(Color online) One-way T-filter ($\cal{T/A}$, $\left|T^l\right|=1,T^r=R^l=R^r=0$) with  potential $V(x,y)=|V(x,y)|e^{i\phi(x,y)}$ set
+  for $k_0 = 1/d$.
+  (a) Absolute value $\left| V(x,y) \right|$;    (b) Argument $\phi(x,y)$;
+  (c) Transmission and reflection coefficients:
+  $\left| R^l \right|^2$ (black, solid line), $\left| T^l \right|^2$ (green, solid line),
+  $\left| R^r \right|^2$ (blue, tick, dashed line), $\left| T^r \right|^2$ (red, dotted line). $V_0 = \hbar^2/(2m d^3)$.\label{fig_device_T_A}}
 \end{figure}
 
 
@@ -400,20 +358,20 @@ $\left| R^r \right|^2$ (blue, tick, dashed line), $\left| T^r \right|^2$ (red, d
 \section{Designing potentials for asymmetric devices\label{examples}}
 
 \begin{figure}
-\begin{center}
-(a) \includegraphics[width = 0.6\columnwidth]{Figures/fig_TR_T_local_pot.pdf}\\
-(b) \includegraphics[width = 0.6\columnwidth]{Figures/fig_TR_T_local_prob_1.pdf}\\
-(c) \includegraphics[width = 0.6\columnwidth]{Figures/fig_TR_T_local_prob_2.pdf}
-\end{center}
-\caption{\label{fig_reflector}(Color online) Transparent 1-way reflector with a local PT potential:
-(a) Approximation of the potential (\ref{num}), real part (green solid line), imaginary part (blue dashed line).
-(b,c) Transmission and reflection coefficients versus momentum $k d$;
-left incidence: $\left| R^l \right|^2$ (black, solid line), $\left| T^l \right|^2$ (green, solid line);
-right incidence: $\left| R^r \right|^2$ (blue, tick, dashed line), $\left| T^r \right|^2$ (red, dotted line, coincides with green, solid line).
-$\epsilon/d = 10^{-4}$.
-(b) $\alpha= 1.0 \hbar^2/(4\pi m)$ (c) $\alpha = 1.225 \hbar^2/(4\pi m)$
-(the black, solid line coincides here mostly with the red, dotted and green, solid lines).
-\label{fig_TR_T_local}}
+  \begin{center}
+    (a) \includegraphics[width = 0.6\columnwidth]{Figures/fig_TR_T_local_pot.pdf}\\
+    (b) \includegraphics[width = 0.6\columnwidth]{Figures/fig_TR_T_local_prob_1.pdf}\\
+    (c) \includegraphics[width = 0.6\columnwidth]{Figures/fig_TR_T_local_prob_2.pdf}
+  \end{center}
+  \caption{\label{fig_reflector}(Color online) Transparent 1-way reflector with a local PT potential:
+  (a) Approximation of the potential (\ref{num}), real part (green solid line), imaginary part (blue dashed line).
+  (b,c) Transmission and reflection coefficients versus momentum $k d$;
+  left incidence: $\left| R^l \right|^2$ (black, solid line), $\left| T^l \right|^2$ (green, solid line);
+  right incidence: $\left| R^r \right|^2$ (blue, tick, dashed line), $\left| T^r \right|^2$ (red, dotted line, coincides with green, solid line).
+  $\epsilon/d = 10^{-4}$.
+  (b) $\alpha= 1.0 \hbar^2/(4\pi m)$ (c) $\alpha = 1.225 \hbar^2/(4\pi m)$
+  (the black, solid line coincides here mostly with the red, dotted and green, solid lines).
+  \label{fig_TR_T_local}}
 \end{figure}
 
 
@@ -428,9 +386,9 @@ for the wavefunctions and the potential
 in the stationary Schr\"odinger equation
 %
 \begin{eqnarray}
-\frac{\hbar^2k^2}{2m} \psi (x) = - \frac{\hbar^2}{2m} \frac{d^2}{dx^2} \psi (x)
-+\!\!\int_{-d}^d \!dy V(x, y) \psi(y).
-\label{Schroedinger}
+  \frac{\hbar^2k^2}{2m} \psi (x) = - \frac{\hbar^2}{2m} \frac{d^2}{dx^2} \psi (x)
+  +\!\!\int_{-d}^d \!dy V(x, y) \psi(y).
+  \label{Schroedinger}
 \end{eqnarray}
 %
 The free parameters are fixed making use of the boundary conditions.
@@ -486,23 +444,23 @@ without imposing $|R^l|=1$.
 In the Born approximation and for a local potential $V(x)$, the reflection amplitudes take the simple form
 %
 \begin{eqnarray}
-R^l=-\frac{2\pi i m}{p}\langle -p|V|p\rangle,
-\;
-R^r=-\frac{2\pi i m}{p}\langle p|V|-p\rangle.
+  R^l=-\frac{2\pi i m}{p}\langle -p|V|p\rangle,
+  \;
+  R^r=-\frac{2\pi i m}{p}\langle p|V|-p\rangle.
 \end{eqnarray}
 %
 Defining the Fourier transform
 %
 \begin{eqnarray}
-\widetilde V (k) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^\infty dx \, V(x) e^{-i k x}
+  \widetilde V (k) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^\infty dx \, V(x) e^{-i k x}
 \end{eqnarray}
 %
 we get for $k=p/\hbar>0$:
 %
 \begin{eqnarray}
-R^l=-\frac{\sqrt{2\pi} i m}{k \hbar^2} \widetilde V (-2k),
-\;
-R^r=-\frac{\sqrt{2\pi} i m}{k\hbar^2} \widetilde V (2 k).
+  R^l=-\frac{\sqrt{2\pi} i m}{k \hbar^2} \widetilde V (-2k),
+  \;
+  R^r=-\frac{\sqrt{2\pi} i m}{k\hbar^2} \widetilde V (2 k).
 \end{eqnarray}
 %
 Assuming that the potential is local and PT-symmetrical, we calculate the transition coefficient
@@ -514,17 +472,17 @@ $\widetilde V(k) = \sqrt{2\pi} \alpha k$ ($k < 0$) and $\widetilde V(k) = 0$ ($k
 By inverse Fourier transformation, this implies
 %
 \begin{eqnarray}
-V(x) &=&
-%-\alpha \frac{\partial}{\partial x} \left[P \frac{1}{x} + i \pi \delta(x) \right]
-%\nonumber\\
-%&=&
--\alpha \frac{\partial}{\partial x} \lim_{\epsilon\to 0} \frac{1}{x - i \epsilon}
-= \alpha \lim_{\epsilon\to 0} \frac{1}{(x - i \epsilon)^2}
-\nonumber\\
-%&=& \alpha \lim_{\epsilon\to 0} \frac{(x + i \epsilon)^2}{(x^2 + \epsilon^2)^2}\\
-&=& \alpha \lim_{\epsilon\to 0} \left[\frac{x^2 - \epsilon^2}{(x^2 + \epsilon^2)^2} + i
-\frac{2 x\epsilon}{(x^2 + \epsilon^2)^2}\right],
-\label{num}
+  V(x) &=&
+  %-\alpha \frac{\partial}{\partial x} \left[P \frac{1}{x} + i \pi \delta(x) \right]
+  %\nonumber\\
+  %&=&
+  -\alpha \frac{\partial}{\partial x} \lim_{\epsilon\to 0} \frac{1}{x - i \epsilon}
+  = \alpha \lim_{\epsilon\to 0} \frac{1}{(x - i \epsilon)^2}
+  \nonumber\\
+  %&=& \alpha \lim_{\epsilon\to 0} \frac{(x + i \epsilon)^2}{(x^2 + \epsilon^2)^2}\\
+  &=& \alpha \lim_{\epsilon\to 0} \left[\frac{x^2 - \epsilon^2}{(x^2 + \epsilon^2)^2} + i
+  \frac{2 x\epsilon}{(x^2 + \epsilon^2)^2}\right],
+  \label{num}
 \end{eqnarray}
 %
 which is indeed a local, $PT$-symmetric potential for $\alpha$ real.

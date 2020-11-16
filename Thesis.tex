@@ -2,29 +2,27 @@
 %% Thesis.tex -- MAIN FILE (the one that you compile with LaTeX)
 %% ----------------------------------------------------------------
 
-% Set up the document
-%\documentclass[a4paper, 11pt, oneside]{Thesis}  % Use the "Thesis" style, based on the ECS Thesis style by Steve Gunn
+% ------------------ Set up the document -----------------------------------------------------------
 %\documentclass[a4paper, 11pt, twoside, openright]{Thesis} %en a4
-\documentclass[a4paper, 12pt, twoside, openright]{Thesis} %para reducir a b5
-\graphicspath{{Figures/}}  % Location of the graphics files (set up for graphics to be in PDF format)
+\documentclass[a4paper, 12pt, twoside, openright]{Thesis}  %para reducir a b5
 
-% Include any extra LaTeX packages required
+% ------------------ Include any extra LaTeX packages required -------------------------------------
 \usepackage[square, numbers, comma, sort&compress]{natbib}  % Use the "Natbib" style for the references in the Bibliography
-\usepackage{verbatim}  % Needed for the "comment" environment to make LaTeX comments
-\usepackage{vector}  % Allows "\bvec{}" and "\buvec{}" for "blackboard" style bold vectors in maths
+\usepackage{verbatim}         % Needed for the "comment" environment to make LaTeX comments
+\usepackage{vector}           % Allows "\bvec{}" and "\buvec{}" for "blackboard" style bold vectors in maths
 \usepackage[table]{xcolor}
 
-\usepackage{parskip} %para que haga el indent al principio de cada parrafo
+\usepackage{parskip}          %para que haga el indent al principio de cada parrafo
 \setlength{\parindent}{15pt}
-\usepackage{indentfirst} %para que ponga el indent en el primer parrafo tambien, sino no lo hace
+\usepackage{indentfirst}      %para que ponga el indent en el primer parrafo tambien, sino no lo hace
 
-\usepackage{lscape} %Poner una página apaisada (util para tablas muy anchas)
+\usepackage{lscape}           %Poner una página apaisada (util para tablas muy anchas)
 
 
 \hypersetup{urlcolor=blue, colorlinks=true}  % Colours hyperlinks in blue, but this can be distracting if there are many links.
 
 
-%Abreviaciones de comandos y nuevos comandos.
+% ------------------ Abreviaciones de comandos y nuevos comandos -----------------------------------
 \newcommand {\absq}[1] {\left| #1 \right|^2}
 
 \def\la{\langle}
@@ -42,60 +40,38 @@
 \def\ssst{\scriptscriptstyle}   %%para hacer más pequeñas algunas ecuaciones
 
 
-%% ----------------------------------------------------------------
+%% ----------------- START OF THE DOCUMENT ---------------------------------------------------------
 \begin{document}
 
 
 
-\frontmatter	  % Begin Roman style (i, ii, iii, iv...) page numbering
+\frontmatter	           % Begin Roman style (i, ii, iii, iv...) page numbering
 
-% Set up the Title Page
-%----------------------------------------------------------------------------------------------------------------------------------------------------------
-%----------------------------------------------------------------------------------------------------------------------------------------------------------
-%----------------------------------------------------------------------------------------------------------------------------------------------------------
-\include{portada}%we use the title page document
-%\newpage
-%\mbox{}
-%\thispagestyle{plain} % para que no se numere esta p�gina
+% ------------------ Set up the Title Page ---------------------------------------------------------
+\include{portada}       %we use the title page document
 
-%This is another way of generating a title page, (in fact below it is written how to use )
-%\title  {Shortcuts to adiabaticity in the double well}
-%\authors  {\texorpdfstring
-%           {\href{sofia.martinez@ehu.eus}{Sof\'ia Mart\'inez Garaot}}
-%            {}
-%            }
 
-%\addresses  {\groupname\\\deptname\\\univname}  % Do not change this here, instead these must be set in the "Thesis.cls" file, please look through it instead
-%\date       {\today}
-%\subject    {}
-%\keywords   {}
+\setstretch{1.3}        % It is better to have smaller font and larger line spacing than the other way round
 
-%\maketitle
-%----------------------------------------------------------------------------------------------------------------------------------------------------------
-%----------------------------------------------------------------------------------------------------------------------------------------------------------
-%----------------------------------------------------------------------------------------------------------------------------------------------------------
 
-\setstretch{1.3}  % It is better to have smaller font and larger line spacing than the other way round
+% --------- Define the page headers using the FancyHdr package and set up for one-sided printing
 
-% Define the page headers using the FancyHdr package and set up for one-sided printing
-\fancyhead{}  % Clears all page headers and footers
-\rhead{\thepage}  % Sets the right side header to show the page number
-\lhead{}  % Clears the left side page header
+\fancyhead{}        % Clears all page headers and footers
+\rhead{\thepage}    % Sets the right side header to show the page number
+\lhead{}            % Clears the left side page header
+\pagestyle{fancy}   % Finally, use the "fancy" page style to implement the FancyHdr headers
+\clearpage          % Declaration ended, now start a new page
 
-\pagestyle{fancy}  % Finally, use the "fancy" page style to implement the FancyHdr headers
-
-\clearpage  % Declaration ended, now start a new page
-
-%Meto una pagina en blanco
-\pagestyle{empty}  % No headers or footers for the following pages
+% Meto una pagina en blanco
+\pagestyle{empty}   % No headers or footers for the following pages
 \null\vfill
 
 \vfill\vfill\vfill\vfill\vfill\vfill\null
-\clearpage  % Empty page ended, start a new page
+\clearpage          % Empty page ended, start a new page
 
 
-%% ----------------------------------------------------------------
-% The "Funny Quote Page"
+
+% ------------------ The "Funny Quote Page" --------------------------------------------------------
 \pagestyle{empty}  % No headers or footers for the following pages
 
 \null\vfill
@@ -110,7 +86,7 @@
 \clearpage  % Funny Quote page ended, start a new page
 %% ----------------------------------------------------------------
 
-%% The Abstract Page
+% ------------------ The Abstract Page -------------------------------------------------------------
 %\addtotoc{Abstract}  % Add the "Abstract" page entry to the Contents
 %\abstract{
 %\addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
@@ -122,7 +98,7 @@
 %\clearpage  % Abstract ended, start a new page
 %%% ----------------------------------------------------------------
 
-%Meto una pagina en blanco
+% Meto una pagina en blanco
 \pagestyle{empty}  % No headers or footers for the following pages
 
 \null\vfill
@@ -132,12 +108,11 @@
 
 \setstretch{1.3}  % Reset the line-spacing to 1.3 for body text (if it has changed)
 
-% The Acknowledgements page, for thanking everyone
+% ------------------ The Acknowledgements page, for thanking everyone ------------------------------
 \acknowledgements{
 \addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
 Do not forget about the people that has been by your side and supported you.
 \it{Esta Tesis ha sido financiada a trav\'es de una beca predoctoral concedida por el Gobierno Vasco/Eusko Jaurlaritza}
-
 }
 
 \clearpage  % End of the Acknowledgements
@@ -171,10 +146,12 @@ Do not forget about the people that has been by your side and supported you.
 \input{Publications}
 
 %% ----------------------------------------------------------------
-\mainmatter	  % Begin normal, numeric (1,2,3...) page numbering
+\mainmatter	       % Begin normal, numeric (1,2,3...) page numbering
 \pagestyle{fancy}  % Return the page headers back to the "fancy" style
 
-% Include the chapters of the thesis, as separate files
+% --------------------------------------------------------------------------------------------------
+% ------------------ Include the chapters of the thesis, as separate files -------------------------
+% --------------------------------------------------------------------------------------------------
 
 \addtocontents{toc}{\vspace{0.6em}}
 
@@ -183,25 +160,24 @@ Do not forget about the people that has been by your side and supported you.
 \input{./Chapters/Introduction} %Introduction
 
 % ------------ PART I: NH-Devices ------------------------------------------------------------------
-\part{Non hermitian devices}
-  \input{./Chapters/ChapterAsymmetricScattering}    %Asymmetric Scattering nonhermitian
-  \input{./Chapters/ChapterSymAndInvariants}        %Invariants of non-h Hamiltonians
-  \input{./Chapters/ChapterRealEigenValues}         %complex plane symmetries of nh Hamiltonians
-  \input{./Chapters/ChapterDiscreteNNSymmetries}    %Discrete Hamiltonian symmetries
-  \input{./Chapters/ChapterPhysicalImplementation}  %Physical Implementation
+% \part{Non hermitian devices}
+\input{./Chapters/ChapterAsymmetricScattering}    %Asymmetric Scattering nonhermitian
+\input{./Chapters/ChapterSymAndInvariants}        %Invariants of non-h Hamiltonians
+\input{./Chapters/ChapterRealEigenValues}         %complex plane symmetries of nh Hamiltonians
+\input{./Chapters/ChapterDiscreteNNSymmetries}    %Discrete Hamiltonian symmetries
+\input{./Chapters/ChapterPhysicalImplementation}  %Physical Implementation
 
 % ------------ PART II: Heat Rectification ---------------------------------------------------------
-\part{Heat rectification in mesoscopic systems}
-  \input{./Chapters/ChapterLocalRectification}      %Rectification with local impurity
-  \input{./Chapters/RectificationChainOfIons}       %Rectification chain of Ions
-  \input{./Chapters/ChapterToyModel}                %Rectification Toy Model
+% \part{Heat rectification in mesoscopic systems}
+\input{./Chapters/ChapterLocalRectification}      %Rectification with local impurity
+\input{./Chapters/RectificationChainOfIons}       %Rectification chain of Ions
+\input{./Chapters/ChapterToyModel}                %Rectification Toy Model
 
 % ------------ CONCLUSIONS -------------------------------------------------------------------------
 \input{./Chapters/Conclusions} %Conclusions
 \addcontentsline{toc}{chapter}{Conclusions}
 
 % ------------ APPENDICES --------------------------------------------------------------------------
-
 \addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aestheticsy
 
 \appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
@@ -209,26 +185,34 @@ Do not forget about the people that has been by your side and supported you.
 %\addcontentsline{toc}{part}{Appendix}
 \addtocontents{toc}{\vspace{0.6em}}
 
-\input{./Appendices/Appendix_ScatteringFormalism} %Review of scattering theory formalism
-\input{./Appendices/Appendix_AlternativeFormulationOfPseudoHermiticity} %Alternative formulation of $A$-pseudohermitian symmetries as ordinary (commuting) symmetries
-\input{./Appendices/Appendix_SeparablePotentials} %Properties of separable potentials
-\input{./Appendices/Appendix_NumericalCalculationOfTandR} %Numerical calculation of transmission and reflection coefficients
-\input{./Appendices/Appendix_SteadyStateEquations} %Full set of steady-state equations for the components of $\mathbb{C}^{s.s}$
-\input{./Appendices/Appendix_SpectralDensity} %Complete expressions for the Spectral Density Matrix
+%Review of scattering theory formalism
+\input{./Appendices/Appendix_ScatteringFormalism}
+
+%Alternative formulation of $A$-pseudohermitian symmetries as ordinary (commuting) symmetries
+\input{./Appendices/Appendix_AlternativeFormulationOfPseudoHermiticity}
+
+%Properties of separable potentials
+\input{./Appendices/Appendix_SeparablePotentials}
+
+%Numerical calculation of transmission and reflection coefficients
+\input{./Appendices/Appendix_NumericalCalculationOfTandR}
+
+%Full set of steady-state equations for the components of $\mathbb{C}^{s.s}$
+\input{./Appendices/Appendix_SteadyStateEquations}
+
+%Complete expressions for the Spectral Density Matrix
+\input{./Appendices/Appendix_SpectralDensity}
 
 
 \addtocontents{toc}{\vspace{0.6em}}  % Add a gap in the Contents, for aesthetics
 \backmatter
 \pagestyle{empty}  % Page style needs to be empty for this page
 
-%% ----------------------------------------------------------------
+% ------------------ BIBLIOGRAPHY ----------------------------------------------------------------
 \label{Bibliography}
-\lhead{\emph{Bibliography}}  % Change the left side page header to "Bibliography"
-%\bibliographystyle{apsrev}  % Use the "unsrtnat" BibTeX style for formatting the Bibliography
-%\bibliographystyle{h-physrev3} % formato PRA sin url ni issn ni hyperlinks
-\bibliographystyle{sofia} %modificado por mi a partir de utphys
-%\bibliographystyle{utphys} %formato arXiv con hyperlinks
-\bibliography{Bibliography_Thesis}  % The references (bibliography) information are stored in the file named "Bibliography_Thesis.bib"
+\lhead{\emph{Bibliography}}             % Change the left side page header to "Bibliography"
+\bibliographystyle{sofia}               % modificado por mi a partir de utphys
+\bibliography{Bibliography_Thesis}      % The references (bibliography) information are stored in the file named "Bibliography_Thesis.bib"
 
 \end{document}  % The End
 %% ----------------------------------------------------------------
