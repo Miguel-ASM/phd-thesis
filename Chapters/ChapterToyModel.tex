@@ -29,6 +29,7 @@ The article is organized as follows. In Section \ref{sec:Physical_Model}
 we describe the physical model and its dynamical equations. In Section \ref{sec:covMatrix} we describe the dynamics of the system in terms of a covariance matrix. We also derive a set of algebraic equations that gives as solution the covariance matrix in the steady state. In Section \ref{sec:solutions} we solve the covariance matrix equations and find analytical expressions for the steady-state temperatures of the masses and heat currents. In Section \ref{sec:TrappedIonSetUp} we relate the parameters of our model to those in a physical set-up of Doppler cooled trapped ions. In Section \ref{sec:lookingForR} we make a parameter sweep looking for configurations which yield high rectification. We also study the power spectra of the oscillators, which confirm the match/mismatch patterns in cases where there is rectification. In Section \ref{sec:Conclusions} we summarize our results and present our conclusions.
 
 \begin{figure}
+  \centering
   \includegraphics[width=1.1\linewidth]{Figures/model_diagram.pdf}
   \caption{Diagram of the model described in Section \ref{sec:Physical_Model}. Two ions coupled to each other through a spring constant $k$. Each ion is harmonically trapped and connected to a bath characterized by its temperature $T_i$ and its friction coefficient $\gamma_i$. }
   \label{fig:model_diagram}
@@ -418,6 +419,7 @@ We will say that we observe rectification whenever the heat current $J$ for a co
 When implementing temperatures and friction coefficients by lasers, this exchange operation is performed by changing the values of the intensities and detunings acting on each ion (Eq. \eqref{eq:DopplerCoolingToyModel}). The exchange operation is straightforward when the two ions are either of the same species or isotopes of each other, since the only required action is to exchange the values of the detunings of the lasers without modifying the intensities. However, if we deal with two different species, i.e., with two different atomic transitions, the laser wavelengths and the decay rates  depend on the species. Then, exchanging the temperatures by modifying the detunings, keeping the laser intensities constant, does not necessarily imply an exchange of the friction coefficients. Nevertheless it is possible to adjust the laser intensities so that the friction coefficients get exchanged and that is the assumption hereafter. The idea of implementing a bath exchange like this follows the same line of thought as \cite{Pereira2017}, since we are adding a temperature dependent feature to the system -the friction coefficients- that changes as the baths are inverted.
 
 \begin{figure}
+  \centering
   \includegraphics[width=\linewidth]{Figures/RwMPlota.pdf}
   \caption{Rectification, $R$, in the $k_L k_R$ plane for $k = 1.17 \times$ fN/m, $\gamma_L = 6.75\times 10^{-22}$ kg/s, and $\gamma_R = 4.64\gamma_L$.}
   \label{fig:Fig_rectification_K_plane}
@@ -493,12 +495,13 @@ Equation \eqref{eq:maxRExpression} is symmetric upon the transformations $a \lef
 
 
 \begin{figure}
-  \includegraphics[width=\linewidth]{Figures/Rade.png}
+  \centering
+  \includegraphics[width=\linewidth]{Figures/Rade.pdf}
   \caption{Rectification factor, $R$, given by Eq. \eqref{eq:maxRExpression}.}
   \label{fig:R_g_a_plane}
 \end{figure}
 
-Fig. \ref{fig:R_g_a_plane} shows the rectification given by Eq. \eqref{eq:maxRExpression} in terms of $a$ and $g$. Along any diagonal line (parallel to the solid cyan or the dashed green lines), the maximum value is at the center, that is, when $a = g$. However, if we fix $a$, increasing $g$ always increases $R$. Although we could increase $g$ arbitrarily to get more rectification this is not a realistic option in a trapped-ion set-up. Since $g$ is defined as the ratio between the friction coefficients, increasing it means making either $\gamma_L$ go to 0 or $\gamma_R$ to infinity. Making $\gamma_L$ go to 0 decouples one of the ions from the bath, so the heat current tends to vanish in any direction. Also, increasing $\gamma_R$ arbitrarily is impossible since the Doppler cooling friction coefficient as a function of the laser detuning (Eq. \eqref{eq:DopplerCoolingToyModel}) is bounded. Although Eq. \eqref{eq:DopplerCoolingToyModel} suggests that boosting the laser intensity can also increase the friction coefficient, this is not an option since Eq. \eqref{eq:DopplerCoolingToyModel} is just an approximation for low laser intensities. When going to higher intensities, the emission/absorption of photons by the ion is saturated and the friction coefficient reaches a finite value proportional to the width $\Gamma$ of the excited state \cite{Metcalf2003}. As a compromise between feasibility and high $R$, we set the ratio between the friction coefficients $g$ to be equal to the mass ratio $a$. As shown  in Fig. \ref{fig:R_g_a_plane}, along the solid-cyan and dashed-green diagonal lines the maximum $R$ is achieved for $a = g$. Fig. \ref{fig:Fig_PerfectRectification} shows the rectification in Eq. \eqref{eq:maxRExpression} for the line $a = g$. When both parameters are large enough, the rectification goes to 1.
+Fig. \ref{fig:R_g_a_plane} shows the rectification given by Eq. \eqref{eq:maxRExpression} in terms of $a$ and $g$. Along any diagonal line (parallel to the solid black or the dashed green lines), the maximum value is at the center, that is, when $a = g$. However, if we fix $a$, increasing $g$ always increases $R$. Although we could increase $g$ arbitrarily to get more rectification this is not a realistic option in a trapped-ion set-up. Since $g$ is defined as the ratio between the friction coefficients, increasing it means making either $\gamma_L$ go to 0 or $\gamma_R$ to infinity. Making $\gamma_L$ go to 0 decouples one of the ions from the bath, so the heat current tends to vanish in any direction. Also, increasing $\gamma_R$ arbitrarily is impossible since the Doppler cooling friction coefficient as a function of the laser detuning (Eq. \eqref{eq:DopplerCoolingToyModel}) is bounded. Although Eq. \eqref{eq:DopplerCoolingToyModel} suggests that boosting the laser intensity can also increase the friction coefficient, this is not an option since Eq. \eqref{eq:DopplerCoolingToyModel} is just an approximation for low laser intensities. When going to higher intensities, the emission/absorption of photons by the ion is saturated and the friction coefficient reaches a finite value proportional to the width $\Gamma$ of the excited state \cite{Metcalf2003}. As a compromise between feasibility and high $R$, we set the ratio between the friction coefficients $g$ to be equal to the mass ratio $a$. As shown  in Fig. \ref{fig:R_g_a_plane}, along the solid-black and dashed-green diagonal lines the maximum $R$ is achieved for $a = g$. Fig. \ref{fig:Fig_PerfectRectification} shows the rectification in Eq. \eqref{eq:maxRExpression} for the line $a = g$. When both parameters are large enough, the rectification goes to 1.
 %
 %
 \subsection{Spectral match/mismatch approach to rectification}
@@ -506,6 +509,7 @@ Fig. \ref{fig:R_g_a_plane} shows the rectification given by Eq. \eqref{eq:maxREx
 %
 %
 \begin{figure}
+  \centering
   \includegraphics[width=\linewidth]{Figures/CC.pdf}
   \caption{Rectification for different values of $c=m_2/m_1=\gamma_R/\gamma_L$ when the maximum condition in the $k_L k_R$ plane is satisfied (Eq. \eqref{eq:MaxRLines}).}
   \label{fig:Fig_PerfectRectification}
@@ -533,6 +537,7 @@ Eq. \eqref{eq:Wiener-Khinchin} directly connects the spectral density matrix to 
 
 
 \begin{figure}[t]
+  \centering
   \includegraphics[width=\linewidth]{Figures/SpectrumComparative.pdf}
   \caption{Spectral densities of the velocities of the ions ($r_3$ and $r_4$) corresponding to different values of $c$ in Fig. \ref{fig:Fig_PerfectRectification}: (a), (b) for $c=1$ and (c), (d) for $c=10$. Solid, black lines correspond to the left ion velocity spectral density $\mathbb{S}_{3,3}(\omega)$ and dashed, blue lines correspond to the right ion velocity spectral density $\mathbb{S}_{4,4}(\omega)$. (a) and (b) correspond to $R = 0$:  the overlap between the phonon bands is the same in the forward and reversed configurations. (c) and (d) correspond to $R\approx 0.8$:  in the forward configuration (c)  the phonons match better than in the reversed configuration (d).}
   \label{fig:Figure_Spectra}
