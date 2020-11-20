@@ -27,10 +27,6 @@
 
 \def\la{\langle}
 \def\ra{\rangle}
-% \def\beq{\begin{equation}}
-% \def\eeq{\end{equation}}
-% \def\beqa{\begin{eqnarray}}
-% \def\eeqa{\end{eqnarray}}
 \def\blankpage{
 \newpage
 \begin{equation}
@@ -160,15 +156,17 @@ Do not forget about the people that has been by your side and supported you.
 \input{./Chapters/Introduction} %Introduction
 
 % ------------ PART I: NH-Devices ------------------------------------------------------------------
-% \part{Non hermitian devices}
-\input{./Chapters/ChapterAsymmetricScattering}    %Asymmetric Scattering nonhermitian
+\part{Non-hermitian systems and asymmetric scattering}
+\input{./Chapters/Chapter1}    % Asymmetric scattering by non-Hermitian potentials
+\input{./Chapters/Chapter2}    % Symmetries of non-hermitian potentials
 \input{./Chapters/ChapterSymAndInvariants}        %Invariants of non-h Hamiltonians
 \input{./Chapters/ChapterRealEigenValues}         %complex plane symmetries of nh Hamiltonians
 \input{./Chapters/ChapterDiscreteNNSymmetries}    %Discrete Hamiltonian symmetries
-\input{./Chapters/ChapterPhysicalImplementation}  %Physical Implementation
+\input{./Chapters/Chapter3}    % Physical Implementation of non-hermitian and non-local hamiltonians
+
 
 % ------------ PART II: Heat Rectification ---------------------------------------------------------
-% \part{Heat rectification in mesoscopic systems}
+\part{Heat rectification in mesoscopic systems}
 \input{./Chapters/ChapterLocalRectification}      %Rectification with local impurity
 \input{./Chapters/RectificationChainOfIons}       %Rectification chain of Ions
 \input{./Chapters/ChapterToyModel}                %Rectification Toy Model
