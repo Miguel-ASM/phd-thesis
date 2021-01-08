@@ -27,6 +27,10 @@
 
 \def\la{\langle}
 \def\ra{\rangle}
+% \def\beq{\begin{equation}}
+% \def\eeq{\end{equation}}
+% \def\beqa{\begin{eqnarray}}
+% \def\eeqa{\end{eqnarray}}
 \def\blankpage{
 \newpage
 \begin{equation}
@@ -35,6 +39,14 @@
 \newpage}
 \def\ssst{\scriptscriptstyle}   %%para hacer más pequeñas algunas ecuaciones
 
+%% Para habilitar la gamma mayuscula con blackboard style
+\newcommand{\bbGamma}{{\mathpalette\makebbGamma\relax}}
+\newcommand{\makebbGamma}[2]{%
+  \raisebox{\depth}{\scalebox{1}[-1]{$\mathsurround=0pt#1\mathbb{L}$}}%
+}
+
+% Para doublestruck 0
+\usepackage[bb=boondox]{mathalfa}
 
 %% ----------------- START OF THE DOCUMENT ---------------------------------------------------------
 \begin{document}
@@ -159,17 +171,17 @@ Do not forget about the people that has been by your side and supported you.
 \part{Non-hermitian systems and asymmetric scattering}
 \input{./Chapters/Chapter1}    % Asymmetric scattering by non-Hermitian potentials
 \input{./Chapters/Chapter2}    % Symmetries of non-hermitian potentials
-\input{./Chapters/ChapterSymAndInvariants}        %Invariants of non-h Hamiltonians
-\input{./Chapters/ChapterRealEigenValues}         %complex plane symmetries of nh Hamiltonians
-\input{./Chapters/ChapterDiscreteNNSymmetries}    %Discrete Hamiltonian symmetries
+  \input{./Chapters/ChapterSymAndInvariants}        %Invariants of non-h Hamiltonians
+  \input{./Chapters/ChapterRealEigenValues}         %complex plane symmetries of nh Hamiltonians
+  \input{./Chapters/ChapterDiscreteNNSymmetries}    %Discrete Hamiltonian symmetries
 \input{./Chapters/Chapter3}    % Physical Implementation of non-hermitian and non-local hamiltonians
 
 
 % ------------ PART II: Heat Rectification ---------------------------------------------------------
 \part{Heat rectification in mesoscopic systems}
-\input{./Chapters/ChapterLocalRectification}      %Rectification with local impurity
-\input{./Chapters/RectificationChainOfIons}       %Rectification chain of Ions
-\input{./Chapters/ChapterToyModel}                %Rectification Toy Model
+\input{./Chapters/Chapter4}    % Heat Rectification with local impurities
+\input{./Chapters/Chapter5}    % Heat Rectification in graded chains of trapped ions
+\input{./Chapters/Chapter6}    % Rectification in a minimal model
 
 % ------------ CONCLUSIONS -------------------------------------------------------------------------
 \input{./Chapters/Conclusions} %Conclusions

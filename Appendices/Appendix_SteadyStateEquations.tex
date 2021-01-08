@@ -4,34 +4,38 @@
 \label{Appendix:SteadyStateEquations}
 \lhead{Appendix E. \emph{Full set of steady-state equations for the components of $\mathbb{C}^{s.s}$}}
 
-Here we present the full set of equations for the covariance matrix elements in the steady state,
+Here is the full set of equations for the covariance matrix elements in the steady state.
+We use the shorthand notation $\langle ... \rangle=\langle ... \rangle^{s.s}$, i.e., all averages are
+in the steady state.
 %
-\begin{equation}
-  \begin{split}
-    \frac{2 k \expval{ p_2 q_1}^{s.s.} }{m_1 m_2}+\frac{2 \gamma _L \expval{ p_1^2}^{s.s.} }{m_1^3}&=\frac{2 D_L}{m_1^2},
-    %
-    \\
-    -\frac{2 k \expval{ p_2 q_1}^{s.s.} }{m_2^2}+\frac{2 \gamma _R \expval{ p_2^2}^{s.s.} }{m_2^3}&=\frac{2 D_R}{m_2^2},
-    %
-    \\
-    %
-    -\frac{\left(k_L+k\right) \expval{ q_1 q_2}^{s.s.} }{m_1}+\frac{k \expval{ q_2^2}^{s.s.} }{m_1}+\frac{\gamma _L \expval{ p_2 q_1}^{s.s.} }{m_1 m_2}+\frac{\expval{ p_1 p_2}^{s.s.} }{m_1 m_2}&=0,
-    %
-    \\
-    %
-    \frac{\left(k_L+k\right) \expval{ p_2 q_1}^{s.s.} }{m_1 m_2}-\frac{\left(k_R+k\right) \expval{ p_2 q_1}^{s.s.} }{m_2^2}+\frac{\gamma _L \expval{ p_1 p_2}^{s.s.} }{m_1^2 m_2}+\frac{\gamma _R \expval{ p_1 p_2}^{s.s.} }{m_1 m_2^2}&=0,
-    %
-    \\
-    %
-    -\frac{\left(k_L+k\right) \expval{ q_1^2}^{s.s.} }{m_1}+\frac{k \expval{ q_1 q_2}^{s.s.} }{m_1}+\frac{\expval{ p_1^2}^{s.s.} }{m_1^2}&=0,
-    %
-    \\
-    %
-    -\frac{\left(k_R+k\right) \expval{ q_2^2}^{s.s.} }{m_2}+\frac{k \expval{ q_1 q_2}^{s.s.} }{m_2}+\frac{\expval{ p_2^2}^{s.s.} }{m_2^2}&=0,
-    %
-    \\
-    %
-    -\frac{\left(k_R+k\right) \expval{ q_1 q_2}^{s.s.} }{m_2}+\frac{k \expval{ q_1^2}^{s.s.} }{m_2}-\frac{\gamma _R \expval{ p_2 q_1}^{s.s.} }{m_2^2}+\frac{\expval{ p_1 p_2}^{s.s.} }{m_1 m_2}&=0
-  \end{split}
-  \label{eq:SteadyStateEquationsModelB_Explicite}
-\end{equation}
+%\begin{widetext}
+  \begin{eqnarray}
+%    \begin{split}
+&&      \frac{2 k \expval{ p_2 q_1} }{m_1 m_2}+\frac{2 \gamma _L \expval{ p_1^2} }{m_1^3}=\frac{2 D_L}{m_1^2},
+      %
+      \nonumber\\
+&&      -\frac{2 k \expval{ p_2 q_1} }{m_2^2}+\frac{2 \gamma _R \expval{ p_2^2} }{m_2^3}=\frac{2 D_R}{m_2^2},
+      %
+       \nonumber\\
+      %
+&&      -\frac{\left(k_L+k\right) \expval{ q_1 q_2}}{m_1}+\frac{k \expval{ q_2^2} }{m_1}+\frac{\gamma _L \expval{ p_2 q_1}}{m_1 m_2}+\frac{\expval{ p_1 p_2} }{m_1 m_2}=0,
+      %
+       \nonumber\\
+      %
+&&      \frac{\left(k_L\!+\!k\right)\! \expval{ p_2 q_1\!}}{m_1 m_2}\!-\!\frac{\left(k_R\!+\!k\right)\! \expval{ p_2 q_1\!}}{m_2^2}\!+\!\frac{\gamma _L \!\expval{ p_1 p_2\!}}{m_1^2 m_2}\!+\!\frac{\gamma _R\! \expval{ p_1 p_2\!}}{m_1 m_2^2}\!=\!0,
+      %
+       \nonumber\\
+      %
+&&      -\frac{\left(k_L+k\right) \expval{ q_1^2}}{m_1}+\frac{k \expval{ q_1 q_2} }{m_1}+\frac{\expval{ p_1^2} }{m_1^2}=0,
+      %
+       \nonumber\\
+      %
+&&      -\frac{\left(k_R+k\right) \expval{ q_2^2} }{m_2}+\frac{k \expval{ q_1 q_2} }{m_2}+\frac{\expval{ p_2^2} }{m_2^2}=0,
+      %
+       \nonumber\\
+      %
+&&      -\frac{\left(k_R+k\right) \expval{ q_1 q_2} }{m_2}+\frac{k \expval{ q_1^2} }{m_2}-\frac{\gamma _R \expval{ p_2 q_1}}{m_2^2}+\frac{\expval{ p_1 p_2}}{m_1 m_2}=0.
+\nonumber
+%    \end{split}
+    \label{eq:SteadyStateEquationsModelB_Explicite}
+  \end{eqnarray}
