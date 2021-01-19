@@ -349,10 +349,10 @@
     \cleardoublepage
 }
 \newcommand\acknowledgements[1]{
-\btypeout{Acknowledgements}
-\addtotoc{Acknowledgements}
+\btypeout{Agradecimientos}
+% \addtotoc{Agradecimientos} % Add acknowledgements to the table of contents
 \thispagestyle{plain}
-\begin{center}{\huge{\textit{Acknowledgements}} \par}\end{center}
+\begin{center}{\huge{\textit{Agradecimientos}} \par}\end{center}
 {\normalsize #1}
 \vfil\vfil\null
 
