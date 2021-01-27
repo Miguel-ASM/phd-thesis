@@ -14,12 +14,6 @@ that integrates the dynamical equations of the system and averages over noise re
 %
 \section{Introduction\label{IntroductionRectificationChainOfIons}}
 
-The ideal thermal rectifier, also ``thermal diode'',  is a device that allows heat to propagate in one direction, from a hot to a cold bath, but not in the opposite one when the temperature bias of the baths is  reversed. The name is set by analogy to the
-half-wave rectifiers or diodes for electric current. More generally thermal rectification simply denotes
-asymmetric heat flows (not necessarily all or nothing) when the bath temperatures are reversed.
- Thermal rectification was discovered by C. Starr in 1936 in a junction between copper and cuprous oxide \cite{Starr1936}. Many years later, a work of Terraneo \textit{et al.} demonstrated thermal rectification in a model
-consisting on a segmented chain of coupled nonlinear oscillators  in contact with two thermal baths at temperatures $T_H$ and $T_C$, with $T_H > T_C$ \cite{Terraneo2002}. This paper sparked a substantial body of research  that spans to this day \cite{Pereira2019} (see Fig. 1 in \cite{Roberts2011}).
-
 \begin{figure*}
     \centering
     \includegraphics[width=0.9\linewidth]{Figures/Diagram.eps}
@@ -27,47 +21,20 @@ consisting on a segmented chain of coupled nonlinear oscillators  in contact wit
     \label{fig:Diagram}
 \end{figure*}
 
-Research on thermal rectification has gained a lot of attention in recent years as a key ingredient to build
-prospective devices to control heat flows similarly to electrical currents \cite{Roberts2011,Li2012}. There are  proposals
-%that exploit the analogy with electronic currents
-to engineer thermal logic circuits \cite{Ye2017} in which information, stored in thermal memories \cite{Wang2008}, would be processed in thermal gates \cite{Wang2007}. Such thermal gates, as their electronic counterparts,  will require thermal diodes and thermal transistors  to operate \cite{Li2006,Joulain2016}.
-%Information may also be stored in thermal memories \cite{Wang2008}.
-Heat rectifying devices would also be quite useful  in nano electronic circuits, letting delicate components dissipate heat while being protected from external heat sources \cite{Roberts2011}.
-
-Most work on thermal diodes has been theoretical with only a few experiments \cite{Chang2006,Kobayashi2009,Leitner2013,Elzouka2017}.
-A relevant attempt to build a thermal rectifier was based on a graded structure made of carbon and boron nitride nanotubes that transports heat between a pair of heating/sensing circuits \cite{Chang2006}. One of the ends of the nanotube is loaded with a deposition of another material, which makes the heat flow better from the loaded end to the unloaded end. However, rectifications were small, with rectification factors (relative
-heat-flow differentials) around $7\%$.
-% in \cite{Chang2006}).
-
 Much effort has been aimed at improving the rectification factors and the features of the rectifiers. Some works
-relied, as in \cite{Terraneo2002}, on a chain segmented into two or more regions  with different properties,  but using other lattice models such as the Frenkel-Kontorova (FK) model \cite{Li2008,Hu2006}.
-The fundamental ingredient for having rectification  was attributed to nonlinear forces in the chain \cite{Zeng2008,Katz2016,Li2008,Hu2006,Benenti2016,Li2012}, which lead to a temperature dependence of the phonon bands or power spectral densities. The bands may match or mismatch at the
-interfaces depending on the sign of the temperature bias of the baths, allowing or obstructing heat flow \cite{Terraneo2002,Li2004}.  Later, alternative mechanisms have been
-proposed which do not necessarily rely on anharmonic potentials \cite{Pereira2017,Pons2017}.
-Also, Peyrard provided a simple model to explain and build rectifiers based on assuming the Fourier law for heat conduction locally
-combined with a temperature and position-dependent conductivity \cite{Peyrard2006}.
+relied, as in \cite{Terraneo2002}, on a chain segmented into two or more regions  with different properties,  but using other lattice models such as the Frenkel-Kontorova (FK) model \cite{Li2008,Hu2006}. However, the rectification power of segmened rectifiers decays fast as their size increase \cite{Hu2006}. As discussed in \ref{IntroductionPartII}, two workarounds have been proposed: chains with a graded distribution for some structural property \cite{Wang2012,Chen2015,Romero-Bastida2017,Yang2007,Romero-Bastida2013,Dettori2016,Pereira2010,Pereira2011,Avila2013} and long range interactions \cite{Chen2015,Bagchi2017,Pereira2013}. Additionally, long range interactions fix the problem of decaying maximum currents as the size of the rectificator increases.
 
-
-It was soon realized that the performance of segmented rectifiers was very sensitive to the size of the device, i.e., rectification decreases with increasing the length of the rectifier \cite{Hu2006}. To overcome this limitation two ideas were proposed. The first one consists in using graded rather than segmented chains, i.e., chains where some physical property varies continuously along the site position such as the mass of particles in the lattice \cite{Wang2012,Chen2015,Romero-Bastida2017,Yang2007,Romero-Bastida2013,Dettori2016,Pereira2010,Pereira2011,Avila2013}. The second one uses particles with long-range interactions (LRI), such that all the particles in the lattice interact with each other \cite{Chen2015,Bagchi2017,Pereira2013}. The rationale behind was that in a graded system new asymmetric, rectifying channels are created, while the long-range interactions create
-also new transport channels, avoiding the usual decay of heat flow with size \cite{Chen2015}.
-%
-%
-Besides a stronger rectification power, LRI graded chains are expected to have better heat conductivity than segmented ones. This is an important point for technological applications, because devices with high rectification factors are not useful if the currents that flow through them are very small.
-
-In this article we propose to bridge the gap between mathematical models and actual systems
+In this chapter we propose to bridge the gap between mathematical models and actual physical systems
 exploring the implementation of a heat rectifier in a realistic, graded system with long-range interactions:
-a chain of  ultracold ions in a segmented Paul trap with graded microtraps for each ion.
-Long-range interactions are due to the Coulomb forces, and the  baths at the ends of the chain  may be implemented with optical molasses,
+a chain of ultracold ions in a segmented Paul trap with graded microtraps for each ion. Long-range interactions are due to the Coulomb forces, and the  baths at the ends of the chain  may be implemented with optical molasses,
 see Fig. \ref{fig:Diagram}. The trapping frequencies of the  microtraps are controlled individually in order to create a graded and asymmetric trap-frequency profile along the chain. This asymmetry will lead to a heat flow that depends on the sign of the temperature difference of the baths. Heat transport in trapped ion chains has been studied in several works  \cite{Freitas2015,Ruiz2014,Ruiz2019,Pruttivarasin2011,Ramm2014} and interesting phenomena like phase transitions have been investigated \cite{Freitas2015,Ruiz2014,Ruiz2019,Pruttivarasin2011}. The idea of using locally-controlled traps is already mentioned in \cite{Freitas2015} to implement disorder and study its effects. The device we present here may be challenging to implement, but at reach with the current technology, in particular  that of microfabricated traps \cite{Cirac2000,Krauth2014,Schmied2009}. Thus the setting is thought for a small, realistic number of controllable ions.
-% and, while refraining from scaling up the size of the chain beyond realistic
-%values, we shall nevertheless analyze  the dependence with the number of ions.
 
-The rest of the article is organized as follows. In Section \ref{Physical System} we describe the physical system of trapped ions with graded trap frequencies. We also set the stochastic dynamics due to the action of lasers at the chain edges.
-In Section \ref{sec:HeatFlow}  we implement an efficient  method to find the steady state using Novikov's theorem and solving an algebraic system of equations. In Section \ref{Numerical Results} we present simulations of this system exhibiting thermal rectification and discuss the dependence with ion number, different options for the ion-laser coupling, and the advantages/disadvantages of using a graded frequency profile instead of a segmented one. Finally, in Section \ref{ConclusionsRectificationChainOfIons} we summarize our conclusions, and discuss connections with other works.
+The chapter is organized as follows. In Section \ref{sec:chapter5_PhysicalSystem} we describe the physical system of trapped ions with graded trap frequencies. We also set the stochastic dynamics due to the action of lasers at the chain edges.
+In Section \ref{sec:chapter5_HeatFlow}  we implement an efficient  method to find the steady state using Novikov's theorem and solving an algebraic system of equations. In Section \ref{sec:chapter5_NumericalResults} we present simulations of this system exhibiting thermal rectification and discuss the dependence with ion number, different options for the ion-laser coupling, and the advantages/disadvantages of using a graded frequency profile instead of a segmented one. Finally, in Section \ref{sec:chapter5_Conclusions} we summarize our conclusions, and discuss connections with other works.
 %
 %
 %
-\section{Physical System\label{Physical System}}
+\section{Physical System\label{sec:chapter5_PhysicalSystem}}
 %
 %
 %
@@ -124,7 +91,7 @@ for two different values of detuning. These two possibilities imply different co
 %
 %
 %
-\section{Calculation of the stationary heat currents\label{sec:HeatFlow}}
+\section{Calculation of the stationary heat currents\label{sec:chapter5_HeatFlow}}
 %
 %
 The local energy of each site is defined by
@@ -293,7 +260,7 @@ to the second line because of the symmetry with respect to $n,l$. The system of 
 %
 %
 %
-\section{Numerical Results\label{Numerical Results}}
+\section{Numerical Results\label{sec:chapter5_NumericalResults}}
 %
 %
 %
@@ -440,17 +407,17 @@ We have also compared the performance of the graded thermal diode and a segmente
 \end{figure}
 %
 %
-\section{Summary and discussion\label{ConclusionsRectificationChainOfIons}}
+\section{Summary and discussion\label{sec:chapter5_Conclusions}}
 %
 %
 %
 %
-In this article we have numerically demonstrated heat rectification in a chain of ions trapped in individual microtraps with graded frequencies, connected at both ends to thermal baths
+In this chapter we have numerically demonstrated heat rectification in a chain of ions trapped in individual microtraps with graded frequencies, connected at both ends to thermal baths
 created by optical molasses. An alternative to implement a graded
 frequency profile in the lab
 could be combining a collective Paul trap for all the ions with on-site dipolar laser forces \cite{Freitas2015,Enderlein2012,Bermudez2013,Schneider2010}.
 
-A goal of this article is to connect two communities, ion trappers and
+A goal of this chapter is to connect two communities, ion trappers and
 researchers on heat-rectification models. The results found are encouraging and demonstrate the potential of a trapped-ion platform to experimentally investigate heat rectification schemes. Trapped ions are quite interesting to this end because  they are highly controllable,  and may easily adopt several features to enhance rectification, such as
 the ones explored here (long-range interactions and an asymmetrical gradation),
 or others such as time dependent forces \cite{Li2012,Riera-Campeny2018}, or different nonlinearities in onsite forces.
@@ -489,7 +456,7 @@ and the temperature derivative is discretized as
 \end{equation}
 %
 %
-%\blue{In an article of Peyrard \cite{Peyrard2006} the performance of a segmented rectification is studied and the rectification mechanism is understood by means of a thermal conductivity that is both temperature and position dependent. This thermal conductivity is derived from assuming that the heat current follows the Fourier law locally
+%\blue{In an chapter of Peyrard \cite{Peyrard2006} the performance of a segmented rectification is studied and the rectification mechanism is understood by means of a thermal conductivity that is both temperature and position dependent. This thermal conductivity is derived from assuming that the heat current follows the Fourier law locally
 Through integration, it is clear that when $\lambda$ depends on both temperature and position rectification is possible.
 In the continuous model the temperature increment between the  baths is
 %
