@@ -6,7 +6,7 @@
 %\documentclass[a4paper, 11pt, twoside, openright]{Thesis} %en a4
 \documentclass[a4paper, 12pt, twoside, openright]{Thesis}  %para reducir a b5
 
-% ------------------ Include any extra LaTeX packages required -------------------------------------
+% ------------------ Include any extra LaTeX packages required -------------------------------
 \usepackage[square, numbers, comma, sort&compress]{natbib}  % Use the "Natbib" style for the references in the Bibliography
 \usepackage{verbatim}         % Needed for the "comment" environment to make LaTeX comments
 \usepackage{vector}           % Allows "\bvec{}" and "\buvec{}" for "blackboard" style bold vectors in maths
@@ -44,6 +44,9 @@
 % Para doublestruck 0
 \usepackage[bb=boondox]{mathalfa}
 
+% Remove hyphen word split
+% \hyphenpenalty=10000
+
 %% ----------------- START OF THE DOCUMENT ---------------------------------------------------------
 \begin{document}
 
@@ -78,16 +81,14 @@
 % ------------------ The "Funny Quote Page" --------------------------------------------------------
 \pagestyle{empty}  % No headers or footers for the following pages
 
-% \includegraphics{Figures/Honest_Work.jpg}
-\null\vfill
-% Now comes the "Funny Quote", written in italics
-\textit{``It ain't much, but it`s honest work.''}
-\begin{flushright}
-  Someone who you admire or hate
-\end{flushright}
-
-\vfill\vfill\vfill\vfill\vfill\vfill\null
-\clearpage  % Funny Quote page ended, start a new page
+% \null\vfill
+% % Now comes the "Funny Quote", written in italics
+% \textit{``It ain't much, but it`s honest work.''}
+% \begin{flushright}
+%   Someone who you admire or hate
+% \end{flushright}
+% \vfill\vfill\vfill\vfill\vfill\vfill\null
+% \clearpage  % Funny Quote page ended, start a new page
 %% ----------------------------------------------------------------
 
 % ------------------ The Abstract Page -------------------------------------------------------------
@@ -196,10 +197,10 @@
 \addtocontents{toc}{\vspace{0.6em}}
 
 %Review of scattering theory formalism
-\input{./Appendices/Appendix_ScatteringFormalism}
+% \input{./Appendices/Appendix_ScatteringFormalism}
 
-%Alternative formulation of $A$-pseudohermitian symmetries as ordinary (commuting) symmetries
-\input{./Appendices/Appendix_AlternativeFormulationOfPseudoHermiticity}
+% %Alternative formulation of $A$-pseudohermitian symmetries as ordinary (commuting) symmetries
+% \input{./Appendices/Appendix_AlternativeFormulationOfPseudoHermiticity}
 
 %Properties of separable potentials
 \input{./Appendices/Appendix_SeparablePotentials}

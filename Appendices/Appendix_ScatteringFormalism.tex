@@ -5,6 +5,107 @@
 \lhead{Appendix A. \emph{Review of scattering theory formalism}}
 
 %
+
+SCATT 1
+--------------------------------------------
+
+\section{I. Scattering amplitudes\label{sa}}
+%
+We provide a lightning review of scattering amplitudes in 1D. For a more complete account, see [1].
+(Citations and table numbers correspond to the main text. Equation and figure numbers in the Supplemental
+material are indicated as S1, S2, etc..)
+%\cite{cp}.
+We assume $p>0$. The amplitudes for scattering by $H=H_0+V$, may be calculated by
+\begin{eqnarray}
+R^l&=&-\frac{2\pi i m}{p}\la -p|T_{op}(+)|p\ra,
+\\
+T^l&=&1-\frac{2\pi i m}{p} \la p|T_{op}(+)|p\ra,
+\label{tl}
+\\
+R^r&=&-\frac{2\pi i m}{p}\la p|T_{op}(+)|-p\ra,
+\\
+T^r&=&1-\frac{2\pi i m}{p}\la -p|T_{op}(+)|-p\ra,
+\label{tr}
+\end{eqnarray}
+%
+where the $l/r$ superscript indicates left or right incidence, and
+%
+\begin{equation}
+T_{op}(+)|\pm p\ra=\left[V+V\frac{1}{E_p+i0-H}V\right]|\pm p\ra,
+\end{equation}
+%
+where $E_p=p^2/(2m)$.
+To find Born-approximation expressions of the scattering coefficients (square moduli of the amplitudes), we take $T_{op}\approx V$ in the expressions of $R^l$, and $R^r$.
+For $T^l$ and $T^r$ we also include the second order in $V$, which contributes to the square in
+second order due to the $1$ in eqs. (\ref{tl}) and (\ref{tr}).
+
+
+
+The on-shell $\sf{S}$ matrix, see [1],  is formed
+as
+%
+\begin{equation}
+\sf{S}=\left(
+\begin{array}{cc}
+\la \bf{p}|\sf{S}|\bf{p}\ra&\la \bf{p}|\sf{S}|-\bf{p}\ra
+\\
+\la -�\bf{p}|\sf{S}|\bf{p}\ra&\la -\bf{p}|\sf{S}|-\bf{p}\ra
+\end{array}
+\right)
+=
+\left(\begin{array}{cc}
+T^l&R^r
+\\
+R^l&T^r
+\end{array}
+\right).
+\end{equation}
+%
+This on-shell matrix relates to the standard $S$-matrix elements
+in momentum representation,
+%
+\begin{equation}
+\la p|S|p'\ra=\delta(p-p')-2i\pi\delta(E_p-E_p')\la p|T_{op}(+)|p'\ra,
+\end{equation}
+%
+by factoring out a delta function,
+%
+%\begin{equation}
+$$
+\la p|S|p'\ra=\frac{|p|}{m}\delta(E_p-E_p')\la \bf{p}|\sf{S}|\bf{p'}\ra.
+$$
+%\end{equation}
+%
+All the above formulae may be reproduced when the  particle is scattered instead by  $H^\dagger=H_0+V^\dagger$,
+giving scattering amplitudes with a hat, $\widehat{T}^r, \widehat{T}^l, \widehat{R}^r, \widehat{R}^l$, and $\widehat{S}$.
+Hatted and unhatted amplitudes are not independent, they are linked by the generalized unitary relation $\widehat{S}^\dagger S=S\widehat{S}^\dagger=1$, whose
+on-shell matrix elements lead to the four relations in eq. (3) of the main text.
+%
+%\begin{eqnarray}
+%\widehat T^l T^{l*} + \widehat R^l R^{l*} = 1,
+%\nonumber\\
+%\widehat T^r T^{r*} + \widehat R^r R^{r*} = 1,
+%\nonumber\\
+%\hat T^{l*} R^r + T^r \widehat R^{l*} = 0,
+%\nonumber\\
+%T^l \widehat R^{r*} + \widehat T^{r*} R^l = 0.
+%\label{gur}
+%\end{eqnarray}
+%
+They can be rearranged to express the transmission amplitudes of $H^\dagger$ in terms of   those of $H$,
+%
+\begin{eqnarray}
+\widehat T^{l*} = \frac{T^r}{T^l T^r - R^l R^r},\;\;\;
+\widehat R^{l*} = - \frac{R^r}{T^l T^r - R^l R^r},\nonumber\\
+\widehat T^{r*} = \frac{T^l}{T^l T^r - R^l R^r},\;\;\;
+\widehat R^{r*} = - \frac{R^l}{T^l T^r - R^l R^r}.
+\label{hadjamp}
+\end{eqnarray}
+%
+
+
+SCATT 2
+-------------------------------------------
 A detailed overview of scattering theory can be found in \cite{Taylor1972} and its extension to NH systems in \cite{Muga2004}. Scattering theory describes the interaction of an incoming wave packet with a localized potential. In general, the spectrum of scattering Hamiltonians (as defined at the beginning of section \ref{sec:SymTheory}) has both a discrete part and a continuum with real, positive energies.
 %It is precisely this continuous part of the spectrum which is relevant for scattering since the incoming wave packets do not overlap with the eigenstates of the discrete spectrum.
 The eigenstates of the continuous spectrum are constructed by the action on plane waves of the M\"oller operators
