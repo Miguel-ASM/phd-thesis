@@ -1,141 +1,33 @@
 %!TEX root = ../Thesis.tex
 %Chapter 3
 
-\chapter{Physical Implementation of non-hermitian and non-local hamiltonians}
+\chapter{Quantum-Optical implementation of non-Hermitian potentials for asymmetric scattering}
 \label{Chapter3}
-\lhead{Chapter 3. \emph{Physical Implementation of non-hermitian and non-local hamiltonians}}
+\lhead{Chapter 3. \emph{Quantum-Optical implementation of non-Hermitian potentials for asymmetric scattering}}
 %
 Non-Hermitian, one-dimensional  potentials which are also non-local,
 allow for scattering asymmetries, namely, asymmetric transmission or reflection responses to the incidence of a particle from left or right.
 The  symmetries of the potential
 imply selection rules for transmission and reflection. In particular, parity-time (PT)
 symmetry or the symmetry  of any local potential do not allow for asymmetric transmission.
-We put forward a feasible  quantum-optical implementation
+We put forward a feasible quantum-optical implementation
 of non-Hermitian, non-local, non-PT potentials to implement different scattering asymmetries, including transmission
 asymmetries.
 %
 \newpage
 %
 \section{Introduction}
-The asymmetric response of diodes, valves, or rectifiers to input direction is of paramount importance in many different fields and technologies, from hydrodynamics  to microelectronics,  as well as in biological systems. We  expect a wealth of applications of such response asymmetries also in the microscopic quantum realm, in particular in  circuits or operations carrying or processing quantum information with moving atoms.
-So far  devices such as Maxwell demons, which  let atoms pass one way, have  been instrumental, first as ideal devices to  understand the second law \cite{Maxwell1875,Rex1990}, and also  as practical sorting devices \cite{Ruschhaupt2004,Raizen2005,Dudarev2005,Ruschhaupt2006a,Ruschhaupt2006,Ruschhaupt2006b,Ruschhaupt2007,Raizen2009,Jerkins2010}.
 
-Asymmetric transmission and reflection
-probabilities for one-dimensional (1D) particle scattering off  a potential center are not possible if the Hamiltonian is Hermitian \cite{Muga2004,Mostafazadeh2018}.
-Non-Hermitian (NH) Hamiltonians representing effective interactions have a long history in nuclear, atomic, and molecular physics, and have become common in optics, where wave equations in waveguides could simulate  Schr\"odinger equations \cite{Ruschhaupt2005,Longhi2017a,Konotop2016}.
-%
-Non-Hermitian Hamiltonians constructed by analytically continuing Hermitian ones are useful and efficient tools to find resonances \cite{Moiseyev2011}.
-They can also be set phenomenologically, e.g. to describe gain and loss
-\cite{Ruschhaupt2005},
-or be found as effective Hamiltonians for a subspace from a Hermitian Hamiltonian of a larger system
-by projection \cite{Feshbach1958,Ruschhaupt2004,Muga2004}.
-%
+In the previous chapters I generalized the concept of symmetry for non-hermitian Hamiltonians in several ways. In chapter \ref{Chapter1} we proposed to extend the concept of symmetry in terms of conmutation with a unitary or antiunitary operator to include also the concept of pseudohermiticy, eqs. \eqref{eq:chapter1_symmetry}, \eqref{eq:chapter1_pseudoSymmetry}. For 1D particle scattering of a potential center, the different Hamiltonian symmetries imply selection rules for asymmetric transmission and reflection. In particular, these selection rules were derived for the elements of the Klein 4-group $K_{4}=\lbrace 1,\Pi,\theta,\Pi\theta \rbrace$. As a result of the selection rules, asymmetric transmission and reflection probabilities for 1D particle scattering of a potential center are not possible if the Hamiltonian is Hermitian. Whereas hermiticity does not allow for any asymmetry in transmission and reflection probabilities, PT symmetry or the symmetry of local potentials, technically ``pseudohermiticy with respect to time reversal'', do not allow for asymmetric transmission, see symmetries II (Hermiticity), VII (PT symmetry),  and VI (time-reversal pseudohermiticity) in table \ref{chapter3_SymmetriesConditions}. Thus non-local, non-PT, and non-Hermitian potentials are needed to implement a rich set of scattering asymmetries, and in particular asymmetric transmission.
 
-Much of the recent interest in Non-Hermitian Hamiltonians focuses on  parity-time (PT) symmetric Hamiltonians \cite{Bender1998,Znojil2015}  because of their spectral properties and useful applications, mostly in optics  \cite{Longhi2017a,Konotop2016,Longhi2014}, but  alternative symmetries are also being studied \cite{Nixon2016,Nixon2016a,Chen2017,Ruschhaupt2017,Simon2018,Simon2019a,Alana2020,Bernard2002,Kawabata2019}. Symmetry operations
-on NH Hamiltonians can be systematized into group structures \cite{Ruschhaupt2017,Simon2019a,Alana2020}.  In particular for
-1D particle scattering off a potential center, the different Hamiltonian symmetries imply
-selection rules for asymmetric transmission and reflection \cite{Ruschhaupt2017,Simon2019a}.\footnote{Throughout the paper we assume a linear theory for systems whose wave equation is linear in the wavefunction.}
-Whereas hermiticity does not allow for any asymmetry in transmission and reflection probabilities,   PT symmetry or
-the symmetry of local potentials, technically ``pseudohermiticy with respect to time reversal'' \cite{Ruschhaupt2017},
-do not allow for  asymmetric transmission \cite{Muga2004,Mostafazadeh2018}, see symmetries II (Hermiticity), VII (PT symmetry),  and VI
-(time-reversal pseudohermiticity) in table \ref{condi}.
-(Here a ``local potential'' is defined as one whose only non-zero elements in coordinate representation are diagonal, whereas a non-local one has  non-zero nondiagonal elements.)
-%
-%
-Thus  non-local, non-PT, and non-Hermitian potentials are needed to implement a rich set of scattering
-asymmetries, and in particular asymmetric transmission.
+In chapter \ref{Chapter1}, non-local potentials for asymmetric scattering had been constructed as mathematical models but without a physical implementation. In this chapter I put forward a physical realization of effective NH, non-local  Hamiltonians which do not posses PT symmetry. Using Feshbach's projection technique it is found that the effective potentials for a ground-state atom crossing a laser beam in a region of space are generically non-local and non-Hermitian. Shaping the spatial-dependence of the, generally complex, Rabi frequency, and selecting a specific laser detuning allows us to produce different potential symmetries and asymmetric scattering effects, including asymmetric transmission.
 
-In this paper we put forward a physical realization of  effective NH, non-local  Hamiltonians which do not posses PT symmetry.
-Non-local potentials for asymmetric scattering had been constructed as mathematical models \cite{Ruschhaupt2017}, but a physical implementation  had been so far elusive.
-Using Feshbach's projection technique it is found that the
-effective potentials for a ground-state atom crossing a laser beam in a region of space are generically non-local and non-Hermitian. Shaping the spatial-dependence of the, generally complex, Rabi frequency, and selecting a specific laser detuning allows us to produce different potential symmetries and asymmetric scattering effects, including asymmetric transmission.
-
-After a lightning review of Hamiltonian symmetries and the corresponding scattering selection rules in Sec. \ref{ssh},
-we shall  explain in Sec. \ref{enl} how to generate different NH symmetries in a quantum optical setting of an atom impinging on a laser illuminated region. Finally we provide specific example devices (constructed using numerical optimisation) with different asymmetric scattering responses in Sec. \ref{exa}. Realistic experimental parameters are also examined. The asymmetric behavior can be intuitively understood based on a classical approximation of the motion and the non-commutativity of rotations on the Bloch sphere, which gives good estimates for the potential parameters, see Sec. \ref{class}.
-
-%
-%
-%
-\section{Symmetries of Scattering Hamiltonians\label{ssh}}
-%
-%
-We consider one-dimensional  scattering Hamiltonians  $H=H_0+V$, where $H_{0}$
-is the kinetic energy for a particle of mass $m$,
-and
-$V$ is the  potential, which is assumed to decay fast enough on both sides so that $H$ has a continuous spectrum and scattering eigenfunctions. These eigenfunctions may be chosen so that asymptotically, i.e., far from the potential center,  they are superpositions of an incident plane wave and a reflected plane wave on one side, and a transmitted plane wave on the other side. Reflected and transmitted waves include corresponding amplitudes, whose squared-modulii
-(scattering coefficients hereafter) sum to one for Hermitian potentials. Instead, NH potentials
-may produce  absorption or gain.
-
-
-There are eight different symmetries that $H$ could fulfill, see table \ref{condi},
-with the forms
-%
-\begin{eqnarray}
-	AH&=&HA,
-	\\
-	AH&=&H^{\dagger}A,
-	\label{pseudohermiticityPhysicalImplementation}
-\end{eqnarray}
-%
-%
-where $A$ is a unitary or antiunitary operator in the Klein four-group \linebreak $K_{4}=\lbrace 1,\Pi,\theta,\Pi\theta \rbrace$ \cite{Ruschhaupt2017}.
-Relation \eqref{pseudohermiticityPhysicalImplementation} is called here $A$-pseudohermiticity of $H$ \cite{Mostafazadeh2010,Ruschhaupt2017}.
-The operators $1$, $\Pi$, $\theta$ and $\Pi\theta$ are the identity, parity, time reversal,
-and the consecutive (commuting) application of both operators.
-Acting on position eigenvectors $|x\rangle$,
-$\Pi c|x\rangle =c|-x\rangle$, and $\theta c |x\rangle = c^* |x\rangle$, for any  complex number $c$. Note that symmetry I is a trivial symmetry and is satisfied for all Hamiltonians.
-
-%
-The eight symmetries  may be regarded as the invariance of the Hamiltonian with respect to
-eight symmetry operations that form the Abelian group E8 \cite{Simon2019a}. They are all operations that can be done by inversion, transposition, complex conjugation, and their combinations.
-Making use of generalized unitarity relations and  the relations implied by the symmetries on $S$-matrix elements,
-the transmission and reflection amplitudes for right and left incidence, $T^r$, $R^r$ and $T^l$, $R^l$, can be  related
-to each other,
-as well as their modulii \cite{Ruschhaupt2017}.  ``Right and left  incidence'' are here shorthands for ``incidence {\it from} the right'',
-and ``incidence { from} the left'', respectively.
-
-The possible asymmetric responses are allowed or forbidden, according to selection rules,  by the symmetries of the Hamiltonian.
-If we impose that the transmission and reflection coefficients  have only 0 or 1 values,  a convenient reference scenario for  devices intended to manage quantum-information applications, six possible scattering asymmetries may be identified \cite{Ruschhaupt2017}, see table \ref{table2PhysicalImplementation}. It is useful to label them according to the response  to incidence from the left/right. The possible responses are encoded in the  letters ${\cal{A}}$,
-for ``absorption'', and ${\cal{T}}$ and ${\cal{R}}$ for ``transmission'' and ``reflection'', separated by ``$/$''. The
-letters on the left of $/$ are for left incidence, and the ones on the right are for right incidence. For example ${\cal T/A}$ means transmission for left incidence and absorption for right
-incidence. From the selection rules \cite{Ruschhaupt2017}, it is possible to determine which symmetries allow for a given device, see table \ref{table2PhysicalImplementation}.
-
-The relations between the symmetries and ``reciprocity'' are surely worth spelling out, in view of many works and discussions in optics \cite{Lin2011,Feng2011,Fan2012,Peng2014}. ``Reciprocity'' is a somewhat vague term with different meanings for different authors and communities, the reviews \cite{Potton2004} and \cite{Deak2012} give  some useful  background. A primary formulation regards reciprocity as the property of detecting the  same effects when interchanging source and detector without changing the scatterer. This  concept has lead to  different formalizations that fix in more detail what is exactly meant by ``same effects'' and ``interchanging source and detector''.
-In 1D scattering problems we may first  distinguish  a reciprocity for scattering amplitudes or for scattering coefficients (their modulus squared). We shall hereafter focus on  coefficients as in the rest of  the paper.
-Another distinction can be made between reflection and transmission reciprocities, namely, a system with $|R^l|^2=|R^r|^2$
-would be ``reflection reciprocal'' and if $|T^l|^2=|T^r|^2$ the system would be transmission reciprocal.\footnote{Incidentally, for reflection reciprocity, ``interchanging source and detector'' has to be understood in momentum space rather than spatially.}
-A formal definition of reciprocity is that, for some antiunitary operator $K$ \cite{Deak2012},
-%
-\begin{equation}
-	\label{reci}
-	HK=KH^\dagger.
-\end{equation}
-%
-It follows that the scattering transition  matrix obeys in momentum representation \cite{Deak2012}
-%
-\begin{equation}\label{tt}
-	\la p|{\sf T}|p'\ra=\la Kp'|{\sf T}|Kp\ra.
-\end{equation}
-%
-In our symmetry classification, symmetries VI and VIII obey by definition reciprocity conditions of the form \eqref{reci}.
-Inserting the results in the exact forms of transmission and reflection amplitudes, which depend on diagonal and non-diagonal elements of the transition matrix, respectively,   see e.g.  \cite{Muga2004},
-different physical consequences follow:  In symmetry VI, $K=\Theta$, $|Kp\ra=|-p\ra$, and the reciprocity condition implies transmission reciprocity.
-In symmetry VIII, $K=\Pi\Theta$ and $|K p\ra=|p\ra$, so the reciprocity condition implies reflection reciprocity.
-A first relevant observation is this: an arbitrary reciprocity condition of the form \eqref{reci}, does not necessarily imply symmetrical transmission. A second point is that ``scattering selection rules'',  i.e., the set of forbidden phenomena, or compulsory relations among right and left coefficients, see table 1 in \cite{Ruschhaupt2017}, depend as well on generalized unitary relations. Putting together the effect of symmetries on transition or
-$S$-matrix elements and generalized unitarity relations, it turns out that
-symmetries II (Hermiticity) and III (parity) are not capable of any,  reflection or transmission, asymmetry; symmetries VI (time reversal pseudohermiticity) and VII (PT symmetry) allow for reflection asymmetry
-but not for transmission asymmetry;  symmetries V (time-reversal symmetry) and VIII (PT pseudohermiticity) allow for
-transmission asymmetry but not for reflection asymmetry, whereas I (trivial symmetry) and IV (parity pseudohermiticity) allow for both scattering asymmetries.
-Note also the importance on non-locality for asymmetric transmission: All local potentials do satisfy automatically symmetry VI, and are therefore necessarily transmission reciprocal. Let us insist once more than all these results are for linear (Schr\"odinger) dynamics.
-Nonlinearity allows to break down these selection rules \cite{Lin2011,Peng2014,Xu2014}.
-
-
-
+The rest of this chapter is organized as follows. In Sec. \ref{enl}, I shall explain how to generate different NH symmetries in a quantum optical setting of an atom impinging on a laser illuminated region. In Sec. \ref{exa}, I provide specific example devices (constructed using numerical optimisation) with different asymmetric scattering responses. Realistic experimental parameters are also examined. In Sec. \ref{class}, the asymmetric behavior is explained with a classical approximation of the motion and the non-commutativity of rotations on the Bloch sphere, which gives good estimates for the potential parameters. Finally, in Sec. \ref{sec:chapter3_Discussion} I summarize the main findings in the chapter.
 
 %---------------------------------------------------------------------------------------------
 \begin{table}[t]
 
-	\caption{Conditions leading to  specific symmetries in the potential \eqref{effpot}. A given symmetry also implies others, see the last column.\label{condi}}
+	\caption{Conditions leading to  specific symmetries in the potential \eqref{effpot}. A given symmetry also implies others, see the last column.\label{chapter3_SymmetriesConditions}}
 	\hspace*{-0.1cm}
 	\scalebox{.94}{
 	\begin{tabular}{lcc}
@@ -177,16 +69,15 @@ Nonlinearity allows to break down these selection rules \cite{Lin2011,Peng2014,X
 	\centering
 	\scalebox{0.90}{
 	\begin{tabular}{cccccc}
+		\hline\hline
 		$\cal{TR/A}$ & $\cal{T/R}$ & $\cal{T/A}$ & $\cal{TR/R}$ & $\cal{R/A}$ & $\cal{TR/T}$ \\
+		\hline
 		I            & I           & I,VIII      & I,VIII       & I,VI        & I, IV, VI, VII
+		\\
+		\hline\hline
 	\end{tabular}}
 \end{table}
 
-%
-%
-%
-%
-%
 
 %
 \section{Effective non-local potential for the ground state of a two-level atom\label{enl}}
@@ -284,7 +175,7 @@ transitions from ground state to ground state in the full two-level theory see A
 %
 \subsection{Possible symmetries of the non-local potential}
 %
-The necessary conditions for the different symmetries of the potential \eqref{effpot} are outlined in the second column of  table \ref{condi}. For example,
+The necessary conditions for the different symmetries of the potential \eqref{effpot} are outlined in the second column of  table \ref{chapter3_SymmetriesConditions}. For example,
 symmetry III (parity) requires that $V(x,y)=V(-x,-y)$ \cite{Ruschhaupt2017}. Inserting the functional form of the potential from Eq. \eqref{effpot} into this condition, it results in the requirement $\Omega(x) \Omega(y)^* = \Omega(-x) \Omega(-y)^*$. This is fulfilled if $\Omega(x)=\Omega(-x)e^{i \phi}$ with some arbitrary phase freedom $\phi$.
 
 Since $\Omega(x)$ does not depend on $q$, symmetries IV, V and VII imply that symmetry II is obeyed as well (Hermiticity).
@@ -298,7 +189,7 @@ the two-level model see Appendix \ref{Appendix:NumericalCalculationOfTandR}.
 
 %
 %
-As seen from  table \ref{condi}, $\operatorname{Re}(q)=0$ makes the potential Hermitian so we shall avoid this condition.
+As seen from  table \ref{chapter3_SymmetriesConditions}, $\operatorname{Re}(q)=0$ makes the potential Hermitian so we shall avoid this condition.
 If $\gamma=0$,   $\mu \in \mathbb{R}$. Hence $\mu+1<0$ gives $\operatorname{Re}(q)=0$ and $\mu+1>0$ gives
 $\operatorname{Im}(q)=0$. $\mu+1>0$ amounts to a condition on the detuning compared to the incident energy, namely $\Delta>-E/\hbar$.
 In the following examples we implement potentials with symmetries VIII, VI, and I, with detunings and energies satisfying the condition $\mu+1>0$.
@@ -569,7 +460,7 @@ over a large velocity range. This allows one to find good initial values for fur
 
 %
 %
-\section{Discussion}
+\section{Discussion\label{sec:chapter3_Discussion}}
 Non-Hermitian Hamiltonians display many interesting phenomena which are
 impossible for a  Hermitian Hamiltonian  acting on the same Hilbert space. In particular, in the Hilbert space of
 a single, structureless particle on a line formed by square integrable normalizable functions, Hermitian Hamiltonians do not allow, within a linear theory, for asymmetric scattering transmission and reflection coefficients.

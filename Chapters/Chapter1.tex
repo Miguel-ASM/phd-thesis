@@ -108,15 +108,14 @@ with $G(z) = (z-H)^{-1}$ being the Green's operator. In \cite{Muga2004} the tran
 where $G^0(z) = (z-H_0)^{-1}$ is the Green's operator of the free propagation Hamiltonian $H_0$. Now, to obtain the scattering amplitudes of reflection and transmission, one has to take the limits of $\braket{x}{\pm p^+}$, where $\ket{\pm p^+}$ is given by eq. \eqref{eq:chapter1_scatteringStateFormal}, when $|x|$ goes to infinite and compare with eqs. \eqref{eq:chapter1_leftState}, \eqref{eq:chapter1_rightState} to get
 %
 \begin{align}
-R^l&=-i\frac{2\pi m}{p}\la -p|T_{op}(+)|p\ra,
+R^l&=-i\frac{2\pi m}{p}\la -p|T_{op}(+)|p\ra\nonumber,
 \\
-T^l&=1-i\frac{2\pi m}{p} \la p|T_{op}(+)|p\ra,
-\label{tl}
+T^l&=1-i\frac{2\pi m}{p} \la p|T_{op}(+)|p\ra\nonumber,
 \\
-R^r&=-i\frac{2\pi m}{p}\la p|T_{op}(+)|-p\ra,
+R^r&=-i\frac{2\pi m}{p}\la p|T_{op}(+)|-p\ra\nonumber,
 \\
 T^r&=1-i\frac{2\pi m}{p}\la -p|T_{op}(+)|-p\ra,
-\label{tr}
+\label{eq:chapter1_amplitudesFromTOperator}
 \end{align}
 %
 where $T_{op}(+)$ is a shorthand notation for $\lim_{ \varepsilon\to 0^+ } T_{op}(E_p + i\varepsilon)$. The same procedure can be followed using the transition operator $\widehat{T}_{op}$ for $H^\dagger$ to obtain $\widehat{T}^l(p)$, $\widehat{R}^l(p)$, $\widehat{T}^r(p)$ and $\widehat{R}^r(p)$. For what comes next, it is useful to introduce the on-shell scattering matrix, defined as
@@ -338,9 +337,10 @@ both in coordinate or momentum representation, see 3rd and 4th columns of table 
     ``No'' means impossible.  In some cases ``$P$" is accompanied by a condition that must be satisfied.\vspace*{.2cm}
     \label{tab:chapter1_SymmetriesTable}}
     \centering
-    \scalebox{0.75}{
+    \scalebox{.8}{
     \begin{tabular}{cccccccccccc}
-      %\hline
+      \hline\hline\\
+      (1)&(2)&(3)&(4)&(5)&(6)&(7)&(8)&(9)&(10)&(11)&(12)\\
       Code & Symmetry&  $\langle x|V|y\rangle=$ & $\langle p|V|p'\rangle=$ & $\langle p|S|p'\rangle=$ & $T^l\!=$ & $T^r\!=$ & $R^l\!=$& $R^r\!=$& from eq. (\eqref{eq:chapter1_unitarityCoefficients})&$|T^l|\!=\!1$&$|R^l|\!=\!1$
       \\
       &&&&&&&&&&$|T^r|\!=\!0$&$|R^r|\!=\!0$
@@ -363,8 +363,8 @@ both in coordinate or momentum representation, see 3rd and 4th columns of table 
       VII & $\Theta\Pi H=H\Theta \Pi$ &  $\langle -x|V|-y\rangle^*$ & $\langle p|V|p'\rangle^*$ & $\langle p'|\widehat{S}|p\rangle$ &$\widehat{T}^l$& $\widehat{T}^r$ & $\widehat{R}^r$& $\widehat{R}^l$&$|T^l|=|T^r|$&No&$P$, $|T^{r,l}|=1$
       \\
       VIII& $\Theta\Pi H=H^\dagger \Theta \Pi$ &  $\langle -y|V|-x\rangle$ & $\langle p'|V|p\rangle$ & $\langle p'|S|p\rangle$ & $T^l$ & $T^r$ & $R^r$ & $R^l$&$|R^l|=|R^r|$&$P$&No
-      %\\
-      %\hline
+      \\
+      \hline\hline
     \end{tabular}}
   \end{table}
 \end{landscape}
@@ -375,7 +375,8 @@ both in coordinate or momentum representation, see 3rd and 4th columns of table 
   \caption{Transformation rules of the M\"oller and scattering operators under symmetries/pseudo-symmetries with linear or antilinear operators.}
   \label{tab:chapter1_MollerOperatorSymmetries}
   \centering
-  \begin{tabular}{c|cc}
+  \begin{tabular}{lcc}
+  \hline\hline\\
   \textbf{Type of symmetry} & \textbf{$A$ linear} & \textbf{$A$ antilinear}
 
   \\
@@ -432,6 +433,7 @@ both in coordinate or momentum representation, see 3rd and 4th columns of table 
   \end{array}
   $
   \\
+  \hline\hline
   \end{tabular}
 \end{table}
 
@@ -444,7 +446,7 @@ With the definitions of symmetry in eqs. \eqref{eq:chapter1_symmetry}, \eqref{eq
     &= \lim_{t \to -\infty} e^{i H t/\hbar}e^{-i H_0 t/\hbar}A\\
     &= \Omega_+ A,
   \end{split}
-  \label{eq:chapter1_Moller+TransformAUnitary_Symmetry}
+  \label{eq:chapter1_MollerPositiveTransformAUnitary_Symmetry}
 \end{equation}
 %
 and
@@ -456,10 +458,10 @@ and
     &= \lim_{t \to +\infty} e^{i H^\dagger t/\hbar}e^{-i H_0 t/\hbar}A\\
     &= \Omega_- A.
   \end{split}
-  \label{eq:chapter1_Moller-TransformAUnitary_Symmetry}
+  \label{eq:chapter1_MollerNegativeTransformAUnitary_Symmetry}
 \end{equation}
 %
-Using eqs. \eqref{eq:chapter1_Moller+TransformAUnitary_Symmetry} and \eqref{eq:chapter1_Moller+TransformAUnitary_Symmetry} we finally get
+Using eqs. \eqref{eq:chapter1_MollerPositiveTransformAUnitary_Symmetry} and \eqref{eq:chapter1_MollerNegativeTransformAUnitary_Symmetry} we finally get
 %
 \begin{equation}
   \begin{split}
@@ -514,12 +516,14 @@ symmetry VI),  whereas time-reversal symmetry (i.e., a real potential in coordin
   \label{tab:chapter1_KleinGroupOnPosAndMomentBases}
   \center
   \begin{tabular}{lcc}
+    \hline\hline
     & $\alpha \ket{x}$ & $\alpha \ket{p}$\\
     \hline
     $1$ & $\alpha \ket{x}$ & $\alpha \ket{p}$\\ %Identity
     $\Pi$  & $\alpha \ket{-x}$ & $\alpha \ket{-p}$\\ %Parity
     $\Theta$ & $\alpha^* \ket{x}$ & $\alpha^* \ket{-p}$\\ %Time Reversal
     $\Pi\Theta$ & $\alpha^* \ket{-x}$ & $\alpha^* \ket{p}$\\ %PT
+    \hline\hline
   \end{tabular}
 \end{table}
 
@@ -547,9 +551,9 @@ These examples are just particular cases of the full set of equivalences given i
   The commutation with the identity (I) is excluded as this symmetry is satisfied by all potentials.\vspace*{.2cm}
   \label{tab:chapter1_equivalencesBetweenSymmetries}}
   \centering
-  \scalebox{0.9}{
+  \scalebox{1}{
   \begin{tabular}{ccccccc}
-    %\hline
+    \hline\hline
     II & III& IV& V& VI & VII &VIII
     \\
     \hline
@@ -558,8 +562,8 @@ These examples are just particular cases of the full set of equivalences given i
     V=VI&V=VII&V=VIII&III=VII&III=VIII&III=V&III=VI
     \\
     VII=VIII&VI=VIII&VI=VII&IV=VIII&IV=VII&IV=VI&IV=V
-    %\\
-    %\hline
+    \\
+    \hline\hline
   \end{tabular}}
 
 \end{table}
@@ -584,9 +588,9 @@ that do not allow the implementation of the devices in fig. \ref{cases}. The com
     The fifth column indicates the symmetries in table \ref{tab:chapter1_SymmetriesTable} that forbid the device. Figures S2, S3, S5 and S6 can be found in the supplemental material to this paper.\vspace*{.2cm}}
     \label{tab:chapter1_DevicesDescription}
     \centering
-    \scalebox{0.85}{
+    \scalebox{1}{
     \begin{tabular}{ccccccc}
-      %\hline
+      \hline\hline
       Device type & Left incidence& Right incidence&Code& Forbidden by & Example
       \\
       \hline
@@ -602,8 +606,8 @@ that do not allow the implementation of the devices in fig. \ref{cases}. The com
       \\
       Transparent 1-way reflector&transmits and reflects&transmits&$\cal{TR/T}$& II, III, V, VIII
       & figs. \ref{fig_reflector}, S5
-      %\\
-      %\hline
+      \\
+      \hline\hline
     \end{tabular}}
   \end{table}
 \end{landscape}
@@ -615,7 +619,7 @@ that do not allow the implementation of the devices in fig. \ref{cases}. The com
   \centering
   \scalebox{0.9}{
   \begin{tabular}{cc}
-    %\hline
+    \hline\hline
     Symmetry& Allowed devices
     \\
     \hline
@@ -634,8 +638,8 @@ that do not allow the implementation of the devices in fig. \ref{cases}. The com
     VII&$\cal{TR/T}$
     \\
     VIII&$\cal{T/A,TR/R}$
-    %\\
-    %\hline
+    \\
+    \hline\hline
   \end{tabular}}
 
 \end{table}

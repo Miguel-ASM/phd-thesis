@@ -76,7 +76,7 @@ This configuration with poles located on the imaginary  axis or as symmetrical p
 
 \begin{figure}[h]
 	\includegraphics[width=0.75\linewidth]{Figures/DiagramPoles.eps}
-	\caption{Example of configuration of  poles (filled circles) and zeros (empty circles) of the $S$-matrix eigenvalues in the complex momentum plane for hermitian Hamiltonians.  Poles in the upper half plane ($\operatorname{Im}(p) > 0$) correspond to bound eigenstates of the Hamiltonian, i.e. localized states with negative energy. Poles in the lower half plane correspond to  virtual states ($\operatorname{Re}(p) = 0$), resonances ($\operatorname{Re}(p) > 0$) and antiresonances ($\operatorname{Re}(p)<0$). The singularities with negative imaginary part correspond to states that do not belong to the Hilbert space since they are not normalizable. However, they can produce observable effects in the scattering amplitudes, in particular when they approach the real axis. The pole structure of symmetries IV, V, and VII, see Table I,
+	\caption{Example of configuration of  poles (filled circles) and zeros (empty circles) of the $S$-matrix eigenvalues in the complex momentum plane for hermitian Hamiltonians.  Poles in the upper half plane ($\operatorname{Im}(p) > 0$) correspond to bound eigenstates of the Hamiltonian, i.e. localized states with negative energy. Poles in the lower half plane correspond to  virtual states ($\operatorname{Re}(p) = 0$), resonances ($\operatorname{Re}(p) > 0$) and antiresonances ($\operatorname{Re}(p)<0$). The singularities with negative imaginary part correspond to states that do not belong to the Hilbert space since they are not normalizable. However, they can produce observable effects in the scattering amplitudes, in particular when they approach the real axis. The pole structure of symmetries IV, V, and VII, see Table \ref{tab:chapter2_Symmetries},
 	is similar, but pole pairs are also possible in the upper half-plane.}
 	\label{fig:DiagramPoles}
 \end{figure}
@@ -104,15 +104,15 @@ This configuration with poles located on the imaginary  axis or as symmetrical p
 
 %\red{paper structure here}
 
-The remainder of the article is organized as follows. In section \ref{sec:SymTheory} we review the scattering properties of eight different Hamiltonian symmetries. These symmetries may be characterized as commutativity or pseudohermiticity with respect to four unitary or antiunitary operators forming a Klein $4$-group, or as invariance with respect to the action of eight linear or antilinear superoperators. In section \ref{sec:SPoles} we discuss the physical consequences of the symmetries in the pole structure of the scattering matrix eigenvalues  and hence in the transmission/reflection amplitudes. Four symmetries are shown to lead to complex poles corresponding to real energies or conjugate (energy) pairs.  In section \ref{sep_pot_sec} we exemplify the general results with separable potentials exhibiting parity-pseudohermiticity and time-reversal symmetry. These are the two non-trivial symmetries of the four (in the sense that the other two, hermiticity and PT-symmetry, are already well discussed). In section \ref{sec:RealEigenConclusions} we discuss and summarize our results.
+The remainder of the article is organized as follows. In section \ref{sec:SymTheory} we review the scattering properties of eight different Hamiltonian symmetries. These symmetries may be characterized as commutativity or pseudohermiticity with respect to four unitary or antiunitary operators forming a Klein $4$-group, or as invariance with respect to the action of eight linear or antilinear superoperators. In section \ref{sec:chapter2_SPoles} we discuss the physical consequences of the symmetries in the pole structure of the scattering matrix eigenvalues  and hence in the transmission/reflection amplitudes. Four symmetries are shown to lead to complex poles corresponding to real energies or conjugate (energy) pairs.  In section \ref{sec:chapter2_separablePotentials} we exemplify the general results with separable potentials exhibiting parity-pseudohermiticity and time-reversal symmetry. These are the two non-trivial symmetries of the four (in the sense that the other two, hermiticity and PT-symmetry, are already well discussed). In section \ref{sec:RealEigenConclusions} we discuss and summarize our results.
 
 \begin{landscape}
 	\begin{table}
 		\centering
-		\caption{Symmetries of the potential based on the commutativity or pseudohermiticity of $H$ with the elements of $\mathbf{K}_4$ (column 2). Columns 3, 5, and 7 to 11 are to be read as follows: For each symmetry the object in the column is equal to the one in the top row of the column. The relations among potential matrix elements are given in coordinate and momentum representations in the third and fifth columns. In columns 4 and 6, each symmetry is regarded as the invariance of the potential with respect to the transformations represented by superoperators ${\cal L}$ (see Sec. \ref{super}) in coordinate  or momentum  representation.
+		\caption{Symmetries of the potential based on the commutativity or pseudohermiticity of $H$ with the elements of $\mathbf{K}_4$ (column 2). Columns 3, 5, and 7 to 11 are to be read as follows: For each symmetry the object in the column is equal to the one in the top row of the column. The relations among potential matrix elements are given in coordinate and momentum representations in the third and fifth columns. In columns 4 and 6, each symmetry is regarded as the invariance of the potential with respect to the transformations represented by superoperators ${\cal L}$ (see Sec. \ref{sec:chapter2_super}) in coordinate  or momentum  representation.
 		The fifth column gives the relations they imply in the matrix elements of $S$ and $\widehat{S}$ matrices. The final four columns set the relations for the scattering amplitudes.
 		\vspace*{.2cm}
-		\label{table2RealEigen}}
+		\label{tab:chapter2_Symmetries}}
 		\scalebox{1}{
 		\begin{tabular}{ccccccccccc}
 			%\hline
@@ -183,7 +183,7 @@ which are associated with the two generalized symmetry relations corresponding t
 %\end{equation}a
 %
 %where $A$ is a unitary or antiunitary operator in Klein $4$-group $\mathbf{K}_4 = \left\{1,\Pi,\Theta,\Theta\Pi\right\}$ formed by the identity ($1$), parity ($\Pi$), time-reversal ($\Theta$) and their product ($\Theta\Pi$), also known as the PT operator.
-We use Roman numeral to label these symmetries as shown in Table I: I ($1H=H1$, the trivial identity)
+We use Roman numeral to label these symmetries as shown in Table \ref{tab:chapter2_Symmetries}: I ($1H=H1$, the trivial identity)
 ; II ($1H=H^\dagger 1$, hermiticity or ``1-pseudohermiticity''); III ($\Pi H=H\Pi$, parity); IV ($\Pi H=H^\dagger \Pi$, $\Pi$-pseudohermiticity);  V ($\Theta H=H\Theta$, time-reversal invariance);  VI ($\Theta H=H^\dagger \Theta$, $\Theta$-pseudohermiticity);
 VII ($\Pi\Theta H=H\Pi\Theta$, PT-symmetry); VIII ($\Pi\Theta H=H\Pi\Theta$, $\Pi\Theta$-pseudohermiticity).
 Note that a local potential would automatically fulfill symmetry VI but this symmetry does not necessarily imply locality.
@@ -213,8 +213,8 @@ A novel aspect uncovered in this paper is that whenever one of  the above-mentio
 
 %
 %
-\subsection{Superoperator formalism \label{super}}
-The eight symmetries listed in Table I may also be regarded as the invariance
+\subsection{Superoperator formalism \label{sec:chapter2_super}}
+The eight symmetries listed in Table \ref{tab:chapter2_Symmetries} may also be regarded as the invariance
 of the Hamiltonian matrix with respect to
 transformations represented by superoperators ${\cal L}$ \cite{Simon2018} defined by
 %
@@ -233,7 +233,7 @@ transformations represented by superoperators ${\cal L}$ \cite{Simon2018} define
 %``a thing is symmetrical if one can subject it to a certain operation and it appears exactly the same after the operation'' \red{citation}.
 This definition of the superoperator action is independent of the representation we use, but its realization
 in coordinates or momenta in terms of the operations of complex conjugation, transposition, and inversion is different.
-For example, in coordinate representation, these superoperators take the following forms (see column 3 in Table I),
+For example, in coordinate representation, these superoperators take the following forms (see column 3 in Table \ref{tab:chapter2_Symmetries}),
 %
 \begin{eqnarray}
 	1 H&=&\int\!\!\int |x\ra \la x|H|y\ra\la y| dx dy,
@@ -297,7 +297,7 @@ the invariance ${\cal L}H=H$, which includes transformations  beyond the convent
 %of the operator that commutes with $H$ is worked out in the Appendices.
 %
 \section{S-matrix pole structure}
-\label{sec:SPoles}
+\label{sec:chapter2_SPoles}
 %
 %One of the most studied aspects of the collisions with non-hermitian potentials is the meaning
 %of poles of $S_j(p)$ in the complex plane $p$ and their motions. In the unitary case
@@ -367,7 +367,7 @@ Combining Eqs. (\ref{pam1}) and (\ref{pam2}) gives
 Equation \eqref{pam3} is remarkable since it reveals the presence of a pole (zero) at $-p$ if there is a zero (pole) at $p$.
 %
 %Of
-%Generalizing the concept of symmetry for NH-Hamiltonians, eight symmetries are identified, see Table I,
+%Generalizing the concept of symmetry for NH-Hamiltonians, eight symmetries are identified, see Table \ref{tab:chapter2_Symmetries},
 %among which four imply
 %a structure for poles and zeros of the S matrix compatible with the existence of real, discrete eigenvalues, more specifically, the discrete eigenvalues
 %appear necessarily in conjugate pairs. Two of these
@@ -403,7 +403,7 @@ the only difference being the possibility
 of finding pairs of symmetrical poles in the upper complex plane when $H\neq H^\dagger$. They represent normalizable ``bound states
 with complex energies''. When they  are not present, the discrete spectrum becomes purely real.
 
-According to Table I,  Eqs. (\ref{ts}) and (\ref{rs}) are fulfilled
+According to Table \ref{tab:chapter2_Symmetries},  Eqs. (\ref{ts}) and (\ref{rs}) are fulfilled
 for symmetries  II (hermiticity), VII (PT-symmetry), IV (parity pseudohermiticity),
 and V (time-reversal invariance). Thus, Hamiltonians having these symmetries have their $S-$matrix poles symmetrically distributed around the imaginary axis. For local potentials the last two symmetries coalesce with the first two well-known
 cases \cite{Ruschhaupt2017}, namely,
@@ -412,7 +412,7 @@ correspond to genuinely distinct properties. In the following section we shall d
 either purely parity-pseudohermitian (and not PT-symmetrical), or time-reversal invariant but not Hermitian.
 %
 \section{Separable Potentials}
-\label{sep_pot_sec}
+\label{sec:chapter2_separablePotentials}
 %
 %
 In order to illustrate and test the theoretical concepts that we have discussed, in particular the
