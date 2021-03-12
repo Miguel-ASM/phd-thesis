@@ -18,7 +18,6 @@
 
 \usepackage{lscape}           %Poner una página apaisada (util para tablas muy anchas)
 
-
 \hypersetup{urlcolor=blue, colorlinks=true}  % Colours hyperlinks in blue, but this can be distracting if there are many links.
 
 
@@ -163,7 +162,8 @@
 \addtocontents{toc}{\vspace{0.6em}}
 
 % ------------ INTRODUCTION ------------------------------------------------------------------------
-\addcontentsline{toc}{chapter}{Introduction}
+\part*{Introduction}
+\addcontentsline{toc}{part}{Introduction}
 \input{./Chapters/Introduction} %Introduction
 
 % ------------ PART I: NH-Devices ------------------------------------------------------------------
@@ -185,15 +185,17 @@
 \input{./Chapters/Chapter6}    % Rectification in a minimal model
 
 % ------------ CONCLUSIONS -------------------------------------------------------------------------
+\part*{Conclusions}
+\addcontentsline{toc}{part}{Conclusions}
 \input{./Chapters/Conclusions} %Conclusions
-\addcontentsline{toc}{chapter}{Conclusions}
+
 
 % ------------ APPENDICES --------------------------------------------------------------------------
 \addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aestheticsy
 
 \appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
 \part*{Appendix}
-%\addcontentsline{toc}{part}{Appendix}
+\addcontentsline{toc}{part}{Appendix}
 \addtocontents{toc}{\vspace{0.6em}}
 
 %Review of scattering theory formalism
