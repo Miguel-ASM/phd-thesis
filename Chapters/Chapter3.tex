@@ -4,25 +4,12 @@
 \chapter{Quantum-Optical implementation of non-Hermitian potentials for asymmetric scattering}
 \label{Chapter3}
 \lhead{Chapter 3. \emph{Quantum-Optical implementation of non-Hermitian potentials for asymmetric scattering}}
-%
-Non-Hermitian, one-dimensional  potentials which are also non-local,
-allow for scattering asymmetries, namely, asymmetric transmission or reflection responses to the incidence of a particle from left or right.
-The  symmetries of the potential
-imply selection rules for transmission and reflection. In particular, parity-time (PT)
-symmetry or the symmetry  of any local potential do not allow for asymmetric transmission.
-A feasible quantum-optical implementation
+
+In chapter \ref{Chapter1}, non-local potentials for asymmetric scattering had been constructed as mathematical models but without a physical implementation. In this chapter a feasible quantum-optical implementation
 of non-Hermitian, non-local, non-PT potentials is put forward to implement different scattering asymmetries, including transmission
-asymmetries.
-%
-\newpage
-%
-\section{Introduction}
+asymmetries. Using Feshbach's projection technique it is found that the effective potentials for a ground-state atom crossing a laser beam in a region of space are generically non-local and non-Hermitian. Shaping the spatial-dependence of the, generally complex, Rabi frequency, and selecting a specific laser detuning allows to produce different potential symmetries and asymmetric scattering effects, including asymmetric transmission.
 
-In the previous chapters I generalized the concept of symmetry for non-hermitian Hamiltonians in several ways. In chapter \ref{Chapter1} I proposed to extend the concept of symmetry in terms of conmutation with a unitary or antiunitary operator to include also the concept of pseudohermiticy, eqs. \eqref{eq:chapter1_symmetry}, \eqref{eq:chapter1_pseudoSymmetry}. For 1D particle scattering of a potential center, the different Hamiltonian symmetries imply selection rules for asymmetric transmission and reflection. In particular, these selection rules were derived for the elements of the Klein 4-group $K_{4}=\lbrace 1,\Pi,\theta,\Pi\theta \rbrace$. As a result of the selection rules, asymmetric transmission and reflection probabilities for 1D particle scattering of a potential center are not possible if the Hamiltonian is Hermitian. Whereas hermiticity does not allow for any asymmetry in transmission and reflection probabilities, PT symmetry or the symmetry of local potentials, technically ``pseudohermiticy with respect to time reversal'', do not allow for asymmetric transmission, see symmetries II (Hermiticity), VII (PT symmetry),  and VI (time-reversal pseudohermiticity) in table \ref{tab:chapter3_SymmetriesConditions}. Thus non-local, non-PT, and non-Hermitian potentials are needed to implement a rich set of scattering asymmetries, and in particular asymmetric transmission.
-
-In chapter \ref{Chapter1}, non-local potentials for asymmetric scattering had been constructed as mathematical models but without a physical implementation. In this chapter I put forward a physical realization of effective NH, non-local  Hamiltonians which do not posses PT symmetry. Using Feshbach's projection technique it is found that the effective potentials for a ground-state atom crossing a laser beam in a region of space are generically non-local and non-Hermitian. Shaping the spatial-dependence of the, generally complex, Rabi frequency, and selecting a specific laser detuning allows us to produce different potential symmetries and asymmetric scattering effects, including asymmetric transmission.
-
-The rest of this chapter is organized as follows. In Sec. \ref{enl}, I shall explain how to generate different NH symmetries in a quantum optical setting of an atom impinging on a laser illuminated region. In Sec. \ref{exa}, I provide specific example devices (constructed using numerical optimisation) with different asymmetric scattering responses. Realistic experimental parameters are also examined. In Sec. \ref{class}, the asymmetric behavior is explained with a classical approximation of the motion and the non-commutativity of rotations on the Bloch sphere, which gives good estimates for the potential parameters. Finally, in Sec. \ref{sec:chapter3_Discussion} I summarize the main findings in the chapter.
+The rest of this chapter is organized as follows. In Sec. \ref{sec:chapter3_enl}, I shall explain how to generate different NH symmetries in a quantum optical setting of an atom impinging on a laser illuminated region. In Sec. \ref{sec:chapter3_exa}, I provide specific example devices (constructed using numerical optimisation) with different asymmetric scattering responses. Realistic experimental parameters are also examined. In Sec. \ref{sec:chapter3_class}, the asymmetric behavior is explained with a classical approximation of the motion and the non-commutativity of rotations on the Bloch sphere, which gives good estimates for the potential parameters. Finally, in Sec. \ref{sec:chapter3_Discussion} I summarize the main findings in the chapter.
 
 %---------------------------------------------------------------------------------------------
 \begin{table}[t]
@@ -56,7 +43,7 @@ The rest of this chapter is organized as follows. In Sec. \ref{enl}, I shall exp
 %---------------------------------------------------------------------------------------------
 
 %
-\section{Effective non-local potential for the ground state of a two-level atom\label{enl}}
+\section{Effective non-local potential for the ground state of a two-level atom\label{sec:chapter3_enl}}
 %
 The key task is to physically realize some of the potential and asymmetric device types described in chapter \ref{Chapter1}, which are again summarized in table \ref{tab:chapter3_table2PhysicalImplementation}. I start with a two-level atom with ground level $\ket{1}$ and excited state $\ket{2}$ impinging onto a laser illuminated region. For a full account of the model and further references see
 \cite{Ruschhaupt2009}. The motion is assumed one dimensional, either because the atom is confined in a waveguide or because the direction $x$ is uncoupled to
@@ -169,7 +156,7 @@ transitions from ground state to ground state in the full two-level theory (see 
 
 \subsection{Possible symmetries of the non-local potential}
 %
-The necessary conditions for the different symmetries of a non-hermitian and non-local Hamiltonian were worked out in Sec. \ref{sec:chapter1_AsymmetricDevices}. In the second column of table \ref{tab:chapter3_SymmetriesConditions}, those conditions have been particularized for the effective potential of the 2-level atom \eqref{eq:chapter3_effpot}. For example, symmetry III (parity) requires that $V(x,y)=V(-x,-y)$ (see table \ref{tab:chapter1_SymmetriesTable}). Inserting the functional form of the potential from Eq. \eqref{eq:chapter3_effpot} into this condition, it results in the requirement $\Omega(x) \Omega(y)^* = \Omega(-x) \Omega(-y)^*$. This is fulfilled if $\Omega(x)=\Omega(-x)e^{i \phi}$ with some arbitrary phase freedom $\phi$.
+The necessary conditions for the different symmetries of a non-Hermitian and non-local Hamiltonian were worked out in Sec. \ref{sec:chapter1_AsymmetricDevices}. In the second column of table \ref{tab:chapter3_SymmetriesConditions}, those conditions have been particularized for the effective potential of the 2-level atom \eqref{eq:chapter3_effpot}. For example, symmetry III (parity) requires that $V(x,y)=V(-x,-y)$ (see table \ref{tab:chapter1_SymmetriesTable}). Inserting the functional form of the potential from Eq. \eqref{eq:chapter3_effpot} into this condition, it results in the requirement $\Omega(x) \Omega(y)^* = \Omega(-x) \Omega(-y)^*$. This is fulfilled if $\Omega(x)=\Omega(-x)e^{i \phi}$ with some arbitrary phase freedom $\phi$.
 
 Since $\Omega(x)$ does not depend on $q$, symmetries IV, V and VII imply that symmetry II is obeyed as well (Hermiticity).
 Moreover symmetry III (parity) should be discarded for our purpose since it does not allow for asymmetric transmission or reflection
@@ -179,13 +166,13 @@ VI, which allows for  asymmetric reflection; VIII which allows for asymmetric tr
 which in principle allows for arbitrary asymmetric responses, except for physical limitations imposed by
 the two-level model see Appendix \ref{Appendix:NumericalCalculationOfTandR}.
 
-As seen from  table \ref{tab:chapter3_SymmetriesConditions}, $\operatorname{Re}(q)=0$ makes the potential Hermitian so I shall avoid this condition.
+As seen from  table \ref{tab:chapter3_SymmetriesConditions}, $\operatorname{Re}(q)=0$ makes the potential Hermitian, so it must be avoided.
 If $\gamma=0$,   $\mu \in \mathbb{R}$. Hence $\mu+1<0$ gives $\operatorname{Re}(q)=0$ and $\mu+1>0$ gives
 $\operatorname{Im}(q)=0$. $\mu+1>0$ amounts to a condition on the detuning compared to the incident energy, namely $\Delta>-E/\hbar$.
 In the following examples I implement potentials with symmetries VIII, VI, and I, with detunings and energies satisfying the condition $\mu+1>0$.
 
 
-\section{Design of asymmetric devices\label{exa}}
+\section{Design of asymmetric devices\label{sec:chapter3_exa}}
 
 I will now apply this method to physically realize non-local potentials of the form \eqref{eq:chapter3_effpot}. I shall work out explicitly a ${\cal T/A}$ device with symmetry  VIII, a ${\cal R/A}$ device with symmetry  VI, and a ``partial''-${\cal TR/A}$ device,  having 1/2 transmission and reflection coefficients from the left, with symmetry I. The  ${\cal T/A}$ and the ``partial''-${\cal TR/A}$ device have transmission asymmetry so they cannot be built with local or $PT$-symmetric  potentials.
 %, whereas   to design asymmetric devices which can be shown not to be implementable with a one-dimensional, one-channel, local potential.
@@ -310,13 +297,13 @@ addressing \cite{Zeyen2016}. The scaling factors take the values
 \end{eqnarray}
 %
 which gives  $v\approx$ 27 cm/s for $v/v_d=400$, (again, I see no major obstacle to get devices for higher velocities,
-in particular the classical approximations in Sec. \ref{class} can be used to  estimate the values of the parameters)
+in particular the classical approximations in Sec. \ref{sec:chapter3_class} can be used to  estimate the values of the parameters)
 and Rabi frequencies, see Fig. \ref{fig_t_a},  in the hundreds of kHz range. The relative ion-laser beam velocity could be as well
 implemented  by moving the beam in the laboratory frame.
 
 %
 %
-\section{Classical approximation for ${\cal T/A}$ device \label{class}}
+\section{Classical approximation for ${\cal T/A}$ device \label{sec:chapter3_class}}
 %
 %
 In a ${\cal T/A}$ device such as the one presented an incident plane wave from the left ends up as a pure transmitted wave with no reflection or absorption.

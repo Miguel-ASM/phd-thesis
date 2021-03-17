@@ -5,25 +5,16 @@
 \label{Chapter4}
 \lhead{Chapter 4. \emph{Local Rectification of Heat Flux}} % Write in your own chapter title to set the page header
 %
-In this chapter I present an atom-chain thermal rectifer. The chain is homogeneous except for boundary effects and a local modification of the interactions at one site, the ``impurity''. The rectification mechanism is due here to the localized impurity, the only asymmetrical element of the structure, apart from the externally imposed temperature bias,  and does not rely on putting in contact different materials or other known mechanisms such as grading or long-range interactions.  The effect survives if all interaction forces are linear except the ones for the impurity.
-%
-\newpage
-%
+In this chapter, a model for an atom-chain thermal rectifer is presented. The atoms in the chain are trapped in on-site harmonic potentials, and interact with their nearest neighbours by Morse potentials (or also by harmonic potentials in a simplified version). The chain is homogeneous except for a local modification of the interactions at one site, the ``impurity''. The rectification mechanism is due here to the localized impurity, the only asymmetrical element of the structure, apart from the externally imposed temperature bias, and does not rely on putting in contact different materials or other known mechanisms such as grading or long-range interactions.  The effect survives if all interaction forces are linear except the ones for the impurity.
 
-\section{Introduction}
+The rest of the chapter is organized as follows. In section \ref{sec:homogeneous_chain} I shall describe the homogeneous 1D chain, without the impurity.  For this system, I numerically solve the dynamical equations, to show that the usual heat conduction applies. In section \ref{sec:Impurity_rectifier} I modify the potentials for one of the atoms and demonstrate the rectification effect. I also observe rectification when all the interaction Morse potentials are substituted by harmonic oscillators. Finally, in section \ref{sec:chapter4_Discussion} I summarize and discuss the results of this chapter.
 
-In spite of much work on thermal rectification
-after the first model proposal in 2002  by Terraneo \textit{et al. }\cite{Terraneo2002}, the manipulation of phononic heat fluxes is still far from being completely controlled as no efficient and feasible thermal diodes have been found \cite{Chen2015,Pereira2017}. A wealth of research is underway to meet the challenge posed by  a ``near standstill'' of the field \cite{Chen2015,Pereira2017},
-combined with the prospects of widespread and impactful practical applications. Together with experimental progress, at this stage work exploring new models is important to test possibilities that may become feasible as control capabilities improve \cite{Roberts2011}. In this chapter  I propose,
-motivated by previous work on ``atom diodes"  \cite{Ruschhaupt2004,Raizen2005}, a rectifying scheme
-based on the effect of a local defect, or impurity,
-in an otherwise homogeneous system.
+\section{Homogeneous one-dimensional chain\label{sec:homogeneous_chain}}
 
-To date, there have been several proposals of systems that could be used to rectify heat flows at the nanoscale.
-A common scheme is based on coupling two or more different homogeneous segments, modelled with
-chains of atoms with nonlinear interactions (which in this context means non-linear forces, i.e., anharmonic potentials) \cite{Terraneo2002,Li2004,Hu2006,Peyrard2006,Benenti2016}
-or with a temperature and position dependent
-conductivity assuming expressions for the heat current \cite{Peyrard2006,Hu2006a}. Other systems proposed are graded materials, such as a chain with an uneven distribution of mass \cite{Chang2006,Zeng2008,Chen2015}, and long-range interactions  have been shown to be able to amplify the rectification and avoid or mitigate the decay of the effect with system size \cite{Pereira2013,Chen2015}. Also, recent models and experiments use asymmetrical homogeneous or inhomogeneous nanostructures and, in particular, graphene  \cite{Wang2014,Wang2017}. Finally, I mention for completeness theoretical works that consider the use of a quantum system \cite{Roberts2011}, such as a three-level system, with each level coupled to a thermal bath \cite{Joulain2016}, or a double well with different frequencies to implement the asymmetry \cite{Katz2016}.
+I start with a homogeneous $1D$ chain with $N$ atoms coupled at both extremes to heat baths, at different temperatures $T_h$ and $T_c$ for ``hot" and ``cold" respectively. The baths are modeled with a Nos\' e-Hoover method as described in \cite{Martyna1992}. Atoms $1$ and $N$ represent the first and the $N$-th atom in the chain, from left to right, that will be in contact with the baths. All the atoms are subjected to on-site potentials and to nearest-neighbor interactions, and their equilibrium positions $y_{i0}$ are assumed to be equally spaced by a distance $a$.
+$x_i= y_i-y_{i0}$,
+$i=1,...,N$, represent the displacements from the equilibrium positions of the corresponding atoms
+with positions $y_i$.
 
 %%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}
@@ -38,21 +29,6 @@ Parameters: $D=0.5$, $g=1$, $\gamma = 45$, $d=100$ and $b=105$, used throughout 
 \label{fig:chapter4_figure1}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%
-
-The model proposed in this chapter is a one-dimensional chain of atoms where all, except one of them, are trapped in on-site harmonic potentials and interact with their nearest neighbours by Morse potentials (or also by harmonic
-potentials in a simplified version). Unlike most chain models, the structural asymmetry is, except for the boundaries,
-only in the impurity, which is subjected to a different on-site potential and interaction with one of its neighbors. The chain is connected to thermal baths at different temperatures at the boundaries. Let us clarify the terminology:
-The structural asymmetry I have in mind amounts,
-to different interaction potentials of one or several atoms in the chain (other than the boundary atoms) with neighbors on the right and on the left, and/or asymmetric onsite potentials. In this regard chains with Morse interatomic potentials per se are not considered structurally asymmetric here as long as their parameters are the same on both sides of a given atom, even if a single Morse potential is not parity-symmetric \cite{Wang2015}.
-
-The rest of the chapter is organized as follows. In section \ref{sec:homogeneous_chain} I shall describe the homogeneous 1D chain, without the impurity.  For this system, I numerically solve the dynamical equations, to show that the usual heat conduction applies. In section \ref{sec:Impurity_rectifier} I modify the potentials for one of the atoms and demonstrate the rectification effect. I also observe rectification when all the interaction Morse potentials are substituted by harmonic oscillators. Finally, in section \ref{sec:chapter4_Discussion} I summarize the results of this chapter and present the conclusions.
-
-\section{Homogeneous one-dimensional chain\label{sec:homogeneous_chain}}
-
-I start with a homogeneous $1D$ chain with $N$ atoms coupled at both extremes to heat baths, at different temperatures $T_h$ and $T_c$ for ``hot" and ``cold" respectively. The baths are modeled with a Nos\' e-Hoover method as described in \cite{Martyna1992}. Atoms $1$ and $N$ represent the first and the $N$-th atom in the chain, from left to right, that will be in contact with the baths. All the atoms are subjected to on-site potentials and to nearest-neighbor interactions, and their equilibrium positions $y_{i0}$ are assumed to be equally spaced by a distance $a$.
-$x_i= y_i-y_{i0}$,
-$i=1,...,N$, represent the displacements from the equilibrium positions of the corresponding atoms
-with positions $y_i$.
 
 The classical Hamiltonian of the atom chain can be written in a general form as
 %

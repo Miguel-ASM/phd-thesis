@@ -4,27 +4,9 @@
 \chapter{Asymmetric heat transport in ion crystals}
 \label{Chapter5}
 \lhead{Chapter 5. \emph{Asymmetric heat transport in ion crystals}} % Write in your own chapter title to set the page header
-%
-I numerically demonstrate heat rectification for linear chains of  ions in trap lattices with  graded  trapping frequencies, in contact with
-thermal baths implemented by optical molasses.  The local temperatures and heat currents are calculated finding the stationary state by solving a system of algebraic equations. This approach is much faster than the usual method that integrates the dynamical equations of the system and averages over noise realizations.
-%
-\newpage
-%
-\section{Introduction\label{IntroductionRectificationChainOfIons}}
 
-\begin{figure}
-    \center
-    \includegraphics[width=0.75\linewidth]{Figures/Diagram.eps}
-    \caption{Schematic representation  of the frequency-graded chain of trapped ions proposed as a thermal rectifier. The left and right ends of the chain are in contact with optical molasses at temperatures $T_L$ and $T_R$ (green and grey boxes respectively). Each ion is in an individual trap. The (angular) frequencies of the traps increase homogeneously from left to right, starting from $\omega_1$ and ending at $\omega_1+\Delta\omega$. The ions interact through the Coulomb force, which is long range, and therefore all the ions interact among them, even distant neighbors. By default  I use 15 ions.}
-    \label{fig:Diagram}
-\end{figure}
-
-Much effort has been aimed at improving the rectification factors and the features of the rectifiers. Some works
-relied, as in \cite{Terraneo2002}, on a chain segmented into two or more regions  with different properties,  but using other lattice models such as the Frenkel-Kontorova (FK) model \cite{Li2008,Hu2006}. However, the rectification power of segmened rectifiers decays fast as their size increase \cite{Hu2006}. As discussed in \ref{IntroductionPartII}, two workarounds have been proposed: chains with a graded distribution for some structural property \cite{Wang2012,Chen2015,Romero-Bastida2017,Yang2007,Romero-Bastida2013,Dettori2016,Pereira2010,Pereira2011,Avila2013} and long range interactions \cite{Chen2015,Bagchi2017,Pereira2013}. Additionally, long range interactions fix the problem of decaying maximum currents as the size of the rectificator increases.
-
-In this chapter I propose to bridge the gap between mathematical models and actual physical systems exploring the implementation of a heat rectifier in a realistic, graded system with long-range interactions:
-a chain of ultracold ions in a segmented Paul trap with graded microtraps for each ion. Long-range interactions are due to the Coulomb forces, and the  baths at the ends of the chain  may be implemented with optical molasses,
-see Fig. \ref{fig:Diagram}. The trapping frequencies of the  microtraps are controlled individually in order to create a graded and asymmetric trap-frequency profile along the chain. This asymmetry will lead to a heat flow that depends on the sign of the temperature difference of the baths. Heat transport in trapped ion chains has been studied in several works  \cite{Freitas2015,Ruiz2014,Ruiz2019,Pruttivarasin2011,Ramm2014} and interesting phenomena like phase transitions have been investigated \cite{Freitas2015,Ruiz2014,Ruiz2019,Pruttivarasin2011}. The idea of using locally-controlled traps is already mentioned in \cite{Freitas2015} to implement disorder and study its effects. The device I present here may be challenging to implement, but at reach with the current technology, in particular  that of microfabricated traps \cite{Cirac2000,Krauth2014,Schmied2009}. Thus the setting is thought for a small, realistic number of controllable ions.
+In this chapter I propose to bridge the gap between mathematical models and actual physical systems by exploring the implementation of a thermal rectifier in a realistic, graded system with long-range interactions:
+a chain of ultracold ions in a segmented Paul trap with frequency-graded microtraps for each ion. Long-range interactions are due to the Coulomb forces, and the baths at the ends of the chain may be implemented with optical molasses (see Fig. \ref{fig:Diagram}). The trapping frequencies of the  microtraps are controlled individually in order to create a graded and asymmetric trap-frequency profile along the chain. This asymmetry will lead to a heat flow that depends on the sign of the temperature difference of the baths. Heat transport in trapped-ion chains has been studied in several works  \cite{Freitas2015,Ruiz2014,Ruiz2019,Pruttivarasin2011,Ramm2014} and interesting phenomena like phase transitions have been investigated \cite{Freitas2015,Ruiz2014,Ruiz2019,Pruttivarasin2011}. The idea of using locally-controlled traps is already mentioned in \cite{Freitas2015} to implement disorder and study its effects. The device I present here may be challenging to implement, but at reach with the current technology, in particular  that of microfabricated traps \cite{Cirac2000,Krauth2014,Schmied2009}. Thus the setting is thought for a small, realistic number of controllable ions.
 
 The chapter is organized as follows. In Section \ref{sec:chapter5_PhysicalSystem} I describe the physical system of trapped ions with graded trap frequencies. I also set the stochastic dynamics due to the action of lasers at the chain edges.
 In Section \ref{sec:chapter5_HeatFlow}  I implement an efficient  method to find the steady state using Novikov's theorem and solving an algebraic system of equations. In Section \ref{sec:chapter5_NumericalResults} I present simulations of this system exhibiting thermal rectification and discuss the dependence with ion number, different options for the ion-laser coupling, and the advantages/disadvantages of using a graded frequency profile instead of a segmented one. Finally, in Section \ref{sec:chapter5_Discussion} I summarize the conclusions, and discuss connections with other works.
@@ -62,6 +44,13 @@ with $V_{C}(\left|x_n-x_l\right|) = \frac{q^2}{4\pi\varepsilon_0}\frac{1}{\left|
 \end{equation}
 %
 where $\gamma_n$ and $\xi_n(t)$ are only non-zero for the ions in the end regions, in contact with the left and right baths in the sets ${\cal L} = \left\{1,2,...,N_L\right\}$ and \linebreak ${\cal R} = \left\{N-(N_R-1),...,N-1,N\right\}$,  see Fig. \ref{fig:Diagram}. The $\gamma_n$ are friction coefficients and $\xi_n(t)$ are uncorrelated Gaussian noise forces satisfying $\expval{ \xi_n(t)} = 0$ and $\expval{ \xi_n(t)\xi_m(t') } = 2 D_n \delta_{nm}\delta(t-t')$, $D_n$ being the diffusion coefficients. These Gaussian forces are formally the time derivatives of independent Wiener processes (Brownian motions)   $\xi_n(t) = \sqrt{2D_n}\frac{dW_n}{dt}$ \cite{Toral2014,Ruiz2014} and Eq. \eqref{eq:chapter5_Dynamics} is a stochastic differential equation (SDE) in the Stratonovich sense \cite{Toral2014}.
+
+\begin{figure}
+    \center
+    \includegraphics[width=0.75\linewidth]{Figures/Diagram.eps}
+    \caption{Schematic representation  of the frequency-graded chain of trapped ions proposed as a thermal rectifier. The left and right ends of the chain are in contact with optical molasses at temperatures $T_L$ and $T_R$ (green and grey boxes respectively). Each ion is in an individual trap. The (angular) frequencies of the traps increase homogeneously from left to right, starting from $\omega_1$ and ending at $\omega_1+\Delta\omega$. The ions interact through the Coulomb force, which is long range, and therefore all the ions interact among them, even distant neighbors. By default  I use 15 ions.}
+    \label{fig:Diagram}
+\end{figure}
 
 The baths are physically implemented by optical molasses consisting of a pair of counterpropagating Doppler-cooling lasers \cite{Ruiz2014}. The friction and diffusion coefficients for the ions in contact with the baths are given by \cite{Cohen1992,Metcalf2003,Ruiz2014}
 %

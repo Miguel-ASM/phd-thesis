@@ -1,38 +1,28 @@
 %!TEX root = ../Thesis.tex
 %Chapter 6
 
-\chapter{Rectification in a minimal model}
+\chapter{Thermal rectification with a minimal model of two
+harmonic oscillators}
 \label{Chapter6}
-\lhead{Chapter 6. \emph{Rectification in a minimal model}} % Write in your own chapter title to set the page header
+\lhead{Chapter 6. \emph{Thermal rectification with a minimal model of two
+harmonic oscillators}} % Write in your own chapter title to set the page header
 %
-In this chapter I present a minimalistic model system which shows rectification. It is composed of two unequal atoms subjected to linear forces and in contact with effective Langevin baths
-induced by optical molasses. Analytic expressions of the heat currents in the steady state and the rectification coefficient are spelled out. Asymmetric heat transport is found in this linear system if both the bath temperatures and the temperature dependent bath-system couplings are exchanged. The model can be realized with two ions  in  either common or individual traps. This physical setting allows for a natural temperature dependence of the coupling to the baths.
-I also explore the parameter space of the model to optimize asymmetric heat current and find
-conditions for maximal rectification. High rectification corresponds to a good match of the power spectra of the ions for forward temperature bias and mismatch  for reverse bias, which may be understood by the behavior of dissipative normal modes.
-%
-\newpage
-%
-\section{Introduction \label{sec:Introduction}}
 
-As previously discussed in the introduction to this part of the thesis, the presence of thermal rectification in the first models was explained by the temperature dependences of the phonon bands (power spectra) of the different segments of the chain \cite{Terraneo2002,Li2004}. This temperature dependence of the phonon bands brings two different extreme situations. The phonon spectra of neighboring parts of the chain match, meaning they overlap significantly, which implies a good transfer of energy. Conversely, if the spectra of the neighboring parts mismatch, meaning they do not overlap significantly, there will be a bad thermal conduction. If the spectra of the parts of the chain are affected differently by the temperature, then the magnitude of the net heat current will change with the sign of the applied temperature bias. Temperature dependence of the phonon bands occurs naturally in systems where there are non-linear (anharmonic) interactions, therefore non-linearities have been regarded recurrently as an essential element for rectification \cite{Li2012,Li2008,Hu2006,Zeng2008,Segal2005,Segal2005b,Katz2016,Benenti2016}. However, it was later pointed out by Pereira \cite{Pereira2017} that anharmonicity is not a necessary condition for rectification. Rectification can also take place in harmonic systems where there is some structural asymmetry and temperature-dependence of the system parameters.
+As previously discussed in the introduction to this part of the Thesis, the presence of thermal rectification in the first models was explained by the temperature dependence of the phonon bands (power spectra) of the different segments of the chain \cite{Terraneo2002,Li2004}. This temperature dependence of the phonon bands occurs naturally in systems where there are non-linear (anharmonic) interactions, therefore non-linearities have been regarded recurrently as an essential element for rectification \cite{Li2012,Li2008,Hu2006,Zeng2008,Segal2005,Segal2005b,Katz2016,Benenti2016}. However, it was later pointed out by Pereira \cite{Pereira2017} that anharmonicity is not a necessary condition for rectification, since harmonic systems having some structural symmetry and temperature-dependent parameters can rectify.
 
-In this chapter I put forward a minimalistic model for rectification composed of two neighboring atoms of different mass interacting harmonically and in contact with thermal baths with temperature dependent coupling. The model admits a  natural realization in terms of two trapped ions subjected to  Doppler cooling lasers, which provide the
-necessary temperature dependence of the coupling parameters. Apart from the possibility of a physical realization, another interesting
+In this chapter I put forward a minimal model for rectification composed of two neighboring atoms of different mass interacting harmonically and in contact with thermal baths with temperature dependent couplings. Asymmetric heat transport is found if both the bath temperatures and the temperature dependent bath-system couplings are exchanged. The model admits a natural realization in terms of two trapped ions subjected to respective optical molasses, which provide the necessary temperature dependence of the coupling parameters. Apart from the possibility of a physical realization, another interesting
 feature is the analytical treatment, which facilitates greatly the exploration in parameter  space to  identify regimes of maximal rectification. The explicit solution of the stationary regime also provides tools for a better understanding of the physics and enhanced control. For example the match or mismatch of the spectra of the two masses for forward and reverse bias configurations, which will be made evident for the parameters with maximal
 rectification, may be analyzed in terms of dissipative normal modes characterized by complex eigenvalues.
 
-The model may be compared and related to other simple models. The localization of the
-structural asymmetry in a  small spatial region, by a ``defect'', ``impurity'', or asymmetrical molecule has been proposed e.g. in
-several anharmonic models \cite{Segal2005b,Pons2017,Alexander2020}.
 Segal and Nitzan proposed models with some similarities to the one presented in this chapter \cite{Segal2005,Segal2005b}, specifically an anharmonic chain
-with different couplings to both baths. They also worked out  quantum models \cite{Segal2005,Segal2005b} in terms of an N-level
+with different couplings to both baths. They also worked out quantum models \cite{Segal2005,Segal2005b} in terms of an N-level
 system asymmetrically coupled to the baths. Both types of models have ``harmonic limits'', which in the chain is reached by making the potentials
 harmonic, and in the quantum one by taking $N$ to infinity assuming equispaced levels.
 The asymmetrical couplings however, were not interchanged when reversing the temperature bias
 (in these models that interchange would have suppressed the asymmetry because the forward bias configuration becomes a mirror image of the reverse bias one), so that
 the harmonic limit did not give any rectification.
 
-The chapter is organized as follows: In Section \ref{sec:Physical_Model}
+The rest of the chapter is organized as follows: In Section \ref{sec:Physical_Model}
 I describe the physical model and its dynamical equations. In Section \ref{sec:covMatrix} I introduce the covariance matrix and derive the equation that it satisfies in the steady state. In Section \ref{sec:solutions} I solve the covariance matrix equation and find analytical expressions for the steady-state temperatures of the masses and heat currents. In Section \ref{sec:TrappedIonSetUp} I relate the parameters of the model to those of Doppler cooled trapped ions. In Section \ref{sec:lookingForR} I look for configurations with high rectification. I also study the power spectra of the oscillators, which confirms the match or mismatch pattern for rectification. Finally, in Section \ref{sec:chapter6_Discussion} I summarize the results and present the conclusions.
 
 \begin{figure}
@@ -568,7 +558,9 @@ Figure \ref{fig:maximalR}(a) shows the rectification given by Eq. \eqref{eq:chap
 %
 %
 \subsection{Spectral match/mismatch approach to rectification}
-%
+
+
+% This temperature dependence of the phonon bands brings two different extreme situations. The phonon spectra of neighboring parts of the chain match, meaning they overlap significantly, which implies a good transfer of energy. Conversely, if the spectra of the neighboring parts mismatch, meaning they do not overlap significantly, there will be a bad thermal conduction. If the spectra of the parts of the chain are affected differently by the temperature, then the magnitude of the net heat current will change with the sign of the applied temperature bias.
 
 If there is a good match between the phonon spectra of the ions (i.e., their peaks overlap in a broad range of frequencies) for a certain baths configuration, and mismatch when the baths exchange, the system will present heat rectification \cite{Terraneo2002,Li2004}.
 I have studied the phonon spectra of the model for several sets of parameters exhibiting no rectification or strong rectification. The spectra are calculated  through the spectral density matrix. For a real-valued stochastic process $\overrightarrow{x}(t)$, its spectral density matrix is defined as \cite{Sarkka2019}
