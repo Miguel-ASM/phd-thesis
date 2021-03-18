@@ -5,7 +5,7 @@
 \label{Chapter3}
 \lhead{Chapter 3. \emph{Quantum-Optical implementation of non-Hermitian potentials for asymmetric scattering}}
 
-In chapter \ref{Chapter1}, non-local potentials for asymmetric scattering had been constructed as mathematical models but without a physical implementation. In this chapter a feasible quantum-optical implementation
+In chapter \ref{Chapter1}, non-local potentials for asymmetric scattering were constructed as mathematical models but no physical implementation was discussed. In this chapter a feasible quantum-optical implementation
 of non-Hermitian, non-local, non-PT potentials is put forward to implement different scattering asymmetries, including transmission
 asymmetries. Using Feshbach's projection technique it is found that the effective potentials for a ground-state atom crossing a laser beam in a region of space are generically non-local and non-Hermitian. Shaping the spatial-dependence of the, generally complex, Rabi frequency, and selecting a specific laser detuning allows to produce different potential symmetries and asymmetric scattering effects, including asymmetric transmission.
 
@@ -106,7 +106,7 @@ $
 {\cal W}(E)=P{\cal V}P+P{\cal V}Q(E+i0-Q{\cal H}Q)^{-1}Q{\cal V}P,
 $
 %
-is generically non local and energy dependent. Specifically, I have now achieved
+is generically non-local and energy dependent. Specifically, I have now achieved
 a physical realization of an effective (in general) non-local, non-Hermitian potential whose kernel has the form
 %
 \begin{eqnarray}
@@ -126,10 +126,10 @@ $
 \mu=\frac{2\Delta+i\gamma}{2E/\hbar}.
 $
 %
-Eq. \eqref{eq:chapter3_effpot} is worked out  in momentum representation to do the integral
+eq. \eqref{eq:chapter3_effpot} is worked out  in momentum representation to do the integral
 using the residue theorem.
 This is a generalized, non-local version of the effective potentials known for the ground state
-\cite{Chudesnikov1991,Oberthaler1996}, which are found from Eq. \eqref{eq:chapter3_effpot}  in the large $\mu$ limit \cite{Ruschhaupt2004a}.
+\cite{Chudesnikov1991,Oberthaler1996}, which are found from eq. \eqref{eq:chapter3_effpot}  in the large $\mu$ limit \cite{Ruschhaupt2004a}.
 The reflection and transmission amplitudes $R^{r,l}$ and  $T^{r,l}$ may be calculated directly
 using the potential \eqref{eq:chapter3_effpot} or as corresponding amplitudes for
 transitions from ground state to ground state in the full two-level theory (see Appendix \ref{Appendix:NumericalCalculationOfTandR}).
@@ -156,7 +156,7 @@ transitions from ground state to ground state in the full two-level theory (see 
 
 \subsection{Possible symmetries of the non-local potential}
 %
-The necessary conditions for the different symmetries of a non-Hermitian and non-local Hamiltonian were worked out in Sec. \ref{sec:chapter1_AsymmetricDevices}. In the second column of table \ref{tab:chapter3_SymmetriesConditions}, those conditions have been particularized for the effective potential of the 2-level atom \eqref{eq:chapter3_effpot}. For example, symmetry III (parity) requires that $V(x,y)=V(-x,-y)$ (see table \ref{tab:chapter1_SymmetriesTable}). Inserting the functional form of the potential from Eq. \eqref{eq:chapter3_effpot} into this condition, it results in the requirement $\Omega(x) \Omega(y)^* = \Omega(-x) \Omega(-y)^*$. This is fulfilled if $\Omega(x)=\Omega(-x)e^{i \phi}$ with some arbitrary phase freedom $\phi$.
+The necessary conditions for the different symmetries of a non-Hermitian and non-local Hamiltonian were worked out in Sec. \ref{sec:chapter1_AsymmetricDevices}. In the second column of table \ref{tab:chapter3_SymmetriesConditions}, those conditions have been particularized for the effective potential of the 2-level atom \eqref{eq:chapter3_effpot}. For example, symmetry III (parity) requires that $V(x,y)=V(-x,-y)$ (see table \ref{tab:chapter1_SymmetriesTable}). Inserting the functional form of the potential from eq. \eqref{eq:chapter3_effpot} into this condition, it results in the requirement $\Omega(x) \Omega(y)^* = \Omega(-x) \Omega(-y)^*$. This is fulfilled if $\Omega(x)=\Omega(-x)e^{i \phi}$ with some arbitrary phase freedom $\phi$.
 
 Since $\Omega(x)$ does not depend on $q$, symmetries IV, V and VII imply that symmetry II is obeyed as well (Hermiticity).
 Moreover symmetry III (parity) should be discarded for our purpose since it does not allow for asymmetric transmission or reflection
@@ -211,7 +211,7 @@ In addition, I will use as a scaling factor for the velocity $v_{d} = {\hbar}/({
 
 In the following calculations I fix the width of the Gaussians to be $w= {\sqrt{2}}d/{10}$.
 I always first set a target velocity $v_0$ to achieve the desired asymmetric scattering response.
-The real parameters $a$, $b$, $c$, $x_0$ in Eq. \eqref{3omegas}, and  $\Delta$
+The real parameters $a$, $b$, $c$, $x_0$ in eq. \eqref{3omegas}, and  $\Delta$
 are then numerically optimized with the GRAPE (Gradient Ascent Pulse Engineering) algorithm \cite{Khaneja2005,Wu2015}.
 
 The Rabi frequencies will fulfill the indicated symmetries VIII, VI, and I. $\Omega_{\rm VI}(x)$ should not be even (i.e. $b \neq c$) to avoid symmetry II. In addition, $\Omega_{\rm I}(x)$ should not fulfill any other symmetry than ${\rm I}$.
@@ -222,7 +222,7 @@ at the selected velocity and also in a region nearby.
 The ``partial''-${\cal TR/A}$  device fullfills $\absq{T^l} = \absq{R^l} = 1/2$ and full absorption from the right.
 The potential I use for that device has symmetry I only, i.e., ``no symmetry'' other than the trivial commutation with the identity. No other potential symmetry would allow this type of device.
 
-The effective non-local potential $V(x,y)$, see Eq. \eqref{eq:chapter3_effpot}, corresponding to the $v/v_d$ ratios used for the three devices is shown in Fig. \ref{fig_poten1}. Note that the non-local potential has dimensions  energy/length, so  we
+The effective non-local potential $V(x,y)$, see eq. \eqref{eq:chapter3_effpot}, corresponding to the $v/v_d$ ratios used for the three devices is shown in Fig. \ref{fig_poten1}. Note that the non-local potential has dimensions  energy/length, so  we
 divide the absolute value by a factor $V_0=\hbar^2/(m d^3)$ to plot a dimensionless quantity.
 
 
@@ -268,7 +268,7 @@ divide the absolute value by a factor $V_0=\hbar^2/(m d^3)$ to plot a dimensionl
   \includegraphics[width=0.29\linewidth]{Figures/asym_fig_r_a_400_eff_pot_arg.pdf}
   \includegraphics[width=0.29\linewidth]{Figures/asym_fig_1_2_tr_a_8_eff_pot_arg.pdf}
   \end{center}
-  \caption{Nonlocal potentials  $V(x,y)$: absolute value (top), argument (bottom).
+  \caption{Non-local potentials  $V(x,y)$: absolute value (top), argument (bottom).
   Left column: Potential for ${\cal T/A}$ device with symmetry VIII.
   Middle column: Potential for ${\cal R/A}$ device with symmetry VI.
   Right column: ``Partial''-${\cal TR/A}$ device with symmetry I.
