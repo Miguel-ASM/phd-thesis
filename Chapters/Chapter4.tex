@@ -5,13 +5,13 @@
 \label{Chapter4}
 \lhead{Chapter 4. \emph{Local Rectification of Heat Flux}} % Write in your own chapter title to set the page header
 %
-In this chapter, a model for an atom-chain thermal rectifer is presented. The atoms in the chain are trapped in on-site harmonic potentials, and interact with their nearest neighbours by Morse potentials (or also by harmonic potentials in a simplified version). The chain is homogeneous except for a local modification of the interactions at one site, the ``impurity''. The rectification mechanism is due here to the localized impurity, the only asymmetrical element of the structure, apart from the externally imposed temperature bias, and does not rely on putting in contact different materials or other known mechanisms such as grading or long-range interactions.  The effect survives if all interaction forces are linear except the ones for the impurity.
+In this chapter, a model for an atom-chain thermal rectifier is presented. The atoms in the chain are trapped in on-site harmonic potentials, and interact with their nearest neighbours by Morse potentials (or also by harmonic potentials in a simplified version). The chain is homogeneous except for a local modification of the interactions and trapping potential at one site, the ``impurity''. The rectification mechanism is due here to the localized impurity, the only asymmetrical element of the structure, apart from the externally imposed temperature bias, and does not rely on putting in contact different materials or other known mechanisms such as grading or long-range interactions.  The effect survives if all interaction forces are linear except the ones for the impurity.
 
-The rest of the chapter is organized as follows. In section \ref{sec:homogeneous_chain} I shall describe the homogeneous 1D chain, without the impurity.  For this system, I numerically solve the dynamical equations, to show that the usual heat conduction applies. In section \ref{sec:Impurity_rectifier} I modify the potentials for one of the atoms and demonstrate the rectification effect. I also observe rectification when all the interaction Morse potentials are substituted by harmonic oscillators. Finally, in section \ref{sec:chapter4_Discussion} I summarize and discuss the results of this chapter.
+The rest of the chapter is organized as follows. In section \ref{sec:homogeneous_chain}, I shall describe the homogeneous 1D chain, without the impurity.  For this system, I numerically solve the dynamical equations, to show that the usual heat conduction applies. In section \ref{sec:Impurity_rectifier}, I modify the potentials for one of the atoms and demonstrate the rectification effect. I also observe rectification when all the interaction Morse potentials are substituted by harmonic oscillators. Finally, in section \ref{sec:chapter4_Discussion}, I summarize and discuss the results of this chapter.
 
 \section{Homogeneous one-dimensional chain\label{sec:homogeneous_chain}}
 
-I start with a homogeneous $1D$ chain with $N$ atoms coupled at both extremes to heat baths, at different temperatures $T_h$ and $T_c$ for ``hot" and ``cold" respectively. The baths are modeled with a Nos\' e-Hoover method as described in \cite{Martyna1992}. Atoms $1$ and $N$ represent the first and the $N$-th atom in the chain, from left to right, that will be in contact with the baths. All the atoms are subjected to on-site potentials and to nearest-neighbor interactions, and their equilibrium positions $y_{i0}$ are assumed to be equally spaced by a distance $a$.
+I start with a homogeneous 1D chain with $N$ atoms coupled at both extremes to heat baths, at different temperatures $T_h$ and $T_c$ for ``hot" and ``cold" respectively. The baths are modeled with a Nos\' e-Hoover method as described in \cite{Martyna1992}. Atoms $1$ and $N$ represent the first and the $N$-th atom in the chain, from left to right, that will be in contact with the baths. All the atoms are subjected to on-site potentials and to nearest-neighbor interactions, and their equilibrium positions $y_{i0}$ are assumed to be equally spaced by a distance $a$.
 $x_i= y_i-y_{i0}$,
 $i=1,...,N$, represent the displacements from the equilibrium positions of the corresponding atoms
 with positions $y_i$.
@@ -62,7 +62,7 @@ where the $p_i$ are the momenta, $U_i(x_i)$ is the on-site potential for the $i$
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-There are a large number of $1D$ models that obey this general Hamiltonian. Different choices of the trapping and interaction potentials would give different conductivity behaviors. I choose a simple form of the Hamiltonian in which each atom is subjected to a harmonic on-site potential and a Morse interaction potential between nearest neighbors (see fig. \ref{fig:chapter4_figure1}, dashed lines),
+There are a large number of 1D models that obey this general Hamiltonian. Different choices of the trapping and interaction potentials would give different conductivity behaviors. I choose a simple form of the Hamiltonian in which each atom is subjected to a harmonic on-site potential and a Morse interaction potential between nearest neighbors (see fig. \ref{fig:chapter4_figure1}, dashed lines),
 %
 \begin{eqnarray}
 \label{HO}
@@ -76,7 +76,7 @@ U_i(x_i)&=&{1 \over 2} m \omega^2 x^2_i,
 V_i(x_{i-1},x_i)&=&D\left \{e^{-\alpha [x_i-x_{i-1}]}-1\right \}^2,
 \end{eqnarray}
 %
-where $\omega$ is the trapping angular frequency, and $D$ and $\alpha$ are time independent parameters of the Morse potential.
+where $\omega$ is the trapping angular frequency, and $D$ and $\alpha$ are time-independent parameters of the Morse potential.
 A ``minimalist version'' of the model where $V$ becomes the harmonic limit of eq. (\ref{IH}), dotted line in fig. 1,
  will also be considered in the final discussion,
 %
@@ -135,10 +135,10 @@ Parameters as in fig. \ref{fig:chapter4_figure1}.
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The profile of the temperature is linear with boundary nonlinearities at the edges, close to the thermal baths,  due to the boundary conditions \cite{Lepri1997}. In fig. \ref{fig:chapter4_figure3} I depict $T_i$ vs $i/N$ for $N=100, 125$ and $150$ with the same boundary conditions. For these
+The profile of the temperature is linear with boundary non-linearities at the edges, close to the thermal baths,  due to the boundary conditions \cite{Lepri1997}. In fig. \ref{fig:chapter4_figure3}, I depict $T_i$ vs $i/N$ for $N=100, 125$ and $150$ with the same boundary conditions. For these
 larger atom numbers  I have connected the first 3 and the last 3 atoms to the Nos\'e-Hoover baths.
 %The temperature gradient scales as $N^{-1}$, which is also true for many other different models \cite{Hu1998}.
-In the inset (a) of fig. \ref{fig:chapter4_figure3}  the product $JN$ is plotted vs. $N$ showing that in a low $N$ limit there is a well defined conductivity per unit length whereas for longer chains, $JN$ tends to be constant  which indicates a normal thermal conductivity independent of the length. Fixing the number of atoms to 100, as in the inset (b) of fig. \ref{fig:chapter4_figure3},  I observe a linear dependence between the flux and $\Delta T$.
+In the inset (a) of fig. \ref{fig:chapter4_figure3}  the product $JN$ vs. $N$ is plotted, showing that for a low $N$ limit there is a well defined conductivity per unit length whereas for longer chains, $JN$ tends to be constant  which indicates a normal thermal conductivity independent of the length. Fixing the number of atoms to 100, as in the inset (b) of fig. \ref{fig:chapter4_figure3},  I observe a linear dependence between the flux and $\Delta T$.
 %Fourier law, $J=\kappa \nabla T$, is fulfilled.
 
 \section{Impurity-based thermal rectifier \label{sec:Impurity_rectifier}}
@@ -160,8 +160,8 @@ U_j(x_j,t)&=&d e^{-b [x_j(t)+a/3]},
 V_j(x_{j-1},x_j,t)&=&ge^{-\gamma [x_j(t)-x_{j-1}(t)+a/2]}.
 \end{eqnarray}
 %
-All the parameters involved, $d, b$, and $g,\gamma$ are time independent. In fig. \ref{fig:chapter4_figure1} the modifications introduced with respect to the ordinary sites are shown (solid lines).  The different on-site and interaction terms introduce soft-wall potentials
-(instead of hard-walls to aid integrating the dynamical equations) that make it difficult for the impurity to transmit its excitation to the left whereas left-to-right transmission is still possible.
+All the parameters involved, $d, b$, and $g,\gamma$ are time-independent. In fig. \ref{fig:chapter4_figure1} the modifications introduced with respect to the ordinary sites are shown (solid lines).  The different on-site and interaction terms introduce soft-wall potentials
+(instead of hard-walls to aid in integrating the dynamical equations) that make it difficult for the impurity to transmit its excitation to the left whereas left-to-right transmission is still possible.
 This effect is facilitated by the relative size of the coefficients, $a/3<a/2$, that determine the position of the walls.
 % that I fixed after some experimentation.
 These positions imply that an impurity excited by a hot right bath cannot affect its left cold neighbour near its equilibrium position at the $j-1$ site.
@@ -182,7 +182,7 @@ After extensive numerical simulations, I have chosen the values of these paramet
 are both large for $T_h=0.2$, $T_c=0.15$. A large $R$ without a large $J_{L\rightarrow R}$ could in fact be useless \cite{Roberts2011}.
 %($R=0$ would represent a perfectly symmetric heat conduction.).
 Note that the parameters are not necessarily the optimal combination, which in any case would depend on the exact definition of ``optimal'' (technically on how $J_{L\rightarrow R}/J$ and $R$ are weighted and combined in a cost function and on the limits imposed on the
-parameter values). This definition is an interesting question but it goes beyond the focus of this chapter, which is to demonstrate and discuss the effect of the localized inpurity.
+parameter values). This definition is an interesting question but it goes beyond the scope of this chapter, which is to demonstrate and discuss the effect of the localized impurity.
 
 I have used again $N=20$ atoms connected to baths of 16 thermostats each, with the same temperatures as for the homogeneous chain, and numerically solved the dynamical equations
 to calculate the local temperature and the heat flux for both configurations of the baths. The interatomic potential for the regular atoms is the Morse potential (\ref{IH}).
@@ -214,7 +214,7 @@ The numerical results indicate that this model is consistent with normal conduct
 and also helps to isolate and identify the local-impurity mechanism for rectification.
 In this regard it is useful to consider a further simplification, in the spirit of the minimalists models
 proposed by Pereira \cite{Pereira2017}, so as to distill further the essence of the local rectification mechanism.
-If the Morse interatomic interaction is substituted by the corresponding harmonic interaction, see the black dotted line in fig. \ref{fig:chapter4_figure1}(b), the rectification effect remains, albeit slightly reduced, see fig. \ref{fig:chapter4_figure5}. The chain is then perfectly linear with the only nonlinear exception  localized
+If the Morse interatomic interaction is substituted by the corresponding harmonic interaction, see the black dotted line in fig. \ref{fig:chapter4_figure1}(b), the rectification effect remains, albeit slightly reduced, see fig. \ref{fig:chapter4_figure5}. The chain is then perfectly linear with the only non-linear exception  localized
 at the impurity.
 The temperature dependent feature mentioned in \cite{Pereira2017} as the second necessary condition for rectification besides asymmetry, is here localized in the impurity too, and consists of a different
 capability to transfer kinetic energy depending on the temperatures on both sides of the impurity.

@@ -18,6 +18,17 @@
 
 \usepackage{lscape}           %Poner una página apaisada (util para tablas muy anchas)
 
+\usepackage{ragged2e}         %Forzar el full justify en las caption
+\usepackage{caption}
+\captionsetup[figure]{
+  justification   = justified,
+  singlelinecheck = off
+}
+\captionsetup[table]{
+  justification   = justified,
+  singlelinecheck = off
+}
+
 \hypersetup{urlcolor=blue, colorlinks=true}  % Colours hyperlinks in blue, but this can be distracting if there are many links.
 
 
@@ -189,8 +200,8 @@
 \addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aestheticsy
 
 \appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
-\part*{Appendix}
-\addcontentsline{toc}{part}{Appendix}
+\part*{Appendices}
+\addcontentsline{toc}{part}{Appendices}
 \addtocontents{toc}{\vspace{0.6em}}
 
 %Review of scattering theory formalism
