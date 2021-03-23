@@ -7,24 +7,24 @@
 \section{Transition operator}
 \label{Appendix:SeparablePotentials_TransitionOperator}
 %%%%%%%%%%%%%%%%%
- For a separable potential $V=V_0 \ketbra{\phi}{\chi}$, the transition operator becomes
-\begin{eqnarray}
-T_{op}=\alpha \ketbra{\phi}{\chi}
-\end{eqnarray}
+For a separable potential $V=V_0 \ketbra{\phi}{\chi}$, the transition operator becomes
+\begin{equation}
+T_{op}=\alpha \ketbra{\phi}{\chi},
+\end{equation}
 where $\alpha=V_{0}+V_{0}^{2}\bra{\chi}G(E)\ket{\phi}$. Then using the Lippmann-Schwinger equation we get that
 %
-\begin{eqnarray}
-T_{op}(E)&=&V+VG_{0}(E)T_{op}(E)
+\begin{align}
+T_{op}(E)&=V+VG_{0}(E)T_{op}(E)
 \nonumber \\
-&=& \left[V_{0}+\alpha V_{0} \bra{\chi}G_{0}(E)\ket{\phi}\right]\ketbra{\phi}{\chi}
-\end{eqnarray}
+&= \left[V_{0}+\alpha V_{0} \bra{\chi}G_{0}(E)\ket{\phi}\right]\ketbra{\phi}{\chi},
+\end{align}
 %
 where $G_{0}(E)=(E-H_{0})^{-1}$ is the Green's operator for free motion. Solving for $\alpha$ now gives
 %
-\begin{eqnarray}
+\begin{equation}
 \alpha =\frac{V_{0}}{1-V_{0} \bra{\chi}G_{0}(E)\ket{\phi}}
 		   =\frac{V_{0}}{1-V_{0} Q_{0}(E)}.
-\end{eqnarray}
+\end{equation}
 %
 %%%%%%%%%%%%%%%%%
 %
@@ -34,7 +34,7 @@ where $G_{0}(E)=(E-H_{0})^{-1}$ is the Green's operator for free motion. Solving
 \section{$S$-matrix eigenvalues}
 \label{Appendix:SeparablePotentials_AmplitudesAndEigenvaluesofS}
 %
-The eigenvalues for the S-matrix are given by Eq. \eqref{eq:chapter2_SEigenvalues} in terms of the reflection and transmission amplitudes. For a separable potential, using Eq. \eqref{eq:chapter1_amplitudesFromTOperator}, we can simplify the transmission and reflection coefficients as
+The eigenvalues for the S-matrix are given by eq. \eqref{eq:chapter2_SEigenvalues} in terms of the reflection and transmission amplitudes. For a separable potential, using eq. \eqref{eq:chapter1_amplitudesFromTOperator}, we can simplify the transmission and reflection coefficients as
 \begin{eqnarray}
 T^{l}&=&1-\frac{2 \pi i m}{p} \alpha \phi(p) \chi^{*}(p),
 \nonumber \\

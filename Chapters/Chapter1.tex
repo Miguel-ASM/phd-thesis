@@ -1,70 +1,71 @@
 %!TEX root = ../Thesis.tex
 %Chapter 1
 
-\chapter{Asymmetric scattering by non hermitian potentials}
+\chapter{Asymmetric scattering by non-Hermitian potentials}
 \label{Chapter1}
-\lhead{Chapter 1. \emph{Asymmetric scattering by non hermitian potentials}}
+\lhead{Chapter 1. \emph{Asymmetric scattering by non-Hermitian potentials}}
 %
-\null\vfill
+\null
+% \vfill
 \textit{``You must unlearn what you have learned.''}
 \begin{flushright}
   {\bf Master Yoda}\\
   The Empire Strikes Back
 \end{flushright}
-\vfill\null
+% \vfill
+\null
 
-The scattering of quantum particles by non hermitian (generally non-local)  potentials in one dimension may result in asymmetric transmission and/or reflection for left and right incidence.
-Extending the concept of symmetry for non hermitian potentials, eight generalized symmetries based on the discrete  Klein's four-group
-(formed by parity, time reversal, their product, and identity) are found. Together with generalized unitarity relations they determine selection rules for the possible and/or forbidden scattering asymmetries. Six basic device types are identified when the scattering coefficients adopt zero/one values, and transmission and/or reflection are asymmetric. They can pictorically be described as a
-one-way mirror, a one-way barrier (a Maxwell  pressure demon), one-way (transmission or reflection) filters, a mirror with unidirectional transmission, and a transparent, one-way reflector. In this chapter I present potentials that have been designed to implement some of these devices and also demonstrate that the  behavior of the scattering
-coefficients can be extended to a broad range of incident momenta.
-%
-\newpage
-%
-
-\section{Introduction\label{sec:chapter1_Introduction}}
-
-In this chapter I study the properties of potentials with asymmetric transmission or reflection for a quantum, spinless particle of mass $m$ satisfying a one-dimensional (1D) Schr\"{o}dinger equation. I propose six types of asymmetric devices according to the asymmetries of the transmission/reflection coefficients, see fig. \ref{cases}. Non hermitian and non local potentials will be necessary to construct this kind of devices, therefore an important part of this chapter will consist in studying their properties. In particular their behaviour w.r. to symmetries such as parity, time-reversal and PT. Symmetries can be used, analogously to their standard application in atomic physics to determine selection rules for allowed/forbidden transitions, to predict whether a certain potential may or may not lead to asymmetric scattering. The concept of symmetry, however, must be generalized when dealing with non hermitian potentials.
+In this chapter I study the properties of potentials with asymmetric transmission or reflection for a quantum, spinless particle of mass $m$ satisfying the one-dimensional (1D) Schr\"{o}dinger equation. I propose six types of asymmetric devices according to the asymmetries of the transmission/reflection coefficients, see fig. \ref{fig:chapter1_cases}. Non-Hermitian and non-local potentials will be necessary to construct this kind of devices, therefore an important part of this chapter will consist in studying their properties. In particular we will study their symmetries. Symmetries can be used, analogously to their standard application in atomic physics, to determine selection rules for allowed/forbidden transitions and to predict whether a certain potential may or may not lead to asymmetric scattering. Importantly, the concept of symmetry must be generalized when dealing with non-Hermitian potentials.
 
 The theory in this chapter is worked out for particles and the Schr\"odinger equation but it is clearly of relevance for optical devices
 due to the much exploited analogies and connections between Maxwell's equations and the Schr\"odinger equation,
 which were used, e.g., to propose  the realization of PT-symmetric potentials in optics \cite{Ruschhaupt2005}.
 
-I will first start by introducing the formalism of quantum scattering in one dimension by non-hermitian potentials and the concept of left/right eigenvectors and biorthogonal partners, which will be fundamental to understand the rest of the chapter. It will be followed by the definition of generalized symmetries for non hermitian Hamitonians, that will be studied in detail for the 4-group composed by parity, time reversal, their product, and identity. I then derive the selection rules for the scattering coefficients corresponding to the different symmetries. Finally I will describe the types of asymmetric devices that can be built and how the different symmetries affect them.
+The rest of the chapter goes as follows. In sections \ref{sec:chapter1_ScattFormalism} and \ref{sec:chapter1_LeftAndRightEigenstates} I introduce the basics of scattering formalism and the concept of left/right eigenvectors, which will be fundamental to understand the rest of the chapter. In section \ref{sec:chapter1_generalizedSymmetries} the concept of symmetry will be generalized for non-Hermitian Hamiltonians. A set of selection rules will be derived for the scattering coefficients. In section \ref{sec:chapter1_AsymmetricDevices} I will describe the 6 types of asymmetric devices and how the different selection rules from the generalized symmetries of the Klein 4-group (composed by the identity, parity, time reversal and PT-symmetry) affect them. In section \ref{sec:chapter1_examples} some examples of non-local potentials leading to asymmetric scattering are given. In section \ref{sec:chapter1_extension} I give an example of a local PT potential that has completely asymmetric reflection in a broad range of incident momenta. Finally, in section \ref{sec:chapter1_Discussion} I summarize the main results of this chapter.
 
+\begin{figure}
+  \center
+  \includegraphics[width = 0.5\linewidth]{Figures/PotentialCasesPT.pdf}
+  \caption{Devices with asymmetric scattering (limited to scattering coefficients being 0 or 1).  The dashed and continuous lines represent respectively zero or one
+  for the moduli of the scattering amplitudes; the bended lines are for reflection amplitudes, and the straight lines for transmission:
+  (a) One-way mirror ($\cal{TR/A}$); (b) One-way barrier ($\cal{T/R}$); (c) One-Way T-filter ($\cal{T/A}$);
+  (d) Mirror \& 1-way transmitter ($\cal{TR/R}$); (e) One-way R-filter ($\cal{R/A}$); (f) Transparent, one-way
+  reflector ($\cal{TR/T}$). The nomenclature for the devices is explained in the main text of section \ref{sec:chapter1_AsymmetricDevices}.
+  \label{fig:chapter1_cases}}
+\end{figure}
 
-\section{non hermitian scattering in 1 dimension \label{sec:chapter1_ScattFormalism}}
+\section{Non-Hermitian scattering in 1 dimension \label{sec:chapter1_ScattFormalism}}
 
-In this section I will put together the minimum set of ideas and tools needed to describe scattering in 1 dimension. The ideas in the section can be found with more detail in \cite{Muga2004}, which generalizes the results in the celebrated book by Taylor \cite{Taylor1972} to non hermitian hamiltonians. In scattering theory one deals with the usual Hamiltonian for a particle of mass $m$ subjected to the action of a potential $V$
+In this section I will put together a minimum set of concepts and tools needed to describe scattering in 1 dimension. The ideas in this section can be found with more detail in \cite{Muga2004}, which generalizes the results in the celebrated book by Taylor \cite{Taylor1972} to non-Hermitian Hamiltonians. In scattering theory one deals with the Hamiltonian for a particle of mass $m$ subjected to the action of a potential $V$
 %
 \begin{equation}
   H =  H_0 + V,
 \end{equation}
 %
-where $H_0=\frac{P^2}{2m}$ is the kinetic energy operator, with $P$ the momentum operator. The potential $V$ is not assumed to be either hermitian or local. Before continuing, I shall clarify these two statements. A linear operator $\mathcal{O}$ is hermitian, or also self-adjoint, if it is equal to its adjoint operator $\mathcal{O}^\dagger$. The definition of the adjoint of a linear operator is given by the equation
+where $H_0=P^2/(2m)$ is the kinetic energy operator, with $P$ the momentum operator. The potential $V$ is not assumed to be either Hermitian or local. Before continuing, I shall clarify these two statements. A linear operator $\mathcal{O}$ is Hermitian if it is equal to its adjoint operator $\mathcal{O}^\dagger$, with the definition of the adjoint given by
 %
 \begin{equation}
   \braket{\phi}{\mathcal{O}\psi} = \braket{\mathcal{O}^\dagger\phi}{\psi}\quad\forall\ket{\psi},\,\ket{\phi}\in\mathcal{H},
   \label{eq:chapter1_adjointLinearOperators}
 \end{equation}
 %
-Where $\mathcal{H}$ is the Hilbert space of the particle. A potential $V$ with a diagonal representation in the position basis $\{\ket{x}\}$ of the particle's Hilbert space is said to be local
+where $\mathcal{H}$ is the Hilbert space of the particle. A potential $V$ with a diagonal representation in the position basis $\{\ket{x}\}$ of the particle's Hilbert space is said to be local,
 %
 \begin{equation}
   \mel{x}{V_{local}}{x'} = \delta(x-x')V(x'),
   \label{eq:chapter1_localPotential}
 \end{equation}
 %
-whereas a non local potential has off-diagonal elements
+whereas a non-local potential has off-diagonal elements
 %
 \begin{equation}
   \mel{x}{V_{non local}}{x'} = V(x,x').
   \label{eq:chapter1_nonLocalPotential}
 \end{equation}
 %
-The potentials that we study are then non-diagonal and satisfy $V \neq V^\dagger$, therefore, the Hamiltonians will also be non-hermitian, $H \neq H^\dagger$.
+The potentials that we study are in general non-diagonal and satisfy $V \neq V^\dagger$, therefore, the Hamiltonians will also be non-Hermitian, $H \neq H^\dagger$.
 
-Scattering theory tries to answer the following question: given an input (incident) wave packet $\ket{\psi_{in}}$, in which output (outcoming) wave packet $\ket{\psi_{out}}$ transforms into after interacting with the potential? Another way of formulating the same question is: given an incoming state with a momentum $p$, what are the probability amplitudes of the state being reflected and transmited elastically (with the same energy)? To answer these questions the scattering theory brings in the scattering states, eigenstates of the Hamiltonian which belong to the continuum part of the spectrum, \textit{i.e.}, eigenstates of the Hamiltonian which are not bounded to a finite portion of the space and behave asymptotically as plane waves far from the range of action of the potential. The scattering states represent incoming waves with momentum $p$ and energy $E_p = \frac{p^2}{2m}>0$ that are partially reflected and transmitted by the potential. For a plane wave with momentum $p>0$ incoming from the left which is transmited to the right and reflected back, the asymptotic scattering state is $\ket{p^+}$
+Scattering theory addresses the following question: given an input (incident) wave packet $\ket{\psi_{in}}$, what is the output (outgoing) wave packet $\ket{\psi_{out}}$ after interacting with the potential? Since the wave packet is a superposition of plane waves we may reformulate it in terms of its components, namely, given an incoming state with a momentum $p$, what are the probability amplitudes of the state being reflected and transmited elastically (with the same energy)? To answer these questions the scattering theory brings in the scattering states, eigenstates of the Hamiltonian which belong to the continuum part of the spectrum, \textit{i.e.}, eigenstates of the Hamiltonian which are not bounded to a finite portion of space and behave asymptotically as plane waves far from the range of action of the potential. The scattering states represent incoming waves with momentum $p$ and energy $E_p = p^2/(2m)>0$ that are partially reflected and transmitted by the potential. For a plane wave with momentum $p>0$ incoming from the left which is transmited to the right and reflected back, the scattering state $\ket{p^+}$ is, asymptotically,
 %
 \begin{equation}
   \braket{x}{p^+} =
@@ -76,7 +77,7 @@ Scattering theory tries to answer the following question: given an input (incide
   \label{eq:chapter1_leftState}
 \end{equation}
 %
-where $T^l(p)$ and $R^l(p)$ are the transmission and reflection coefficients for left incidence. $\braket{x}{p} = \frac{1}{ \sqrt{2\pi\hbar} } e^{-i p x /\hbar} $ is the unnormalized momentum eigenstate. Similarly, for a plane wave incoming from the right with momentum $-p \;(p>0)$ which is transmited to the left and reflected back, the scattering state is $\ket{-p^+}$
+where $T^l(p)$ and $R^l(p)$ are the transmission and reflection amplitudes for left incidence. $\braket{x}{p} = (2\pi\hbar)^{-1/2} e^{-i p x /\hbar} $ is the delta-normalized momentum eigenstate. Similarly, for a plane wave incoming from the right with momentum $-p \;(p>0)$ which is transmited to the left and reflected back, the scattering state $\ket{-p^+}$ is, asymptotically
 %
 \begin{equation}
   \braket{x}{-p^+} =
@@ -88,24 +89,23 @@ where $T^l(p)$ and $R^l(p)$ are the transmission and reflection coefficients for
   \label{eq:chapter1_rightState}
 \end{equation}
 %
-where $T^r(p)$ and $R^r(p)$ are the transmission and reflection coefficients for right incidence. %Additionally to the scattering states in eqs. \eqref{eq:chapter1_leftState} and \eqref{eq:chapter1_rightState} it is possible to take a negative value of the momentum $p<0$ that will give formally correct scattering eigenstates $\ket{\pm p^-}$ of energy $E_p$ that are, however more difficult to interpret. Roughly, they can be interpreted as a time-reversed scattering process since they consist in a superpositions of 2 plane waves, one coming from the left and the other one from the right which after interacting with the potential recombine into an outgoing plane wave.
-We shall see that in general $T^l\neq T^r$, $R^l\neq R^r$ for Hamiltonians that are nonhermitian and non-local. Taking the adjoint of the Hamiltonian $H^\dagger = \frac{P^2}{2m} + V^\dagger$, we can also obtain the scattering states and scattering coefficients (reflection and transmission) for left and right incidence for the adjoint: $\widehat{T}^l(p)$, $\widehat{R}^l(p)$, $\widehat{T}^r(p)$ and $\widehat{R}^r(p)$. In the rest of this thesis I will use the convention that hatted variables $\widehat{...}$ will refer to the adjoint hamiltonian $H^\dagger$. In the following, all the results I write down for $H$ can be obtained also for $H^\dagger$ by making the change $H \to H^\dagger$.
+where $T^r(p)$ and $R^r(p)$ are the transmission and reflection coefficients for right incidence. We shall see that in general $T^l\neq T^r$, $R^l\neq R^r$ for Hamiltonians that are non-Hermitian and non-local. For the adjoint of the Hamiltonian $H^\dagger = P^2/(2m) + V^\dagger$, we can also find the scattering states and amplitudes for left and right incidence: $\widehat{T}^l(p)$, $\widehat{R}^l(p)$, $\widehat{T}^r(p)$ and $\widehat{R}^r(p)$. In the rest of this Thesis I will use the convention that hatted variables $\widehat{...}$ will refer to the adjoint Hamiltonian $H^\dagger$. In the following, all the results I present for $H$ can be found also for $H^\dagger$ by making the change $H \to H^\dagger$.
 
-Scattering theory provides the method to obtain the scattering amplitudes through the transition operator $T_{op}(z)$, which is defined as
+Scattering theory provides the method to calculate the scattering amplitudes through the transition operator $T_{op}(z)$, which is defined as
 %
 \begin{equation}
 T_{op}(z) = V + VG(z)V,
 \label{eq:chapter1_transitionOperator_definition}
 \end{equation}
 %
-with $G(z) = (z-H)^{-1}$ being the Green's operator. In \cite{Muga2004} the transition operator is used to obtain the scattering eigenstates as
+with $G(z) = (z-H)^{-1}$ being the Green's operator. In \cite{Muga2004} the transition operator is used to write the scattering eigenstates as
 %
 \begin{equation}
   \ket{\pm p^+} =  \ket{\pm p} + \lim_{ \varepsilon\to 0^+ } G^0(E_p + i\varepsilon)T_{op}(E_p + i\varepsilon)\ket{\pm p}\quad (p>0),
   \label{eq:chapter1_scatteringStateFormal}
 \end{equation}
 %
-where $G^0(z) = (z-H_0)^{-1}$ is the Green's operator of the free propagation Hamiltonian $H_0$. Now, to obtain the scattering amplitudes of reflection and transmission, one has to take the limits of $\braket{x}{\pm p^+}$, where $\ket{\pm p^+}$ is given by eq. \eqref{eq:chapter1_scatteringStateFormal}, when $|x|$ goes to infinite and compare with eqs. \eqref{eq:chapter1_leftState}, \eqref{eq:chapter1_rightState} to get
+where $G^0(z) = (z-H_0)^{-1}$ is the Green's operator for free propagation. Now, to find the scattering amplitudes of reflection and transmission, one has to take the limits of $\braket{x}{\pm p^+}$, where $\ket{\pm p^+}$ is given by eq. \eqref{eq:chapter1_scatteringStateFormal}, when $|x|$ goes to infinity and compare with eqs. \eqref{eq:chapter1_leftState}, \eqref{eq:chapter1_rightState} to get
 %
 \begin{align}
 R^l&=-i\frac{2\pi m}{p}\la -p|T_{op}(+)|p\ra\nonumber,
@@ -118,7 +118,7 @@ T^r&=1-i\frac{2\pi m}{p}\la -p|T_{op}(+)|-p\ra,
 \label{eq:chapter1_amplitudesFromTOperator}
 \end{align}
 %
-where $T_{op}(+)$ is a shorthand notation for $\lim_{ \varepsilon\to 0^+ } T_{op}(E_p + i\varepsilon)$. The same procedure can be followed using the transition operator $\widehat{T}_{op}$ for $H^\dagger$ to obtain $\widehat{T}^l(p)$, $\widehat{R}^l(p)$, $\widehat{T}^r(p)$ and $\widehat{R}^r(p)$. For what comes next, it is useful to introduce the on-shell scattering matrix, defined as
+where $T_{op}(+)$ is a shorthand notation for $\lim_{ \varepsilon\to 0^+ } T_{op}(E_p + i\varepsilon)$. The same procedure can be followed using the transition operator $\widehat{T}_{op}$ for $H^\dagger$ to obtain $\widehat{T}^l(p)$, $\widehat{R}^l(p)$, $\widehat{T}^r(p)$ and $\widehat{R}^r(p)$. It is convenient to introduce the on-shell scattering matrix, defined as
 %
 \begin{equation}
   \mathsf{S}(p) =
@@ -134,14 +134,14 @@ where $T_{op}(+)$ is a shorthand notation for $\lim_{ \varepsilon\to 0^+ } T_{op
 %
 which gives the reflected and transmited components for an incident plane wave. Waves propagating from left to right are represented as $\left(1,0\right)^\mathsf{T}$ and waves propagating from right to left as $\left(0,1\right)^\mathsf{T}$. Therefore, a left incident wave will be scattered to $\left(T^l(p),R^l(p)\right)^\mathsf{T}$ and a right incident wave to $\left(R^r(p),T^r(p)\right)^\mathsf{T}$.
 
-As I mentioned before, one of the goals of scattering theory is connecting an input state $\ket{\psi_{in}}$ with an output state $\ket{\psi_{out}}$. In scattering theory the way of doing this is through the collision or scattering operator $S$
+As I mentioned before, one of the goals of scattering theory is connecting an input state $\ket{\psi_{in}}$ to an output state $\ket{\psi_{out}}$. The way of doing this is through the collision or scattering operator $S$
 %
 \begin{equation}
   \ket{\psi_{out}} = S \ket{\psi_{in}}
   \label{eq:chapter1_actuationOfSOperator}.
 \end{equation}
 %
-$S$ is obtained as the product of the M\"{o}ller operators $S = \Omega_{-}^\dagger\Omega_{+}$ which are defined as
+$S$ is the product of the M\"{o}ller operators $S = \Omega_{-}^\dagger\Omega_{+}$, which are defined as
 %
 \begin{align}
     \Omega_+ &= \lim_{t \to -\infty}e^{i H t / \hbar}e^{-i H_0 t/ \hbar},\nonumber\\
@@ -165,7 +165,7 @@ and the following intertwining equations with the complete and free Hamiltonians
   \label{eq:chapter1_MollerIntertwining}
 \end{align}
 %
-The hatted quantities for the adjoint Hamiltonian have expressions similar to those in eqs. \eqref{eq:chapter1_MollerIsometry} and \eqref{eq:chapter1_MollerIntertwining} with the substitution $H\leftrightarrow H^\dagger$. Because of eq. \eqref{eq:chapter1_MollerIntertwining} and because the momentum eigenstates $\ket{p}$ are eigenstates of $H_0$ with energy $E_p$ we have that the scattering states in eqs. \eqref{eq:chapter1_leftState}, \eqref{eq:chapter1_rightState} are also given by
+The hatted quantities for the adjoint Hamiltonian have expressions similar to those in eqs. \eqref{eq:chapter1_MollerIsometry} and \eqref{eq:chapter1_MollerIntertwining} with the substitution $H\leftrightarrow H^\dagger$. Because of eq. \eqref{eq:chapter1_MollerIntertwining} and because the momentum eigenstates $\ket{p}$ are eigenstates of $H_0$ with energy $E_p$, the scattering states in eqs. \eqref{eq:chapter1_leftState} and \eqref{eq:chapter1_rightState} are also given by
 %
 \begin{equation}
   \ket{\pm p^+} = \Omega_+ \ket{\pm p}\quad (p>0).
@@ -173,21 +173,21 @@ The hatted quantities for the adjoint Hamiltonian have expressions similar to th
 \end{equation}
 %
 %
-It is inmediate to see, that since the Hamiltonian may not be hermitian, the scattering operator will not be unitary in general. Because of this non-unitarity, input states may completely be absorved by the potential if the norm goes to zero. However, the scattering operator $S$ and the scattering operator $\widehat{S}$ of the adjoint Hamiltonian $H^\dagger$ satisfy the generalized unitarity relation
+If the Hamiltonian is not Hermitian, the scattering operator will not be unitary in general. Because of this non-unitarity, input states may, for example, be absorbed by the potential. However, the scattering operator $S$ and the scattering operator $\widehat{S}$ of the adjoint Hamiltonian $H^\dagger$ satisfy the generalized unitarity relation
 %
 \begin{equation}
   \widehat{S}^\dagger S = S\widehat{S}^\dagger= 1.
   \label{eq:chapter1_SMatrixUnitarityGeneralized}
 \end{equation}
 %
-The generalized unitary relation \eqref{eq:chapter1_SMatrixUnitarityGeneralized} implies a set of relations for the scattering amplitudes of non hermitian hamiltonians. To find these relations one needs to find the matrix elements of $S$, $\widehat{S}$ in the momentum basis. According to \cite{Muga2004} the matrix elements of the scattering operator are related to the transition operator by
+The generalized unitary relation \eqref{eq:chapter1_SMatrixUnitarityGeneralized} implies a set of relations for the scattering amplitudes of non-Hermitian Hamiltonians. To find these relations one needs to find the matrix elements of $S$ and $\widehat{S}$ in the momentum basis. According to \cite{Muga2004} the matrix elements of the scattering operator are related to the transition operator by
 %
 \begin{equation}
-    \bra{p} S \ket{p'} = \delta (p-p') -2 i \pi \delta (E_p-E_{p'}) \bra{p}T_{op}(+)\ket{p'},
+    \bra{p} S \ket{p'} = \delta (p-p') -2 i \pi \delta (E_p-E_{p'}) \bra{p}T_{op}(+)\ket{p'}.
     \label{eq:SmatrixElements}
 \end{equation}
 %
-If we factor the dirac delta in momentum using that $\delta(p-p') = \frac{|p|}{m}\delta(E_{p}-E_{p'})$ and consider positive momentums $p$ and $p'$ we get
+Factorizing out the Dirac delta in momentum using that $\delta(p-p') = \frac{|p|}{m}\delta(E_{p}-E_{p'})$ and considering positive momenta $p$ and $p'$ we get
 %
 \begin{equation}
   \left(
@@ -219,17 +219,17 @@ Because of \eqref{eq:chapter1_onShellMatrixRelationToS}, the on-shell scattering
     %
     \\
     %
-    T^l(p) \widehat R^{r*}(p) + \widehat T^{r*}(p) R^l(p) &= 0,
+    T^l(p) \widehat R^{r*}(p) + \widehat T^{r*}(p) R^l(p) &= 0.
     %
   \end{cases}
   \label{eq:chapter1_unitarityCoefficients}
 \end{equation}
 %
-The relations in \eqref{eq:chapter1_unitarityCoefficients} will be extremely relevant for the rest of the thesis, as they set extra conditions for the scattering amplitudes of asymmetry devices.
+The relations in \eqref{eq:chapter1_unitarityCoefficients} will be extremely relevant in the following, as they set extra conditions for the scattering amplitudes of asymmetric devices.
 
-\subsection{Why is non-hermiticity needed for asymmetric scattering?}
+\subsection{Why is non-Hermiticity needed for asymmetric scattering?}
 
-Asymmetric scattering is achieved when $\left|T^l\right|\neq\left|T^r\right|$ and $\left|R^l\right|\neq\left|R^r\right|$. We shall see that if the Hamiltonian is hermitian $H = H^\dagger$ the later requirement can not be fulfilled. When the Hamiltonian is hermitian, the hatted ($\widehat{\cdot}$) quantities in eq. \eqref{eq:chapter1_unitarityCoefficients} are equal to the unhatted ones and therefore eq. \eqref{eq:chapter1_unitarityCoefficients} becomes
+Asymmetric scattering is achieved when $\left|T^l\right|\neq\left|T^r\right|$ or $\left|R^l\right|\neq\left|R^r\right|$. When the Hamiltonian is Hermitian, the hatted quantities in eq. \eqref{eq:chapter1_unitarityCoefficients} are equal to the unhatted ones and, therefore, eq. \eqref{eq:chapter1_unitarityCoefficients} becomes
 %
 \begin{align}
   \left|T^l(p)\right|^2 +  \left|R^l(p)\right|^2  &= 1,\nonumber
@@ -251,18 +251,18 @@ Taking absolute values in the last equation in \eqref{eq:chapter1_unitarityCoeff
   \left|T^r(p)\right|  = \left| T^{l}(p) \frac{R^r(p)}{R^{l}(p)} \right|.
 \end{equation}
 %
-Now, because of the first equation in \eqref{eq:chapter1_unitarityCoefficients_HermitianCase} we get $\left|R^r(p)\right| = \left|R^l(p)\right|$. Finally, substracting the two first equations in \eqref{eq:chapter1_unitarityCoefficients_HermitianCase} one arrives at $\left|T^r(p)\right| = \left|T^l(p)\right|$. Therefore, it is impossible to build asymmetric devices with hermitian Hamiltonians.
+Now, because of the first equation in \eqref{eq:chapter1_unitarityCoefficients_HermitianCase} we get $\left|R^r(p)\right| = \left|R^l(p)\right|$. Finally, substracting the two first equations in \eqref{eq:chapter1_unitarityCoefficients_HermitianCase} one arrives at $\left|T^r(p)\right| = \left|T^l(p)\right|$ (in fact, the stronger relation $T^l(p) = T^r(p)$ holds \cite{Muga2004}). Therefore, it is impossible to build asymmetric devices with Hermitian Hamiltonians.
 
-\section{Right and left eigenvectors of non-hermitian Hamiltonians\label{sec:chapter1_LeftAndRightEigenstates}}
+\section{Right and left eigenvectors of non-Hermitian Hamiltonians\label{sec:chapter1_LeftAndRightEigenstates}}
 
-Eigenstates in the discrete part of the spectrum (bound-in-space eigenstates) of a hermitian Hamiltonian corresponding to different eigenvalues are orthogonal, \textit{i.e.} $\braket{E_i}{E_j} =0$ if $E_i\neq E_j$. Assuming there are no degenerate eigenvalues (for simplicity) one can choose the normalization $\braket{E_i}{E_j} =\delta_{ij}$, which makes the  eigenstates an orthonormal set. Similarly, the scattering states $\ket{p^+}$ satisfy (in the hermitian case) $\braket{p^+}{p'^+} =\delta(p-p')$. The discrete and scattering eigenstates are orthonormal bases in their corresponding subspaces and can be used to form a basis of the complete hilbert space in the following way
+Eigenstates in the discrete part of the spectrum (bound-in-space eigenstates) of a Hermitian Hamiltonian corresponding to different eigenvalues are orthogonal, \textit{i.e.} $\braket{E_i}{E_j} =0$ if $E_i\neq E_j$. One can choose the normalization $\braket{E_i}{E_j} =\delta_{ij}$, which makes the  eigenstates an orthonormal set. Similarly, the scattering states $\ket{p^+}$ satisfy (in the Hermitian case) $\braket{p^+}{p'^+} =\delta(p-p')$. The discrete and scattering eigenstates span orthonormal bases in their corresponding subspaces and can be used to form a basis of the complete Hilbert space in the following way,
 %
 \begin{equation}
-  1 = \sum_i \ketbra{E_i}{E_i} + \int dp\; \ketbra{p^+}{p^+}
+  1 = \sum_i \ketbra{E_i}{E_i} + \int dp\; \ketbra{p^+}{p^+}.
   \label{eq:chapter1_HermitianHamiltonianBasis}
 \end{equation}
 %
-However, if the Hamiltonian is not hermitian, the completeness formula \eqref{eq:chapter1_HermitianHamiltonianBasis} will not be correct anymore. It is possible, however, to generalize \eqref{eq:chapter1_HermitianHamiltonianBasis} to the hermitian case with the concept of left eigenvectors and bi-orthogonal partners. We say that the vectors $\ket{\lambda}$ and $\ket{\widehat{\lambda}}$ are a right and a left pair of eigenvectors if there exists a $\lambda$ eigenvalue such that
+It is possible to generalize \eqref{eq:chapter1_HermitianHamiltonianBasis} for a non-Hermitian hamiltonian using a biorthogonal basis. We say that the vectors $\ket{\lambda}$ and $\ket{\widehat{\lambda}}$ are a right and a left pair of eigenvectors if there exists a $\lambda$ eigenvalue such that
 %
 \begin{align}
   H \ket{\lambda} &= \lambda \ket{\lambda},\nonumber\\
@@ -270,32 +270,32 @@ However, if the Hamiltonian is not hermitian, the completeness formula \eqref{eq
   \label{eq:chapter1_leftAndRightEigenvector}
 \end{align}
 %
-If one takes two different eigenvalues $\lambda_1$ and $\lambda_2$, it is easy to show that $\braket{\widehat{\lambda_1}}{\lambda_2}=\braket{\widehat{\lambda_2}}{\lambda_1}=0$, and for this reason, the pairs $\ket{\lambda},\,\ket{\widehat{\lambda}}$ are called biorthogonal partners. This result is applied to scattering hamiltonians in the following way. If we assume, for simplicity, that there is no degeneracy in the discrete spectrum of $H$, we can choose the normalization $\braket{\widehat{E_i}}{E_j} = \delta_{ij}$ for the point spectrum eigenvectors. The right scattering states are given by eq. \eqref{eq:chapter1_scatteringStateFromMoller}. Using the intertwining relations \eqref{eq:chapter1_MollerIntertwining} for the hatted Moller operators (after the $H\leftrightarrow H^\dagger$ substitution) one can prove that the states $\ket{\widehat{p}^+} = \widehat{\Omega}_+\ket{p}$ are left eigenvectors of $H$ with eigenvalue $E_p$. The isometry relation \eqref{eq:chapter1_MollerIsometry} implies $\braket{\widehat{p}^+}{q^+} = \delta(q-p)$, therefore the pairs $\ket{\widehat{p}^+}$, $\ket{p^+}$ are biorthogonal partners. Finally, the completeness formula of the Hilbert space \eqref{eq:chapter1_HermitianHamiltonianBasis} is generalized to the non hermitian case as
+For two different eigenvalues $\lambda_1$ and $\lambda_2$, it is easy to show that $\braket{\widehat{\lambda_1}}{\lambda_2}=\braket{\widehat{\lambda_2}}{\lambda_1}=0$, and for this reason, the pairs $\ket{\lambda},\,\ket{\widehat{\lambda}}$ are called biorthogonal partners. This result is applied to scattering Hamiltonians in the following way. In the discrete spectrum of $H$, we can choose the normalization $\braket{\widehat{E_i}}{E_j} = \delta_{ij}$ for the point spectrum eigenvectors. The right scattering states are given by eq. \eqref{eq:chapter1_scatteringStateFromMoller}. Using the intertwining relations \eqref{eq:chapter1_MollerIntertwining} for the hatted Moller operators (after the $H\leftrightarrow H^\dagger$ substitution) one can prove that the states $\ket{\widehat{p}^+} = \widehat{\Omega}_+\ket{p}$ are left eigenvectors of $H$ with eigenvalue $E_p$. The isometry relation \eqref{eq:chapter1_MollerIsometry} implies $\braket{\widehat{p}^+}{p'^+} = \delta(p-p')$, therefore the pairs $\ket{\widehat{p}^+}$, $\ket{p^+}$ are biorthogonal partners. Finally, the completeness formula of the Hilbert space \eqref{eq:chapter1_HermitianHamiltonianBasis} is generalized to the non-Hermitian case as
 %
 \begin{equation}
-  1 = \sum_i \ketbra{E_i}{\widehat{E}_i} + \int dp\; \ketbra{p^+}{\widehat{p}^+}
+  1 = \sum_i \ketbra{E_i}{\widehat{E}_i} + \int dp\; \ketbra{p^+}{\widehat{p}^+}.
   \label{eq:chapter1_NonHermitianHamiltonianBasis}
 \end{equation}
 %
 
-\section{Generalized symmetries}
+\section{Generalized symmetries\label{sec:chapter1_generalizedSymmetries}}
 
-For hermitian  Hamiltonians, symmetries are represented by the commutation of some symmetry operator $A$ with the Hamiltonian. According to Wigner theorem \cite{Wigner1959}, a symmetry operator $A$ has to be either unitary or antiunitary. Unitary and antiunitary operators are defined by the relation $A^\dagger A = A A^\dagger = 1$, however, the meaning of the hermitian adjoint $^\dagger$ is different in each case. On one hand, unitary operators are linear, and therefore the action of the adjoint is defined by eq. \eqref{eq:chapter1_adjointLinearOperators}. On the other hand, antiunitary operators are antilinear, in which case the action of the adjoint is defined by
+For Hermitian  Hamiltonians, symmetries are represented by the commutation of some symmetry operator $A$ with the Hamiltonian. According to Wigner's theorem \cite{Wigner1959}, a symmetry operator $A$ has to be either unitary or antiunitary. Unitary and antiunitary operators are defined by the relation $A^\dagger A = A A^\dagger = 1$. Unitary operators are linear, and therefore the adjoint is defined by eq. \eqref{eq:chapter1_adjointLinearOperators}, whereas antiunitary operators are antilinear, so the adjoint is defined by
 %
 \begin{equation}
   \braket{\phi}{\mathcal{O}\psi} = \braket{\mathcal{O}^\dagger\phi}{\psi}^*\quad\forall\ket{\psi},\,\ket{\phi}\in\mathcal{H}.
   \label{eq:chapter1_adjointAntiLinearOperators}
 \end{equation}
 %
-In scattering theory, symmetry plays an important role  as it implies relations among
-the S-matrix elements beyond those implied by its unitarity, see e.g. \cite{Taylor1972} and, for scattering in one dimension, Sec. 2.6 in \cite{Muga2004}. Symmetries are also useful for  non hermitian Hamiltonians, but the mathematical and conceptual
+In Hermitian scattering theory, symmetry plays an important role  as it implies relations among
+the S-matrix elements beyond those implied by its unitarity, see e.g. \cite{Taylor1972} and, for scattering in one dimension, Sec. 2.6 in \cite{Muga2004}. Symmetries are also useful for  non-Hermitian Hamiltonians, but the mathematical and conceptual
 framework must be generalized. We consider that a unitary or antiunitary operator $A$ represents a symmetry of $H$ if it satisfies at least one of these relations,
 %
 \begin{eqnarray}
   AH&=&HA,
   \label{eq:chapter1_symmetry}
   \\
-  AH&=&H^\dagger A,
+  AH&=&H^\dagger A.
   \label{eq:chapter1_pseudoSymmetry}
 \end{eqnarray}
 %
@@ -318,17 +318,17 @@ Here we consider
 %that $H$ may be non-local, and
 $A$ to be a member of the
 Klein 4-group $K_4=\{1,\Pi, \Theta, \Pi\Theta\}$ formed by unity, the parity operator $\Pi$, the antiunitary time-reversal operator $\Theta$, and their product
-$\Pi\Theta$. The Klein 4-group is a discrete, abelian group and every element $A$ satisfies $A^2 = 1$. We also assume that the  Hamiltonian is  of the form $H=H_0+V$, with $H_0$, the kinetic energy operator of the particle,
-being hermitian and
+$\Pi\Theta$. The Klein 4-group is a discrete, Abelian group and every element $A$ satisfies $A^2 = 1$. We also assume that the  Hamiltonian is  of the form $H=H_0+V$, with $H_0$, the kinetic energy operator of the particle,
+being Hermitian and
 satisfying $[H_0,A]=0$ for all members of the group, whereas the potential $V$ may be non-local in position representation.
 The  motivation to use Klein's group is that the eight relations implied by eqs. (\ref{eq:chapter1_symmetry}) and (\ref{eq:chapter1_pseudoSymmetry}) generate all
 possible symmetry transformations of a non-local potential due to the identity, complex conjugation, transposition, and sign inversion,
-both in coordinate or momentum representation, see 3rd and 4th columns of table \ref{tab:chapter1_SymmetriesTable}, where each symmetry has been labeled by a roman number.
+both in coordinate or momentum representation, see the 3rd and 4th columns of table \ref{tab:chapter1_SymmetriesTable}, where each symmetry has been labeled by a roman number.
 
 % ----------------------------------------------------------------------------------------------
 \begin{landscape}
   \begin{table}
-    \caption{Symmetries of the potential classified in terms of the commutativity or pseudo-hermiticity of $H$ with the elements of
+    \caption{Symmetries of the potential classified in terms of the commutativity or pseudo-Hermiticity of $H$ with the elements of
     Klein's 4-group  $\{1,\Pi,\theta,\Pi\theta\}$ (second column). The first column sets a simplifying roman-number code for each symmetry.
     The relations among potential matrix elements are given in coordinate and momentum representations in the third and fourth columns.
     The fifth column gives the relations they imply in the matrix elements of $S$ and/or $\widehat{S}$ matrices ($S$ is for scattering by $H$
@@ -372,7 +372,7 @@ both in coordinate or momentum representation, see 3rd and 4th columns of table 
 
 
 \begin{table}
-  \caption{Transformation rules of the M\"oller and scattering operators under symmetries/pseudo-symmetries with linear or antilinear operators.}
+  \caption{Transformation rules of the M\"oller and scattering operators with linear and antilinear operators.}
   \label{tab:chapter1_MollerOperatorSymmetries}
   \centering
   \begin{tabular}{lcc}
@@ -437,7 +437,7 @@ both in coordinate or momentum representation, see 3rd and 4th columns of table 
   \end{tabular}
 \end{table}
 
-With the definitions of symmetry in eqs. \eqref{eq:chapter1_symmetry}, \eqref{eq:chapter1_pseudoSymmetry} and the tools from scattering formalism in \ref{sec:chapter1_ScattFormalism} we can now derive the effects of the symmetries in the scattering operator $S$, which will pose new restrictions in the scattering amplitudes. We start by deriving the transformation rules of the M\"{o}ller operators \eqref{eq:chapter1_MollerDefinition} under a symmetry operator $A$ of the Klein 4-group. The M\"{o}ller operators are transformed differently depending on whether $A$ is unitary or antiunitary and whether the Hamiltonian obeys usual symmetry \eqref{eq:chapter1_symmetry} or pseudohermiticity \eqref{eq:chapter1_pseudoSymmetry}. For example, for $A$ unitary and \eqref{eq:chapter1_symmetry} we have
+With the definitions of symmetry in eqs. \eqref{eq:chapter1_symmetry}, \eqref{eq:chapter1_pseudoSymmetry} and the tools from scattering formalism in \ref{sec:chapter1_ScattFormalism} we can now find the effects of the symmetries in the scattering operator $S$, which will pose restrictions in the scattering amplitudes. We start by specifying the transformation rules of the M\"{o}ller operators \eqref{eq:chapter1_MollerDefinition} under a symmetry operator $A$ of the Klein 4-group. The M\"{o}ller operators are transformed differently depending on whether $A$ is unitary or antiunitary and whether the Hamiltonian obeys a usual symmetry \eqref{eq:chapter1_symmetry} or pseudohermiticity \eqref{eq:chapter1_pseudoSymmetry}. For example, for $A$ unitary and \eqref{eq:chapter1_symmetry} we have
 %
 \begin{equation}
   \begin{split}
@@ -475,7 +475,7 @@ Using eqs. \eqref{eq:chapter1_MollerPositiveTransformAUnitary_Symmetry} and \eqr
   \label{eq:chapter1_Moller-TransformAUnitary_Symmetry}
 \end{equation}
 %
-The rest of combinations of the type of $A$ (unitary/antiunitary) with the type of symmetry (\eqref{eq:chapter1_symmetry} or \eqref{eq:chapter1_pseudoSymmetry}) is summarized in table \ref{tab:chapter1_MollerOperatorSymmetries}. Since the symmetry operators conmute with the free hamiltonian $H_0$, the action of any of them on a an momentum eigenstate will give as a result a state with the same energy. In fact, as can be seen in table \ref{tab:chapter1_KleinGroupOnPosAndMomentBases} the result of the action of any element $A$ of the 4-group on a state $\ket{p}$ is either $\ket{p}$ or $\ket{-p}$. For this reason, we can work with the on-shell representation of the scattering operator to obtain extra relations between the scattering amplitudes. As an example I will demonstrate what happens to the scattering amplitudes when the symmetry III is satisified, \textit{i.e.}, $\Pi H = H \Pi$. Considering a momentum $p>0$ and using $S = \Pi^{\dagger}S \Pi$ (see table \ref{tab:chapter1_MollerOperatorSymmetries}) I find
+The rest of combinations of the type of $A$ (unitary/antiunitary) with the type of symmetry (\eqref{eq:chapter1_symmetry} or \eqref{eq:chapter1_pseudoSymmetry}) are summarized in table \ref{tab:chapter1_MollerOperatorSymmetries}. Since the symmetry operators commute with the free Hamiltonian $H_0$, the action of any of them on a momentum eigenstate will give, as a result, a state with the same energy. In fact, as can be seen in table \ref{tab:chapter1_KleinGroupOnPosAndMomentBases}, the result of the action of any element $A$ of the 4-group on a state $\ket{p}$ is either $\ket{p}$ or $\ket{-p}$. For this reason, we can work with the on-shell representation of the scattering operator to obtain extra relations between the scattering amplitudes. As an example I will demonstrate what happens to the scattering amplitudes when the symmetry III is satisified, \textit{i.e.}, $\Pi H = H \Pi$. Considering a momentum $p>0$ and using $S = \Pi^{\dagger}S \Pi$ (see table \ref{tab:chapter1_MollerOperatorSymmetries}) I find
 %
 \begin{equation}
   \left(
@@ -504,7 +504,7 @@ Now, using the on-shell representation of the scattering operator \eqref{eq:chap
 Instead of deriving the equivalent relation to \eqref{eq:chapter1_effectOfPArityOnamplitudes} for all the symmetries explicitely, I summarize the results for the matrix elements of the $S$ operator in the 5th column and for the scattering amplitudes in the columns 6-9 of table \ref{tab:chapter1_SymmetriesTable}. Explicit examples on how to find the relations in the 5th and 6th columns of table \ref{tab:chapter1_SymmetriesTable} for other symmetries can be found in \cite{Muga2004}.
 
 If we now take into account the generalized unitary relations $\widehat{S}^\dagger S=S\widehat{S}^\dagger=1$, in terms of amplitudes \eqref{eq:chapter1_unitarityCoefficients}, the columns 6-9 of table \ref{tab:chapter1_SymmetriesTable} imply further consequences on the amplitudes' moduli (tenth column of table \ref{tab:chapter1_SymmetriesTable}) and phases (not shown). The final two columns use the previous results to determine if perfect asymmetry is possible for transmission or reflection.
-This makes evident that hermiticity (II) and parity (III) preclude, independently, any asymmetry in the scattering coefficients;
+This makes evident that Hermiticity (II) and parity (III) preclude, independently, any asymmetry in the scattering coefficients;
 PT-symmetry (VII) or  $\Theta$-pseudohermiticity
 (VI) forbid transmission asymmetry (all local potentials  satisfy automatically
 symmetry VI),  whereas time-reversal symmetry (i.e., a real potential in coordinate space)
@@ -512,7 +512,7 @@ symmetry VI),  whereas time-reversal symmetry (i.e., a real potential in coordin
 
 
 \begin{table}
-  \caption{Action of the Klein 4-group on the position and momentum bases. Each cell corresponds to the action of the elements of the Klein 4-group (in the first column) on the position and momentum eigenstates (in the first row). A scalar $\alpha \in \mathbb{C}$ is included in the table to make the unitary/antiunitary nature of the elements of the group explicit.}
+  \caption{Action of the Klein 4-group operators on the position and momentum eigenkets. A scalar $\alpha \in \mathbb{C}$ is included in the table to make the unitary/antiunitary nature of the elements of the group explicit.}
   \label{tab:chapter1_KleinGroupOnPosAndMomentBases}
   \center
   \begin{tabular}{lcc}
@@ -538,14 +538,14 @@ When a double symmetry holds, excluding the identity,  the ``first'' symmetry  i
 We have already mentioned that $\Pi$-pseudohermiticity (IV) is equivalent to $PT$-symmetry (VII) for local potentials.
 Being local is just one particular way to satisfy symmetry VI, namely $\Theta$-pseudohermiticity. The reader may verify with the aid of
 the third column for $\langle x|V|y\rangle$  in table \ref{tab:chapter1_SymmetriesTable}, that indeed, if symmetry VI is satisfied (first symmetry), symmetry IV has the same effect as symmetry VII.
-They become equivalent. Other well known example is  that for a local potential (symmetry VI is satisfied), a real potential in coordinate space  is necessarily hermitian,
+They become equivalent. Another well known example is  that for a local potential (symmetry VI is satisfied), a real potential in coordinate space  is necessarily Hermitian,
 so symmetries V and II become equivalent.
-These examples are just particular cases of the full set of equivalences given in table \ref{tab:chapter1_equivalencesBetweenSymmetries}.
+These examples are just particular cases of the full set of equivalences given in table \ref{tab:chapter1_equivalencesBetweenSymmetries}. The concept of equivalence for symmetries was refined and studied in more detail in \cite{Alana2020}.
 
 \begin{table}
   \caption{Equivalences among symmetries for the potential elements.
   Given the symmetry of the upper row, the table provides the equivalent symmetries.
-  For example, if II is satisfied, then III=IV holds. In words, if the potential is hermitian,  parity symmetry amounts to
+  For example, if II is satisfied, then III=IV holds. In words, if the potential is Hermitian,  parity symmetry amounts to
   parity pseudohermiticity. In terms of the matrix elements of the potential, if  $\langle x|V|y\rangle=\langle y|V|x\rangle^*$ and also
   $\langle x|V|y\rangle=\langle -x|V|-y\rangle$, $\forall (x,y)$, then $\langle x|V|y\rangle=\langle -y|V|-x\rangle^*$ holds as well. One may proceed similarly for all other relations.
   The commutation with the identity (I) is excluded as this symmetry is satisfied by all potentials.\vspace*{.2cm}
@@ -572,20 +572,18 @@ These examples are just particular cases of the full set of equivalences given i
 
 \section{Asymmetric devices\label{sec:chapter1_AsymmetricDevices}}
 
-Now, I will describe the set of devices that we want to design and how the symmetries of the Klein 4-group make this possible or impossible in some cases. Table \ref{tab:chapter1_DevicesDescription} shows a descriptive list of the 6 kinds of asymmetric devices that we consider. The first column gives the name that we have chosen for each of the devices. Second and third columns show the expected behaviour for left or right incidence, respectively. The fourth column shows the descriptive code for each of the devices. The descriptive codes have always the following structure, \textit{LI/RI}, where LI and RI are codes that describe the behaviour for left and right incidence respectively. LI and RI can be composed by the following symbols $\mathcal{T}$, $\mathcal{R}$, $\mathcal{A}$. $\mathcal{T}$ stands for devices with full transmision ($T=1$), $\mathcal{R}$ for full reflection ($R = 1$). $\mathcal{A}$ is the code for full absortion ($R=T=0$). For example, a device with reflection asymmetry $R^l=1$, $R^r=0$ and with $T^r=T^l=1$ would in our case be a particular ``transparent, one-way reflector'', as full transmission occurs from both sides and its descriptive code would be $\mathcal{T}\mathcal{R}/\mathcal{T}$. This effect has however become popularized as ``unidirectional invisibility'' \cite{Lin2011,Yin2013}. The device denominations in fig. \ref{cases} or table \ref{tab:chapter1_DevicesDescription} are intended as short and meaningful, and do not necessarily coincide with some extended terminology, in part because the range of possibilities is broader here than those customarily considered, and because we use a 1 or 0 condition for the moduli.
+I will describe now the set of devices that we want to design and how the eight non-Hermitian symmetries of the Klein 4-group make this possible or impossible in some cases. Table \ref{tab:chapter1_DevicesDescription} gives a descriptive list of the 6 kinds of asymmetric devices that we consider (see also fig. \ref{fig:chapter1_cases} for a schematic representation of the devices). The first column gives the name that we have chosen for each of the devices. Second and third columns show the expected behaviour for left or right incidence, respectively. The fourth column shows the descriptive code for each of the devices. The descriptive codes have always the following structure, \textit{LI/RI}, where LI and RI are codes that describe the behaviour for left and right incidence respectively. LI and RI are composed by a combination of the symbols $\mathcal{T}$, $\mathcal{R}$, $\mathcal{A}$. $\mathcal{T}$ stands for devices with full transmision ($|T|=1$), $\mathcal{R}$ for full reflection ($|R| = 1$). $\mathcal{A}$ is the code for full absorption ($|R|=|T|=0$). For example, a device with reflection asymmetry $|R^l|=1$, $|R^r|=0$ and with $|T^r|=|T^l|=1$ would in our case be a particular ``transparent, one-way reflector'', as full transmission occurs from both sides and its descriptive code would be $\mathcal{T}\mathcal{R}/\mathcal{T}$. This effect is known as ``unidirectional invisibility'' \cite{Lin2011,Yin2013}. The device denominations in fig. \ref{fig:chapter1_cases} or table \ref{tab:chapter1_DevicesDescription} are intended to be compact and systematic, and do not necessarily coincide with some extended terminology, in part because the range of possibilities is broader here than those customarily considered, and because we use a 1 or 0 condition for the moduli.
 
 Combining the information of the last two-columns in table \ref{tab:chapter1_SymmetriesTable} with the additional condition that all scattering coefficients
-be 0 or 1 we elaborate the last two columns of table \ref{tab:chapter1_DevicesDescription}, which provides the symmetries
-that do not allow the implementation of the devices in fig. \ref{cases}. The complementary table \ref{tab:chapter1_AllowedDevices} gives instead the symmetries that allow, but do not necessarily imply, a given device type.
+be 0 or 1, we elaborate the last two columns of table \ref{tab:chapter1_DevicesDescription}, which provides the symmetries
+that do not allow the implementation of the devices in fig. \ref{fig:chapter1_cases}. The complementary table \ref{tab:chapter1_AllowedDevices} gives instead the symmetries that allow, but do not necessarily imply, a given type of device.
 
 
 
 
 \begin{landscape}
   \begin{table}
-    \caption{Device types for  transmission and/or reflection asymmetry, restricted to 1 or 0 moduli for the scattering amplitudes.¡''
-    % (i.e., zero scattering amplitudes for transmission and reflection from the right).
-    The fifth column indicates the symmetries in table \ref{tab:chapter1_SymmetriesTable} that forbid the device. Figures S2, S3, S5 and S6 can be found in the supplemental material to this paper.\vspace*{.2cm}}
+    \caption{Device types for  transmission and/or reflection asymmetry, restricted to 1 or 0 moduli for the scattering amplitudes. The fifth column indicates the symmetries in table \ref{tab:chapter1_SymmetriesTable} that forbid the device.\vspace*{.2cm}}
     \label{tab:chapter1_DevicesDescription}
     \centering
     \scalebox{1}{
@@ -594,18 +592,18 @@ that do not allow the implementation of the devices in fig. \ref{cases}. The com
       Device type & Left incidence& Right incidence&Code& Forbidden by & Example
       \\
       \hline
-      One-way mirror&transmits and reflects&absorbs&$\cal{TR/A}$&II, III, IV, V, VI,  VII, VIII& fig. S1
+      One-way mirror&transmits and reflects&absorbs&$\cal{TR/A}$&II, III, IV, V, VI,  VII, VIII&
       \\
-      One-way barrier&transmits&reflects&$\cal{T/R}$&II, III, IV, V, VI, VII, VIII&fig. S2
+      One-way barrier&transmits&reflects&$\cal{T/R}$&II, III, IV, V, VI, VII, VIII&
       \\
-      One-way T-filter&transmits&absorbs&$\cal{T/A}$&II, III, IV, V, VI, VII&fig. \ref{fig_device_T_A}, S3
+      One-way T-filter&transmits&absorbs&$\cal{T/A}$&II, III, IV, V, VI, VII&fig. \ref{fig_device_T_A}
       \\
-      Mirror\&1-way transmitter&transmits and reflects&reflects&$\cal{TR/R}$&II, III, VI, VII&fig. S4
+      Mirror\&1-way transmitter&transmits and reflects&reflects&$\cal{TR/R}$&II, III, VI, VII
       \\
       One-way R-filter&reflects&absorbs&$\cal{R/A}$&II, III, IV, V, VII, VIII&\cite{Huang2016}
       \\
       Transparent 1-way reflector&transmits and reflects&transmits&$\cal{TR/T}$& II, III, V, VIII
-      & figs. \ref{fig_reflector}, S5
+      & figs. \ref{fig_reflector}
       \\
       \hline\hline
     \end{tabular}}
@@ -666,7 +664,7 @@ that do not allow the implementation of the devices in fig. \ref{cases}. The com
 %
 %
 
-\section{Designing potentials for asymmetric devices\label{examples}}
+\section{Designing potentials for asymmetric devices\label{sec:chapter1_examples}}
 
 \begin{figure}
   \begin{center}
@@ -685,13 +683,10 @@ that do not allow the implementation of the devices in fig. \ref{cases}. The com
   \label{fig_TR_T_local}}
 \end{figure}
 
+We will demonstrate how to design non-local potentials with different asymmetric responses.
+For simplicity we look for non-local potentials $V(x,y)$ that vanish outside the finite region of space $|x| \leq d$ and $|y| \leq d$.
 
-We will show  how to design non-local potentials
-leading to the asymmetric devices.
-For simplicity we look for  non-local potentials $V(x,y)$ with local support
-that vanish  for $|x| >d$ and $|y| >d$.
-
-To obtain the potentials for the asymmetric devices I follow an inverse scattering approach similar to \cite{Palao1998}. It starts by imposing an ansatz for the wavefunctions and the potential in the stationary Schr\"{o}dinger equation
+I follow an inverse scattering approach similar to \cite{Palao1998}. This approach starts by imposing an ansatz for the wave functions and the potential in the stationary Schr\"{o}dinger equation
 %
 \begin{eqnarray}
   \frac{\hbar^2k^2}{2m} \psi (x) = - \frac{\hbar^2}{2m} \frac{d^2}{dx^2} \psi (x)
@@ -700,19 +695,20 @@ To obtain the potentials for the asymmetric devices I follow an inverse scatteri
 \end{eqnarray}
 %
 The free parameters are fixed making use of the boundary conditions.
-The form of the wavefunction incident from the left is
+The form of the wave function incident from the left is
 $\psi_l(x) = e^{i k x} + R^l e^{-i k x}$ for $x < -d$ and $\psi_l (x) = T^l e^{i k x}$ for $x > d$,
 where  $k=p/\hbar$.
-The wavefunction incident from the right is instead
+The wave function incident from the right is instead
 $\psi_r(x) = e^{-ikx} T^r$ for $x < -d$ and $\psi_r (x) = e^{-i k x} + R^r e^{i k x}$ for $x > d$.
 
-Our strategy is to assume  polynomial forms for the two wavefunctions in the interval $|x| < d$,
+Our strategy is to assume  polynomial forms for the two wave functions in the interval $|x| < d$,
 $\psi_l (x) = \sum_{j=0}^5 c_{l,j} x^j$ and $\psi_r (x) = \sum_{j=0}^5 c_{r,j} x^j$, and also a
 polynomial ansatz of finite degree for the potential $V(x,y) = \sum_i \sum_j v_{ij} x^i y^j$.
 Inserting these ansatzes in eq. (\ref{Schroedinger}) and from the conditions that $\psi_{l,r}$
 and their derivatives must be continuous, all coefficients $c_{l,j}\,,c_{r,j}$ and $v_{ij}$ can be determined.
 Symmetry properties of the potential can also be imposed via additional conditions on
-the potential coefficients $v_{ij}$. For example we may use this method to obtain a one-way T-filter ($\cal{T/A}$) device (third device in table \ref{tab:chapter1_DevicesDescription}) with a nonlocal PT-pseudohermitian potential (symmetry VIII of table \ref{tab:chapter1_SymmetriesTable}) for a chosen wavevector $k = k_0$. The absolute value and argument of the resulting potential $V(x,y)$ are shown in figs. \ref{fig_device_T_A}(a) and \ref{fig_device_T_A}(b) together with its scattering coefficients as function of the incident wave vector, fig. \ref{fig_device_T_A}(c). As can be seen in fig. \ref{fig_device_T_A}(c) the imposed scattering coefficients are fulfilled exactly for the chosen wavevector. They are also satisfied approximately in a neighborhood of $k_0$. In the  Supplemental Material, Sec. II, we give further details about the construction of this potential and we work out other asymmetric devices of fig. \ref{cases}.
+the potential coefficients $v_{ij}$. For example we may use this method to obtain a one-way T-filter ($\cal{T/A}$) device (third device in table \ref{tab:chapter1_DevicesDescription}) with a non-local PT-pseudohermitian potential (symmetry VIII of table \ref{tab:chapter1_SymmetriesTable}) for a chosen wave vector $k = k_0$. The absolute value and argument of the resulting potential $V(x,y)$ are shown in figs. \ref{fig_device_T_A}(a) and \ref{fig_device_T_A}(b) together with its scattering coefficients as a function of the incident wave vector, fig. \ref{fig_device_T_A}(c). As can be seen in fig. \ref{fig_device_T_A}(c) the imposed scattering coefficients are fulfilled exactly for the chosen wave vector. They are also satisfied approximately in a neighborhood of $k_0$.
+Other examples of potentials for the devices in fig. \ref{fig:chapter1_cases} can be found in the supplemental material of ref. \cite{Ruschhaupt2017}.
 %
 % ---------------------------------------- Asymmetric Reflection -----------------------------------
 %
@@ -726,17 +722,15 @@ the potential coefficients $v_{ij}$. For example we may use this method to obtai
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 
-\section{Extending the scattering asymmetry to a broad incident-momentum domain\label{ext}}
+\section{Extending the scattering asymmetry to a \\broad incident-momentum domain\label{sec:chapter1_extension}}
 %
 %
 %
 %
 The inversion technique just described may be generalized
 to extend the range of incident momenta for which the potential works by imposing additional
-conditions and increasing correspondingly the number of parameters in the wavefunction ansatz,
-for example we may impose that the derivatives of the  amplitudes,  in one or more orders,  vanish at $k_0$,
-or  0/1 values for the coefficients not only at  $k_0$ but at a series of grid points $k_1$, $k_2$, ... $k_N$,
-as in \cite{Brouard1994,Palao1998a,Palao1998,Muga2004}.
+conditions and increasing correspondingly the number of parameters in the wave function ansatz. For example we may impose that the derivatives of the  amplitudes,  in one or more orders,  vanish at $k_0$,
+or  0/1 values for the coefficients not only at  $k_0$ but at a series of grid points $k_1$, $k_2$, ... $k_N$ \cite{Brouard1994,Palao1998a,Palao1998,Muga2004}.
 
 Here we put forward instead a method that provides a very broad working-window domain.
 While we make formally use of the Born approximation, the exact numerical
@@ -795,9 +789,7 @@ By inverse Fourier transformation, this implies
 %
 which is indeed a local, $PT$-symmetric potential for $\alpha$ real.
 $\alpha$ is directly related to the reflection coefficient, within the Born approximation,
-$R^l = 4 \pi i m \alpha/\hbar^2$. As the Born approximation may differ from exact results
-we shall keep $\alpha$ as an adjustable parameter
-in the following.
+$R^l = 4 \pi i m \alpha/\hbar^2$. As the Born approximation may differ from exact results, in the following we shall keep $\alpha$ as an adjustable parameter.
 
 In a possible physical implementation, the potential in eq. (\ref{num}) will
 be approximated by keeping a small finite $\epsilon>0$, see fig. \ref{fig_TR_T_local}(a).
@@ -819,38 +811,24 @@ in different applications \cite{Snieder1990,Mostafazadeh2014,Horsley2015}. For a
 $|T^r|= |T^l|\approx1$  in a broad $k$-domain, see fig. \ref{fig_TR_T_local}(b). Adjusting  the value of $\alpha$, fig. \ref{fig_TR_T_local}(c),
 sets $|R^l|\approx 1$ as desired.
 %
-%Remarkably, except for very low $k$,
-%the potential is reflectionless from the right
-%and provides full transmission independently of $\alpha$. As well, $|R^2|^2$ stays constant with respect to $k$ for different $\alpha$,
-%so that that up to the adjustable parameter the Born approximation provides in fact the required potential shape, a surprising
-%in inverse problems \cite{Snieder1990,Mostafazadeh2014,Horsley2015}.
-%Figure \ref{fig_TR_T_local}(c) demonstrates that $\alpha$ can indeed be adjusted so that the  potential works
-%as intended, i.e., as a transparent one-way reflector,  for a very broad range of $k$ values.
-
 %
-%
-%
-%
-%
-\section{Discussion}
+\section{Discussion\label{sec:chapter1_Discussion}}
 %
 %
 Scattering asymmetries are necessary to develop technologically relevant devices such
 as one-way mirrors, filters and  barriers, invisibility cloaks, diodes, or Maxwell demons.
-So far much effort has been devoted to build and apply local PT-symmetric potentials but the possible scattering asymmetries with them are
-quite limited. We find that six  device types with asymmetric scattering are possible
+So far, much effort has been devoted to build and apply local PT-symmetric potentials but the possible scattering asymmetries with them are
+quite limited. We find that six types of devices with asymmetric scattering are possible
 when imposing $0$ or $1$ scattering coefficients.
 PT-symmetry can only realize one of them, but this symmetry  is just one among eight possible symmetries of complex non-local potentials.
 The eight symmetries arise from the discovery that Klein's four-group
 $\{1, \Pi, \Theta, \Theta\Pi\}$, combined with two possible relations among the Hamiltonian, its adjoint,
 and the symmetry operators of the group, eqs. (1) and (2),
-produce all possible  equalities among potential matrix elements after complex conjugation, coordinate inversion, the identity, and transposition.
-In other words, to have all possible such equalities, the conventional definition of a symmetry $A$ in terms of its commutation with the Hamiltonian $H$ is not enough, and $A$-pseudohermiticity must be considered as well on the same footing.
+produce all possible symmetries generated by complex conjugation, coordinate inversion and transposition.
+The conventional definition of a symmetry in terms of the commutation of a unitary/antiunitary operator $A$ with the Hamiltonian $H$ is not enough, and $A$-pseudohermiticity must be considered as well on the same footing.
 Extending the concept of what a symmetry is for complex, non-local potentials is
 a fundamental, far-reaching step of this work.
 This group theoretical analysis and classification is not only esthetically pleasing, but also of practical importance, as it reveals
 the underlying structure and span of the possibilities available in principle to manipulate the asymmetrical response of a potential
-for a structureless particle.
-
-We provide a potential for a One-way T-filter ($\mathcal{T}/\mathcal{A}$) and a PT potential for a transparent One-way reflector ($\mathcal{T}\mathcal{R}/\mathcal{T}$) that works in a broad domain of incident momenta. Although the present theory is for the scattering of quantum particles, the analogies between quantum physics and optics suggest to extend the concepts and results for optical asymmetric devices.
+for a structureless particle. Although the present theory is for the scattering of quantum particles, the analogies between quantum physics and optics suggest to extend the concepts and results for optical asymmetric devices.
 %
