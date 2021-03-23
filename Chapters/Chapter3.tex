@@ -9,7 +9,7 @@ In chapters \ref{Chapter1} and \ref{Chapter2}, non-local potentials for asymmetr
 of non-Hermitian, non-local, non-PT potentials is put forward to implement different scattering asymmetries, including transmission
 asymmetries. Using Feshbach's projection technique it is found that the effective potentials for a ground-state atom crossing a laser beam in a region of space are generically non-local and non-Hermitian. Shaping the spatial-dependence of the, generally complex, Rabi frequency, and selecting a specific laser detuning allows to produce different potential symmetries and asymmetric scattering effects, including asymmetric transmission.
 
-The rest of this chapter is organized as follows. In Sec. \ref{sec:chapter3_enl}, I shall explain how to generate different NH symmetries in a quantum-optical setting of an atom impinging on a laser illuminated region. In Sec. \ref{sec:chapter3_exa}, I provide specific examples of devices (constructed using numerical optimisation) with different asymmetric scattering responses. Realistic experimental parameters are also examined. In Sec. \ref{sec:chapter3_class}, the asymmetric behavior is explained with a classical approximation of the motion and the non-commutativity of rotations on the Bloch sphere, which gives good estimates for the potential parameters. Finally, in Sec. \ref{sec:chapter3_Discussion}, I summarize the main findings in the chapter.
+The rest of this chapter is organized as follows. In section \ref{sec:chapter3_enl}, I shall explain how to generate different non-Hermitian symmetries in a quantum-optical setting of an atom impinging on a laser illuminated region. In section \ref{sec:chapter3_exa}, I provide specific examples of devices (constructed using numerical optimisation) with different asymmetric scattering responses. Realistic experimental parameters are also examined. In section \ref{sec:chapter3_class}, the asymmetric behavior is explained with a classical approximation of the motion and the non-commutativity of rotations on the Bloch sphere, which gives good estimates for the potential parameters. Finally, in section \ref{sec:chapter3_Discussion}, I summarize the main findings in the chapter.
 
 %---------------------------------------------------------------------------------------------
 \begin{table}[t]
@@ -74,7 +74,7 @@ where
   \right).
 \end{eqnarray}
 %
-I assume perpendicular incidence of the atom on the laser sheet for simplicity. Here $E=\hbar^2 k^2/2m$ is the energy, and
+I assume perpendicular incidence of the atom on the laser beam for simplicity. Here $E=\hbar^2 k^2/2m$ is the energy, and
 $\Omega(x)$ is the position-dependent, on-resonance Rabi frequency, where real and imaginary parts may be controlled independently
 using two  laser field quadratures  \cite{Zhang2013};
 $\gamma$ is the inverse of the lifetime of the excited state;
@@ -135,7 +135,7 @@ transitions from ground state to ground state in the full two-level theory (see 
 
 %%%%%%%%%
 \begin{table}
-  \caption{Device types for  transmission and/or reflection asymmetry in the first row (see Sec. \ref{sec:chapter1_AsymmetricDevices} for nomenclature).
+  \caption{Device types for  transmission and/or reflection asymmetry in the first row (see section \ref{sec:chapter1_AsymmetricDevices} for nomenclature).
   The second row gives the corresponding symmetries  that allow
   each device.
   \label{devices}}
@@ -155,7 +155,7 @@ transitions from ground state to ground state in the full two-level theory (see 
 
 \subsection{Possible symmetries of the non-local potential}
 %
-The necessary conditions for the different symmetries of a non-Hermitian and non-local Hamiltonian were worked out in Sec. \ref{sec:chapter1_AsymmetricDevices}. In the second column of table \ref{tab:chapter3_SymmetriesConditions}, those conditions have been particularized for the effective potential of the 2-level atom \eqref{eq:chapter3_effpot}. For example, symmetry III (parity) requires that $V(x,y)=V(-x,-y)$ (see table \ref{tab:chapter1_SymmetriesTable}). Inserting the functional form of the potential from eq. \eqref{eq:chapter3_effpot} into this condition, it results in the requirement $\Omega(x) \Omega(y)^* = \Omega(-x) \Omega(-y)^*$. This is fulfilled if $\Omega(x)=\Omega(-x)e^{i \phi}$ with some arbitrary phase freedom $\phi$.
+The necessary conditions for the different symmetries of a non-Hermitian and non-local Hamiltonian were worked out in section \ref{sec:chapter1_AsymmetricDevices}. In the second column of table \ref{tab:chapter3_SymmetriesConditions}, those conditions have been particularized for the effective potential of the 2-level atom \eqref{eq:chapter3_effpot}. For example, symmetry III (parity) requires that $V(x,y)=V(-x,-y)$ (see table \ref{tab:chapter1_SymmetriesTable}). Inserting the functional form of the potential from eq. \eqref{eq:chapter3_effpot} into this condition, it results in the requirement $\Omega(x) \Omega(y)^* = \Omega(-x) \Omega(-y)^*$. This is fulfilled if $\Omega(x)=\Omega(-x)e^{i \phi}$ with some arbitrary phase freedom $\phi$.
 
 Since $\Omega(x)$ does not depend on $q$, symmetries IV, V and VII imply that symmetry II is obeyed as well (Hermiticity).
 Moreover, symmetry III (parity) should be discarded for our purpose since it does not allow for asymmetric transmission or reflection
@@ -296,7 +296,7 @@ addressing \cite{Zeyen2016}. The scaling factors take the values
 \end{eqnarray}
 %
 which gives  $v\approx$ 27 cm/s for $v/v_d=400$, (there is no major obstacle to get devices for higher velocities,
-in particular the classical approximations in Sec. \ref{sec:chapter3_class} can be used to  estimate the values of the parameters)
+in particular the classical approximations in section \ref{sec:chapter3_class} can be used to  estimate the values of the parameters)
 and Rabi frequencies, see fig. \ref{fig_t_a},  in the hundreds of kHz range. The relative ion-laser beam velocity could be as well
 implemented  by moving the beam in the laboratory frame.
 
@@ -425,23 +425,16 @@ over a large velocity range. This allows one to find good initial values for fur
 %
 \section{Discussion\label{sec:chapter3_Discussion}}
 
-% Non-Hermitian Hamiltonians display many interesting phenomena which are
-% impossible for a  Hermitian Hamiltonian  acting on the same Hilbert space. In particular, in the Hilbert space of
-% a single, structureless particle on a line formed by square integrable normalizable functions, Hermitian Hamiltonians do not allow, within a linear theory, for asymmetric scattering transmission and reflection coefficients.
-% % for right/left incidence of a particle off a potential center.
-% However,
-% non-Hermitian Hamiltonians do.
-
 Since devices of technological interest, such as one-way filters for transmission or reflection, one-way barriers, one-way mirrors, and others, may be built based on the asymmetric scattering response of non-Hermitian Hamiltonians, there is both fundamental
-interest and applications in sight to implement Non-Hermitian scattering Hamiltonians. The results in this chapter are a step forward in that direction, specifically I propose a quantum-optical implementation of potentials with asymmetric scattering response.
+interest and applications in sight to implement non-Hermitian scattering Hamiltonians. The results in this chapter are a step forward in that direction, specifically I propose a quantum-optical implementation of potentials with asymmetric scattering response.
 They are non-local and non-PT symmetrical, which allows for asymmetric transmission.
 
 In general the chosen Hilbert space may  be regarded as a subspace of a larger space. For example,  the space of a ``structureless particle'' in 1D is the ground-state subspace
 for a particle with internal structure, consisting of two-levels in the simplest scenario.
-It is then possible to regard the Non-Hermitian physics in the reduced space
-as a projection of the larger space, which may itself be driven by a  Hermitian or a Non-Hermitian Hamiltonian.
+It is then possible to regard the non-Hermitian physics in the reduced space
+as a projection of the larger space, which may itself be driven by a  Hermitian or a non-Hermitian Hamiltonian.
 I have used the Hermitian option in the examples, where I assumed a zero decay constant, $\gamma=0$, for the excited state.
-A non-zero $\gamma$ implies  a Non-Hermitian  Hamiltonian in the larger two-level space. The description may still be
+A non-zero $\gamma$ implies  a non-Hermitian  Hamiltonian in the larger two-level space. The description may still be
 enlarged,  including  quantized field modes to account for the atom-field interaction with a Hermitian Hamiltonian.
 As an outlook, depending on the application, there might be the need for a more fundamental and detailed descriptive level. Presently I discuss the desired physics (i.e., the scattering asymmetries) at the level of the smallest 1D space of the ground state, while taking refuge in the
 two-level space to find a feasible physical implementation.
