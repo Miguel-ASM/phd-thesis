@@ -54,6 +54,9 @@
 % Para doublestruck 0
 \usepackage[bb=boondox]{mathalfa}
 
+% Para tachar
+\usepackage{soul}
+
 % Remove hyphen word split
 % \hyphenpenalty=10000
 
@@ -91,15 +94,15 @@
 % ------------------ The "Funny Quote Page" --------------------------------------------------------
 \pagestyle{empty}  % No headers or footers for the following pages
 
-% \null\vfill
-% % Now comes the "Funny Quote", written in italics
-% \textit{``It ain't much, but it`s honest work.''}
-% \begin{flushright}
-%   Someone who you admire or hate
-% \end{flushright}
-% \vfill\vfill\vfill\vfill\vfill\vfill\null
-% \clearpage  % Funny Quote page ended, start a new page
-%% ----------------------------------------------------------------
+\null\vfill
+% Now comes the "Funny Quote", written in italics
+\textit{``Look at me. Look at me. I am the \textst{captain} doctor now.''}
+\begin{flushright}
+  Captain Phillips
+\end{flushright}
+\vfill\vfill\vfill\vfill\vfill\vfill\null
+\clearpage  % Funny Quote page ended, start a new page
+% ----------------------------------------------------------------
 
 % ------------------ The Abstract Page -------------------------------------------------------------
 %\addtotoc{Abstract}  % Add the "Abstract" page entry to the Contents
@@ -173,10 +176,10 @@ Lo volveré a repetir para que quede perfectamente claro:
 \setstretch{1.5}  % Set the line spacing to 1.5, this makes the following tables easier to read
 \clearpage  % Start a new page
 
-%% Begin the Dedication page
-\setstretch{1.3}  % Return the line spacing back to 1.3
-\pagestyle{empty}  % Page style needs to be empty for this page
-\dedicatory{dedicatory here}
+% %% Begin the Dedication page
+% \setstretch{1.3}  % Return the line spacing back to 1.3
+% \pagestyle{empty}  % Page style needs to be empty for this page
+% \dedicatory{dedicatory here}
 
 \addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
 \input{Publications}
