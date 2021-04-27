@@ -4,8 +4,7 @@
 \chapter{Thermal rectification with a minimal model of two
 harmonic oscillators}
 \label{Chapter6}
-\lhead{Chapter 6. \emph{Thermal rectification with a minimal model of two
-harmonic oscillators}} % Write in your own chapter title to set the page header
+\lhead{Chapter 6. \emph{Thermal rectification with a minimal model of two...}} % Write in your own chapter title to set the page header
 %
 
 As previously discussed in the introduction to this part of the Thesis, the presence of thermal rectification in the first models was explained by the temperature dependence of the phonon bands (power spectra) of the different segments of the chain \cite{Terraneo2002,Li2004}. This temperature dependence of the phonon bands occurs naturally in systems where there are non-linear (anharmonic) interactions, therefore non-linearities have been regarded recurrently as an essential element for rectification \cite{Li2012,Li2008,Hu2006,Zeng2008,Segal2005,Segal2005b,Katz2016,Benenti2016}. However, it was later pointed out by Pereira \cite{Pereira2017} that anharmonicity is not a necessary condition for rectification, since harmonic systems having some structural symmetry and temperature-dependent parameters can rectify.
@@ -27,7 +26,7 @@ I describe the physical model and its dynamical equations. In section \ref{sec:c
 
 \begin{figure}
   \center
-  \includegraphics[width=0.75\linewidth]{Figures/model_diagram.pdf}
+  \includegraphics[width=0.9\linewidth]{Figures/model_diagram.pdf}
   \caption{Diagram of the model described in section \ref{sec:Physical_Model}. Two masses are coupled to each other through a spring constant $k$. Each mass is harmonically trapped and connected to a bath characterized by its temperature $T_i$ and its friction coefficient $\gamma_i$. }
   \label{fig:model_diagram}
 \end{figure}
@@ -144,19 +143,29 @@ As discussed in section \ref{sec:chapter5_steadyState}, the covariances of the p
 
 To begin, I differentiate $\mathbb{C}(t)$ with respect to time and use eq. \eqref{eq:chapter6_vectorEqOfMotion} to get
 %
-\begin{align}
-  \frac{d}{dt}\mathbb{C}(t) &=
+\begin{equation}
+  \frac{d}{dt}\mathbb{C}(t) =
   \mathbb{A}\mathbb{C}(t) +
   \mathbb{C}(t) \mathbb{A}^\mathsf{T}
-  \nonumber\\
-  &+
+  +
   \mathbb{L}\expval{ \overrightarrow{\xi}(t)\overrightarrow{r}(t)^\mathsf{T}}
-  %\nonumber\\
- % &+
-+
+  +
   \expval{ \overrightarrow{r}(t)\overrightarrow{\xi}(t)^\mathsf{T}}\mathbb{L}^\mathsf{T}.
   \label{eq:chapter6_evolutionOfCovariances}
-\end{align}
+\end{equation}
+% \begin{align}
+%   \frac{d}{dt}\mathbb{C}(t) &=
+%   \mathbb{A}\mathbb{C}(t) +
+%   \mathbb{C}(t) \mathbb{A}^\mathsf{T}
+%   \nonumber\\
+%   &+
+%   \mathbb{L}\expval{ \overrightarrow{\xi}(t)\overrightarrow{r}(t)^\mathsf{T}}
+%   %\nonumber\\
+%  % &+
+% +
+%   \expval{ \overrightarrow{r}(t)\overrightarrow{\xi}(t)^\mathsf{T}}\mathbb{L}^\mathsf{T}.
+%   \label{eq:chapter6_evolutionOfCovariances}
+% \end{align}
 %
 The solution of eq. \eqref{eq:chapter6_evolutionOfCovariances} can be used to find the kinetic temperatures of the masses at all times but I am only interested in the steady-state values, \textit{i.e.} the asymptotic values for $t\to \infty$. In the steady state, the covariance matrix is constant ($\frac{d}{dt}\mathbb{C}(t)=0$), therefore it satisfies
 %
@@ -438,7 +447,7 @@ eq. \eqref{eq:chapter6_DopplerCoolingToyModel}, the exchange operation is straig
 
 \begin{figure}
   \center
-  \includegraphics[width=0.75\linewidth]{Figures/RwMPlota.pdf}
+  \includegraphics[width=0.85\linewidth]{Figures/RwMPlota.pdf}
   \caption{Rectification, $R$, in the $k_L k_R$ plane for $k = 1.17$ fN/m, $\gamma_L = 6.75\times 10^{-22}$ kg/s, and $\gamma_R = 4.64\gamma_L$, $m_1 = 24.305$ a.u., $m_2 = 40.078$ a.u. The dashed  line represents eq.  (\ref{eq:chapter6_MaxRLines}).}
   \label{fig:Fig_rectification_K_plane}
 \end{figure}
@@ -545,7 +554,7 @@ Equation \eqref{eq:chapter6_maxRExpression} is symmetric upon the transformation
 
 \begin{figure}
   \center
-  \includegraphics[width=0.75\linewidth]{Figures/MaximalR.pdf}
+  \includegraphics[width=0.85\linewidth]{Figures/MaximalR.pdf}
   \caption{(a) Rectification factor, $R$, given by eq. \eqref{eq:chapter6_maxRExpression} as a function of the mass and friction ratios $a$ and $g$. (b) Rectification factor along the diagonal dotted line $a=g$ in (a).}
   \label{fig:maximalR}
 \end{figure}
@@ -580,7 +589,7 @@ see  eqs.(\ref{eq:chapter6_Temperature_definition}) and (\ref{eq:chapter6_curren
 
 \begin{figure}[t]
   \center
-  \includegraphics[width=0.75\linewidth]{Figures/SpectrumComparative.pdf}
+  \includegraphics[width=0.85\linewidth]{Figures/SpectrumComparative.pdf}
   \caption{Spectral densities of the velocities of the ions ($r_3$ and $r_4$) corresponding to $T_L=\tilde{T}_R=2$ mK, $T_R=\tilde{T}_L=1$ mK, and  two values of $c$ in fig. \ref{fig:maximalR}(b): (a), (b) for $c=1$ and (c), (d) for $c=10$. Solid, black lines are for the left ion spectral density ${\cal{S}}_1(\omega)$ and dashed, blue lines for the right ion spectral density
  ${\cal{S}}_2(\omega)$. Dot-dashed, vertical lines mark the frequencies of the normal modes of the system. The spectra are multiplied by their corresponding masses so that  the areas are proportional to the steady-state temperatures, see  eq. \eqref{eq:chapter6_Wiener-Khinchin}. (a) and (b) correspond to $R = 0$:  the overlap between the phonon bands is the same in forward and reversed configurations. (c) and (d) correspond to $R\approx 0.8$:  in the forward configuration (c)  the phonons match better than in the reversed configuration (d).}
   \label{fig:Figure_Spectra}
@@ -603,15 +612,13 @@ The imaginary part of the eigenvalues of the dynamical matrix $\mathbb{A}$ corre
 where $P_\mathbb{A}(\lambda)$ is the characteristic polynomial of the dynamical matrix $\mathbb{A}$ and $\mathbb{S}_L(\omega)$, $\mathbb{S}_R(\omega)$ are the matrix polynomials in the angular frequency $\omega$ whose coefficients are defined in Appendix \ref{Appendix:SpectralDensity}. I show the spectral densities for the velocities, ${\cal{S}}_1\equiv\mathbb{S}_{3,3}(\omega) = \expval{R_3(\omega)R_3(-\omega)}$ for the left ion, and ${\cal S}_2\equiv\mathbb{S}_{4,4}(\omega) = \expval{R_4(\omega)R_4(-\omega)}$ for the right ion, since they are the elements related to the calculation of the heat current using eq. \eqref{eq:chapter6_Wiener-Khinchin},
 %
   \begin{align}
-    {\cal S}_1(\omega) &= 2 k_B \frac{\gamma_R k^2 T_R \omega ^2+\gamma_L T_L \left[\omega ^4 \left(\gamma_R^2-2 k m_2-2 k_R m_2\right)+\omega ^2 (k+k_R)^2+m_2^2 \omega ^6\right]}{(m_1 m_2)^2 P_\mathbb{A}(i\omega)P_\mathbb{A}(-i\omega)},\nonumber\\
+    &{\cal S}_1(\omega) =\nonumber\\
+    &2 k_B \frac{\gamma_R k^2 T_R \omega ^2+\gamma_L T_L \left[\omega ^4 \left(\gamma_R^2-2 k m_2-2 k_R m_2\right)+\omega ^2 (k+k_R)^2+m_2^2 \omega ^6\right]}{(m_1 m_2)^2 P_\mathbb{A}(i\omega)P_\mathbb{A}(-i\omega)},\nonumber\\
     %
-%    \nonumber\\
-    %
-%    \mathbb{S}_{4,4}(\omega)
-{\cal S}_2(\omega)
-&= 2 k_B \frac{\gamma_L k^2 T_L \omega ^2+\gamma_R T_R \left[\omega ^4 \left(\gamma_L^2-2 k m_1-2 k_L m_1\right)+\omega ^2 (k+k_L)^2+m_1^2 \omega ^6\right]}{(m_1 m_2)^2 P_\mathbb{A}(i\omega)P_\mathbb{A}(-i\omega)}.
+    &{\cal S}_2(\omega) = \nonumber\\
+    &2 k_B \frac{\gamma_L k^2 T_L \omega ^2+\gamma_R T_R \left[\omega ^4 \left(\gamma_L^2-2 k m_1-2 k_L m_1\right)+\omega ^2 (k+k_L)^2+m_1^2 \omega ^6\right]}{(m_1 m_2)^2 P_\mathbb{A}(i\omega)P_\mathbb{A}(-i\omega)}.
     \label{eq:chapter6_SpectralDensitiesVelocities}
-  \end{align}
+\end{align}
 %
 %The spectral densities of the masses depend explicitly on the temperatures on the baths, as well as implicitly through the dependence of the friction coefficients if the laser cooling baths are used.
 Figure \ref{fig:Figure_Spectra} depicts a series of plots of the spectra given by eq. \eqref{eq:chapter6_SpectralDensitiesVelocities}, corresponding to two points in fig. \ref{fig:maximalR}(b) (The calculation for the reverse bias is done with the substitutions in table \ref{tab:reversed_bath}).
@@ -624,7 +631,7 @@ at the imaginary value (left dotted-dashed line) any more.
 
 \begin{figure}
   \center
-  \includegraphics[width=0.75\linewidth]{Figures/Eigenvals_NormalModes.pdf}
+  \includegraphics[width=0.9\linewidth]{Figures/Eigenvals_NormalModes.pdf}
   \caption{The evolution of the dissipative normal modes of the system as the asymmetry parameter $c$ increases is shown in this plot. $\lambda_r$, $\lambda_i$ stand for the real and imaginary parts of the eigenvaules of the dynamical matrix $\mathbb{A}$.}
   \label{fig:Figure_Eigenvals_NormalModes}
 \end{figure}

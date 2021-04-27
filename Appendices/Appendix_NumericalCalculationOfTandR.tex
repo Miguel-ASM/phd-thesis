@@ -40,7 +40,6 @@ The corresponding stationary Schr\"odinger equation is now
 	k^{2} \psi^{(1)}(x)&=&-\frac{\partial^2}{\partial x^2}\psi^{(1)}(x)+\Omega(x) \psi^{(2)}(x),
 	\nonumber \\
 	k^{2} \psi^{(2)}(x)&=&-\frac{\partial^2}{\partial x^2}\psi^{(2)}(x)+\Omega(x)^* \psi_{1}(x)-i \Gamma \psi^{(2)}(x).
-	\nonumber
 \end{eqnarray}
 %
 Let us denote as  $|{\Psi}_\alpha(x)\ra$  the wave vector for the atom impinging in internal level $\alpha$, $\alpha=1,2$.
@@ -76,7 +75,7 @@ When ${\cal V}(x)=0$ we get
 for $\alpha=1,2$.
 We can write down the solutions for particles ``coming'' from the left $\ket{\psi_{\alpha}(x)}$ in  internal state $\ket{\alpha}$ as
 %
-\begin{eqnarray}
+\begin{equation}
 	\ket{\psi_{1}(x)} = \left(\begin{array}{c}
 	\frac{1}{\sqrt{k}} e^{i k x}\\
 	0
@@ -86,15 +85,15 @@ We can write down the solutions for particles ``coming'' from the left $\ket{\ps
 	0\\
 	\frac{1}{\sqrt[4]{k^2+i \Gamma}} e^{i \sqrt{k^2+i \Gamma}x}
 	\end{array}\!\!\right)\!,
-	\nonumber
-\end{eqnarray}
+	% \nonumber
+\end{equation}
 %
 where we assume the branch $\operatorname{Im} \sqrt{k^2+i \Gamma}\ge 0$.
 $\ket{\psi_2(x)}$ is a regular traveling wave only for real $\sqrt{k^2+i\Gamma})$. If the square root has an imaginary part,  $\ket{\psi_2(x)}$  decays  from left to right.
 %
 The solutions for incidence from the right  $\ket{\widetilde{\psi}_{\alpha}(x)}$ in internal state $\ket{\alpha}$ are similarly
 %
-\begin{eqnarray}
+\begin{equation}
 	\ket{\widetilde{\psi}_{1}(x)} = \left(\!\begin{array}{c}
 	\frac{1}{\sqrt{k}} e^{-i k x}\\
 	0
@@ -103,8 +102,8 @@ The solutions for incidence from the right  $\ket{\widetilde{\psi}_{\alpha}(x)}$
 	0\\
 	\frac{1}{\sqrt[4]{k^2+i \Gamma}} e^{-i \sqrt{k^2+i \Gamma}x}
 	\end{array}\!\!\right)\!.
-	\nonumber
-\end{eqnarray}
+	% \nonumber
+\end{equation}
 %
 The normalization is chosen in such a way that the dimensionless probability current
 is constant (and equal) for all solutions with real $\sqrt{k^2+i\Gamma}$.
@@ -131,15 +130,15 @@ To solve the general case, we construct the Green's function defined by
 %
 It is given by
 %
-\begin{eqnarray}
-	G_{0}(x,x')&=&W^{-1} \begin{cases}
+\begin{align}
+	G_{0}(x,x')&=W^{-1} \begin{cases}
 	h_{+}(x)h_{-}(x')  & x>x' , \\ h_{+}(x')h_{-}(x) & x'>x ,
-	\end{cases} \\
-	&=& -\frac{i}{2} \left(\!\begin{array}{cc}
+	\end{cases}\nonumber \\
+	&= -\frac{i}{2} \left(\!\begin{array}{cc}
 	\frac{1}{k}e^{ i k \abs{x-x'}} & 0\\
 	0 & \frac{e^{ i \sqrt{k^2+i \Gamma} \abs{x-x'}}}{\sqrt{k^2+i \Gamma}} \\
-	\end{array}\!\right). \nonumber
-\end{eqnarray}
+	\end{array}\!\right).
+\end{align}
 %
 The Green's function allows us to solve for   $F(x)$ and $\widetilde{F}(x)$ in integral form,
 %

@@ -337,7 +337,7 @@ both in coordinate or momentum representation, see the 3rd and 4th columns of ta
     ``No'' means impossible.  In some cases ``$P$" is accompanied by a condition that must be satisfied.\vspace*{.2cm}
     \label{tab:chapter1_SymmetriesTable}}
     \centering
-    \scalebox{.8}{
+    \scalebox{.75}{
     \begin{tabular}{cccccccccccc}
       \hline\hline\\
       (1)&(2)&(3)&(4)&(5)&(6)&(7)&(8)&(9)&(10)&(11)&(12)\\
@@ -439,41 +439,35 @@ both in coordinate or momentum representation, see the 3rd and 4th columns of ta
 
 With the definitions of symmetry in eqs. \eqref{eq:chapter1_symmetry}, \eqref{eq:chapter1_pseudoSymmetry} and the tools from scattering formalism in \ref{sec:chapter1_ScattFormalism} we can now find the effects of the symmetries in the scattering operator $S$, which will pose restrictions in the scattering amplitudes. We start by specifying the transformation rules of the M\"{o}ller operators \eqref{eq:chapter1_MollerDefinition} under a symmetry operator $A$ of the Klein 4-group. The M\"{o}ller operators are transformed differently depending on whether $A$ is unitary or antiunitary and whether the Hamiltonian obeys a usual symmetry \eqref{eq:chapter1_symmetry} or pseudohermiticity \eqref{eq:chapter1_pseudoSymmetry}. For example, for $A$ unitary and \eqref{eq:chapter1_symmetry} we have
 %
-\begin{equation}
-  \begin{split}
-    A \Omega_+ &= A \lim_{t \to -\infty} e^{i H t/\hbar}e^{-i H_0 t/\hbar}\\
-    &= \lim_{t \to -\infty}e^{i H t/\hbar}Ae^{-i H_0 t/\hbar}\\
-    &= \lim_{t \to -\infty} e^{i H t/\hbar}e^{-i H_0 t/\hbar}A\\
+\begin{align}
+    A \Omega_+ &= A \lim_{t \to -\infty} e^{i H t/\hbar}e^{-i H_0 t/\hbar}\nonumber\\
+    &= \lim_{t \to -\infty}e^{i H t/\hbar}Ae^{-i H_0 t/\hbar}\nonumber\\
+    &= \lim_{t \to -\infty} e^{i H t/\hbar}e^{-i H_0 t/\hbar}A\nonumber\\
     &= \Omega_+ A,
-  \end{split}
   \label{eq:chapter1_MollerPositiveTransformAUnitary_Symmetry}
-\end{equation}
+\end{align}
 %
 and
 %
-\begin{equation}
-  \begin{split}
-    A \Omega_- &= A \lim_{t \to +\infty} e^{i H^\dagger t/\hbar}e^{-i H_0 t/\hbar}\\
-    &= \lim_{t \to +\infty}e^{i H^\dagger t/\hbar}Ae^{-i H_0 t/\hbar}\\
-    &= \lim_{t \to +\infty} e^{i H^\dagger t/\hbar}e^{-i H_0 t/\hbar}A\\
+\begin{align}
+    A \Omega_- &= A \lim_{t \to +\infty} e^{i H^\dagger t/\hbar}e^{-i H_0 t/\hbar}\nonumber\\
+    &= \lim_{t \to +\infty}e^{i H^\dagger t/\hbar}Ae^{-i H_0 t/\hbar}\nonumber\\
+    &= \lim_{t \to +\infty} e^{i H^\dagger t/\hbar}e^{-i H_0 t/\hbar}A\nonumber\\
     &= \Omega_- A.
-  \end{split}
   \label{eq:chapter1_MollerNegativeTransformAUnitary_Symmetry}
-\end{equation}
+\end{align}
 %
 Using eqs. \eqref{eq:chapter1_MollerPositiveTransformAUnitary_Symmetry} and \eqref{eq:chapter1_MollerNegativeTransformAUnitary_Symmetry} we finally get
 %
-\begin{equation}
-  \begin{split}
-    A S &= A \Omega_{-}^\dagger\Omega_{+} \\
-    &= \Omega_{-}^\dagger A \Omega_{+} \\
-    &= \Omega_{-}^\dagger\Omega_{+} A \\
-    &= S A,\\
-    &\Downarrow\\
+\begin{align}
+    A S &= A \Omega_{-}^\dagger\Omega_{+}\nonumber \\
+    &= \Omega_{-}^\dagger A \Omega_{+}\nonumber \\
+    &= \Omega_{-}^\dagger\Omega_{+} A\nonumber \\
+    &= S A,\nonumber\\
+    &\Downarrow\nonumber\\
     S &= A^{\dagger}SA.
-  \end{split}
   \label{eq:chapter1_Moller-TransformAUnitary_Symmetry}
-\end{equation}
+\end{align}
 %
 The rest of combinations of the type of $A$ (unitary/antiunitary) with the type of symmetry (\eqref{eq:chapter1_symmetry} or \eqref{eq:chapter1_pseudoSymmetry}) are summarized in table \ref{tab:chapter1_MollerOperatorSymmetries}. Since the symmetry operators commute with the free Hamiltonian $H_0$, the action of any of them on a momentum eigenstate will give, as a result, a state with the same energy. In fact, as can be seen in table \ref{tab:chapter1_KleinGroupOnPosAndMomentBases}, the result of the action of any element $A$ of the 4-group on a state $\ket{p}$ is either $\ket{p}$ or $\ket{-p}$. For this reason, we can work with the on-shell representation of the scattering operator to obtain extra relations between the scattering amplitudes. As an example I will demonstrate what happens to the scattering amplitudes when the symmetry III is satisified, \textit{i.e.}, $\Pi H = H \Pi$. Considering a momentum $p>0$ and using $S = \Pi^{\dagger}S \Pi$ (see table \ref{tab:chapter1_MollerOperatorSymmetries}) I find
 %
@@ -586,7 +580,7 @@ that do not allow the implementation of the devices in fig. \ref{fig:chapter1_ca
     \caption{Device types for  transmission and/or reflection asymmetry, restricted to 1 or 0 moduli for the scattering amplitudes. The fifth column indicates the symmetries in table \ref{tab:chapter1_SymmetriesTable} that forbid the device.\vspace*{.2cm}}
     \label{tab:chapter1_DevicesDescription}
     \centering
-    \scalebox{1}{
+    \scalebox{0.9}{
     \begin{tabular}{ccccccc}
       \hline\hline
       Device type & Left incidence& Right incidence&Code& Forbidden by & Example

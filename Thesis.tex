@@ -3,8 +3,31 @@
 %% ----------------------------------------------------------------
 
 % ------------------ Set up the document -----------------------------------------------------------
-%\documentclass[a4paper, 11pt, twoside, openright]{Thesis} %en a4
-\documentclass[a4paper, 12pt, twoside, openright]{Thesis}  %para reducir a b5
+\documentclass[b5paper, 11pt, twoside, openright]{Thesis} %para reducir a b5
+% \documentclass[b5paper]{Thesis} %para reducir a b5
+% \documentclass[a4paper, 12pt, twoside, openright]{Thesis}  %en a4
+
+\usepackage{geometry}
+\newgeometry{
+    top=2.5cm,
+    bottom=2.5cm,
+    outer=2.5cm,
+    inner=3cm,
+}
+% \usepackage[
+%   % set width and height to a4 width and height + 6mm
+%   width=18.2truecm, height=25.6truecm,
+%   % use any combination of these options to add different cut markings
+%   % cam,
+%   % axes,
+%   % frame,
+%   % cross,
+%   % set the type of TeX renderer you use
+%   pdftex,
+%   % center the contents
+%   center
+% ]{crop}
+
 
 % ------------------ Include any extra LaTeX packages required -------------------------------
 \usepackage[square, numbers, comma, sort&compress]{natbib}  % Use the "Natbib" style for the references in the Bibliography
@@ -29,7 +52,8 @@
   singlelinecheck = off
 }
 
-\hypersetup{urlcolor=blue, colorlinks=true}  % Colours hyperlinks in blue, but this can be distracting if there are many links.
+% \hypersetup{urlcolor=blue, colorlinks=true}  % Colours hyperlinks in blue, but this can be distracting if there are many links.
+\hypersetup{draft}  % No links for the printed version
 
 
 % ------------------ Abreviaciones de comandos y nuevos comandos -----------------------------------
@@ -145,8 +169,8 @@
 \input{./Chapters/agradecimientos}
 
 % ------------------ The Abstract (spanish) --------------------------------------------------------
-% \addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics
-\input{./Chapters/resumen}
+% Quitar en la version impresa encuadernada
+% \input{./Chapters/resumen}
 
 % ------------------ The List of Publications ------------------------------------------------------
 % \addtocontents{toc}{\vspace{1em}}  % Add a gap in the Contents, for aesthetics

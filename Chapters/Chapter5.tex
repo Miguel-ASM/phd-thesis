@@ -34,34 +34,30 @@ $\bm{x},\bm{p}$, $x_n^{(0)} = n  a$ are the centers of the harmonic traps, and $
 %
 with $V_{C}(\left|x_n-x_l\right|) = \frac{q^2}{4\pi\varepsilon_0}\frac{1}{\left|x_n-x_l\right|}$. The ends of the chain are in contact with two thermal reservoirs at temperatures $T_L$ for the left bath and $T_R$ for the right bath respectively. The action of the resevoirs on the dynamics of the chain is modeled via Langevin baths at temperatures $T_L$ and $T_R$ \cite{Lepri2003,Dhar2018}. The equations of motion of the chain, taking into account the baths and the Hamiltonian, are
 %
-\begin{equation}
-    \begin{split}
-        \dot{x}_n &= \frac{1}{m}p_n, \\
-        \dot{p}_n &= - m\omega_n^2 (x_n-x_n^{(0)}) - \frac{\partial V_{int}}{\partial x_n} - \frac{\gamma_n}{m}p_n + \xi_n(t),
-    \end{split}
-    \label{eq:chapter5_Dynamics}
-\end{equation}
+\begin{align}
+  \dot{x}_n &= \frac{1}{m}p_n,\nonumber \\
+  \dot{p}_n &= - m\omega_n^2 (x_n-x_n^{(0)}) - \frac{\partial V_{int}}{\partial x_n} - \frac{\gamma_n}{m}p_n + \xi_n(t),
+  \label{eq:chapter5_Dynamics}
+\end{align}
 %
 where $\gamma_n$ and $\xi_n(t)$ are only non-zero for the ions in the end regions, in contact with the left and right baths in the sets ${\cal L} = \left\{1,2,...,N_L\right\}$ and \linebreak ${\cal R} = \left\{N-(N_R-1),...,N-1,N\right\}$,  see fig. \ref{fig:Diagram}. $\gamma_n$ are friction coefficients and $\xi_n(t)$ are uncorrelated Gaussian noise forces satisfying $\expval{ \xi_n(t)} = 0$ and $\expval{ \xi_n(t)\xi_m(t') } = 2 D_n \delta_{nm}\delta(t-t')$, $D_n$ being the diffusion coefficients. These Gaussian forces are formally the time derivatives of independent Wiener processes (Brownian motions)   $\xi_n(t) = \sqrt{2D_n}\frac{dW_n}{dt}$ \cite{Toral2014,Ruiz2014} and eq. \eqref{eq:chapter5_Dynamics} is a stochastic differential equation (SDE) in the Stratonovich sense \cite{Toral2014}.
 
 \begin{figure}
     \center
-    \includegraphics[width=0.75\linewidth]{Figures/Diagram.eps}
+    \includegraphics[width=0.9\linewidth]{Figures/Diagram.eps}
     \caption{Schematic representation  of the frequency-graded chain of trapped ions proposed as a thermal rectifier. The left and right ends of the chain are in contact with optical molasses at temperatures $T_L$ and $T_R$ (green and grey boxes respectively). Each ion is in an individual trap. The (angular) frequencies of the traps increase homogeneously from left to right, starting from $\omega_1$ and ending at $\omega_1+\Delta\omega$. The ions interact through the Coulomb force, which is long range, and therefore all the ions interact among them, even distant neighbors. By default  I use 15 ions.}
     \label{fig:Diagram}
 \end{figure}
 
 The baths are physically implemented by optical molasses consisting of a pair of counterpropagating Doppler-cooling lasers \cite{Ruiz2014}. The friction and diffusion coefficients for the ions in contact with the baths are given in \cite{Cohen1992,Metcalf2003,Ruiz2014}
 %
-\begin{equation}
-    \begin{split}
-        \gamma_n &= -4 \hbar k_{L,R}^2 \left(\frac{I_{L,R}}{I_0}\right)\frac{2\delta_{L,R}/\Gamma}{\left[1 + (2\delta_{L,R}/\Gamma)^2\right]^2},\\
-        %
-        D_n &= \hbar^2 k_{L,R}^2 \left(\frac{I_{L,R}}{I_0}\right) \frac{\Gamma}{1 + (2\delta_{L,R}/\Gamma)^2},\\
-        n &\in \cal{L},\cal{R},
-    \end{split}
-    \label{eq:chapter5_DopplerCooling}
-\end{equation}
+\begin{align}
+  \gamma_n &= -4 \hbar k_{L,R}^2 \left(\frac{I_{L,R}}{I_0}\right)\frac{2\delta_{L,R}/\Gamma}{\left[1 + (2\delta_{L,R}/\Gamma)^2\right]^2},\nonumber\\
+  %
+  D_n &= \hbar^2 k_{L,R}^2 \left(\frac{I_{L,R}}{I_0}\right) \frac{\Gamma}{1 + (2\delta_{L,R}/\Gamma)^2},\nonumber\\
+  n &\in \cal{L},\cal{R},
+  \label{eq:chapter5_DopplerCooling}
+\end{align}
 %
 where $k_L$ ($k_R$) and $I_L$ ($I_R$) are the wave vector and intensity of the left (right) laser. $\delta_L$ ($\delta_R$) is the detuning of the left (right) laser with respect to the angular frequency $\omega_0$ of the atomic transition the laser is exciting, and $\Gamma$ is the corresponding natural line width of the  excited state. The expressions in eq. \eqref{eq:chapter5_DopplerCooling} are valid only if the intensities of the lasers are small compared to the saturation intensity $I_0$, $I_{L,R}/I_0\ll 1$. In this bath model, the friction term in eq. \eqref{eq:chapter5_Dynamics} comes from the cooling action of the laser and the white noise force $\xi_n(t)$ corresponds to the random recoil of the ions due to spontaneous emission of photons \cite{Metcalf2003,Cohen1992}. Using the diffusion-dissipation relation $D = \gamma k_B T $ \cite{Chee2010}, the temperatures of the optical molasses baths are given by
 %
@@ -108,13 +104,11 @@ nearest-neighbor interatomic interactions for some atoms in the chain \cite{Chen
 but this approach is not realistic in the current system so I define instead the heat currents
 for the left and right baths as
 %
-\begin{equation}
-    \begin{split}
-        J_L (t)&= \sum_{n\in {\cal L}} \expval{j^B_n},\\
-        J_R (t)&= \sum_{n\in {\cal R}} \expval{j^B_n},
-    \end{split}
-    \label{eq:chapter5_BathHeatFlows}
-\end{equation}
+\begin{align}
+  J_L (t)&= \sum_{n\in {\cal L}} \expval{j^B_n},\nonumber\\
+  J_R (t)&= \sum_{n\in {\cal R}} \expval{j^B_n},
+  \label{eq:chapter5_BathHeatFlows}
+\end{align}
 %
 respectively. These expressions are in general time-dependent. In the steady state $J_{L,{\rm steady}}$ and $J_{R,{\rm steady}}$ should cancel each other since the local energies stabilize and internal energy flows cancel. I will use either $J_{L,{\rm steady}}$ or $J_{R,{\rm steady}}$ to calculate the total energy flow in the chain, always taking the absolute value, i.e., $J \equiv \abs{J_{L,{\rm steady}}}= \abs{J_{R,{\rm steady}}}$. $J$ is defined as $J_\rightarrow$ when the hot bath is on the left
 and $J_\leftarrow$ when it is on the right.
@@ -130,36 +124,30 @@ $n_{noise}$ Gaussian noises $\xi_i(t)$ with zero mean value, $\expval{\xi_i(t)} 
 %
 where ${\delta \phi(t)}/{\delta\xi_j(t')}$ is the functional derivative of $\phi(t)$ with respect to the $j$-th component of the noise. Since the noises are independent from each other and $\delta-$correlated,
 %
-\begin{equation}
-  \begin{split}
-    \expval{\xi_i(t)\phi(t)} &= 2D_i \overbrace{\int_0^t dt' \delta(t-t') \expval{\frac{\delta \phi(t)}{\delta\xi_i(t')}}}^{= \frac{1}{2} \lim_{t'\to t^-} \expval{\frac{\delta \phi(t)}{\delta\xi_i(t')}} }\\
-    &=D_i \lim_{t'\to t^-} \expval{ \frac{\delta \phi(t)}{\delta\xi_i(t')} }.
-  \end{split}
+\begin{align}
+  \expval{\xi_i(t)\phi(t)} &= 2D_i \overbrace{\int_0^t dt' \delta(t-t') \expval{\frac{\delta \phi(t)}{\delta\xi_i(t')}}}^{= \frac{1}{2} \lim_{t'\to t^-} \expval{\frac{\delta \phi(t)}{\delta\xi_i(t')}} }\nonumber\\
+  &=D_i \lim_{t'\to t^-} \expval{ \frac{\delta \phi(t)}{\delta\xi_i(t')} }.
   \label{eq:chapter5_Novikov_WhiteIndependentNoise}
-\end{equation}
+\end{align}
 %
 The $1/2$ factor from the integral in eq. \eqref{eq:chapter5_Novikov_WhiteIndependentNoise} comes from the assumption that the Dirac delta function is the limit of even correlation functions when the correlation time goes to 0. The notation $\lim_{t'\to t^-}$ stands for the limit when $t'$ goes to $t$ from below ($t'<t$). To evaluate the functional derivatives of the position $x_n(t)$ and momentum $p_n(t)$ coordinates with respect to the white noises, I integrate eq. \eqref{eq:chapter5_Dynamics} to have its formal solution as a functional depending on the white Gaussian noises $\xi_n(t)$,
 %
-\begin{equation}
-    \begin{split}
-        x_n(t) &= x_n(0) +  \frac{1}{m}\int_0^t ds\; p_n(s) ,\\
-        p_n(t) &= p_n(0) + \int_0^t ds\; \left[ -\frac{\partial H}{\partial x_n}(s) - \frac{\gamma_n}{m}p_n(s) + \xi_n(s)\right].
-    \end{split}
-    \label{eq:chapter5_FormalSolution}
-\end{equation}
+\begin{align}
+  x_n(t) &= x_n(0) +  \frac{1}{m}\int_0^t ds\; p_n(s) ,\nonumber\\
+  p_n(t) &= p_n(0) + \int_0^t ds\; \left[ -\frac{\partial H}{\partial x_n}(s) - \frac{\gamma_n}{m}p_n(s) + \xi_n(s)\right].
+  \label{eq:chapter5_FormalSolution}
+\end{align}
 %
 Taking the functional derivatives of eq. \eqref{eq:chapter5_FormalSolution} I get for $t'<t$
 %
-\begin{equation}
-  \begin{split}
-    \frac{\delta x_n(t)}{\delta \xi_m(t')} &= \frac{1}{m}\int_{t'}^{t} ds\; \frac{\delta p_n(s)}{\delta \xi_m(t')},
-    %
-    \\
-    %
-    \frac{\delta p_n(t)}{\delta \xi_m(t')} &= \delta_{nm} -\int_{t'}^{t} ds\;\frac{\delta}{\delta \xi_m(t')}\left[\frac{\partial H}{\partial x_n}(s) + \frac{\gamma_n}{m}p_n(s) \right].
-  \end{split}
+\begin{align}
+  \frac{\delta x_n(t)}{\delta \xi_m(t')} &= \frac{1}{m}\int_{t'}^{t} ds\; \frac{\delta p_n(s)}{\delta \xi_m(t')},\nonumber
+  %
+  \\
+  %
+  \frac{\delta p_n(t)}{\delta \xi_m(t')} &= \delta_{nm} -\int_{t'}^{t} ds\;\frac{\delta}{\delta \xi_m(t')}\left[\frac{\partial H}{\partial x_n}(s) + \frac{\gamma_n}{m}p_n(s) \right].
   \label{eq:chapter5_functional_derivatives}
-\end{equation}
+\end{align}
 %
 The integration limits in eq. \eqref{eq:chapter5_functional_derivatives} go from $t'$ to $t$ since the functional derivatives are $0$ when $s<t'$, because the values of the noise in the future cannot affect a signal in the present, which would break causality. I have also used that $\frac{\delta \xi_n(t)}{\delta \xi_m(t')} = \delta_{nm}\delta(t-t')$. Taking the limit $t'\to t^-$ in eq. \eqref{eq:chapter5_FormalSolution} I obtain the values of the functional derivatives of $x_n$ and $p_n$, $ \lim_{t'\to t^-} \delta x_n(t)/\delta \xi_m(t') = 0$ and $\lim_{t'\to t^-} \delta p_n(t)/\delta \xi_m(t') = \delta_{nm}$ ($\delta_{nm}$ is the usual Kronecker delta). Thus I have $\expval{x_n(t) \xi_m(t)} = 0$ and $\expval{p_n(t) \xi_m(t)} = \delta_{nm}D_m$, which gives for the heat flow from the baths
 %
@@ -197,7 +185,7 @@ A system of linear algebraic equations for the moments results, that can be easi
 
 \begin{figure}
   \center
-  \includegraphics[width=0.75\linewidth]{Figures/24Mg_Temperature_Profiles_And_Evolution.eps}
+  \includegraphics[width=0.85\linewidth]{Figures/24Mg_Temperature_Profiles_And_Evolution.eps}
   \caption{(a) Temperatures of the ions in the stationary state for a graded chain with the parameters described in section \ref{Results_A}. The temperature profiles found with the algebraic method (eq. \eqref{eq:chapter5_SteadyStateEquation}) are indistinguishable from the ones found solving the Langevin equation (eq. \eqref{eq:chapter5_Dynamics}). Empty triangles (squares) correspond to $T_L = T_H$ ($T_L = T_C$) and $T_R = T_C$ ($T_R = T_H$). (b) Heat currents  as a function of time for $T_L = T_H$ and $T_R = T_C$, see eq. (\ref{eq:chapter5_BathHeatFlows}): $J_L(t)$ (solid green line) from the left reservoir into the chain;$J_R(t)$ (dotted grey line) from the right reservoir into the chain (negative except at very short times); $J_L(t)+J_R(t)$ (dotted-dashed black line), which must go to zero in the steady state. The three lines tend to stationary values marked by horizontal lines. Parameters: $\omega_1 = 2\pi \times 50$ kHz, $a=50\, \mu$m,  $\delta_H = -0.02 \, \Gamma$, and $\delta_C = -0.1 \, \Gamma$, which gives temperatures $T_H \approx 12$ mK and $T_C \approx 3$ mK. $\Delta\omega = 0.5 \, \omega_1$. In all figures $\Gamma = 2\pi \times 41.3$ MHz.}
   \label{fig:Temperature_Profiles_Magnesium}
 \end{figure}
@@ -221,35 +209,29 @@ with $K_{nm} = \frac{\partial^2 V(\bm{x})}{\partial x_n \partial x_m}\Big|_{\bm{
 %
 Note that this approximation does not modify the two main features of the system, namely asymmetry and long-range interactions, which are manifest in the asymmetric distribution of $\omega_n$ and the non-zero off-diagonal elements of the $K$ matrix, respectively. In the following I will use $y_n=x_n-x_n^{eq}$ to simplify the notation. The linearized dynamics around the equilibrium positions are given by
 %
-\begin{equation}
-    \begin{split}
-        \dot{y}_n &= \frac{1}{m}p_n,\\
-        \dot{p}_n &= -\sum_{l}K_{nl}y_l- \frac{\gamma_n}{m}p_n + \xi_n(t).
-    \end{split}
-    \label{eq:chapter5_DynamicsHarmonic}
-\end{equation}
+\begin{align}
+  \dot{y}_n &= \frac{1}{m}p_n,\nonumber\\
+  \dot{p}_n &= -\sum_{l}K_{nl}y_l- \frac{\gamma_n}{m}p_n + \xi_n(t).
+  \label{eq:chapter5_DynamicsHarmonic}
+\end{align}
 %
 Now, I set ${d\expval{\cdot\!\cdot\!\cdot}}/{dt} = 0$ for all the moments. Using eq. \eqref{eq:chapter5_DynamicsHarmonic} and applying Novikov's theorem I find
 
 %
-\begin{equation}
-    \begin{split}
-        \expval{p_n p_l} - \gamma_l\expval{y_n p_l} - \sum_m K_{lm}\expval{y_n y_m} &= 0,\\
-        \sum_{m}\left[ K_{nm}\expval{y_m p_l} + K_{lm}\expval{y_m p_n} \right] + \frac{1}{m}\left( \gamma_l + \gamma_n \right)\expval{p_n p_l} &= 2 \delta_{nl} D_n.
-    \end{split}
-    \label{eq:chapter5_SteadyStateEquation}
-\end{equation}
+\begin{align}
+  \expval{p_n p_l} - \gamma_l\expval{y_n p_l} - \sum_m K_{lm}\expval{y_n y_m} &= 0,\nonumber\\
+  \sum_{m}\left[ K_{nm}\expval{y_m p_l} + K_{lm}\expval{y_m p_n} \right] + \frac{1}{m}\left( \gamma_l + \gamma_n \right)\expval{p_n p_l} &= 2 \delta_{nl} D_n.
+  \label{eq:chapter5_SteadyStateEquation}
+\end{align}
 %
 The system \eqref{eq:chapter5_SteadyStateEquation} is linear in the second order moments so it can be solved numerically to find the steady-state values of the moments. Besides eq. \eqref{eq:chapter5_SteadyStateEquation} I have that $\expval{y_n p_l} = - \expval{y_l p_n}$, which follows from eq. \eqref{eq:chapter5_DynamicsHarmonic} and $d\expval{y_n y_m}/dt = 0$. Since there are $\frac{1}{2}N(N-1)$ independent $\expval{y_n p_l}$ moments, I choose the ones with $n<l$. Similarly, the moments $\expval{y_n y_l}$ and $\expval{p_n p_l}$ contribute with $\frac{1}{2}N(N+1)$ independent variables each and I choose the ones with $n\leq m$. Thus there are in total $\frac{1}{2}N(3N+1)$ independent moments that can be arranged in the vector
 %
-\begin{equation}
-\begin{split}
-    \bm\eta = \Big[ &\expval{y_1 y_1},\expval{y_1 y_2},...,\expval{y_N y_N},\\
-    &\expval{p_1 p_1},\expval{p_1 p_2},...,\expval{p_N p_N},\\
+\begin{align}
+    \bm\eta = \Big[ &\expval{y_1 y_1},\expval{y_1 y_2},...,\expval{y_N y_N},\nonumber\\
+    &\expval{p_1 p_1},\expval{p_1 p_2},...,\expval{p_N p_N},\nonumber\\
     &\expval{y_1 p_2},\expval{y_1 p_3},...,\expval{y_{N-1} p_N}\Big]^T.
     \label{eq:chapter5_CovariancesVector}
-\end{split}
-\end{equation}
+\end{align}
 %
 There are the same number of independent equations
 %in eq. \eqref{eq:chapter5_SteadyStateEquation}
@@ -278,7 +260,7 @@ section \ref{GS}, I compare the graded chain to a segmented chain, where the lef
 
 \begin{figure}
   \center
-  \includegraphics[width=0.75\linewidth]{Figures/Graded_24Mg_FluxAndRectification_VS_FreqGradient.eps}
+  \includegraphics[width=0.85\linewidth]{Figures/Graded_24Mg_FluxAndRectification_VS_FreqGradient.eps}
   \caption{Graded chain of $N=15$ $^{24}$Mg$^+$ ions. (a) Stationary fluxes for different frequency increments: $J_\rightarrow$   (for $T_L = T_H$ and $T_R = T_C$, dashed line); $J_\leftarrow$ (for $T_L = T_C$ and $T_R = T_H$, solid line) (b) Rectification factor. Parameters: $\omega_1 = 2 \pi \times 1$ MHz, $l = 5.25\;\mu$m, $a = 4.76\, l$ ($25\,\mu$m), $\delta_H = -0.02 \,\Gamma$, and $\delta_C = -0.1 \, \Gamma$.}
   \label{fig:RFG}
 \end{figure}
@@ -298,7 +280,7 @@ algebraic method.
 %%%%%%%%%%%%%%%%%%%%
 \begin{figure}
   \center
-  \includegraphics[width=0.75\linewidth]{Figures/Graded_24Mg_Rectification_VS_Gradient_and_lattConstant.eps}
+  \includegraphics[width=0.85\linewidth]{Figures/Graded_24Mg_Rectification_VS_Gradient_and_lattConstant.eps}
   \caption{ Rectification factor in a graded chain of $N=15$ $^{24}$Mg$^+$ ions for different trap distances and frequency increment. The dashed lines are for $R = 0$ and delimit the regions $J_\rightarrow > J_\leftarrow$ and $J_\rightarrow < J_\leftarrow$. The parameters  are $\omega_1 = 2 \pi \times 1$ MHz, $l = 5.25\,\mu$m, $\delta_H = -0.02 \,\Gamma$, and $\delta_C = -0.1 \, \Gamma$.}
   \label{fig:Graded_24Mg_Rectification_VS_Gradient_and_lattConstant}
 \end{figure}
@@ -311,7 +293,7 @@ algebraic method.
 %
 \begin{figure}
   \center
-  \includegraphics[width=0.75\linewidth]{Figures/R_as_function_of_TemperatureBias.eps}
+  \includegraphics[width=0.85\linewidth]{Figures/R_as_function_of_TemperatureBias.eps}
   \caption{ (a) Friction coefficient defined in eq. \eqref{eq:chapter5_DopplerCooling}. (b) Bath temperature defined in eq. \eqref{eq:chapter5_Doppler}. (c) Rectification as a function of the temperature difference between the hot and cold baths $T_H -T_C$ for $\delta_H$ below (dashed black line) and above (solid blue line) the Doppler limit, and $\delta_C=\delta_D$ (Doppler limit). Parameters: $\omega_1 = 2 \pi \times 1$ MHz, $\Delta \omega = 0.15 \, \omega_1$, $l = 5.25\,\mu$m, $a = 4.76 \, l$.}
   \label{fig:RD}
 \end{figure}
@@ -331,7 +313,7 @@ does not imply a major limitation.}
 
 \begin{figure}
   \center
-  \includegraphics[width=0.75\linewidth]{Figures/Changing_N.eps}
+  \includegraphics[width=0.85\linewidth]{Figures/Changing_N.eps}
   \caption{Rectification factor for different bath temperature differences $\Delta T$ as the number of ions is increased. The detuning of the cold bath laser is set to the Doppler limit $\delta_C = - \Gamma / 2$. $\omega_1 = 2 \pi \times 1$ MHz, $\Delta \omega = 0.15 \, \omega_1$, $l = 5.25\,\mu$m, $a = 4.76 \, l$.}
   \label{fig:N_Dependence}
 \end{figure}
@@ -374,7 +356,7 @@ I have also compared the performance of the graded thermal diode and a segmented
 
 \begin{figure}
   \center
-  \includegraphics[width=0.75\linewidth]{Figures/24Mg_Comparacion_Graded_AND_Segmented.eps}
+  \includegraphics[width=0.85\linewidth]{Figures/24Mg_Comparacion_Graded_AND_Segmented.eps}
   \caption{Comparison of graded and segmented chains with $N=15$ $^{24}$Mg$^+$ ions. (a) Maximum
   of $J_\rightarrow$ and $J_\leftarrow$
    for the graded and segmented chain for different frequency increments. (b) Rectification factor: graded chain (dashed lines); segmented chain (solid lines). Parameters: $\omega_1 = 2 \pi \times 1$ MHz, $l = 5.25\,\mu$m, $a = 4.76 \, l$, $\delta_H = -0.02 \, \Gamma$, and $\delta_C = -0.1 \, \Gamma$.}
